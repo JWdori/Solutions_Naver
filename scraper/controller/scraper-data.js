@@ -36,11 +36,28 @@ const gApp = async (req, res) => {
 }
 
 const gList = async (req, res) => {
-    const number = 600;
+    const number = 500;
     let appData = [];
     gPlay.list({
-        category: gPlay.category.GAME_SPORTS,
-        collection: gPlay.collection.TOP_FREE,
+        // 'GAME_ACTION',
+        // 'GAME_ADVENTURE',
+        // 'GAME_ARCADE',
+        // 'GAME_BOARD',
+        // 'GAME_CARD',
+        // 'GAME_CASINO',
+        // 'GAME_CASUAL',
+        // 'GAME_EDUCATIONAL',
+        // 'GAME_MUSIC',
+        // 'GAME_PUZZLE',
+        // 'GAME_RACING',
+        // 'GAME_ROLE_PLAYING',
+        // 'GAME_SIMULATION',
+        // 'GAME_SPORTS',
+        // 'GAME_STRATEGY',
+        // 'GAME_TRIVIA',
+        // 'GAME_WORD'
+        category: gPlay.category.GAME_WORD,
+        collection: gPlay.collection.TOP_PAID,//TOP_FREE,TOP_PAID
         num: number,
         lang: "ko",
         country: "kr",
@@ -78,7 +95,8 @@ const gList = async (req, res) => {
                                 if (aria === "true" &&
                                     (!genre.includes("설치") &&
                                         !genre.includes("위시리스트") &&
-                                        !genre.includes("세부정보"))
+                                        !genre.includes("세부정보") &&
+                                        !genre.includes("구매"))
                                     && genre !== app.genre) {
                                     genreList.push(genre)
                                 }
@@ -90,27 +108,28 @@ const gList = async (req, res) => {
                         return error;
                     }
 
-                    appData.push({
-                        appId: app.appId,
-                        url: app.url,
-                        title:app.title,
-                        description:app.description,
-                        summary:app.summary,
-                        installs:app.installs,
-                        scoreText:app.scoreText,
-                        reviews:app.reviews,
-                        price:app.price,
-                        free:app.free,
-                        currency:app.currency,
-                        priceText:app.priceText,
-                        icon:app.icon,
-                        headerImage:app.headerImage,
-                        contentRating:app.contentRating,
-                        genreId:app.genreId,
-                        mainGenre:app.genre,
-                        subGenre:genreList
-                    });
-
+                    if (app.score != 0.0 && app.reviews > 50) {//별점 0.0인거랑 리뷰갯수 50개 미만인건 거름
+                        appData.push({
+                            appId: app.appId,
+                            url: app.url,
+                            title: app.title,
+                            description: app.description,
+                            summary: app.summary,
+                            installs: app.installs,
+                            scoreText: app.scoreText,
+                            reviews: app.reviews,
+                            price: app.price,
+                            free: app.free,
+                            currency: app.currency,
+                            priceText: app.priceText,
+                            icon: app.icon,
+                            headerImage: app.headerImage,
+                            contentRating: app.contentRating,
+                            genreId: app.genreId,
+                            mainGenre: app.genre,
+                            subGenre: genreList
+                        });
+                    }
                 }
             } catch (e) {
                 console.log(e)
