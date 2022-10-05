@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.jpg";
+import logo from "../images/logo.png";
 import { Route, Link } from "react-router-dom";
 import back from "../images/back.png";
 
@@ -18,21 +18,21 @@ const Header = (props) => {
     <>
       <div className="headerContainer">
         {isBack && (
-          <img
-            className="back"
-            src={back}
-            onClick={handleOnClick}
-            width="24px"
-            height="24px"
-            alt="img"
-          />
+            <img
+                className="back"
+                src={back}
+                onClick={handleOnClick}
+                width="24px"
+                height="24px"
+                alt="img"
+            />
         )}
         <Link to="/">
           <img
             className="logo"
             src={logo}
             alt="img"
-            width="70px"
+            width="80px"
             height="30px"
             onClick={handleOnClick}
           ></img>
