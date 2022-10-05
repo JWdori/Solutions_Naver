@@ -3,13 +3,22 @@ import {useNavigate} from "react-router-dom";
 import main from "../images/main.png"
 import adimage from "../images/adimage.png"
 import gameIcon from "../images/gameIcon.png"
+import facebook from "../images/facebook.png";
+import kakao from "../images/kakao.png";
+import link from "../images/link.png";
+import twitter from "../images/twitter.png";
+import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 
 const Home = (props) => {
     const navigate = useNavigate();
 
-    const onClick = () => {
-        navigate.push("/test");
+    const onGameClick = () => {
+        navigate("/loading");
+    };
+
+    const onSurClick = () => {
+        navigate("/survey");
     };
 
     return (
@@ -45,10 +54,10 @@ const Home = (props) => {
                 ></img>
             </div>
 
-            <button id="homeGameBtn" onClick={onClick}>
+            <button id="homeGameBtn" onClick={onGameClick}>
                 성향 검사 시작하기
             </button>
-            <button id="homeSurveyBtn" onClick={onClick}>
+            <button id="homeSurveyBtn" onClick={onSurClick}>
                 게임 추천 설문하기
             </button>
             <div className="ad_game">
@@ -73,6 +82,58 @@ const Home = (props) => {
             </div>
 
 
+
+            <div className={"shareText"}>
+                결과 공유하기
+                <img
+                    className="shareTextIcon"
+                    src={shareIcon}
+                    alt="shareIcon"
+                    width="20px"
+                    height="20px"
+                />
+            </div>
+            <div id="shareContainer">
+                <img
+                    className="shareIcon"
+                    src={kakao}
+                    alt="kakaotalk"
+                    width="40px"
+                    height="40px"
+                    // onClick={kakaoShare}
+                />
+
+                <img
+                    className="shareIcon"
+                    src={facebook}
+                    alt="facebook"
+                    width="40px"
+                    height="40px"
+                    // onClick={facebookShare}
+                ></img>
+
+                <img
+                    className="shareIcon"
+                    src={twitter}
+                    alt="twitter"
+                    width="40px"
+                    height="40px"
+                    // onClick={twitterShare}
+                ></img>
+                <input type="hidden" id="urlInput" className="url-input"/>
+
+                <img
+                    className="shareIcon"
+                    src={link}
+                    alt="link"
+                    width="40px"
+                    height="40px"
+                    onClick={() => {
+                        // copy(handleToast);
+                    }}
+                ></img>
+
+            </div>
 
         </>
     );
