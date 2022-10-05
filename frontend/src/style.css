@@ -58,6 +58,58 @@ body {
     margin: 15px;
 }
 
+
+.ad_game{
+    margin-top: 80px;
+    /*margin-right: 30px;*/
+    /*margin-left: 30px;*/
+    width: 300px;
+    height: 420px;
+    left: 31px;
+    top: 117px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #929292;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.ad_game_font{
+    margin-top: 20px;
+    font-family: "G마켓 산스 TTF Medium";
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 12px;
+}
+
+.ad_game_box{
+    display: flex;
+    align-items: center;
+}
+
+.ad_game_box_black_1{
+    margin-top: -216px;
+    height: 400px;
+    width: 32px;
+    background: black;
+    margin-left: -16px;
+}
+
+.ad_game_image{
+    border-radius: 10px;
+    z-index: 1;
+    position:relative
+}
+
+.ad_game_box_black_2{
+    height: 400px;
+    width: 32px;
+    background: black;
+    margin-left: 300px;
+}
+
+
 .mainDesc {
 
     width: 300px;
