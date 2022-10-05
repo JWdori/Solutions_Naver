@@ -1,16 +1,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 
-.App {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 375px;
-    background-color: rgba(0, 0, 0, 0);
-    margin-top: 90px;
+html {
+    -ms-content-zooming: none;
+    -ms-touch-action: pan-x pan-y;
 }
+
 
 body {
     -ms-user-select: none;
@@ -23,6 +18,19 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px;
+
+}
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    background: black;
+    /*background-color: rgba(0, 0, 0, 0);*/
+    margin-top: 90px;
 }
 
 .back {
@@ -48,4 +56,56 @@ body {
 .logo {
     cursor: pointer;
     margin: 15px;
+}
+
+.mainDesc {
+
+    width: 300px;
+    height: 123px;
+    left: 31px;
+    top: 117px;
+    margin: auto;
+    background: #D9D9D9;
+}
+
+.home {
+    margin-top: 60px;
+}
+
+.gameIntro{
+    color:white;
+
+}
+
+.homeTitle {
+    margin: 8px;
+}
+
+#homeGameBtn {
+    background: #FF6900;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+#homeSurveyBtn {
+    background: #FF4337;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 20px;
+
 }
