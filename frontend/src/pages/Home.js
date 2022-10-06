@@ -2,10 +2,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import main from "../images/main.png"
 import gameIcon from "../images/gameIcon.png"
-import popular_game from "../images/popular_game.png"
-import popular_result from "../images/popular_result.png"
-import left from "../images/left.png"
-import right from "../images/right.png"
+
 import facebook from "../images/facebook.png";
 import kakao from "../images/kakao.png";
 import link from "../images/link.png";
@@ -13,7 +10,7 @@ import twitter from "../images/twitter.png";
 import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
-import popular_game_slide from "../elements/Popular_game_slide";
+import Popular_game_slide from "../elements/Popular_game_slide";
 
 
 const Home = (props) => {
@@ -119,53 +116,9 @@ const Home = (props) => {
             </div>
             <Ad_game>
             </Ad_game>
-            <div className="popular_result_box">
-                <div className="popular_result_font">
-                    유형별 인기 게임
-                </div>
 
-                <div className="popular_result_slide_box">
-
-                    <button id="leftslidebutton">
-                        <img
-                            className="popular_result_left"
-                            src={left}
-                            alt="img"
-                            width="8px"
-                            height="18px"
-                        ></img>
-                    </button>
-
-
-                    <img
-                        className="popular_result_result"
-                        src={popular_result}
-                        alt="img"
-                        width="112px"
-                        height="112px"
-                    ></img>
-                    <img
-                        className="popular_result_game"
-                        src={popular_game}
-                        alt="img"
-                        width="112px"
-                        height="112px"
-                    ></img>
-
-
-                    <button
-                        id="rightslidebutton">
-                            <img
-                                className="popular_result_right"
-                                src={right}
-                                alt="img"
-                                width="8px"
-                                height="18px"
-                            >
-                            </img>
-                    </button>
-                </div>
-            </div>
+            <Popular_game_slide>
+            </Popular_game_slide>
 
 
 

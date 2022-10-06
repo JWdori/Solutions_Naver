@@ -3,7 +3,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 
 
-const Ad_game = (props) => {
+const Adgame = (props) => {
     const navigate = useNavigate();
     const onadClick = () => {
         navigate("/adgame");
@@ -48,4 +48,4 @@ const Ad_game = (props) => {
     );
 };
 
-export default Ad_game;
+export default Adgame;
