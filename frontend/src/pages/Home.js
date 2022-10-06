@@ -1,7 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import main from "../images/main.png"
-import adimage from "../images/adimage.png"
 import gameIcon from "../images/gameIcon.png"
 import facebook from "../images/facebook.png";
 import kakao from "../images/kakao.png";
@@ -9,6 +8,8 @@ import link from "../images/link.png";
 import twitter from "../images/twitter.png";
 import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
+import Ad_game from "../elements/Ad_game";
+
 
 const Home = (props) => {
     const navigate = useNavigate();
@@ -60,29 +61,7 @@ const Home = (props) => {
             <button id="homeSurveyBtn" onClick={onSurClick}>
                 게임 추천 설문하기
             </button>
-            <div className="ad_game">
-                <div className="ad_game_font">
-                    넷째주 게임
-                </div>
-                <img
-                    className="ad_game_image"
-                    id="adimage"
-                    src={adimage}
-                    alt="img"
-                    width="300x"
-                    height="170px"
-                ></img>
-                <div className="ad_game_box">
-                    <div className="ad_game_box_black_1">
-                        <div className="ad_game_box_black_2">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
+            <Ad_game></Ad_game>
             <div className={"shareText"}>
                 결과 공유하기
                 <img
