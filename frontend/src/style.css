@@ -260,7 +260,25 @@ body {
     margin-right: 20px;
 }
 
+.progress-div {
+    background-color: #FF8936;
+}
 
+.progress {
+    background-color: #FF8936;
+    height: 8px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.progresschar{
+    background: none;
+    margin-bottom: 1px;
+    margin-right: -20px;
+}
 
 
 #homeSurveyBtn {
