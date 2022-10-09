@@ -212,7 +212,7 @@ body {
 .modal {
     width: 100%;
     height: 100vh;
-    background-color: firebrick;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0%;
     left: 0%;
@@ -224,29 +224,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 500px;
+    height: 250px;
     background-color: #fffef5;
     overflow: auto;
     overflow: x-hidden;
     z-index: 3;
-    border-radius: 15px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
 }
 
-.modalHead {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    justify-content: space-between;
-    background-color: #6aa99e;
-}
 
-.modalHeadFont {
-    color: #fffef5;
-    font-family: "GmarketSansLight";
-    font-weight: bold;
-    font-size: 16px;
-    margin: 11px;
-}
+
+/*.modalHeadFont {*/
+/*    color: #fffef5;*/
+/*    font-family: "GmarketSansLight";*/
+/*    font-weight: bold;*/
+/*    font-size: 16px;*/
+/*    margin: 11px;*/
+/*}*/
 
 .closeBtn {
     margin: 18px;
@@ -254,28 +251,43 @@ body {
     height: 14px;
     color: #fffef5;
     font-weight: bold;
+    position:relative;
+    z-index: 1;
+
 }
 
+
+
 .modalCon {
-    border: 1px solid #6aa99e;
-    padding: 20px;
+    margin: 12px;
+    width: 276px;
+    height: 226px;
+    margin-top: -38px;
+    border-radius: 10px;
+    background: url("./images/game.png") repeat;
 }
 
 .modalTitle {
     font-family: "GmarketSansBold";
+    width: 160px;
     text-align: start;
-    font-size: 22px;
-    color: #6aa99e;
-    margin: 15px 0px 10px 0px;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 30px;
+    margin-left: 20px;
+    color: white;
 }
 
 .modalSemi {
     font-family: "Noto Sans KR";
     text-align: start;
-    font-weight: 550;
-    font-size: 13px;
+    font-weight: lighter;
+    width: 240px;
+    margin-left: 20px;
+    margin-top: 12px;
+    font-size: 14px;
     line-height: 19px;
-    color: #6aa99e;
+    color: white;
 }
 
 .modalDetail {
@@ -285,6 +297,12 @@ body {
     font-size: 12px;
     line-height: 19px;
     margin: 10px 0px;
+}
+
+.colsebox{
+    display: flex;
+    justify-content: end;
+    margin-right: 0px;
 }
 
 
@@ -354,6 +372,26 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+
+
+#recommend {
+    background: #FF6900;
+    border: none;
+    border-radius: 32px;
+    width: 240px;
+    text-align: center;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position:relative;
+    z-index: 1;
+    margin-top:28px;
+}
+
+
+
 
 #rightslidebutton {
     background: none;
