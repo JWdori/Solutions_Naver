@@ -158,6 +158,9 @@ body {
 }
 
 
+
+
+
 .popular_result_box{
     height: 186px;
 
@@ -235,6 +238,41 @@ body {
     border-color: #FF6900
 }
 
+.stars {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    margin-top: -0.5em;
+}
+
+.FontAwesomeIcon {
+    cursor: pointer;
+    margin-top:30px;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.blank {
+
+    color: #8A8A8A;
+}
+
+.modalstar{
+    margin-top: 30px;
+}
+
+.lit {
+    color: #FF8936;
+    text-shadow: -1px 0 #FF6900, 0 1px #FF6900, 1px 0 #FF6900, 0 -1px #FF6900;
+}
+
+
+
 
 .modalPost2 {
     position: absolute;
@@ -269,6 +307,24 @@ body {
     border-width: 2px;
     border-color: #FF6900
 }
+
+.modalPost4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 220px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
 
 
 
@@ -637,4 +693,41 @@ body {
     font-weight: 700;
     font-size: 14px;
     color: #fffef5;
+}
+
+
+#resultAll {
+    background-color: #6aa99e;
+    border: none;
+    border-radius: 32.5px;
+    width: 170px;
+    height: 64px;
+    cursor: pointer;
+    font-family: "Noto Sans KR";
+    font-weight: 700;
+    font-size: 14px;
+    color: #fffef5;
+}
+
+
+#scorebutton {
+    background: none;
+    border: #FF6900;
+    border-radius: 10px;
+    border: solid 2px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Noto Sans KR";
+    font-weight: bold;
+    font-size: 16px;
+    color: #FF6900;
+}
+#scorebutton:active{
+    font-size:16px;
+    color: white;
+    background: #FF6900;
+    border-width: 0px;
 }

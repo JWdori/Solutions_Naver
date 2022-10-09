@@ -4,6 +4,8 @@ import Header from "../elements/Header";
 import Recommend from "../elements/Recommend";
 import Recommendnext from "../elements/Recommendnext";
 import Resultmodal from "../elements/Resultmodal";
+import Score from "../elements/Score";
+import ScorePage from "../elements/ScorePage";
 
 const Result = (props) => {
     const navigate = useNavigate();
@@ -21,7 +23,7 @@ const Result = (props) => {
                 </button>
             </div>
             {/*{showPopup&& <Recommend setShowPopup={setShowPopup}/>}*/}
-            {showPopup&& <Resultmodal setShowPopup={setShowPopup}/>}
+            {showPopup&& <ScorePage setShowPopup={setShowPopup}/>}
         </>
     );
 };
