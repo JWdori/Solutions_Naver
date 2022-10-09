@@ -3,7 +3,6 @@ import left from "../images/left.png";
 import popular_result from "../images/popular_result.png";
 import popular_game from "../images/popular_game.png";
 import right from "../images/right.png";
-import Slider from "react-slick";
 
 
 
