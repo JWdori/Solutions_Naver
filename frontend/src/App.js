@@ -7,8 +7,7 @@ import Header from "./elements/Header";
 import Loading from "./pages/Loading";
 import Test from "./pages/Test"
 import Result from "./pages/Result"
-import Score from "./elements/Score";
-import StarRating from "./elements/Score";
+
 
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
                     <Route element={<Home/>} path={"/"}/>
                     <Route element={<Loading/>} path={"/loading"}/>
                     <Route element={<Test/>} path={"/test"}/>
-                    <Route element={<Score/>} path={"/result"}/>
+                    <Route element={<Result/>} path={"/result"}/>
                 </Routes>
             </BrowserRouter>
         </div>

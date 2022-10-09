@@ -5,13 +5,9 @@ import popular_game from "../images/popular_game.png";
 import right from "../images/right.png";
 
 
-
-
 const Slider = (props) => {
 
-
-        return (
-
+    return (
         <div className="popular_result_box">
             <div className="popular_result_font">
                 유형별 인기 게임
