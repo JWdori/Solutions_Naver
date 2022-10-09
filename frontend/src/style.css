@@ -300,6 +300,29 @@ body {
 }
 
 
+.starBox {
+    z-index: 1000;
+    margin-left: 55px;
+    margin-right: 10px;
+    height: 19px;
+    overflow: hidden;
+}
+
+.pointOfStar {
+    z-index: 10;
+    height: 19px;
+    width: 100px;
+}
+
+.backgroundStar {
+    position: absolute;
+    margin-left: 84px;
+    width: 100px;
+    height: 19px;
+}
+
+
+
 
 .modalCon {
     border: 1px solid #FF6900;
@@ -319,6 +342,7 @@ body {
     background-color: #FF6900;
     align-items: center;
 }
+
 
 
 .closeBtn {
