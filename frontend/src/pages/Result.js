@@ -2,6 +2,8 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import Header from "../elements/Header";
 import Recommend from "../elements/Recommend";
+import Recommendnext from "../elements/Recommendnext";
+import Resultmodal from "../elements/Resultmodal";
 
 const Result = (props) => {
     const navigate = useNavigate();
@@ -18,7 +20,8 @@ const Result = (props) => {
                     모달 팝업
                 </button>
             </div>
-            {showPopup&& <Recommend setShowPopup={setShowPopup}/>}
+            {/*{showPopup&& <Recommend setShowPopup={setShowPopup}/>}*/}
+            {showPopup&& <Resultmodal setShowPopup={setShowPopup}/>}
         </>
     );
 };

@@ -236,14 +236,90 @@ body {
 }
 
 
+.modalPost2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 173px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
 
-/*.modalHeadFont {*/
-/*    color: #fffef5;*/
-/*    font-family: "GmarketSansLight";*/
-/*    font-weight: bold;*/
-/*    font-size: 16px;*/
-/*    margin: 11px;*/
-/*}*/
+.modalPost3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
+
+
+
+.modalHeadFont {
+
+    color: white;
+    font-family: "GmarketSansLight";
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.modalTitleresult {
+    font-family: "GmarketSansBold";
+    text-align: start;
+    font-size: 22px;
+    color: #6aa99e;
+    margin: 15px 0px 10px 0px;
+}
+
+.modalSemiresult {
+    font-family: "Noto Sans KR";
+    text-align: start;
+    font-weight: 550;
+    font-size: 13px;
+    line-height: 19px;
+    color: #6aa99e;
+}
+
+
+
+.modalCon {
+    border: 1px solid #FF6900;
+    padding: 20px;
+}
+
+
+.modalHead {
+
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    background-color: #FF6900;
+    align-items: center;
+}
+
 
 .closeBtn {
     margin: 18px;
@@ -253,12 +329,18 @@ body {
     font-weight: bold;
     position:relative;
     z-index: 1;
-
+}
+.closeBtn2 {
+    margin: 9px;
+    width: 14px;
+    height: 14px;
+    color: #fffef5;
+    font-weight: bold;
+    position:relative;
+    z-index: 1;
 }
 
-
-
-.modalCon {
+.modalImage {
     margin: 12px;
     width: 276px;
     height: 226px;
@@ -266,6 +348,18 @@ body {
     border-radius: 10px;
     background: url("./images/game.png") repeat;
 }
+
+
+.modalImage2 {
+    margin: 7px 7px 7px 7px;
+    width: 276px;
+    height: 160px;
+    margin-top: -26px;
+    border-radius: 10px;
+    background: url("./images/game2.png") repeat;
+}
+
+
 
 .modalTitle {
     font-family: "GmarketSansBold";
@@ -299,11 +393,18 @@ body {
     margin: 10px 0px;
 }
 
-.colsebox{
+.closebox{
     display: flex;
     justify-content: end;
     margin-right: 0px;
 }
+
+.closebox2{
+    display: flex;
+    justify-content: end;
+    margin-right: 4px;
+}
+
 
 
 .tag {
@@ -388,6 +489,22 @@ body {
     position:relative;
     z-index: 1;
     margin-top:28px;
+}
+
+#recommend2 {
+    background: #FF6900;
+    border: none;
+    border-radius: 32px;
+    width: 240px;
+    text-align: center;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position:relative;
+    z-index: 1;
+    margin-top:32px;
 }
 
 

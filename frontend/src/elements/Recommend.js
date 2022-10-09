@@ -1,6 +1,6 @@
 import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
-import progresschar from "../images/progressCHAR.png";
+
 
 
 const Recommend = (props) => {
@@ -17,10 +17,10 @@ const Recommend = (props) => {
                     onClick={(e) => {
                         e.stopPropagation();
                     }}>
-                    <div className="colsebox">
+                    <div className="closebox">
                         <CloseOutlined className="closeBtn" onClick={handleCloseBtn} />
                     </div>
-                    <div className="modalCon">
+                    <div className="modalImage">
 
                         <div className="modalTitle">
                             AI 게임 추천 서비스를 받아보세요!
