@@ -10,7 +10,7 @@ import twitter from "../images/twitter.png";
 import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
-import Popular_game_slide from "../elements/Popular_game_slide";
+import Slider from "../elements/Slider";
 
 
 const Home = (props) => {
@@ -115,7 +115,7 @@ const Home = (props) => {
 
             </div>
             <Ad_game/>
-            <Popular_game_slide/>
+            <Slider/>
 
 
 
