@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Header from "./elements/Header";
 import Loading from "./pages/Loading";
 import Test from "./pages/Test"
-import recgogo from "./elements/Popup_rec_gogo";
+import Result from "./pages/Result"
 
 
 function App() {
@@ -15,8 +15,9 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route element={<Home/>} path={"/"}/>
-                    <Route element={<recgogo/>} path={"/recgogo"}/>
+                    <Route element={<Loading/>} path={"/loading"}/>
                     <Route element={<Test/>} path={"/test"}/>
+                    <Route element={<Result/>} path={"/result"}/>
                 </Routes>
             </BrowserRouter>
         </div>

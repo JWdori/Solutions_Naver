@@ -114,11 +114,9 @@ const Home = (props) => {
                 ></img>
 
             </div>
-            <Ad_game>
-            </Ad_game>
+            <Ad_game/>
+            <Popular_game_slide/>
 
-            <Popular_game_slide>
-            </Popular_game_slide>
 
 
 
