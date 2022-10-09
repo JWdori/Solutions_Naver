@@ -356,29 +356,6 @@ body {
 }
 
 
-.starBox {
-    z-index: 1000;
-    margin-left: 55px;
-    margin-right: 10px;
-    height: 19px;
-    overflow: hidden;
-}
-
-.pointOfStar {
-    z-index: 10;
-    height: 19px;
-    width: 100px;
-}
-
-.backgroundStar {
-    position: absolute;
-    margin-left: 84px;
-    width: 100px;
-    height: 19px;
-}
-
-
-
 
 .modalCon {
     border: 1px solid #FF6900;
@@ -398,7 +375,6 @@ body {
     background-color: #FF6900;
     align-items: center;
 }
-
 
 
 .closeBtn {
@@ -696,6 +672,75 @@ body {
 }
 
 
+.resultImg1
+{
+    width: 300px;
+    height: 120px;
+    background: #929292;
+    margin-top: 40px;
+}
+
+.resultImg2
+{
+    width: 300px;
+    height: 280px;
+    background: #929292;
+    margin-top: 20px;
+}
+
+.resultImg3
+{
+    width: 300px;
+    height: 135px;
+    background: #929292;
+    margin-top: 30px;
+}
+
+.resultBar{
+    width: 300px;
+    height: 185px;
+    background: #929292;
+    margin-top: 30px;
+}
+
+.resultText{
+    display:inline-block;
+    /*margin-bottom: */
+}
+
+#resultGameBtn{
+    background: #FF6900;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.resultRecommend{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#regameBtn{
+    width: 130px;
+    height: 40px;
+    background: #EF7A29;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 #resultAll {
     background-color: #6aa99e;
     border: none;
@@ -708,6 +753,7 @@ body {
     font-size: 14px;
     color: #fffef5;
 }
+
 
 
 #scorebutton {
@@ -725,9 +771,51 @@ body {
     font-size: 16px;
     color: #FF6900;
 }
-#scorebutton:active{
-    font-size:16px;
+#scorebutton:active {
+    font-size: 16px;
     color: white;
     background: #FF6900;
     border-width: 0px;
+}
+
+.similarGame{
+    width: 300px;
+    height: 206px;
+    color:white;
+    margin-top:40px;
+}
+
+.gameRating{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.gameRanking{
+    margin: 6px;
+}
+
+#allGameBtn{
+    background: #FF6900;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#allTypeBtn{
+    background: #D9D9D9;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    color: #343434;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+
 }
