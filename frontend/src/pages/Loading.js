@@ -7,7 +7,7 @@ const Loading = (props) => {
     const navigate = useNavigate();
     React.useEffect(() => {
         setTimeout(() => {
-            navigate("/test");
+            navigate("/tutorial");
         }, 4000);
 
     })

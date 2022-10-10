@@ -1,0 +1,67 @@
+import React from "react";
+import {useNavigate} from "react-router-dom";
+
+import Header from "../elements/Header";
+import img from "../images/ranking1.png";
+
+const Tutorial = (props) => {
+    const navigate = useNavigate();
+    const [step, setStep] = React.useState(0);
+    const [name, setName] = React.useState("");
+    const text =
+        ["내이름은 가르반 4세라고 하네. 사악할 용을 퇴치할 용사는 이름을 알려주겠나?",
+            "그래 용사" + name + "이여, 먼저 싫어하는 게임 장르가 있는가?",
+            "자네는 이제 사악한 흑염룡을 물리쳐서 왕국을 구해주면 된다네. 이곳이 자네에게 알맞은 게임을 찾기 위해 만들어진 세계라는 것은 알고 있을테지. 자네에 선택에 따라 이 세계의 운명이 바뀌니 모든 대답은 게임 스타일대로 대답해 줄 것이라 믿겠네."]
+    const textSize = [120, 120, 250];
+    const btnText = [
+        "나를 소개한다",
+        "완료",
+        "다음"
+    ];
+    const btnSize = ["300px", "170px", "170px"]
+
+    const onClick = (num) => {
+
+        if (step < 2) setStep(step + 1);
+        else if (step === 2) {
+            navigate("/test");
+        }
+
+    };
+    return (
+        <>
+            <Header isBack={true}/>
+            {/*프로그래스바 넣어야함 넣어줘도리씨*/}
+            <div className={""}>
+                <img
+                    className=""
+                    src={img}
+                    alt="img"
+                    width="220px"
+                    height="220px"
+                />
+                <div className={"tutorialText"}
+                     style={{height: textSize[step]}}>
+                    {text[step]}
+                </div>
+            </div>
+
+            <div
+             style={{color:"white"}}>
+                이제 여기 사이에 이름 받는 컴포넌트나
+                아니면 그 게임소거하는거 넣으면 됩니다
+                참고로 step 2에서는 이 div는 사라집니다...
+            </div>
+
+            <div className={"tutorialBtn"}>
+                <button id={"tutorialBtn"}
+                        style={{width: btnSize[step]}}
+                        onClick={onClick}>
+                    {btnText[step]}
+                </button>
+            </div>
+        </>
+    );
+};
+
+export default Tutorial;
