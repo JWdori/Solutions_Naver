@@ -8,7 +8,7 @@ const Genre = (props) => {
 
     return (
         <>
-            <div className="genreBox1" style={{marginTop:"20px"}}>
+            <div className="genreBox1" style={{marginTop:"40px"}}>
                 <button id="genreButton">
                     RPG
                 </button>
@@ -22,7 +22,7 @@ const Genre = (props) => {
                     공포
                 </button>
             </div>
-                <div className="genreBox1" style={{marginBottom:"40px", marginTop:"12px"}}>
+                <div className="genreBox1" style={{marginBottom:"30px", marginTop:"12px"}}>
                 <button id="genreButton">
                     RPG
                 </button>

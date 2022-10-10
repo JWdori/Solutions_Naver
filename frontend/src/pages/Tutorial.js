@@ -5,6 +5,7 @@ import Header from "../elements/Header";
 import img from "../images/tutorial/tutorial_king.png";
 import Progress from "../elements/Progress_test";
 import Genre from "../elements/Genre";
+import Name from "../elements/Name";
 
 const Tutorial = (props) => {
     const navigate = useNavigate();
@@ -51,7 +52,7 @@ const Tutorial = (props) => {
 
             <div
              style={{color:"white"}}>
-                <Genre></Genre>
+                <Name></Name>
             </div>
 
             <div className={"tutorialBtn"}>
