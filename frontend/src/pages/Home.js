@@ -11,6 +11,7 @@ import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
 import Slider from "../elements/Slider";
+import Serviceintroduce from "../elements/ServiceIntroduce";
 
 
 const Home = (props) => {
@@ -28,7 +29,10 @@ const Home = (props) => {
         <>
             <Header isBack={false}/>
             <div className="mainDesc">
-                여기에 우리 거 설명이 들어감
+                게임유형 검사를 받아보고,
+                AI기반 게임 추천 서비스를 경험해보세요!
+                내가 만약 게임속 주인공이라면?
+
             </div>
 
             <img
@@ -41,7 +45,7 @@ const Home = (props) => {
 
             <div className="gameIntro">
                 <img
-                    className="homeGameIcon"
+                    className="homeGameIcon1"
                     src={gameIcon}
                     alt="img"
                     width="24px"
@@ -49,7 +53,7 @@ const Home = (props) => {
                 ></img>
                 <span>  평소 게임 스타일을 이입해서 답변해주세요   </span>
                 <img
-                    className="homeGameIcon"
+                    className="homeGameIcon2"
                     src={gameIcon}
                     alt="img"
                     width="24px"
@@ -116,6 +120,7 @@ const Home = (props) => {
             </div>
             <Ad_game/>
             <Slider/>
+            <Serviceintroduce></Serviceintroduce>
 
 
 
