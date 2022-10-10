@@ -2,8 +2,9 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 
 import Header from "../elements/Header";
-import img from "../images/ranking1.png";
+import img from "../images/tutorial/tutorial_king.png";
 import Progress from "../elements/Progress_test";
+import Genre from "../elements/Genre";
 
 const Tutorial = (props) => {
     const navigate = useNavigate();
@@ -50,9 +51,7 @@ const Tutorial = (props) => {
 
             <div
              style={{color:"white"}}>
-                이제 여기 사이에 이름 받는 컴포넌트나
-                아니면 그 게임소거하는거 넣으면 됩니다
-                참고로 step 2에서는 이 div는 사라집니다...
+                <Genre></Genre>
             </div>
 
             <div className={"tutorialBtn"}>

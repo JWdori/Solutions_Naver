@@ -711,6 +711,34 @@ body {
     text-align: center;
     line-height: 30px;
 }
+.genreBox1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#genreButton{
+    cursor: pointer;
+   height: 44px;
+    width: 66px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+    background: none;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: 500;
+    border-width: 2.5px;
+    border-radius: 10px;
+    border: solid;
+    border-color: #FF6900;
+    margin-right: 12px;
+}
+
+#genreButton:focus{
+    background: #FF6900;
+    border-width: 0px;
+}
 
 
 .shareIcon {
