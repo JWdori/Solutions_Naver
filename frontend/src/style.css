@@ -675,8 +675,9 @@ body {
 }
 
 .progress-div {
-
-    background-color: #FF8936;
+    background-color: rgba(246, 246, 246, 0.5);
+    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .progress {

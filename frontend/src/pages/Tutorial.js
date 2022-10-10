@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 import Header from "../elements/Header";
 import img from "../images/ranking1.png";
+import Progress from "../elements/Progress_test";
 
 const Tutorial = (props) => {
     const navigate = useNavigate();
@@ -31,7 +32,8 @@ const Tutorial = (props) => {
     return (
         <>
             <Header isBack={true}/>
-            {/*프로그래스바 넣어야함 넣어줘도리씨*/}
+            <Progress width={300} percent={0} />
+
             <div className={""}>
                 <img
                     className=""
