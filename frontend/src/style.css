@@ -2033,3 +2033,17 @@ body {
 .testAnswer:visited {
     color: #000000;
 }
+
+.h3Container {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+.resultH3 {
+    font-family: "GmarketSansBold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF6900;
+    margin: 2px;
+}
