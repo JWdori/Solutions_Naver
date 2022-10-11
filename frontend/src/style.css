@@ -639,7 +639,7 @@ body {
 }
 .homeGameIcon1{
     margin-top: 1px;
-  margin-right: 4px;
+    margin-right: 4px;
 }
 .homeGameIcon2{
     margin-top: 1px;
@@ -757,7 +757,7 @@ body {
 
 #genreButton{
     cursor: pointer;
-   height: 44px;
+    height: 44px;
     width: 66px;
     line-height: 22px;
     text-align: center;
@@ -1020,4 +1020,1000 @@ body {
     background: rgba(217, 217, 217, 0.1);
     border-radius: 20px;
     color:white;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+html {
+    -ms-content-zooming: none;
+    -ms-touch-action: pan-x pan-y;
+}
+
+
+body {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background: black;
+}
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+
+    /*background-color: rgba(0, 0, 0, 0);*/
+    margin-top: 60px;
+}
+
+.back {
+    margin-bottom: 18px;
+    margin-left: -120px;
+    margin-right: 95px;
+    cursor: pointer;
+}
+
+
+.headerContainer {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    max-height: 60px;
+    left: 0px;
+    top: 0px;
+
+    /* main1 */
+    background: #FF6900;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 15px;
+}
+
+
+.ad_game {
+    margin-top: 80px;
+    /*margin-right: 30px;*/
+    /*margin-left: 30px;*/
+
+    height: 440px;
+    left: 31px;
+    top: 117px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #929292;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.serviceintroduce {
+
+}
+
+.ad_game_font {
+    height: 40px;
+    margin-top: 20px;
+    font-family: "G마켓 산스 TTF Medium";
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.ad_game_box {
+    display: flex;
+    align-items: center;
+}
+
+
+.ad_game_image {
+    border-radius: 10px;
+    z-index: 1;
+    position: relative
+}
+
+.ad_game_name {
+    margin-top: 8px;
+    height: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ad_game_tag {
+    height: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+}
+
+.ad_game_sum {
+    height: 38px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FF6900;
+    text-align: center;
+}
+
+
+#adgamebutton {
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 111px;
+    height: 40px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 16px;
+}
+
+#adgamebutton:active {
+    background: #D9D9D9;
+    color: black;
+    font-weight: bold;
+}
+
+
+.ad_game_box_black_1 {
+    margin-top: -444px;
+    height: 420px;
+    width: 32px;
+    background: black;
+    margin-left: -16px;
+}
+
+
+.ad_game_box_black_2 {
+    height: 420px;
+    width: 32px;
+    background: black;
+    margin-left: 300px;
+}
+
+
+.popular_result_box {
+    height: 186px;
+
+    background: none;
+}
+
+.popular_result_font {
+    height: 40px;
+    font-family: "G마켓 산스 TTF Medium";
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+
+.popular_result_left {
+    background: black;
+    margin-right: 20px;
+}
+
+
+.popular_result_right {
+    background: black;
+    margin-left: 20px;
+}
+
+
+.popular_result_slide_box {
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.popular_result_result {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.popular_result_game {
+    border-radius: 20px;
+}
+
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.modalPost {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 250px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
+.stars {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    margin-top: -0.5em;
+}
+
+.FontAwesomeIcon {
+    cursor: pointer;
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.blank {
+
+    color: #8A8A8A;
+}
+
+.modalstar {
+    margin-top: 30px;
+}
+
+.lit {
+    color: #FF8936;
+    text-shadow: -1px 0 #FF6900, 0 1px #FF6900, 1px 0 #FF6900, 0 -1px #FF6900;
+}
+
+
+.modalPost2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 173px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
+.modalPost3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
+.modalPost4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 220px;
+    background-color: #fffef5;
+    overflow: auto;
+    overflow: x-hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: #FF6900
+}
+
+.servicebox {
+
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.serviceTitle1 {
+    font-family: "GmarketSansBold";
+    color: #FF6900;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.serviceTitleBox {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.serviceSemiBox {
+    display: flex;
+    align-items: start;
+    margin-top: 12px;
+    justify-content: start;
+}
+
+.NameQ {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FF6900;
+    font-family: "Noto Sans KR";
+}
+
+.NameBox {
+    height: 40px;
+    width: 124px;
+    background: #76767620;
+    border-radius: 10px;
+    border: solid 2px;
+    margin-top: 10px;
+    font-family: "Noto Sans KR";
+    color: white;
+    line-height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.servicecContentBox {
+    margin-top: 20px;
+
+}
+
+
+.servicesemi {
+    font-size: 18px;
+    font-family: "Noto Sans KR";
+    font-weight: 600;
+    color: #FF6900;
+}
+
+
+.Contact {
+    margin-top: 80px;
+    font-size: 16px;
+    font-family: "Noto Sans KR";
+    color: white;
+    display: flow;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.Email {
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    color: #b4b4b4;
+}
+
+
+.servicecontent {
+    margin-bottom: 8px;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+
+.modalHeadFont {
+
+    color: white;
+    font-family: "GmarketSansLight";
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.modalTitleresult {
+    font-family: "GmarketSansBold";
+    text-align: start;
+    font-size: 22px;
+    color: #6aa99e;
+    margin: 15px 0px 10px 0px;
+}
+
+.modalSemiresult {
+    font-family: "Noto Sans KR";
+    text-align: start;
+    font-weight: 550;
+    font-size: 13px;
+    line-height: 19px;
+    color: #6aa99e;
+}
+
+
+.modalCon {
+    border: 1px solid #FF6900;
+    padding: 20px;
+}
+
+
+.modalHead {
+
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    background-color: #FF6900;
+    align-items: center;
+}
+
+
+.closeBtn {
+    margin: 18px;
+    width: 14px;
+    height: 14px;
+    color: #fffef5;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.closeBtn2 {
+    margin: 9px;
+    width: 14px;
+    height: 14px;
+    color: #fffef5;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.modalImage {
+    margin: 12px;
+    width: 276px;
+    height: 226px;
+    margin-top: -38px;
+    border-radius: 10px;
+    background: url("./images/game.png") repeat;
+}
+
+
+.modalImage2 {
+    margin: 7px 7px 7px 7px;
+    width: 276px;
+    height: 160px;
+    margin-top: -26px;
+    border-radius: 10px;
+    background: url("./images/game2.png") repeat;
+}
+
+
+.modalTitle {
+    font-family: "GmarketSansBold";
+    width: 160px;
+    text-align: start;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 30px;
+    margin-left: 20px;
+    color: white;
+}
+
+.modalSemi {
+    font-family: "Noto Sans KR";
+    text-align: start;
+    font-weight: lighter;
+    width: 240px;
+    margin-left: 20px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+}
+
+.modalDetail {
+    font-family: "Noto Sans KR";
+    text-align: start;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    margin: 10px 0px;
+}
+
+.closebox {
+    display: flex;
+    justify-content: end;
+    margin-right: 0px;
+}
+
+.closebox2 {
+    display: flex;
+    justify-content: end;
+    margin-right: 4px;
+}
+
+
+.tag {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 12px;
+    color: #fffef5;
+    background: #6999b5;
+    border-radius: 100px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.mainDesc {
+    width: 300px;
+    height: 123px;
+    left: 31px;
+    top: 117px;
+    margin-top: 30px;
+    background: #D9D9D9;
+}
+
+
+.home {
+    margin-top: 60px;
+}
+
+
+.gameIntro {
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.homeGameIcon1 {
+    margin-top: 1px;
+    margin-right: 4px;
+}
+
+.homeGameIcon2 {
+    margin-top: 1px;
+    margin-left: 4px;
+}
+
+.homeTitle {
+    margin: 8px;
+}
+
+
+#homeGameBtn {
+    background: #FF6900;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+#recommend {
+    background: #FF6900;
+    border: none;
+    border-radius: 32px;
+    width: 240px;
+    text-align: center;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+}
+
+#recommend2 {
+    background: #FF6900;
+    border: none;
+    border-radius: 32px;
+    width: 240px;
+    text-align: center;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    margin-top: 32px;
+
+}
+
+
+#rightslidebutton {
+    background: none;
+    margin-left: 20px;
+}
+
+#leftslidebutton {
+    background: none;
+    margin-right: 20px;
+}
+
+.progress-div {
+    background-color: rgba(246, 246, 246, 0.5);
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.progress {
+    background-color: #FF8936;
+    height: 8px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.progresschar {
+    background: none;
+    margin-bottom: 1px;
+    margin-right: -20px;
+}
+
+
+#homeSurveyBtn {
+    background: #FF4337;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.genreBox1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#genreButton {
+    cursor: pointer;
+    height: 44px;
+    width: 66px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+    background: none;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: 500;
+    border-width: 2.5px;
+    border-radius: 10px;
+    border: solid;
+    border-color: #FF6900;
+    margin-right: 12px;
+}
+
+#genreButton:focus {
+    background: #FF6900;
+    border-width: 0px;
+}
+
+
+.shareIcon {
+    margin: 5px;
+    cursor: pointer;
+    padding: 1px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.shareText {
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareTextIcon {
+    margin-left: 10px;
+
+}
+
+
+#loading {
+    display: inline-block;
+    padding: 100px;
+    font-size: 20px;
+    animation: fadein 3s ease-in-out;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+.resultImg1 {
+    width: 300px;
+    height: 120px;
+    background: #929292;
+    margin-top: 40px;
+}
+
+.resultImg2 {
+    width: 300px;
+    height: 280px;
+    background: #929292;
+    margin-top: 20px;
+}
+
+.resultImg3 {
+    width: 300px;
+    height: 135px;
+    background: #929292;
+    margin-top: 30px;
+}
+
+.resultBar {
+    width: 300px;
+    height: 185px;
+    background: #929292;
+    margin-top: 30px;
+}
+
+.resultText {
+    display: inline-block;
+    /*margin-bottom: */
+}
+
+#resultGameBtn {
+    background: #FF6900;
+    border: none;
+    border-radius: 32.5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.resultRecommend {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#regameBtn {
+    width: 130px;
+    height: 40px;
+    background: #EF7A29;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+#scorebutton {
+    background: none;
+    border: #FF6900;
+    border-radius: 10px;
+    border: solid 2px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Noto Sans KR";
+    font-weight: bold;
+    font-size: 16px;
+    color: #FF6900;
+}
+
+#scorebutton:active {
+    font-size: 16px;
+    color: white;
+    background: #FF6900;
+    border-width: 0px;
+}
+
+.similarGame {
+    width: 300px;
+    height: 206px;
+    color: white;
+    margin-top: 40px;
+}
+
+.gameRating {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.gameRanking {
+    margin: 6px;
+}
+
+#allGameBtn {
+    background: #FF6900;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+#allTypeBtn {
+    background: #D9D9D9;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    color: #343434;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.tutorialBtn {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#tutorialBtn {
+    background: #FF6900;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tutorialText {
+    margin-top: 20px;
+    width: 300px;
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 20px;
+    color: white;
+}
+
+.questionTxt {
+    margin-top: 20px;
+    width: 300px;
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 20px;
+    color: white;
+    display: inline-block;
+}
+
+.questionImg{
+    margin-top: 35px;
+}
+
+.testAnswer{
+    width: 300px;
+    height: 52px;
+    background-color:#6aa99e;
+    border: #FF6900 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.testAnswer:active {
+    background: #6aa99e;
+    color: #fffef5;
+    border-radius: 32.5px;
+    border: 2px solid #6aa99e;
+    padding: 0;
+}
+
+.testAnswer:visited {
+    color: #000000;
 }
