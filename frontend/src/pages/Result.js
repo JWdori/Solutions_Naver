@@ -40,7 +40,7 @@ const Result = (props) => {
     };
     return (
         <>
-            <Header isBack={true}/>
+            <Header isBack={false}/>
             <div className="resultBox">
 
 

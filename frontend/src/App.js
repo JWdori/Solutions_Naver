@@ -8,6 +8,7 @@ import Loading from "./pages/Loading";
 import Test from "./pages/Test"
 import Result from "./pages/Result"
 import Tutorial from "./pages/Tutorial"
+import BeforeResult from "./pages/BeforeResult"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <Route element={<Test/>} path={"/test"}/>
                     <Route element={<Result/>} path={"/result"}/>
                     <Route element={<Tutorial/>} path={"/tutorial"}/>
+                    <Route element={<BeforeResult/>} path={"/beforeResult"}/>
                 </Routes>
             </BrowserRouter>
         </div>

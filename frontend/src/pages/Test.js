@@ -124,7 +124,7 @@ const Test = (props) => {
         setTime(false);
         if (step < 13) setStep(step + 1);
         else if (step === 13) {
-            navigate("/result")
+            navigate("/beforeResult")
         }
         // select[step] = num;
     };
