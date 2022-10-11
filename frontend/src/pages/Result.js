@@ -4,7 +4,7 @@ import Header from "../elements/Header";
 import Recommend from "../elements/Recommend";
 import Recommendnext from "../elements/Recommendnext";
 import Resultmodal from "../elements/Resultmodal";
-
+import type1 from "../images/type1.png"
 
 import graph1 from "../images/graph1.png"
 import graph2 from "../images/graph2.png"
@@ -43,40 +43,50 @@ const Result = (props) => {
             <Header isBack={true}/>
             <div className="resultBox">
 
+                <img
+                    style={{marginTop:"-100px",marginRight:"16px"}}
+                    id=""
+                    src={chat1}
+                    alt="img"
+                    width={"25px"}
+                    height={"16px"}
+                ></img>
 
+                <div className={"resultText1"}>
+                    용사는 압도적인 무력으로<br/>
+                    사악한 용을 물리치고<br/>
+                    왕국에 평화를 가져왔습니다.
+                </div>
+                <img
+                    style={{marginTop:"90px", marginLeft:"16px"}}
+                    id=""
+                    src={chat2}
+                    alt="img"
+                    width={"25px"}
+                    height={"16px"}
+                ></img>
             </div>
-            <div className={"resultText1"}>
-                용사는 압도적인 무력으로<br/>
-                사악한 용을 물리치고<br/>
-                왕국에 평화를 가져왔습니다.
-            </div>
-            <img
-                style={{marginTop:"10px"}}
-                id=""
-                src={chat1}
-                alt="img"
-                width={"25px"}
-                height={"16px"}
-            ></img>
-            <img
-                style={{marginTop:"10px"}}
-                id=""
-                src={chat2}
-                alt="img"
-                width={"25px"}
-                height={"16px"}
-            ></img>
-
-
-            <div className={"resultImg2"}>
+            <div className={"resultImg2"}style={{marginTop:"0px"}}>
                 두번째 img 규격만 잡아 놓을게용
             </div>
-            <div className={"resultImg3"}>
-                세번째 img 규격만 잡아 놓을게용
+            <img
+                id=""
+                src={type1}
+                alt="img"
+                width={"272px"}
+                height={"60pxpx"}
+            ></img>
+            <div className={"resultImg3"} style={{marginTop:"-6px"}}>
+                당신의 압도적인 힘에 사악한 흑염룡은 최후의 순간까지 자신을 변호하려 했지만, 당신은 듣지 않고 최후의 일격을 날렸어요.
+                홀로 사악한 흑염룡을 물리친 당신은 왕국의 은인입니다!
             </div>
+            <div className={"resultImg3"}>
+                던전에서 나오니 왕과 수많은 병사들이 당신을 맞이해주네요. 개선식이라도 열어주려는 걸까요...?
+            </div>
+
             <div className={"resultBar"}>
-                <div className="resultBox">
-                    <div style={{marginTop:"10px",marginRight:"10px"}}>개인 &nbsp;</div>
+                <div className="resultBoxgraph">
+                    <div style={{marginTop:"10px",marginRight:"20px"}}>개인 &nbsp;</div>
                     <img
                         style={{marginTop:"10px"}}
                         id=""
@@ -85,10 +95,10 @@ const Result = (props) => {
                         width={"185px"}
                         height={"30px"}
                     ></img>
-                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 협동</div><br/>
+                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 협동</div><br/>
                 </div>
-                <div className="resultBox">
-                    <div style={{marginTop:"10px",marginRight:"10px"}}>모험 &nbsp;</div>
+                <div className="resultBoxgraph">
+                    <div style={{marginTop:"10px",marginRight:"20px"}}>모험 &nbsp;</div>
                     <img
                         id=""
                         src={graph2}
@@ -97,22 +107,22 @@ const Result = (props) => {
                         height={"30px"}
                         style={{marginTop: "10px"}}
                     ></img>
-                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 공략</div><br/>
+                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 공략</div><br/>
                 </div>
-                <div className="resultBox">
-                    <div style={{marginTop:"10px",marginRight:"10px"}}>감각 &nbsp;</div>
+                <div className="resultBoxgraph">
+                    <div style={{marginTop:"10px",marginRight:"20px"}}>감각 &nbsp;</div>
                     <img
                         id=""
-                        src={graph3}
+                        src={graph1}
                         alt="img"
                         width={"185px"}
                         height={"30px"}
                         style={{marginTop: "10px"}}
                     ></img>
-                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 직관</div><br/>
+                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 직관</div><br/>
                 </div>
-                <div className="resultBox">
-                    <div style={{marginTop:"10px",marginRight:"10px"}}>완성 &nbsp;</div>
+                <div className="resultBoxgraph">
+                    <div style={{marginTop:"10px",marginRight:"20px"}}>완성 &nbsp;</div>
                     <img
                         id=""
                         src={graph4}
@@ -121,7 +131,7 @@ const Result = (props) => {
                         height={"30px"}
                         style={{marginTop: "10px"}}
                     ></img>
-                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 재미</div><br/>
+                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 재미</div><br/>
                 </div>
             </div>
 
@@ -196,7 +206,7 @@ const Result = (props) => {
                     }}
                 ></img>
             </div>
-            <button id="regameBtn" onClick={onGameClick}>
+            <button id="regameBtn" style={{marginBottom:"60px"}} onClick={onGameClick}>
                 다시하기
             </button>
 

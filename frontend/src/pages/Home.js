@@ -135,6 +135,10 @@ const Home = (props) => {
             </div>
             <Ad_game/>
             <Slider/>
+            <button id="allGameBtn" style={{marginBottom:"80px"}}>
+                모든 인기 게임 확인하기
+            </button>
+
             <Serviceintroduce></Serviceintroduce>
 
 

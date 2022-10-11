@@ -440,7 +440,7 @@ body {
 .modalHeadFont {
 
     color: white;
-    font-family: "GmarketSansLight";
+    font-family: "Gmarket Sans";
     font-weight: bold;
     font-size: 16px;
     margin: 20px;
@@ -787,11 +787,13 @@ body {
 }
 
 .shareText{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .shareTextIcon{
@@ -838,18 +840,20 @@ body {
     font-family: "Gmarket Sans";
     font-weight: bold;
     font-size: 20px;
-    margin-top: 40px;
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
     line-height: 150%;
+    position: relative;
+    z-index: 1;
 }
 .resultTextBox{
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 
 
@@ -861,16 +865,9 @@ body {
     margin-top: 20px;
 }
 
-.resultImg3
-{
-    width: 300px;
-    height: 135px;
-    background: #929292;
-    margin-top: 30px;
-}
 
 .resultBar{
-    margin-top: 20px;
+    margin-top: 0px;
     display: flow;
     align-items: center;
 }
@@ -889,8 +886,20 @@ body {
     font-family: "Gmarket Sans";
     font-size: 16px;
     color: white;
+    margin-top: 40px;
+}
+
+.resultBoxgraph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    color: white;
 
 }
+
 
 #resultGameBtn{
     background: #FF6900;
@@ -957,6 +966,9 @@ body {
     height: 206px;
     color:white;
     margin-top:40px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Gmarket Sans";
 }
 
 .gameRating{
@@ -1104,11 +1116,11 @@ body {
 .ad_game_font {
     height: 40px;
     margin-top: 20px;
-    font-family: "G마켓 산스 TTF Medium";
+    font-family: "Gmarket Sans";
     text-align: center;
     line-height: 40px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
     margin-bottom: 12px;
 }
@@ -1197,7 +1209,7 @@ body {
 
 .popular_result_box {
     height: 186px;
-
+    margin-bottom: 20px;
     background: none;
 }
 
@@ -1359,13 +1371,13 @@ body {
 .servicebox {
 
     width: 100%;
-    margin-top: 80px;
+
     margin-left: 80px;
     margin-right: 80px;
 }
 
 .serviceTitle1 {
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     color: #FF6900;
     font-weight: bold;
     font-size: 24px;
@@ -1452,14 +1464,14 @@ body {
 .modalHeadFont {
 
     color: white;
-    font-family: "GmarketSansLight";
+    font-family: "Gmarket Sans";
     font-weight: bold;
     font-size: 16px;
     margin: 20px;
 }
 
 .modalTitleresult {
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     text-align: start;
     font-size: 22px;
     color: #6aa99e;
@@ -1537,7 +1549,7 @@ body {
 
 
 .modalTitle {
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     width: 160px;
     text-align: start;
     font-size: 16px;
@@ -1820,7 +1832,7 @@ body {
 
 
 .resultImg1 {
-    width: 300px;
+    width: 320px;
     height: 120px;
     background: #929292;
     margin-top: 40px;
@@ -1834,10 +1846,19 @@ body {
 }
 
 .resultImg3 {
-    width: 300px;
-    height: 135px;
-    background: #929292;
-    margin-top: 30px;
+    width: 320px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    line-height: 160%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: none;
 }
 
 
@@ -1876,7 +1897,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -1925,6 +1946,7 @@ body {
     border-radius: 8px;
     width: 300px;
     height: 50px;
+    line-height: 25px;
     color: white;
     cursor: pointer;
     margin-bottom: 20px;
