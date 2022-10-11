@@ -22,7 +22,10 @@ import copperCrown from "../images/crown3.png"
 import r1 from "../images/ranking1.png"
 import r2 from "../images/ranking2.png"
 import r3 from "../images/ranking3.png"
+import chat1 from "../images/chat_1_gray.png"
+import chat2 from "../images/chat_2_gray.png"
 import Ad_game from "../elements/Ad_game";
+import Serviceintroduce from "../elements/ServiceIntroduce";
 
 
 const Result = (props) => {
@@ -38,9 +41,21 @@ const Result = (props) => {
     return (
         <>
             <Header isBack={true}/>
-            <div className={"resultImg1"}>
-                첫번째 img 규격만 잡아 놓을게용
+            <div className={"resultText1"}>
+                용사는 압도적인 무력으로<br/>
+                사악한 용을 물리치고<br/>
+                왕국에 평화를 가져왔습니다.
             </div>
+            <img
+                style={{marginTop:"10px"}}
+                id=""
+                src={chat1}
+                alt="img"
+                width={"185px"}
+                height={"30px"}
+            ></img>
+
+
             <div className={"resultImg2"}>
                 두번째 img 규격만 잡아 놓을게용
             </div>
@@ -48,59 +63,67 @@ const Result = (props) => {
                 세번째 img 규격만 잡아 놓을게용
             </div>
             <div className={"resultBar"}>
-                <span className={"resultText"}>개인 &nbsp;</span>
-                <img
-                    id=""
-                    src={graph1}
-                    alt="img"
-                    width={"185px"}
-                    height={"30px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <span>&nbsp; 협동</span><br/>
-                <span>모험 &nbsp;</span>
-                <img
-                    id=""
-                    src={graph2}
-                    alt="img"
-                    width={"185px"}
-                    height={"30px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <span>&nbsp; 공략</span><br/>
-                <span>감각 &nbsp;</span>
-                <img
-                    id=""
-                    src={graph3}
-                    alt="img"
-                    width={"185px"}
-                    height={"30px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <span>&nbsp; 직관</span><br/>
-                <span>완성 &nbsp;</span>
-                <img
-                    id=""
-                    src={graph4}
-                    alt="img"
-                    width={"185px"}
-                    height={"30px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <span>&nbsp; 재미</span><br/>
+                <div className="resultBox">
+                    <div style={{marginTop:"10px",marginRight:"10px"}}>개인 &nbsp;</div>
+                    <img
+                        style={{marginTop:"10px"}}
+                        id=""
+                        src={graph1}
+                        alt="img"
+                        width={"185px"}
+                        height={"30px"}
+                    ></img>
+                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 협동</div><br/>
+                </div>
+                <div className="resultBox">
+                    <div style={{marginTop:"10px",marginRight:"10px"}}>모험 &nbsp;</div>
+                    <img
+                        id=""
+                        src={graph2}
+                        alt="img"
+                        width={"185px"}
+                        height={"30px"}
+                        style={{marginTop: "10px"}}
+                    ></img>
+                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 공략</div><br/>
+                </div>
+                <div className="resultBox">
+                    <div style={{marginTop:"10px",marginRight:"10px"}}>감각 &nbsp;</div>
+                    <img
+                        id=""
+                        src={graph3}
+                        alt="img"
+                        width={"185px"}
+                        height={"30px"}
+                        style={{marginTop: "10px"}}
+                    ></img>
+                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 직관</div><br/>
+                </div>
+                <div className="resultBox">
+                    <div style={{marginTop:"10px",marginRight:"10px"}}>완성 &nbsp;</div>
+                    <img
+                        id=""
+                        src={graph4}
+                        alt="img"
+                        width={"185px"}
+                        height={"30px"}
+                        style={{marginTop: "10px"}}
+                    ></img>
+                    <div style={{marginTop:"10px",marginLeft:"10px"}}>&nbsp; 재미</div><br/>
+                </div>
             </div>
 
-            <div className="resultRecommend">
+            <div className="gameIntro" style={{marginTop:"40px"}}>
                 <img
-                    className="homeGameIcon"
+                    className="homeGameIcon1"
                     src={gameIcon}
                     alt="img"
                     width="24px"
                     height="24px"
                 ></img>
-                <span>검사 결과를 기반으로 게임이 추천됩니다 </span>
+                <span>  겸사 결과를 기반으로 게임이 추천됩니다.   </span>
                 <img
-                    className="homeGameIcon"
+                    className="homeGameIcon2"
                     src={gameIcon}
                     alt="img"
                     width="24px"
@@ -235,6 +258,9 @@ const Result = (props) => {
 
 
             <Ad_game/>
+
+            <Serviceintroduce></Serviceintroduce>
+
             {/*<div className={"gameIntro"}>*/}
             {/*    결과화면*/}
             {/*    <button id="resultAll" onClick={handleShowPopup}>*/}

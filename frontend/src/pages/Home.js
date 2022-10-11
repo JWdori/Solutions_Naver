@@ -28,12 +28,27 @@ const Home = (props) => {
     return (
         <>
             <Header isBack={false}/>
-            <div className="mainDesc">
-                게임유형 검사를 받아보고,
-                AI기반 게임 추천 서비스를 경험해보세요!
-                내가 만약 게임속 주인공이라면?
-
+            <div className="mainSubTitle">
+                게임유형 검사와 게임 추천 서비스를 경험해보세요!
             </div>
+            <div className="mainBox">
+                <div className="mainTitle">
+                    내가 만약&nbsp;
+                </div>
+                <div className="mainTitle"style={{fontSize:"28px",color:"#FF6900"}}>
+                    게임&nbsp;
+                </div>
+                <div className="mainTitle">
+                    속&nbsp;
+                </div>
+                <div className="mainTitle"style={{fontSize:"28px",color:"#FF6900"}}>
+                    용사
+                </div>
+                <div className="mainTitle">
+                    라면?
+                </div>
+            </div>
+
 
             <img
                 id="mainImg"

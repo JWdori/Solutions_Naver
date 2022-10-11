@@ -342,13 +342,12 @@ body {
 .servicebox{
 
     width: 100%;
-    margin-top: 80px;
     margin-left: 80px;
     margin-right: 80px;
 }
 
 .serviceTitle1{
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     color: #FF6900;
     font-weight: bold;
     font-size: 24px;
@@ -448,7 +447,7 @@ body {
 }
 
 .modalTitleresult {
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     text-align: start;
     font-size: 22px;
     color: #6aa99e;
@@ -527,7 +526,7 @@ body {
 
 
 .modalTitle {
-    font-family: "GmarketSansBold";
+    font-family: "Gmarket Sans";
     width: 160px;
     text-align: start;
     font-size: 16px;
@@ -594,9 +593,26 @@ body {
 
 
 
+.mainSubTitle {
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    color: #dcdcdc;
+}
 
+.mainTitle {
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: "Gmarket Sans";
+    font-weight: bold;
+    color: white;
+}
 
-
+.mainBox{
+    display: flex;
+    align-items: center;
+}
 
 
 .mainDesc {
@@ -618,6 +634,7 @@ body {
     color:white;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 
 }
 .homeGameIcon1{
@@ -642,7 +659,6 @@ body {
     height: 60px;
     color: white;
     cursor: pointer;
-    margin-top: 30px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 20px;
@@ -817,13 +833,25 @@ body {
 
 
 
-.resultImg1
+.resultText1
 {
-    width: 300px;
-    height: 120px;
-    background: #929292;
+    font-family: "Gmarket Sans";
+    font-weight: bold;
+    font-size: 20px;
     margin-top: 40px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    line-height: 150%;
 }
+.resultTextBox{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .resultImg2
 {
@@ -842,15 +870,27 @@ body {
 }
 
 .resultBar{
-    width: 300px;
-    height: 185px;
-    background: #929292;
-    margin-top: 30px;
+
+    margin-top: 20px;
+    display: flow;
+    align-items: center;
 }
 
 .resultText{
     display:inline-block;
+
     /*margin-bottom: */
+}
+
+.resultBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    color: white;
+
 }
 
 #resultGameBtn{
@@ -861,6 +901,7 @@ body {
     height: 60px;
     color: white;
     cursor: pointer;
+    line-height: 30px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 20px;
@@ -926,6 +967,7 @@ body {
 
 .gameRanking{
     margin: 6px;
+    border-radius: 10px;
 }
 
 #allGameBtn{
