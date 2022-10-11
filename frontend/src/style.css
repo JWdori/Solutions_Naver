@@ -870,7 +870,6 @@ body {
 }
 
 .resultBar{
-
     margin-top: 20px;
     display: flow;
     align-items: center;
@@ -1841,12 +1840,6 @@ body {
     margin-top: 30px;
 }
 
-.resultBar {
-    width: 300px;
-    height: 185px;
-    background: #929292;
-    margin-top: 30px;
-}
 
 .resultText {
     display: inline-block;

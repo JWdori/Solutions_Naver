@@ -41,6 +41,10 @@ const Result = (props) => {
     return (
         <>
             <Header isBack={true}/>
+            <div className="resultBox">
+
+
+            </div>
             <div className={"resultText1"}>
                 용사는 압도적인 무력으로<br/>
                 사악한 용을 물리치고<br/>
@@ -51,8 +55,16 @@ const Result = (props) => {
                 id=""
                 src={chat1}
                 alt="img"
-                width={"185px"}
-                height={"30px"}
+                width={"25px"}
+                height={"16px"}
+            ></img>
+            <img
+                style={{marginTop:"10px"}}
+                id=""
+                src={chat2}
+                alt="img"
+                width={"25px"}
+                height={"16px"}
             ></img>
 
 
