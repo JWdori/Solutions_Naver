@@ -6,7 +6,6 @@ import Header from "../elements/Header";
 const Test = (props) => {
     const navigate = useNavigate();
 
-
     return (
         <>
             <Header isBack={true}/>
