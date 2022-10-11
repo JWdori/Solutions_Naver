@@ -42,10 +42,10 @@ const Serviceintroduce = (props) => {
                         2. 추천된 게임에 대한 선호도 평가를 받습니다.<br></br>
                     </div>
                     <div className="servicecontent" style={{color: "white"}}>
-                        3. 텐투플레이 API가 게임에 대한 유저의 행동패턴을 분석합니다.<br></br>
+                        3. 텐투플레이 API가 유저의 행동패턴을 분석합니다.<br></br>
                     </div>
                     <div className="servicecontent" style={{color: "white"}}>
-                        4. AI가 유저의 선호도에 적합한 게임을 추가로 추천합니다.<br></br>
+                        4. AI가 유저적합한 게임을 추가로 추천합니다.<br></br>
                     </div>
                 </div>
             </div>

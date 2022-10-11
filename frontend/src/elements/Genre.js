@@ -13,27 +13,27 @@ const Genre = (props) => {
                     RPG
                 </button>
                 <button id="genreButton">
-                    공포
+                    스포츠
                 </button>
                 <button id="genreButton">
-                    공포
+                    액션
                 </button>
                 <button id="genreButton" style={{marginRight:"0px"}}>
-                    공포
+                    음악
                 </button>
             </div>
                 <div className="genreBox1" style={{marginBottom:"30px", marginTop:"12px"}}>
                 <button id="genreButton">
-                    RPG
+                    전략
                 </button>
                 <button id="genreButton">
-                    공포
+                    퍼즐
                 </button>
                 <button id="genreButton">
-                    공포
+                    AOS
                 </button>
                 <button id="genreButton" style={{marginRight:"0px"}}>
-                    공포
+                    FPS
                 </button>
             </div>
         </>

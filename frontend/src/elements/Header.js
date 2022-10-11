@@ -32,7 +32,7 @@ const Header = (props) => {
             className="logo"
             src={logo}
             alt="img"
-            width="52px"
+            width="60px"
             height="30px"
             onClick={handleOnClick}
           ></img>

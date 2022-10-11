@@ -5,7 +5,9 @@ import Recommend from "../elements/Recommend";
 import Recommendnext from "../elements/Recommendnext";
 import Resultmodal from "../elements/Resultmodal";
 import type1 from "../images/type1.png"
-
+import typeexample1 from "../images/typeexample1.png"
+import typeexample2 from "../images/typeexample2.png"
+import typeexample3 from "../images/typeexample3.png"
 import graph1 from "../images/graph1.png"
 import graph2 from "../images/graph2.png"
 import graph3 from "../images/graph3.png"
@@ -67,7 +69,7 @@ const Result = (props) => {
                 ></img>
             </div>
             <div className={"resultImg2"}style={{marginTop:"0px"}}>
-                두번째 img 규격만 잡아 놓을게용
+                결과 이미지
             </div>
             <img
                 id=""
@@ -78,10 +80,10 @@ const Result = (props) => {
             ></img>
             <div className={"resultImg3"} style={{marginTop:"-6px"}}>
                 당신의 압도적인 힘에 사악한 흑염룡은 최후의 순간까지 자신을 변호하려 했지만, 당신은 듣지 않고 최후의 일격을 날렸어요.
-                홀로 사악한 흑염룡을 물리친 당신은 왕국의 은인입니다!
+                 홀로 사악한 흑염룡을 물리친 당신은 왕국의 은인입니다!
             </div>
             <div className={"resultImg3"}>
-                던전에서 나오니 왕과 수많은 병사들이 당신을 맞이해주네요. 개선식이라도 열어주려는 걸까요...?
+                당신이 던전에서 나오니 국왕과 수많은 병사들이 당신을 맞이해주네요. 개선식이라도 열어주려는 걸까요...?
             </div>
 
             <div className={"resultBar"}>
@@ -134,6 +136,36 @@ const Result = (props) => {
                     <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 재미</div><br/>
                 </div>
             </div>
+
+
+            <div className="typeExample">
+                <img
+                    id=""
+                    src={typeexample1}
+                    alt="img"
+                    width={"83px"}
+                    height={"126px"}
+                    style={{marginTop: "10px"}}
+                ></img>
+                <img
+                    id=""
+                    src={typeexample2}
+                    alt="img"
+                    width={"83px"}
+                    height={"126px"}
+                    style={{marginTop: "10px"}}
+                ></img>
+                <img
+                    id=""
+                    src={typeexample3}
+                    alt="img"
+                    width={"83px"}
+                    height={"126px"}
+                    style={{marginTop: "10px"}}
+                ></img>
+
+            </div>
+
 
             <div className="gameIntro" style={{marginTop:"40px"}}>
                 <img

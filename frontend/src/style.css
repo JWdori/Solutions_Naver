@@ -74,9 +74,6 @@ body {
     margin-bottom: 80px;
 }
 
-.serviceintroduce{
-
-}
 
 .ad_game_font{
     height: 40px;
@@ -339,12 +336,6 @@ body {
     border-color: #FF6900
 }
 
-.servicebox{
-
-    width: 100%;
-    margin-left: 80px;
-    margin-right: 80px;
-}
 
 .serviceTitle1{
     font-family: "Gmarket Sans";
@@ -352,6 +343,8 @@ body {
     font-weight: bold;
     font-size: 24px;
 }
+
+
 
 
 .serviceTitleBox{
@@ -793,7 +786,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 1px;
 }
 
 .shareTextIcon{
@@ -861,8 +854,13 @@ body {
 {
     width: 300px;
     height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background: #929292;
     margin-top: 20px;
+    border-radius: 20px;
 }
 
 
@@ -1025,13 +1023,7 @@ body {
     font-size: 18px;
 }
 
-.tutorialText{
-    margin-top: 20px;
-    width: 300px;
-    background: rgba(217, 217, 217, 0.1);
-    border-radius: 20px;
-    color:white;
-}
+
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
@@ -1369,11 +1361,28 @@ body {
 }
 
 .servicebox {
+    width: 320px;
+}
 
-    width: 100%;
 
-    margin-left: 80px;
-    margin-right: 80px;
+.typeExample {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    color: white;
+}
+.typeExampleSemi{
+
+    margin-left: -22px;
+    font-weight:300;
+    margin-top: 2px;
+    margin-bottom: 10px;
 }
 
 .serviceTitle1 {
@@ -1388,6 +1397,16 @@ body {
     display: flex;
     align-items: start;
     justify-content: start;
+}
+
+.serviceTitleBox2 {
+    width: 80px;
+    height: 100px;
+    border: solid 2px;
+    border-color: #b4b4b4;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
 }
 
 .serviceSemiBox {
@@ -1426,7 +1445,7 @@ body {
 
 
 .servicesemi {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Noto Sans KR";
     font-weight: 600;
     color: #FF6900;
@@ -1789,7 +1808,10 @@ body {
 .shareText {
     margin-bottom: 10px;
     color: white;
+    font-family: "Noto Sans KR";
     display: flex;
+    font-weight: 500;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
 }
@@ -1974,20 +1996,38 @@ body {
 }
 
 #tutorialBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 8px;
+    background: none;
+    border: solid 2.5px;
+    border-radius: 20px;
+    border-color:#FF6900;
     height: 50px;
     color: white;
     cursor: pointer;
     margin-bottom: 20px;
+    font-family: "Noto Sans KR";
     line-height: 25px;
     font-weight: bold;
-    font-size: 18px;
+    letter-spacing: 0.07px;
+    font-size: 16px;
+
+}
+#tutorialBtn:active {
+    background: #FF6900;
+    border: none;
 }
 
+
+
 .tutorialText {
+    white-space: pre-wrap;
     margin-top: 20px;
+    font-family: "Gmarket Sans";
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
     width: 300px;
     background: rgba(217, 217, 217, 0.1);
     border-radius: 20px;
@@ -1995,13 +2035,22 @@ body {
 }
 
 .questionTxt {
+    white-space: pre-wrap;
     margin-top: 20px;
+    font-family: "Gmarket Sans";
+    font-weight: 400;
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 24px;
     width: 300px;
     background: rgba(217, 217, 217, 0.1);
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    display: inline-block;
     margin-bottom: 30px;
+
 }
 
 .questionImg{
@@ -2009,25 +2058,30 @@ body {
 }
 
 .testAnswer{
+    white-space: pre-wrap;
     width: 300px;
     height: 52px;
     background-color:transparent;
+    font-family: "Noto Sans KR";
     border: 2px solid #FF6900;
     border-radius: 20px;
     color: white;
     cursor: pointer;
-    margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 25px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 13px;
+    display: flow;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.07em;
+    line-height: 19px;
 }
 
+
 .testAnswer:active {
-    background: #6aa99e;
+    background: #FF6900;
     color: #fffef5;
-    border-radius: 32.5px;
-    border: 2px solid #6aa99e;
-    padding: 0;
 }
 
 .testAnswer:visited {
