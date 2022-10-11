@@ -2001,6 +2001,7 @@ body {
     border-radius: 20px;
     color: white;
     display: inline-block;
+    margin-bottom: 30px;
 }
 
 .questionImg{
@@ -2010,9 +2011,9 @@ body {
 .testAnswer{
     width: 300px;
     height: 52px;
-    background-color:#6aa99e;
-    border: #FF6900 10px;
-    border-radius: 8px;
+    background-color:transparent;
+    border: 2px solid #FF6900;
+    border-radius: 20px;
     color: white;
     cursor: pointer;
     margin-top: 20px;
