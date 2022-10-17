@@ -2,10 +2,10 @@ import React from "react";
 import {CloseOutlined} from "@ant-design/icons";
 
 
-const Name = ({NameFunction}) => {
+const Name = ({nameFunction}) => {
     const [name, setName] = React.useState("");
     const onChangeName = (event) => {
-        NameFunction(event.target.value);
+        nameFunction(event.target.value);
     }
     return (
         <>
@@ -23,7 +23,6 @@ const Name = ({NameFunction}) => {
             </div>
 
             <input type="text" className="NameBox" maxLength='6' style={{textAlign: "center", borderWidth: "2px"}}
-                // onChange={event => setName(event.target.value)}>
                    onChange={onChangeName}>
             </input>
 
