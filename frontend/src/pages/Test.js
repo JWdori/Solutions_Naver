@@ -21,7 +21,7 @@ import q14 from "../images/test/q16.png"
 
 const Test = (props) => {
     const navigate = useNavigate();
-    const [step, setStep] = React.useState(0);
+    const [step, setStep] = React.useState(3);
     const [time, setTime] = React.useState(false);
     const questionImg = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14];
     const question =
@@ -121,8 +121,8 @@ const Test = (props) => {
     }, [time]);
     const onClick = (num) => {
         setTime(false);
-        if (step < 13) setStep(step + 1);
-        else if (step === 13) {
+        if (step < 16) setStep(step + 1);
+        else if (step === 16) {
             navigate("/beforeResult")
         }
         // select[step] = num;
@@ -136,19 +136,19 @@ const Test = (props) => {
                     {
                         <img
                             className="questionImg"
-                            src={questionImg[step]}
+                            src={questionImg[step - 3]}
                             alt="img"
-                            width={wid[step]}
-                            height={hei[step]}
+                            width={wid[step - 3]}
+                            height={hei[step - 3]}
                         ></img>
                     }
                     {
-                        step == 11 ?
-                            <div className={"questionTxt"} style={{height: "240px",marginRight:"40px"}}>
-                                {question[step]}
+                        step === 14 ?
+                            <div className={"questionTxt"} style={{height: "240px", marginRight: "40px"}}>
+                                {question[step - 3]}
                             </div> :
                             <div className={"questionTxt"} style={{height: "122px"}}>
-                                {question[step]}
+                                {question[step - 3]}
                             </div>
 
                     }
@@ -158,28 +158,28 @@ const Test = (props) => {
                             onClick(1);
                         }}
                     >
-                        {answerYes[step]}
+                        {answerYes[step - 3]}
                     </button>
                     {
-                        step != 11 ?
+                        step !== 14 ?
                             <button
                                 className="testAnswer"
                                 onClick={() => {
                                     onClick(2);
                                 }}
                             >
-                                {answerNo[step]}
+                                {answerNo[step - 3]}
                             </button> : null
                     }
                     {
-                        step == 0 ?
-                        <button className="testAnswer"
-                                onClick={() => {
-                                    onClick(3);
-                                }}>
-                            왕에게 거금을 내고 왕실 창고에서 랜덤으로<br/>
-                            장비와 마법을 받는다.
-                        </button> : null
+                        step === 3 ?
+                            <button className="testAnswer"
+                                    onClick={() => {
+                                        onClick(3);
+                                    }}>
+                                왕에게 거금을 내고 왕실 창고에서 랜덤으로<br/>
+                                장비와 마법을 받는다.
+                            </button> : null
                     }
                 </div>
             )}
