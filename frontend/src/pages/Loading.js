@@ -6,11 +6,13 @@ import Header from "../elements/Header";
 const Loading = (props) => {
     const navigate = useNavigate();
     React.useEffect(() => {
-        setTimeout(() => {
+        let timer = setTimeout(() => {
             navigate("/tutorial");
-        }, 4000);
-
-    })
+        }, 1000);
+        return () => {
+            clearTimeout(timer)
+        }
+    }, [])
 
     return (
         <>
