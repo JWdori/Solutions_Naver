@@ -38,7 +38,7 @@ const Tutorial = (props) => {
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <Progress width={300} percent={0}/>
+            <Progress width={300} percent={0.01}/>
 
                 <div>
                     <img
