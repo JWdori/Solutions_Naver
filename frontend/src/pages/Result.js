@@ -55,9 +55,9 @@ const Result = (props) => {
                 ></img>
 
                 <div className={"resultText1"}>
-                    용사는 압도적인 무력으로<br/>
-                    사악한 용을 물리치고<br/>
-                    왕국에 평화를 가져왔습니다.
+                    용사의 압도적인 무력 앞에<br/>
+                    사악한 용은 쓰러졌고<br/>
+                    왕국엔 평화가 찾아왔습니다.
                 </div>
                 <img
                     style={{marginTop:"90px", marginLeft:"16px"}}
