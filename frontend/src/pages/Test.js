@@ -130,7 +130,7 @@ const Test = (props) => {
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <Progress width={300} percent={step / 13}/>
+            <Progress width={300} percent={(step - 2.9) / 13}/>
             {time && (
                 <div id="questionDiv">
                     {
