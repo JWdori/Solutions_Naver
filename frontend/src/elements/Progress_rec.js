@@ -1,5 +1,4 @@
 import React from "react";
-import progresschar from "../images/progressCHAR.png";
 import eggNo from "../images/game/egg_no.png"
 import eggClear from "../images/game/egg_clear.png"
 

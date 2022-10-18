@@ -9,6 +9,7 @@ import Test from "./pages/Test"
 import Result from "./pages/Result"
 import Tutorial from "./pages/Tutorial"
 import BeforeResult from "./pages/BeforeResult"
+import GameRecommend from "./pages/GameRecommend";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Route element={<Result/>} path={"/result"}/>
                     <Route element={<Tutorial/>} path={"/tutorial"}/>
                     <Route element={<BeforeResult/>} path={"/beforeResult"}/>
+                    <Route element={<GameRecommend/>} path={"/recommend"}/>
                 </Routes>
             </BrowserRouter>
         </div>

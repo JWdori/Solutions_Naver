@@ -322,7 +322,7 @@ const Result = (props) => {
             {/*        모달 팝업*/}
             {/*    </button>*/}
             {/*</div>*/}
-            {/*{showPopup&& <Recommend setShowPopup={setShowPopup}/>}*/}
+            {/*{showPopup&& <GameRecommend setShowPopup={setShowPopup}/>}*/}
 
             {showPopup && <Resultmodal setShowPopup={setShowPopup}/>}
 
