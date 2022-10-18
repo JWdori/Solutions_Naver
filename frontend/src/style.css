@@ -705,11 +705,7 @@ body {
     margin-right: 20px;
 }
 
-.progress-div {
-    background-color: rgba(246, 246, 246, 0.5);
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
+
 
 .progress {
     background-color: #FF8936;
@@ -719,6 +715,26 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
 }
+
+
+.progressRec-div {
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    background:none;
+
+}
+
+.progressRecEgg{
+    display: flex;
+    justify-content: space-between;
+    background:none;
+
+}
+
+
+
 
 
 .progresschar{
@@ -1719,24 +1735,9 @@ body {
 .progress-div {
     background-color: rgba(246, 246, 246, 0.5);
     border-radius: 20px;
-    margin-bottom: 40px;
-}
-
-.progress {
-    background-color: #FF8936;
-    height: 8px;
-    border-radius: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
 }
 
 
-.progresschar {
-    background: none;
-    margin-bottom: 1px;
-    margin-right: -20px;
-}
 
 
 #homeSurveyBtn {
@@ -2023,7 +2024,7 @@ body {
 
 
 .questionImg{
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .testAnswer{

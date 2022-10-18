@@ -49,7 +49,6 @@ const Home = (props) => {
                 </div>
             </div>
 
-
             <img
                 id="mainImg"
                 src={main}

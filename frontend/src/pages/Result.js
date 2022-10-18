@@ -33,6 +33,7 @@ import Serviceintroduce from "../elements/ServiceIntroduce";
 const Result = (props) => {
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
+
     const handleShowPopup = () => {
         setShowPopup(true);
     };
