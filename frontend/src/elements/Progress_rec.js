@@ -2,10 +2,10 @@ import React from "react";
 import eggNo from "../images/game/egg_no.png"
 import eggClear from "../images/game/egg_clear.png"
 
-const ProgressRec = ({step}) => {
+const ProgressRec = ({width,step}) => {
     return (
         <div>
-            <div className="progressRec-div" style={{ width: step }}>
+            <div className="progressRec-div"  style={{ width: width }}>
                 <div>
                     {
                         step >= 1

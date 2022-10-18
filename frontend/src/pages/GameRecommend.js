@@ -9,7 +9,7 @@ const GameRecommend = (props) => {
     return (
         <>
             <Header isBack={false}/>
-            <ProgressRec step={step}/>
+            <ProgressRec width={300} step={step}/>
         </>
     );
 };
