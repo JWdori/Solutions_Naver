@@ -764,7 +764,7 @@ body {
     justify-content: center;
 }
 
-#genreButton{
+.genreButton{
     cursor: pointer;
     height: 44px;
     width: 66px;
@@ -782,7 +782,22 @@ body {
     margin-right: 12px;
 }
 
-#genreButton:focus{
+.genreButtonFocus{
+    cursor: pointer;
+    height: 44px;
+    width: 66px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+    background: none;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: 500;
+    border-width: 2.5px;
+    border-radius: 10px;
+    border: solid;
+    border-color: #FF6900;
+    margin-right: 12px;
     background: #FF6900;
     border-width: 0px;
 }
