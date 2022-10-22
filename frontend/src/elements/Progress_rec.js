@@ -15,7 +15,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggClear}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                             :
                             <img
@@ -23,7 +23,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggNo}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                     }
                 </div>
@@ -38,7 +38,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggClear}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                             :
                             <img
@@ -46,7 +46,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggNo}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                     }
                 </div>
@@ -61,7 +61,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggClear}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                             :
                             <img
@@ -69,7 +69,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggNo}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                     }
                 </div>
@@ -85,7 +85,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggClear}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                             :
                             <img
@@ -93,7 +93,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggNo}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                     }
                 </div>
@@ -109,7 +109,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggClear}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                             :
                             <img
@@ -117,7 +117,7 @@ const ProgressRec = ({width,step}) => {
                                 src={eggNo}
                                 alt="img"
                                 width="44px"
-                                height="44px">
+                                height="54px">
                             </img>
                     }
                 </div>
