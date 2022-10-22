@@ -431,12 +431,12 @@ body {
 
 
 .modalHeadFont {
-
     color: white;
     font-family: "Gmarket Sans";
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     margin: 20px;
+
 }
 
 .modalTitleresult {
@@ -1499,14 +1499,7 @@ body {
 }
 
 
-.modalHeadFont {
 
-    color: white;
-    font-family: "Gmarket Sans";
-    font-weight: bold;
-    font-size: 16px;
-    margin: 20px;
-}
 
 .modalTitleresult {
     font-family: "Gmarket Sans";
@@ -1546,25 +1539,7 @@ body {
 }
 
 
-.closeBtn {
-    margin: 18px;
-    width: 14px;
-    height: 14px;
-    color: #fffef5;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-}
 
-.closeBtn2 {
-    margin: 9px;
-    width: 14px;
-    height: 14px;
-    color: #fffef5;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-}
 
 .modalImage {
     margin: 12px;
@@ -2210,12 +2185,14 @@ body {
 }
 
 
-.already{
+#already{
+    background: none;
     font-size: 16px;
     font-family: "Noto Sans KR";
     font-weight: 400;
     color: #dadada;
     text-decoration: underline ;
+    cursor: pointer;
 }
 
 
@@ -2232,9 +2209,13 @@ body {
     cursor: pointer;
 }
 
-#goodImage{
-    cursor: pointer;
+#goodButton:focus{
+    border: #FF4337;
+    background: #FF4337;
+    color: black;
 }
+
+
 
 #badButton{
     border: solid 1px;
@@ -2247,12 +2228,17 @@ body {
     height: 36px;
     width: 92px;
     cursor: pointer;
-
 }
 
-#badImage{
+#badButton:focus{
+    background: #428BC1;
+    border: #428BC1;
     cursor: pointer;
+    color: black;
+    font-weight: 500;
 }
+
+
 
 #recNextButton{
     margin-top: 24px;

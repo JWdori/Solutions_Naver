@@ -2,20 +2,28 @@ import React from "react";
 import Header from "../elements/Header";
 import ProgressRec from "../elements/Progress_rec";
 import type1 from "../images/gamerec_1.png"
-import good from "../images/good_gray.png"
-import bad from "../images/bad_gray.png"
+import good from "../images/good_red.png"
+import bad from "../images/bad_blue.png"
 import kakao from "../images/kakao.png";
 import facebook from "../images/facebook.png";
 import twitter from "../images/twitter.png";
 import link from "../images/link.png";
 import shareIcon from "../images/shareicon.png";
 import reset from "../images/reset.png";
+import Score from "../elements/Score";
+import ScorePage from "../elements/ScorePage";
 
 const GameRecommend = (props) => {
-
+    const [isShowAll, setShowPopup] = React.useState(false);
     const [step, setStep] = React.useState(0);
+
+    const handleShowAllBtn = () => {
+        setShowPopup(true);
+    };
+
     return (
         <>
+
             <Header isBack={false}/>
             <ProgressRec width={"300px"} step={step}/>
 
@@ -70,21 +78,20 @@ const GameRecommend = (props) => {
                         className="recGameImg"
                         src={good}
                         alt="img"
-                        width={"20px"}
+                        width={"18px"}
                         height={"20px"}
                     ></img>
                     <span>게임 평가</span>
                     <img
                         className="recGameImg"
-                        src={good}
+                        src={bad}
                         alt="img"
-                        width={"20px"}
+                        width={"18px"}
                         height={"20px"}
                     ></img>
                 </div>
 
-                <span className={"already"}>이미 해본 게임이라면?</span>
-
+                <button id={"already"} onClick={handleShowAllBtn}>이미 해본 게임이라면?</button>
 
                 <div className={"shareText"} style={{marginTop:"40px"}}>
                     게임 공유하기
@@ -155,6 +162,7 @@ const GameRecommend = (props) => {
                     }}
                 ></img>
             </button>
+            {isShowAll && <ScorePage setShowPopup={setShowPopup} />}
         </>
     );
 };

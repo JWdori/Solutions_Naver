@@ -22,7 +22,7 @@ const ScorePage = (props) => {
                     }}
                 >
                     <div className="modalHead">
-                        <div className="modalHeadFont">전체 유형 보기</div>
+                        <div className="modalHeadFont">평점 주기</div>
                         <CloseOutlined className="closeBtn" onClick={handleCloseBtn} />
                     </div>
                     <div className="modalstar">
