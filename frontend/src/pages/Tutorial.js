@@ -14,6 +14,10 @@ const Tutorial = (props) => {
     const nameFunction = (x) => {
         console.log(x);
     }
+
+    const genreFunction = (x) => {
+        console.log(x);
+    }
     const text =
         ["내이름은 가르반 4세라고 하네.\n 사악할 용을 퇴치할 용사는\n 이름을 알려주겠나?",
             "그래 용사여,\n 먼저 싫어하는 게임 장르가 있는가?",
@@ -60,7 +64,7 @@ const Tutorial = (props) => {
                     {step === 0 ?
                         <Name nameFunction={nameFunction}/> :
                         step === 1 ?
-                            <Genre/> : null
+                            <Genre genreFunction={genreFunction}/> : null
 
                     }
 

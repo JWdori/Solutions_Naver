@@ -1,61 +1,55 @@
 import React from "react";
-import { CloseOutlined } from "@ant-design/icons";
+import {CloseOutlined} from "@ant-design/icons";
 
 
+const Genre = ({genreFunction}) => {
 
-const Genre = (props) => {
+    const [genre, setGenre] = React.useState([
+        {text: "RPG", state: false},
+        {text: "스포츠", state: false},
+        {text: "액션", state: false},
+        {text: "음악", state: false},
+        {text: "전략", state: false},
+        {text: "퍼즐", state: false},
+        {text: "AOS", state: false},
+        {text: "FPS", state: false}])
+    ;
 
-    const [isChecked, setIsChecked] = React.useState(false); //체크 여부
-    const [checkedItems, setCheckedItems] = React.useState(new Set());//체크된 요소들
+    const onGenreClick = (input) => {
+        setGenre(genre.map(
+            genre => genre.text === input
+                ? {...genre, state: !genre.state}
+                : genre
+        ));
 
-    const checkHandler = ({ target }) => {
-        console.log(target)
-        setIsChecked(!isChecked);
-        checkedItemHandler(target.parentNode, target.value, target.checked);
-    };
-    const checkedItemHandler = (box, id, isChecked) => {
-        if (isChecked) { //체크 되었을때
-            checkedItems.add(id); //체크시 삽입
-            setCheckedItems(checkedItems); //체크 요소 넣어주기
-            box.style.backgroundColor = "#F6CB44"; //스타일 변경
-        } else if (!isChecked && checkedItems.has(id)) { //체크가 안되었고, id가 있을때(클릭 2번시)
-            checkedItems.delete(id); //체크 두번시 삭제
-            setCheckedItems(checkedItems);
-            box.style.backgroundColor = "#fff";
+        const genreAll = () => {
+            let value = [];
+            genre.map(genre => genre.state === true ? value.push(genre.text) : null)
+            return value;
         }
-        return checkedItems;
     };
     return (
         <>
-            <div className="genreBox1" style={{marginTop:"40px"}}>
-                <button id="genreButton"
-                        value={"RPG"}
-                        onChange={(e) => checkHandler(e)}>
-                    RPG
-                </button>
-                <button id="genreButton">
-                    스포츠
-                </button>
-                <button id="genreButton">
-                    액션
-                </button>
-                <button id="genreButton" style={{marginRight:"0px"}}>
-                    음악
-                </button>
-            </div>
-                <div className="genreBox1" style={{marginBottom:"30px", marginTop:"12px"}}>
-                <button id="genreButton">
-                    전략
-                </button>
-                <button id="genreButton">
-                    퍼즐
-                </button>
-                <button id="genreButton">
-                    AOS
-                </button>
-                <button id="genreButton" style={{marginRight:"0px"}}>
-                    FPS
-                </button>
+            <div className="genreBox1" style={{marginTop: "40px"}}>
+                {genre.map((item, idx) => (
+                    <button
+                        className={item.state ? "genreButtonFocus" : "genreButton"}
+                        onClick={() => {
+                            onGenreClick(item.text)
+                        }}
+                        style={
+                            idx < 4
+                                ? idx == 3 ? {marginTop: "40px"} : {marginTop: "40px", whiteSpace: "pre"}
+                                : idx == 7 ? {marginBottom: "30px", marginTop: "12px"} : {
+                                    marginBottom: "30px",
+                                    marginTop: "12px"
+                                }
+                        }
+                    >
+                        {item.text}
+                    </button>
+                ))
+                }
             </div>
         </>
     );
