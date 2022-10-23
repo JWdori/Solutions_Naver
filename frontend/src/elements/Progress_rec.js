@@ -8,6 +8,29 @@ const ProgressRec = ({width,step}) => {
             <div className="progressRec-div"  style={{ width: width }}>
                 <div>
                     {
+                        step >= 0
+                            ?
+                            <img
+                                className="progressRecEgg"
+                                src={eggClear}
+                                alt="img"
+                                width="44px"
+                                height="54px">
+                            </img>
+                            :
+                            <img
+                                className="progressRecEgg"
+                                src={eggNo}
+                                alt="img"
+                                width="44px"
+                                height="54px">
+                            </img>
+                    }
+                </div>
+
+
+                <div>
+                    {
                         step >= 1
                             ?
                             <img
@@ -52,6 +75,7 @@ const ProgressRec = ({width,step}) => {
                 </div>
 
 
+
                 <div>
                     {
                         step >= 3
@@ -79,30 +103,6 @@ const ProgressRec = ({width,step}) => {
                 <div>
                     {
                         step >= 4
-                            ?
-                            <img
-                                className="progressRecEgg"
-                                src={eggClear}
-                                alt="img"
-                                width="44px"
-                                height="54px">
-                            </img>
-                            :
-                            <img
-                                className="progressRecEgg"
-                                src={eggNo}
-                                alt="img"
-                                width="44px"
-                                height="54px">
-                            </img>
-                    }
-                </div>
-
-
-
-                <div>
-                    {
-                        step >= 5
                             ?
                             <img
                                 className="progressRecEgg"

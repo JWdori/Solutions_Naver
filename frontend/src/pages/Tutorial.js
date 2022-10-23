@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-
+import img2 from "../images/tutorial/q2_tuto.png"
 import Header from "../elements/Header";
 import img from "../images/tutorial/tutorial_king.png";
 import Progress from "../elements/Progress_test";
@@ -45,13 +45,24 @@ const Tutorial = (props) => {
             <Progress width={300} percent={0.01}/>
 
                 <div>
-                    <img
-                        className=""
-                        src={img}
-                        alt="img"
-                        width="220px"
-                        height="220px"
-                    />
+                    {
+                        step == 2 ?
+                            <img
+                                className="questionImg"
+                                src={img2}
+                                alt="img"
+                                width="220px"
+                                height="220px"
+                            />
+                            :
+                        <img
+                            className="questionImg"
+                            src={img}
+                            alt="img"
+                            width="220px"
+                            height="220px"
+                        />
+                    }
                     <div className={"tutorialText"}
                          style={{height: textSize[step]}}>
                         {text[step]}
