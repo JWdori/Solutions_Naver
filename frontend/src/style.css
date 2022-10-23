@@ -59,7 +59,7 @@ body {
 }
 
 
-.ad_game{
+.ad_game {
     margin-top: 80px;
     /*margin-right: 30px;*/
     /*margin-left: 30px;*/
@@ -75,30 +75,31 @@ body {
 }
 
 
-.ad_game_font{
+.ad_game_font {
     height: 40px;
     margin-top: 20px;
     font-family: "G마켓 산스 TTF Medium";
     text-align: center;
-    line-height : 40px;
+    line-height: 40px;
     font-size: 20px;
     font-weight: bold;
-    color:white;
+    color: white;
     margin-bottom: 12px;
 }
 
-.ad_game_box{
+.ad_game_box {
     display: flex;
     align-items: center;
 }
 
 
-.ad_game_image{
+.ad_game_image {
     border-radius: 10px;
     z-index: 1;
-    position:relative
+    position: relative
 }
-.ad_game_name{
+
+.ad_game_name {
     margin-top: 8px;
     height: 25px;
     color: white;
@@ -106,7 +107,8 @@ body {
     font-size: 16px;
     text-align: center;
 }
-.ad_game_tag{
+
+.ad_game_tag {
     height: 16px;
     margin-top: 4px;
     font-size: 12px;
@@ -115,7 +117,7 @@ body {
     text-align: center;
 }
 
-.ad_game_sum{
+.ad_game_sum {
     height: 38px;
     margin-top: 12px;
     font-size: 14px;
@@ -150,9 +152,7 @@ body {
 }
 
 
-
-
-.ad_game_box_black_1{
+.ad_game_box_black_1 {
     margin-top: -444px;
     height: 420px;
     width: 32px;
@@ -161,7 +161,7 @@ body {
 }
 
 
-.ad_game_box_black_2{
+.ad_game_box_black_2 {
     height: 420px;
     width: 32px;
     background: black;
@@ -169,47 +169,43 @@ body {
 }
 
 
-
-
-
-.popular_result_box{
+.popular_result_box {
     height: 186px;
 
     background: none;
 }
 
-.popular_result_font{
+.popular_result_font {
     height: 40px;
     font-family: "G마켓 산스 TTF Medium";
     text-align: center;
-    line-height : 40px;
+    line-height: 40px;
     font-size: 20px;
     font-weight: bold;
-    color:white;
+    color: white;
     margin-bottom: 12px;
 }
 
 
-
-.popular_result_left{
+.popular_result_left {
     background: black;
     margin-right: 20px;
 }
 
 
-.popular_result_right{
+.popular_result_right {
     background: black;
     margin-left: 20px;
 }
 
 
-.popular_result_slide_box{
+.popular_result_slide_box {
     height: 130px;
     display: flex;
     align-items: center;
 }
 
-.popular_result_result{
+.popular_result_result {
     border: solid;
     border-color: white;
     border-width: 1px;
@@ -217,10 +213,9 @@ body {
     margin-right: 20px;
 }
 
-.popular_result_game{
+.popular_result_game {
     border-radius: 20px;
 }
-
 
 
 .modal {
@@ -262,18 +257,19 @@ body {
 
 .FontAwesomeIcon {
     cursor: pointer;
-    margin-top:30px;
+    margin-top: 30px;
     width: 40px;
     height: 40px;
     margin-left: 6px;
     margin-right: 6px;
 }
+
 .blank {
 
     color: #8A8A8A;
 }
 
-.modalstar{
+.modalstar {
     margin-top: 30px;
 }
 
@@ -281,8 +277,6 @@ body {
     color: #FF8936;
     text-shadow: -1px 0 #FF6900, 0 1px #FF6900, 1px 0 #FF6900, 0 -1px #FF6900;
 }
-
-
 
 
 .modalPost2 {
@@ -337,7 +331,7 @@ body {
 }
 
 
-.serviceTitle1{
+.serviceTitle1 {
     font-family: "Gmarket Sans";
     color: #FF6900;
     font-weight: bold;
@@ -345,29 +339,27 @@ body {
 }
 
 
-
-
-.serviceTitleBox{
+.serviceTitleBox {
     display: flex;
     align-items: start;
     justify-content: start;
 }
 
-.serviceSemiBox{
+.serviceSemiBox {
     display: flex;
     align-items: start;
     margin-top: 12px;
     justify-content: start;
 }
 
-.NameQ{
-    font-weight: bold ;
+.NameQ {
+    font-weight: bold;
     font-size: 20px;
     color: #FF6900;
     font-family: "Noto Sans KR";
 }
 
-.NameBox{
+.NameBox {
     height: 40px;
     width: 124px;
     background: #76767620;
@@ -382,14 +374,13 @@ body {
 }
 
 
-
-.servicecContentBox{
+.servicecContentBox {
     margin-top: 20px;
 
 }
 
 
-.servicesemi{
+.servicesemi {
     font-size: 18px;
     font-family: "Noto Sans KR";
     font-weight: 600;
@@ -397,7 +388,7 @@ body {
 }
 
 
-.Contact{
+.Contact {
     margin-top: 80px;
     font-size: 16px;
     font-family: "Noto Sans KR";
@@ -406,14 +397,15 @@ body {
     align-items: center;
     margin-bottom: 100px;
 }
-.Email{
+
+.Email {
     font-family: "Noto Sans KR";
     font-size: 14px;
     color: #b4b4b4;
 }
 
 
-.servicecontent{
+.servicecontent {
     margin-bottom: 8px;
     font-family: "Noto Sans KR";
     font-size: 14px;
@@ -422,12 +414,6 @@ body {
     align-items: start;
     justify-content: start;
 }
-
-
-
-
-
-
 
 
 .modalHeadFont {
@@ -457,7 +443,6 @@ body {
 }
 
 
-
 .modalCon {
     border: 1px solid #FF6900;
     padding: 20px;
@@ -484,16 +469,17 @@ body {
     height: 14px;
     color: #fffef5;
     font-weight: bold;
-    position:relative;
+    position: relative;
     z-index: 1;
 }
+
 .closeBtn2 {
     margin: 9px;
     width: 14px;
     height: 14px;
     color: #fffef5;
     font-weight: bold;
-    position:relative;
+    position: relative;
     z-index: 1;
 }
 
@@ -515,7 +501,6 @@ body {
     border-radius: 10px;
     background: url("./images/game2.png") repeat;
 }
-
 
 
 .modalTitle {
@@ -550,18 +535,17 @@ body {
     margin: 10px 0px;
 }
 
-.closebox{
+.closebox {
     display: flex;
     justify-content: end;
     margin-right: 0px;
 }
 
-.closebox2{
+.closebox2 {
     display: flex;
     justify-content: end;
     margin-right: 4px;
 }
-
 
 
 .tag {
@@ -578,12 +562,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .tagContainer {
     display: flex;
     flex-wrap: wrap;
 }
-
-
 
 
 .mainSubTitle {
@@ -602,7 +585,7 @@ body {
     color: white;
 }
 
-.mainBox{
+.mainBox {
     display: flex;
     align-items: center;
 }
@@ -623,18 +606,20 @@ body {
 }
 
 
-.gameIntro{
-    color:white;
+.gameIntro {
+    color: white;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 
 }
-.homeGameIcon1{
+
+.homeGameIcon1 {
     margin-top: 1px;
     margin-right: 4px;
 }
-.homeGameIcon2{
+
+.homeGameIcon2 {
     margin-top: 1px;
     margin-left: 4px;
 }
@@ -670,9 +655,9 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
-    position:relative;
+    position: relative;
     z-index: 1;
-    margin-top:28px;
+    margin-top: 28px;
 }
 
 #recommend2 {
@@ -686,13 +671,11 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
-    position:relative;
+    position: relative;
     z-index: 1;
-    margin-top:32px;
+    margin-top: 32px;
 
 }
-
-
 
 
 #rightslidebutton {
@@ -704,7 +687,6 @@ body {
     background: none;
     margin-right: 20px;
 }
-
 
 
 .progress {
@@ -722,23 +704,20 @@ body {
     width: 300px;
     display: flex;
     justify-content: space-between;
-    background:none;
+    background: none;
     margin-bottom: 4px;
 
 }
 
-.progressRecEgg{
+.progressRecEgg {
     display: flex;
     justify-content: space-between;
-    background:none;
+    background: none;
 
 }
 
 
-
-
-
-.progresschar{
+.progresschar {
     background: none;
     margin-bottom: 1px;
     margin-right: -20px;
@@ -759,13 +738,14 @@ body {
     text-align: center;
     line-height: 30px;
 }
-.genreBox1{
+
+.genreBox1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.genreButton{
+.genreButton {
     cursor: pointer;
     height: 44px;
     width: 66px;
@@ -783,7 +763,7 @@ body {
     margin-right: 12px;
 }
 
-.genreButtonFocus{
+.genreButtonFocus {
     cursor: pointer;
     height: 44px;
     width: 66px;
@@ -811,7 +791,7 @@ body {
     border: 2px solid rgba(0, 0, 0, 0);
 }
 
-.shareText{
+.shareText {
     margin-bottom: 20px;
     color: white;
     display: flex;
@@ -823,16 +803,16 @@ body {
     margin-top: 1px;
 }
 
-.shareTextIcon{
+.shareTextIcon {
     margin-left: 10px;
 
 }
 
 
-#loading{
+#loading {
     display: inline-block;
     padding: 100px;
-    font-size:20px;
+    font-size: 20px;
     animation: fadein 3s ease-in-out;
 }
 
@@ -860,10 +840,7 @@ body {
 }
 
 
-
-
-.resultText1
-{
+.resultText1 {
     font-family: "Gmarket Sans";
     font-weight: bold;
     font-size: 20px;
@@ -875,7 +852,8 @@ body {
     position: relative;
     z-index: 1;
 }
-.resultTextBox{
+
+.resultTextBox {
     display: flex;
     color: white;
     justify-content: center;
@@ -884,8 +862,7 @@ body {
 }
 
 
-.resultImg2
-{
+.resultImg2 {
     width: 300px;
     height: 280px;
     display: flex;
@@ -898,19 +875,19 @@ body {
 }
 
 
-.resultBar{
+.resultBar {
     margin-top: 0px;
     display: flow;
     align-items: center;
 }
 
-.resultText{
-    display:inline-block;
+.resultText {
+    display: inline-block;
 
     /*margin-bottom: */
 }
 
-.resultBox{
+.resultBox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -921,7 +898,7 @@ body {
     margin-top: 40px;
 }
 
-.resultBoxgraph{
+.resultBoxgraph {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -933,7 +910,7 @@ body {
 }
 
 
-#resultGameBtn{
+#resultGameBtn {
     background: #FF6900;
     border: none;
     border-radius: 32.5px;
@@ -947,13 +924,13 @@ body {
     font-size: 20px;
 }
 
-.resultRecommend{
+.resultRecommend {
     margin-top: 50px;
     margin-bottom: 20px;
     color: white;
 }
 
-#regameBtn{
+#regameBtn {
     width: 130px;
     height: 40px;
     background: #EF7A29;
@@ -966,9 +943,6 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
-
-
-
 
 
 #scorebutton {
@@ -986,6 +960,7 @@ body {
     font-size: 16px;
     color: #FF6900;
 }
+
 #scorebutton:active {
     font-size: 16px;
     color: white;
@@ -993,27 +968,27 @@ body {
     border-width: 0px;
 }
 
-.similarGame{
+.similarGame {
     width: 300px;
     height: 206px;
-    color:white;
-    margin-top:40px;
+    color: white;
+    margin-top: 40px;
     font-size: 20px;
     font-weight: 500;
     font-family: "Gmarket Sans";
 }
 
-.gameRating{
+.gameRating {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.gameRanking{
+.gameRanking {
     margin: 6px;
     border-radius: 10px;
 }
 
-#allGameBtn{
+#allGameBtn {
     background: #FF6900;
     border: none;
     border-radius: 8px;
@@ -1027,7 +1002,7 @@ body {
     text-align: center;
 }
 
-#allTypeBtn{
+#allTypeBtn {
     background: #D9D9D9;
     border: none;
     border-radius: 8px;
@@ -1040,10 +1015,12 @@ body {
 
 }
 
-.tutorialBtn{
+
+.tutorialBtn {
     margin-bottom: 40px;
 }
-#tutorialBtn{
+
+#tutorialBtn {
     background: #FF6900;
     border: none;
     border-radius: 8px;
@@ -1055,7 +1032,6 @@ body {
     font-weight: bold;
     font-size: 18px;
 }
-
 
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -1410,10 +1386,11 @@ body {
     font-size: 14px;
     color: white;
 }
-.typeExampleSemi{
+
+.typeExampleSemi {
 
     margin-left: -22px;
-    font-weight:300;
+    font-weight: 300;
     margin-top: 2px;
     margin-bottom: 10px;
 }
@@ -1513,8 +1490,6 @@ body {
 }
 
 
-
-
 .modalTitleresult {
     font-family: "Gmarket Sans";
     text-align: start;
@@ -1551,8 +1526,6 @@ body {
     background-color: #FF6900;
     align-items: center;
 }
-
-
 
 
 .modalImage {
@@ -1678,8 +1651,6 @@ body {
 }
 
 
-
-
 #recommend {
     background: #FF6900;
     border: none;
@@ -1728,8 +1699,6 @@ body {
     background-color: rgba(246, 246, 246, 0.5);
     border-radius: 20px;
 }
-
-
 
 
 #homeSurveyBtn {
@@ -1978,7 +1947,7 @@ body {
     background: none;
     border: solid 2.5px;
     border-radius: 20px;
-    border-color:#FF6900;
+    border-color: #FF6900;
     height: 50px;
     color: white;
     cursor: pointer;
@@ -1990,11 +1959,11 @@ body {
     font-size: 16px;
 
 }
+
 #tutorialBtn:active {
     background: #FF6900;
     border: none;
 }
-
 
 
 .tutorialText {
@@ -2015,16 +1984,15 @@ body {
 }
 
 
-
-.questionImg{
+.questionImg {
     margin-top: 40px;
 }
 
-.testAnswer{
+.testAnswer {
     white-space: pre-wrap;
     width: 300px;
     height: 52px;
-    background-color:transparent;
+    background-color: transparent;
     font-family: "Noto Sans KR";
     border: 2px solid #FF6900;
     border-radius: 20px;
@@ -2055,6 +2023,7 @@ body {
     margin-top: 180px;
     margin-bottom: 100px;
 }
+
 .resultH3 {
     font-family: "GmarketSansBold";
     font-style: normal;
@@ -2117,30 +2086,54 @@ body {
 }
 
 
-
-
-.recGameImg{
+.recGameImg {
     margin-bottom: 20px;
 }
-.recGame{
-    color:white;
-    margin-top: 60px;
+
+.recGameAll {
+    color: white;
+    animation: fadein 3s ease-in-out;
+
 }
-.recGameDesc{
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.recGameDesc {
     font-weight: bold;
     font-family: "Noto Sans KR";
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.recGameDesc2{
+.recGameDesc2 {
     font-weight: 400;
     font-family: "Noto Sans KR";
     font-size: 12px;
     margin-bottom: 10px;
 }
 
-.recinfo{
+.recinfo {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -2149,7 +2142,7 @@ body {
 }
 
 
-.divideLine{
+.divideLine {
     margin-top: 1px;
     width: 1px;
     height: 12px;
@@ -2157,12 +2150,12 @@ body {
 
 }
 
-#recGenreButton{
+#recGenreButton {
     font-size: 12px;
     font-weight: 400;
     font-family: "Noto Sans KR";
     border-radius: 10px;
-    border:solid;
+    border: solid;
     height: 34px;
     width: 100px;
     text-align: center;
@@ -2171,7 +2164,7 @@ body {
     text-align: center;
 }
 
-.playstore{
+.playstore {
     color: #428BC1;
     font-weight: 400;
     font-family: "Noto Sans KR";
@@ -2179,7 +2172,7 @@ body {
 
 }
 
-.rating{
+.rating {
     margin-top: 40px;
     display: flex;
     color: white;
@@ -2190,10 +2183,10 @@ body {
     align-items: center;
 }
 
-.rating2{
+.rating2 {
     margin-top: 10px;
     display: flex;
-    color: rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
     justify-content: space-around;
     font-family: "Noto Sans KR";
     align-items: center;
@@ -2201,52 +2194,51 @@ body {
 }
 
 
-#already{
+#already {
     background: none;
     font-size: 16px;
     font-family: "Noto Sans KR";
     font-weight: 400;
     color: #dadada;
-    text-decoration: underline ;
+    text-decoration: underline;
     cursor: pointer;
 }
 
 
-#goodButton{
+#goodButton {
     border: solid 1px;
     border-color: #D9D9D9;
     border-radius: 32px;
     font-size: 14px;
     font-weight: 500;
-    color:#D9D9D9 ;
+    color: #D9D9D9;
     background: none;
     height: 36px;
     width: 92px;
     cursor: pointer;
 }
 
-#goodButton:focus{
+#goodButton:focus {
     border: #FF4337;
     background: #FF4337;
     color: black;
 }
 
 
-
-#badButton{
+#badButton {
     border: solid 1px;
     border-color: #D9D9D9;
     border-radius: 32px;
     font-size: 14px;
     font-weight: 500;
-    color:#D9D9D9 ;
+    color: #D9D9D9;
     background: none;
     height: 36px;
     width: 92px;
     cursor: pointer;
 }
 
-#badButton:focus{
+#badButton:focus {
     background: #428BC1;
     border: #428BC1;
     cursor: pointer;
@@ -2255,8 +2247,7 @@ body {
 }
 
 
-
-#recNextButton{
+#recNextButton {
     margin-top: 24px;
     height: 60px;
     width: 300px;
@@ -2271,7 +2262,7 @@ body {
 
 }
 
-.resetButton{
+.resetButton {
     background: none;
     color: white;
     font-size: 16px;
