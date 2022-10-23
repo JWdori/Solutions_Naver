@@ -39,7 +39,7 @@ const Result = (props) => {
     };
 
     const onGameClick = () => {
-
+        navigate("/recommend");
     };
     return (
         <>

@@ -2270,7 +2270,7 @@ body {
 
 }
 
-#resetButton{
+.resetButton{
     background: none;
     color: white;
     font-size: 16px;

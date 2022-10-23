@@ -7,10 +7,18 @@ import Score from "./Score";
 
 
 const ScorePage = (props) => {
-    const { setShowPopup } = props;
+    const { setShowPopup,num,complete } = props;
     const handleCloseBtn = (e) => {
         setShowPopup(false);
+        console.log(num)
     };
+    const handleCompleteBtn = (e) => {
+        setShowPopup(false);
+        complete(num+1);
+        console.log(num)
+        console.log("gd")
+    };
+
 
     return (
         <>
@@ -27,7 +35,7 @@ const ScorePage = (props) => {
                     </div>
                     <div className="modalstar">
                         <Score></Score>
-                        <button id="scorebutton"onClick={handleCloseBtn} >완료</button>
+                        <button id="scorebutton"onClick={handleCompleteBtn} >완료</button>
                     </div>
 
 

@@ -13,17 +13,21 @@ import reset from "../images/reset.png";
 import Score from "../elements/Score";
 import ScorePage from "../elements/ScorePage";
 
+
+
 const GameRecommend = (props) => {
     const [isShowAll, setShowPopup] = React.useState(false);
     const [step, setStep] = React.useState(0);
-
-    const handleShowAllBtn = () => {
+    const [num, setComplete] = React.useState(0);
+    const handleShowAllBtn = (props) => {
         setShowPopup(true);
     };
+    const complete = (num) => {
+        setComplete(num);
+    }
 
     return (
         <>
-
             <Header isBack={false}/>
             <ProgressRec width={"300px"} step={step}/>
 
@@ -90,8 +94,12 @@ const GameRecommend = (props) => {
                         height={"20px"}
                     ></img>
                 </div>
+                {
+                    num==0
+                        ? <span id={"already"} onClick={handleShowAllBtn} style={{color: "white"}}>이미 해본 게임이라면?</span>
+                        : <span id={"already"} onClick={handleShowAllBtn} style={{color: "#ff6900"}}>이미 해본 게임이라면?</span>
+                }
 
-                <button id={"already"} onClick={handleShowAllBtn}>이미 해본 게임이라면?</button>
 
                 <div className={"shareText"} style={{marginTop:"40px"}}>
                     게임 공유하기
@@ -148,7 +156,7 @@ const GameRecommend = (props) => {
                 </button>
 
                 </div>
-            <button id = "resetButton">
+            <span className = "resetButton">
                 초기화 하기
                 <img
                     className="shareIcon"
@@ -161,8 +169,8 @@ const GameRecommend = (props) => {
                         // copy(handleToast);
                     }}
                 ></img>
-            </button>
-            {isShowAll && <ScorePage setShowPopup={setShowPopup} />}
+            </span>
+            {isShowAll && <ScorePage setShowPopup={setShowPopup} complete={complete} num={num}/>}
         </>
     );
 };
