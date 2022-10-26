@@ -12,7 +12,7 @@ import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
 import Slider from "../elements/Slider";
 import Serviceintroduce from "../elements/ServiceIntroduce";
-
+import {TentuPlay} from '@tentuplay/js-client-sdk';
 
 const Home = (props) => {
     const navigate = useNavigate();
@@ -25,6 +25,15 @@ const Home = (props) => {
         navigate("/survey");
     };
 
+
+    React.useEffect(() => {
+        const tp = new TentuPlay({
+            clientKey: "2Y5dB5x4cW1N82MHZT5V",
+        });
+        tp.onInit(() => {
+            console.log(tp.SDKVersion);
+        })
+    })
     return (
         <>
             <Header isBack={false}/>
@@ -35,13 +44,13 @@ const Home = (props) => {
                 <div className="mainTitle">
                     내가 만약&nbsp;
                 </div>
-                <div className="mainTitle"style={{fontSize:"28px",color:"#FF6900"}}>
+                <div className="mainTitle" style={{fontSize: "28px", color: "#FF6900"}}>
                     게임&nbsp;
                 </div>
                 <div className="mainTitle">
                     속&nbsp;
                 </div>
-                <div className="mainTitle"style={{fontSize:"28px",color:"#FF6900"}}>
+                <div className="mainTitle" style={{fontSize: "28px", color: "#FF6900"}}>
                     용사
                 </div>
                 <div className="mainTitle">
@@ -134,13 +143,11 @@ const Home = (props) => {
             </div>
             <Ad_game/>
             <Slider/>
-            <button id="allGameBtn" style={{marginBottom:"80px"}}>
+            <button id="allGameBtn" style={{marginBottom: "80px"}}>
                 모든 인기 게임 확인하기
             </button>
 
             <Serviceintroduce></Serviceintroduce>
-
-
 
 
         </>
