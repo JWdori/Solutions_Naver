@@ -425,13 +425,7 @@ body {
 
 }
 
-.modalTitleresult {
-    font-family: "Gmarket Sans";
-    text-align: start;
-    font-size: 22px;
-    color: #6aa99e;
-    margin: 15px 0px 10px 0px;
-}
+
 
 .modalSemiresult {
     font-family: "Noto Sans KR";
@@ -483,23 +477,15 @@ body {
     z-index: 1;
 }
 
-.modalImage {
-    margin: 12px;
-    width: 276px;
-    height: 226px;
-    margin-top: -38px;
-    border-radius: 10px;
-    background: url("./images/game.png") repeat;
-}
+
 
 
 .modalImage2 {
     margin: 7px 7px 7px 7px;
-    width: 276px;
+    width: 280px;
     height: 160px;
     margin-top: -26px;
     border-radius: 10px;
-    background: url("./images/game2.png") repeat;
 }
 
 
@@ -509,9 +495,8 @@ body {
     text-align: start;
     font-size: 16px;
     font-weight: normal;
-    padding-top: 30px;
+    margin-top: 10px;
     margin-left: 20px;
-    color: white;
 }
 
 .modalSemi {
@@ -673,8 +658,7 @@ body {
     font-size: 16px;
     position: relative;
     z-index: 1;
-    margin-top: 32px;
-
+    margin-top: 20px;
 }
 
 
@@ -721,6 +705,10 @@ body {
     background: none;
     margin-bottom: 1px;
     margin-right: -20px;
+}
+
+.recommendnextImage{
+    border-radius: 20px;
 }
 
 
@@ -1324,7 +1312,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 173px;
+    height: 174px;
     background-color: #fffef5;
     overflow: auto;
     overflow: x-hidden;
@@ -1534,30 +1522,11 @@ body {
     height: 226px;
     margin-top: -38px;
     border-radius: 10px;
-    background: url("./images/game.png") repeat;
 }
 
 
-.modalImage2 {
-    margin: 7px 7px 7px 7px;
-    width: 276px;
-    height: 160px;
-    margin-top: -26px;
-    border-radius: 10px;
-    background: url("./images/game2.png") repeat;
-}
 
 
-.modalTitle {
-    font-family: "Gmarket Sans";
-    width: 160px;
-    text-align: start;
-    font-size: 16px;
-    font-weight: normal;
-    padding-top: 30px;
-    margin-left: 20px;
-    color: white;
-}
 
 .modalSemi {
     font-family: "Noto Sans KR";
@@ -1666,24 +1635,6 @@ body {
     z-index: 1;
     margin-top: 28px;
 }
-
-#recommend2 {
-    background: #FF6900;
-    border: none;
-    border-radius: 32px;
-    width: 240px;
-    text-align: center;
-    height: 40px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    position: relative;
-    z-index: 1;
-    margin-top: 32px;
-
-}
-
 
 #rightslidebutton {
     background: none;

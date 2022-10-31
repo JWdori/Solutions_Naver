@@ -25,15 +25,25 @@ const Home = (props) => {
         navigate("/survey");
     };
 
+    const tp = new TentuPlay({
+            clientKey: "b64DGZZd38ZKHomhQFQE",
+    });
 
-    React.useEffect(() => {
-        const tp = new TentuPlay({
-            clientKey: "2Y5dB5x4cW1N82MHZT5V",
-        });
-        tp.onInit(() => {
-            console.log(tp.SDKVersion);
+    function myLogin(){
+        tp.onInit(()=>{
+            tp.sendJoin({
+                playerUUID: "44"
+            });
+            tp.sendLogin({
+                playerUUID: "44"
+            })
         })
-    })
+
+    }
+    myLogin();
+
+
+
     return (
         <>
             <Header isBack={false}/>
@@ -86,6 +96,9 @@ const Home = (props) => {
 
             <button id="homeGameBtn" onClick={onGameClick}>
                 성향 검사 시작하기
+                {
+
+                }
             </button>
             <button id="homeSurveyBtn" onClick={onSurClick}>
                 게임 추천 설문하기

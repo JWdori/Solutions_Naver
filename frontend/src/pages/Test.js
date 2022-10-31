@@ -143,6 +143,7 @@ const Test = (props) => {
                             height={hei[step - 3]}
                         ></img>
                     }
+
                     {
                         step === 14 ?
                             <div className={"questionTxt"} style={{height: "240px", marginRight: "40px"}}>
@@ -151,8 +152,8 @@ const Test = (props) => {
                             <div className={"questionTxt"} style={{height: "122px"}}>
                                 {question[step - 3]}
                             </div>
-
                     }
+
                     <button
                         className="testAnswer"
                         onClick={() => {
