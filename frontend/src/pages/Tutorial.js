@@ -31,8 +31,8 @@ const Tutorial = (props) => {
 
     const onClick = (num) => {
 
-        if (step < 2) setStep(step + 1);
-        else if (step === 2) {
+        if (step < 1) setStep(step + 1);
+        else if (step === 1) {
             navigate("/test");
         }
 
