@@ -1,6 +1,5 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import main from "../images/main.png"
 import gameIcon from "../images/gameIcon.png"
 
 import facebook from "../images/facebook.png";
@@ -11,8 +10,14 @@ import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
 import Slider from "../elements/Slider";
+import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
+
+
 import {TentuPlay} from '@tentuplay/js-client-sdk';
+import GameSlide1 from "../elements/GameSlide1";
+import GameSlide2 from "../elements/GameSlide2";
+
 
 const Home = (props) => {
     const navigate = useNavigate();
@@ -43,7 +48,6 @@ const Home = (props) => {
     myLogin();
 
 
-
     return (
         <>
             <Header isBack={false}/>
@@ -68,13 +72,9 @@ const Home = (props) => {
                 </div>
             </div>
 
-            <img
-                id="mainImg"
-                src={main}
-                alt="img"
-                width="300x"
-                height="357px"
-            ></img>
+
+
+            <MainSlide></MainSlide>
 
             <div className="gameIntro">
                 <img
@@ -100,9 +100,9 @@ const Home = (props) => {
 
                 }
             </button>
-            <button id="homeSurveyBtn" onClick={onSurClick}>
-                게임 추천 설문하기
-            </button>
+            {/*<button id="homeSurveyBtn" onClick={onSurClick}>*/}
+            {/*    게임 추천 설문하기*/}
+            {/*</button>*/}
             <div className={"shareText"}>
                 결과 공유하기
                 <img
@@ -118,8 +118,8 @@ const Home = (props) => {
                     className="shareIcon"
                     src={kakao}
                     alt="kakaotalk"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={kakaoShare}
                 />
 
@@ -127,8 +127,8 @@ const Home = (props) => {
                     className="shareIcon"
                     src={facebook}
                     alt="facebook"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={facebookShare}
                 ></img>
 
@@ -136,8 +136,8 @@ const Home = (props) => {
                     className="shareIcon"
                     src={twitter}
                     alt="twitter"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
@@ -146,16 +146,26 @@ const Home = (props) => {
                     className="shareIcon"
                     src={link}
                     alt="link"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     onClick={() => {
                         // copy(handleToast);
                     }}
                 ></img>
 
             </div>
-            <Ad_game/>
-            <Slider/>
+
+
+            <div className={"slide__game__title"}>
+                유형별 인기 게임
+            </div>
+            <div className={"slide__game__option"} >
+                <GameSlide1/>
+                <GameSlide2/>
+            </div>
+
+
+
             <button id="allGameBtn" style={{marginBottom: "80px"}}>
                 모든 인기 게임 확인하기
             </button>

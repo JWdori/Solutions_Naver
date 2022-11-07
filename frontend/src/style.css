@@ -7,20 +7,6 @@ html {
 }
 
 
-body {
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    background: black;
-}
-
 .App {
     text-align: center;
     display: flex;
@@ -41,17 +27,6 @@ body {
 }
 
 
-.headerContainer {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    max-height: 60px;
-    left: 0px;
-    top: 0px;
-
-    /* main1 */
-    background: #FF6900;
-}
 
 .logo {
     cursor: pointer;
@@ -615,17 +590,28 @@ body {
 
 
 #homeGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 32.5px;
-    width: 300px;
+    background: #FF8216;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    width: 270px;
     height: 60px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
+    border: 0px;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 24px;
+    justify-content: center;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.08em;
+
+    color: #FFFFFF;
+    margin-bottom: 36px;
 }
 
 
@@ -976,19 +962,7 @@ body {
     border-radius: 10px;
 }
 
-#allGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 8px;
-    width: 300px;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
+
 
 #allTypeBtn {
     background: #D9D9D9;
@@ -1042,7 +1016,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px;
-    background: black;
+    background: white;
 }
 
 .App {
@@ -1052,7 +1026,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 375px;
-
     /*background-color: rgba(0, 0, 0, 0);*/
     margin-top: 60px;
 }
@@ -1068,8 +1041,7 @@ body {
 .headerContainer {
     position: absolute;
     width: 100%;
-    height: 60px;
-    max-height: 60px;
+    height: 54px;
     left: 0px;
     top: 0px;
 
@@ -1101,6 +1073,57 @@ body {
 .serviceintroduce {
 
 }
+
+
+.slide__image {
+    display: block;
+    width: 253px;
+    height: 253px;
+    object-fit: cover;
+}
+
+.slide__game_type{
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.slide__game {
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: -60px;
+}
+
+.slide__game__title{
+    margin-top: 72px;
+    margin-bottom: 10px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FF8216;
+}
+
+
+
+.slide__game__option{
+    display: flex;
+    justify-content: start;
+}
+
+
 
 .ad_game_font {
     height: 40px;
@@ -1602,7 +1625,7 @@ body {
     color: white;
     display: flex;
     align-items: center;
-
+    margin-top: 40px;
 }
 
 .homeGameIcon1 {
@@ -1862,18 +1885,30 @@ body {
 }
 
 #allGameBtn {
-    background: #FF6900;
+    background: #FF8216;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    border-radius: 8px;
-    width: 300px;
-    height: 50px;
-    line-height: 25px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
+    border-radius: 20px;
+    width: 270px;
+    height: 42px;
+    margin-top: 20px;
+
+    left: calc(50% - 258.63px/2 - 0.5px);
+    top: calc(50% - 17px/2 - 193px);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    letter-spacing: -0.08em;
+
+    color: #FFFFFF;
 }
 
 #allTypeBtn {

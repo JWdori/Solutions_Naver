@@ -38,8 +38,8 @@ const Header = (props) => {
                         className="logo"
                         src={logo}
                         alt="img"
-                        width="60px"
-                        height="30px"
+                        width="54px"
+                        height="28px"
                         onClick={handleOnClick}
                     ></img>
                 </Link>

@@ -1,9 +1,9 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import main from "../images/main.png"
+
 import Header from "../elements/Header";
 import Progress from "../elements/Progress_test";
-import Progressrec from "../elements/Progress_rec";
+
 import q1 from "../images/test/q3.png"
 import q2 from "../images/test/q4.png"
 import q3 from "../images/test/q5.png"
