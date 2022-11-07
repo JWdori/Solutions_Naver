@@ -335,23 +335,36 @@ html {
 }
 
 .NameBox {
-    height: 40px;
-    width: 124px;
-    background: #76767620;
-    border-radius: 10px;
-    border: solid 2px;
-    margin-top: 10px;
-    font-family: "Noto Sans KR";
-    color: white;
-    line-height: 40px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    height: 60px;
+    width: 270px;
+    border: 2px solid #FF8936;
+    border-radius: 20px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFAE68;
+
 }
 
+input::placeholder {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFAE68;
+}
+
+input:focus{
+    outline: none;
+}
 
 .servicecContentBox {
     margin-top: 20px;
-
 }
 
 
@@ -719,42 +732,30 @@ html {
     justify-content: center;
 }
 
-.genreButton {
-    cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
-    text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
-    margin-right: 12px;
-}
 
 .genreButtonFocus {
     cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
+    height: 38px;
+    width: 62px;
+    white-space: pre-wrap;
     text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    border: 0px;
+
     margin-right: 12px;
-    background: #FF6900;
-    border-width: 0px;
+
+    background: #FF8216;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 
@@ -978,22 +979,7 @@ html {
 }
 
 
-.tutorialBtn {
-    margin-bottom: 40px;
-}
 
-#tutorialBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 8px;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    line-height: 25px;
-    font-weight: bold;
-    font-size: 18px;
-}
 
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -1437,26 +1423,8 @@ body {
     justify-content: start;
 }
 
-.NameQ {
-    font-weight: bold;
-    font-size: 20px;
-    color: #FF6900;
-    font-family: "Noto Sans KR";
-}
 
-.NameBox {
-    height: 40px;
-    width: 124px;
-    background: #76767620;
-    border-radius: 10px;
-    border: solid 2px;
-    margin-top: 10px;
-    font-family: "Noto Sans KR";
-    color: white;
-    line-height: 40px;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+
 
 
 .servicecContentBox {
@@ -1690,34 +1658,31 @@ body {
     line-height: 30px;
 }
 
-.genreBox1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-#genreButton {
+
+.genreButton {
+    white-space: pre-wrap;
+    box-sizing: border-box;
     cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
+    height: 38px;
+    width: 62px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
     text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
+    color: #FF8216;
+    justify-items: center;
     margin-right: 12px;
+
+    border: 2.5px solid #FF8216;
+    border-radius: 10px;
+    background: white;
 }
 
-#genreButton:focus {
-    background: #FF6900;
-    border-width: 0px;
-}
+
+
 
 
 .shareIcon {
@@ -1930,20 +1895,21 @@ body {
 }
 
 #tutorialBtn {
-    background: none;
-    border: solid 2.5px;
-    border-radius: 20px;
-    border-color: #FF6900;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-family: "Noto Sans KR";
-    line-height: 25px;
-    font-weight: bold;
-    letter-spacing: 0.07px;
+    width: 270px;
+    height: 48px;
+    background: #FF8216;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
     font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    justify-content: center;
 
+    color: #FFFFFF;
 }
 
 #tutorialBtn:active {
@@ -1954,24 +1920,19 @@ body {
 
 .tutorialText {
     white-space: pre-wrap;
-    margin-top: 20px;
-    font-family: "Gmarket Sans";
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    align-items: center;
-    font-size: 14px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
     line-height: 24px;
-    width: 300px;
-    background: rgba(217, 217, 217, 0.1);
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+    color: #FF8216;
 }
 
 
 .questionImg {
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
 .testAnswer {
