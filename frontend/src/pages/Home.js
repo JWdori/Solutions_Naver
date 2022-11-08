@@ -79,19 +79,13 @@ const Home = (props) => {
             <div className="gameIntro">
                 <img
                     className="homeGameIcon1"
+
                     src={gameIcon}
                     alt="img"
-                    width="24px"
-                    height="24px"
+                    width="21px"
+                    height="15px"
                 ></img>
-                <span>  평소 게임 스타일을 이입해서 답변해주세요   </span>
-                <img
-                    className="homeGameIcon2"
-                    src={gameIcon}
-                    alt="img"
-                    width="24px"
-                    height="24px"
-                ></img>
+                <span> 평소 게임 스타일을 이입해서 답변해주세요   </span>
             </div>
 
             <button id="homeGameBtn" onClick={onGameClick}>
@@ -104,14 +98,15 @@ const Home = (props) => {
             {/*    게임 추천 설문하기*/}
             {/*</button>*/}
             <div className={"shareText"}>
-                결과 공유하기
                 <img
                     className="shareTextIcon"
                     src={shareIcon}
                     alt="shareIcon"
-                    width="20px"
-                    height="20px"
+                    style={{marginRight:"4px"}}
+                    width="10px"
+                    height="11px"
                 />
+                테스트 공유하기
             </div>
             <div id="shareContainer">
                 <img
@@ -144,6 +139,7 @@ const Home = (props) => {
 
                 <img
                     className="shareIcon"
+                    style={{marginRight:"0px"}}
                     src={link}
                     alt="link"
                     width="24px"

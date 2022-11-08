@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 import Header from "../elements/Header";
 import Progress from "../elements/Progress_test";
 
-import q1 from "../images/test/q3.png"
+import q1 from "../images/test/q1.png"
 import q2 from "../images/test/q4.png"
 import q3 from "../images/test/q5.png"
 import q4 from "../images/test/q6.png"
@@ -109,11 +109,41 @@ const Test = (props) => {
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <Progress width={300} percent={(step - 2.9) / 13}/>
+            <Progress
+                width={300}
+                percent={0.07+(step - 2.9) / 13}
+            />
             {time && (
                 <div id="questionDiv">
                     {
-                        <img
+                        step === 3 ?
+                            <img
+                                className="questionTxtImage"
+                                src={questionImg[step - 3]}
+                                alt="img"
+                                width="158px"
+                                height="108px"
+                            ></img>
+                            :
+                        step === 14 ?
+                            <div className={"questionTxt"}>
+                                {question[step - 3]}
+                            </div> :
+                            <div className={"questionTxt"}>
+                                {question[step - 3]}
+                            </div>
+                    }
+                    {
+                        step === 3
+                        ?<img
+                                className="questionImg"
+                                src={questionImg[step - 3]}
+                                alt="img"
+                                width="158px"
+                                height="108px"
+                                style={{marginBottom:"95px"}}
+                            ></img>
+                        :<img
                             className="questionImg"
                             src={questionImg[step - 3]}
                             alt="img"
@@ -122,15 +152,6 @@ const Test = (props) => {
                         ></img>
                     }
 
-                    {
-                        step === 14 ?
-                            <div className={"questionTxt"} style={{height: "240px", marginRight: "40px"}}>
-                                {question[step - 3]}
-                            </div> :
-                            <div className={"questionTxt"} style={{height: "122px"}}>
-                                {question[step - 3]}
-                            </div>
-                    }
 
                     <button
                         className="testAnswer"

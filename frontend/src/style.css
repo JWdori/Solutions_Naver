@@ -580,15 +580,24 @@ input:focus{
 
 
 .gameIntro {
-    color: white;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.03em;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    color: #FF8216;
+    margin-bottom: 12px;
+    margin-top: 40px;
 
 }
 
 .homeGameIcon1 {
-    margin-top: 1px;
+
     margin-right: 4px;
 }
 
@@ -673,9 +682,9 @@ input:focus{
 
 
 .progress {
-    background-color: #FF8936;
-    height: 8px;
-    border-radius: 20px;
+    background: linear-gradient(270deg, #FF8936 44.7%, #FF6900 100%);
+    height: 19px;
+    border-radius: 13.5px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -759,24 +768,9 @@ input:focus{
 }
 
 
-.shareIcon {
-    margin: 5px;
-    cursor: pointer;
-    padding: 1px;
-    border: 2px solid rgba(0, 0, 0, 0);
-}
 
-.shareText {
-    margin-bottom: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Noto Sans KR";
-    font-weight: 600;
-    font-size: 16px;
-    margin-top: 1px;
-}
+
+
 
 .shareTextIcon {
     margin-left: 10px;
@@ -1589,12 +1583,7 @@ body {
 }
 
 
-.gameIntro {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-}
+
 
 .homeGameIcon1 {
     margin-top: 1px;
@@ -1638,8 +1627,8 @@ body {
 }
 
 .progress-div {
-    background-color: rgba(246, 246, 246, 0.5);
-    border-radius: 20px;
+    background: #FFEAD8;
+    border-radius: 13.5px;
 }
 
 
@@ -1686,27 +1675,24 @@ body {
 
 
 .shareIcon {
-    margin: 5px;
+    margin-right: 7px;
     cursor: pointer;
-    padding: 1px;
-    border: 2px solid rgba(0, 0, 0, 0);
+
 }
 
 .shareText {
-    margin-bottom: 10px;
-    color: white;
-    font-family: "Noto Sans KR";
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.6667px;
+    line-height: 13px;
+    text-align: center;
+    color: #BABABA;
+    margin-bottom: 5px;
     display: flex;
-    font-weight: 500;
-    font-size: 16px;
     align-items: center;
-    justify-content: center;
 }
 
-.shareTextIcon {
-    margin-left: 10px;
-
-}
 
 
 #loading {
@@ -1982,21 +1968,25 @@ body {
 }
 
 .questionTxt {
+    margin-top: 110px;
     white-space: pre-wrap;
-    margin-top: 20px;
-    font-family: "Gmarket Sans";
-    font-weight: 400;
-    margin-left: 40px;
-    font-size: 14px;
-    line-height: 24px;
-    width: 300px;
-    background: rgba(217, 217, 217, 0.1);
-    border-radius: 20px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    margin-bottom: 40px;
+    color: #FF8216;
+}
+
+.questionTxtImage {
+    margin-top: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 

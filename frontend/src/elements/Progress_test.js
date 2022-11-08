@@ -8,14 +8,7 @@ const Progress = ({ width, percent }) => {
         <div>
 
             <div className="progress-div" style={{ width: width }}>
-                <div style={{ width: `${progress}px`,marginTop:"52px" }} className="progress">
-                <img
-                        className="progresschar"
-                        src={progresschar}
-                        alt="img"
-                        width="50px"
-                        height="50px"
-                    ></img>
+                <div style={{ width: `${progress}px`,marginTop:"38px" }} className="progress">
                 </div>
             </div>
         </div>

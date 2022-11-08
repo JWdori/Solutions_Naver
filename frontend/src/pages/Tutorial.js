@@ -40,10 +40,10 @@ const Tutorial = (props) => {
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <Progress width={300} percent={0.01}/>
+            <Progress width={300} percent={0.08}/>
 
                 <div>
-                    <div className={"tutorialText"}>
+                    <div className={"tutorialText"} style={{marginTop:"120px"}}>
                         {text[step]}
                     </div>
                     {
