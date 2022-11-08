@@ -2,103 +2,150 @@ const express = require('express');
 const router = express.Router();
 const models = require("../models")
 const testdb = models.GAME_INFO;
+const userdb = models.USER_INFO;
+const catdb = models.USER_DISLIKE;
+const {Op, Sequelize} = require("sequelize");
 const cwr = require('../utils/createWebResponse');
 
 const postTestResult = async (req, res) => {
-    //결과 받아서 알고리즘 타서 최종 결과 db에서 받아오고 그 결과 테스트수 +1
-    //우선 db에 test결과 넣어줘야함
+    //유저 정보 받아서 회원 테이블에 insert (그 과정에서 선호하지 않는 게임까지 user 정보에 저장을 하자 -> 스키마 추가하기)
+    //선택한 결과를 토대로 계산해서 해당 유형 db에서 받아와서 관련 정보를 반환하자
+    //유저가 어떤 유형인지도 insert할때 한번에 해주자 그럼.
+
     const header = res.setHeader('Content-Type', 'application/json');
     const resultArr = req.body.result;
-    res.header("Access-Control-Allow-Origin","*")
+    const user = req.body.user;
+    const categoryArr = req.body.category;
+    res.header("Access-Control-Allow-Origin", "*")
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const userAgent = req.get('User-Agent');
+    const browser = getBrowserInfo(userAgent);
 
-    let gihun = 0, chulsoo = 0, junha = 0, ryuhwan = 0, yongnam = 0, kwangsoo = 0;
 
-    for (let i = 1; i < 11; i++) {
+    let RER = 0, NOM = 0, GRO = 0, FAS = 0, WAL = 0, FOL = 0, UND = 0, FAM = 0, COL = 0, PVP = 0;
+
+    for (let i = 1; i < 13; i++) {
         if (i == 1) {
-            if (resultArr[i] == 0) ryuhwan++, yongnam++, kwangsoo++;
-            else gihun++, chulsoo++, junha++;
+            if (resultArr[i] == 'a') FOL += 1;
+            else NOM += 1;
             continue;
         }
         if (i == 2) {
-            if (resultArr[i] == 0) gihun++, chulsoo++, kwangsoo++;
-            else yongnam++, ryuhwan++, junha++;
+            if (resultArr[i] == 'a') GRO += 0.5;
+            else FAS += 1.01;
             continue;
         }
         if (i == 3) {
-            if (resultArr[i] == 0) ryuhwan++, junha++, kwangsoo++;
-            else yongnam++, chulsoo++, junha++;
+            if (resultArr[i] == 'a') GRO += 1, WAL += 2.98;
+            else NOM += 1, RER += 1;
             continue;
         }
         if (i == 4) {
-            if (resultArr[i] == 0) chulsoo++, junha++, kwangsoo++, gihun++;
-            else yongnam++, ryuhwan++;
+            if (resultArr[i] == 'a') PVP += 2.9;
+            else NOM += 0.11, GRO += 0.11;
             continue;
         }
         if (i == 5) {
-            if (resultArr[i] == 0) ryuhwan++, yongnam++, kwangsoo++;
-            else chulsoo++, junha++, gihun++;
+            if (resultArr[i] == 'a') RER += 1, GRO += 1;
+            else NOM += 1, WAL -= 2.98;
             continue;
         }
         if (i == 6) {
-            if (resultArr[i] == 0) gihun++, junha++, kwangsoo++;
-            else yongnam++, ryuhwan++, chulsoo++;
+            if (resultArr[i] == 'a') FOL += 0.99;
+            else UND += 2.02;
             continue;
         }
         if (i == 7) {
-            if (resultArr[i] == 0) gihun++, yongnam++, ryuhwan++;
-            else chulsoo++, kwangsoo++, junha++;
-
+            if (resultArr[i] == 'a') FAM += 2.02;
+            else FOL += 1;
             continue;
         }
         if (i == 8) {
-            if (resultArr[i] == 0) junha, gihun++, chulsoo++, yongnam++;
-            else kwangsoo++, ryuhwan++;
+            if (resultArr[i] == 'a') FAS += 1.01;
+            else COL += 1;
             continue;
         }
         if (i == 9) {
-            if (resultArr[i] == 0) junha++, yongnam++, gihun++;
-            else kwangsoo++, chulsoo++, ryuhwan++;
+            if (resultArr[i] == 'a') RER += 1.1;
             continue;
         }
         if (i == 10) {
-            if (resultArr[i] == 0) yongnam++, ryuhwan++, gihun++;
-            else yongnam++, ryuhwan++, gihun++;
+            if (resultArr[i] == 'a') WAL += 99, GRO += 0.5;
+            else NOM += 0.5;
             continue;
         }
-
-    }
-    const name = ["gihun", "chulsoo", "junha", "ryuhwan", "yongnam", "kwangsoo"];
-    const cnt = [gihun, chulsoo, junha, ryuhwan, yongnam, kwangsoo];
-    let max_name = name[0];
-    let max_cnt = cnt[0];
-    // console.log(max_cnt)
-    // console.log(max_name)
-    // console.log(name)
-    // console.log(cnt)
-    for (let i = 0; i < 6; i++) {
-        if (max_cnt < cnt[i]) {
-            max_name = name[i];
-            max_cnt = cnt[i];
+        if (i == 11) {
+            if (resultArr[i] == 'a') FAS += 1.01;
+            else COL += 1.98;
+            continue;
+        }
+        if (i == 12) {
+            if (resultArr[i] == 'a') FAM += 0.98;
+            else UND += 0.98;
+            continue;
         }
     }
+    const name = ["RER", "NOM", "GRO", "FAS", "WAL", "FOL", "UND", "FAM", "COL", "PVP"];
+    const cnt = [RER, NOM, GRO, FAS, WAL, FOL, UND, FAM, COL, PVP];
 
-    //결과 db에서 찾아오고, 해당타입 참여수 +1 해준다
-    let testResult = await testdb.findOne({where: {type_id: max_name}});
-    console.log(testResult)
-    //console.log(testResult.dataValues.type_id)
-    let resultLike = await testdb.findOne({where: {type_id: testResult.dataValues.type_like}});
-    let resultDislike = await testdb.findOne({where: {type_id: testResult.dataValues.type_dislike}});
-    testdb.increment({type_attend: 1}, {where: {type_id: testResult.dataValues.type_id}}).then(function (result) {
+    let types = [
+        {type: 'RER', cnt: RER},
+        {type: 'NOM', cnt: NOM},
+        {type: 'GRO', cnt: GRO},
+        {type: 'FAS', cnt: FAS},
+        {type: 'WAL', cnt: WAL},
+        {type: 'FOL', cnt: FOL},
+        {type: 'UND', cnt: UND},
+        {type: 'FAM', cnt: FAM},
+        {type: 'COL', cnt: COL},
+        {type: 'PVP', cnt: PVP},
+    ];
+    let result;
+
+    // Year int 값의 크기순으로 정렬
+    result = types.sort(function (a, b) {
+        return b.cnt - a.cnt;
+    });
+
+    //결과 db에서 찾아오면된다,,
+    const firstResult = await testdb.findOne({where: {appId: result[0].type}});
+    const secondResult = await testdb.findOne({where: {appId: result[1].type}});
+    const thirdResult = await testdb.findOne({where: {appId: result[2].type}});
+
+
+    //** 사용자를 insert하고
+    //선호하지 않는 게임 장르도 insert해주자~
+    const userId = uuid();
+    userdb.create({
+        user_id: user.id,
+        user_name: user.name,
+        user_ip: ip,
+        user_date: Sequelize.literal('now()'),
+        user_browser: browser,
+        type_id: result[0].type
+    }).then(newUser => {
+        //여기서 이제 새롭게 싫어하는 카테고리 테이블 인서트 쳐준다.
+        //그리고 그 밑에서 return 웹 해주면 된다~~
+        //온제 하냐,,?
+
+        if (categoryArr.length > 0) {
+            for (let i = 0; i < categoryArr.length; i++) {
+                catdb.create({
+                    user_id: user.id,
+                    category_id: categoryArr[i]
+                })
+            }
+        }
+        console.log(newUser);
         return cwr.createWebResp(res, header, 200, {
             message: "testing is completed, sending testResult!",
-            testResult: testResult,
-            resultLike: resultLike,
-            resultDislike: resultDislike
+            firstResult: firstResult,
+            secondResult: secondResult,
+            thirdResult: thirdResult,
+            user:newUser,
+            category:categoryArr
         });
-    }).catch(e => {
-        return cwr.errorWebResp(res, header, 500,
-            'test failed', e.message || e);
-    });
+    })
 }
 
 const getResult = async (req, res) => {
@@ -114,5 +161,25 @@ const getResult = async (req, res) => {
 
 }
 
+function getBrowserInfo(req) {
+    const agent = req.toUpperCase();
+    if (agent.indexOf('TRIDENT') >= 0) {
+        return 'IE';
+    } else if (agent.indexOf('FIREFOX') >= 0) {
+        return 'FIREFOX';
+    } else if (agent.indexOf('EDG') >= 0) {
+        return 'EDGE';
+    } else if (agent.indexOf('SAFARI') >= 0) {
+        return 'SAFARI';
+    } else if (agent.indexOf('CHROME') >= 0) {
+        return 'CHROME';
+    } else {
+        return '';
+    }
+}
 
-module.exports = {postTestResult,getResult}
+function uuid() {
+    return Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36);
+}
+
+module.exports = {postTestResult, getResult}

@@ -69,10 +69,6 @@ module.exports = function(sequelize, DataTypes) {
     mainGenre: {
       type: DataTypes.TEXT,
       allowNull: true
-    },
-    subGenre: {
-      type: DataTypes.JSON,
-      allowNull: true
     }
   }, {
     sequelize,

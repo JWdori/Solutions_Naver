@@ -9,6 +9,8 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const testRouter = require('./routes/api/test');
+const recommendRouter = require('./routes/api/recommend');
+const viewRouter = require('./routes/api/view');
 
 
 const app = express();
@@ -40,6 +42,8 @@ models.sequelize.sync().then( (res) => {
 
 app.use('/', indexRouter);
 app.use('/api/test', testRouter);
+app.use('/api/recommend', recommendRouter);
+app.use('/api/view', viewRouter);
 
 app.get("/*", (req, res) => {
   console.log(__dirname);

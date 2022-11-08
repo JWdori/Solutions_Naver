@@ -7,7 +7,7 @@ const testController = require('../../controllers/w2p_test')
    res.send('respond with a test');
  });
 
-// router.post('/postTestArray',testController.postTestResult);
+router.post('/postTestArray',testController.postTestResult);
 router.get('/getResult',testController.getResult)
 
 module.exports = router;
