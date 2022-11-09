@@ -1,8 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import Header from "../elements/Header";
-import Recommend from "../elements/Recommend";
-import Recommendnext from "../elements/Recommendnext";
+
 import Resultmodal from "../elements/Resultmodal";
 import type1 from "../images/type1.png"
 import typeexample1 from "../images/typeexample1.png"
@@ -10,7 +9,7 @@ import typeexample2 from "../images/typeexample2.png"
 import typeexample3 from "../images/typeexample3.png"
 import graph1 from "../images/graph1.png"
 import graph2 from "../images/graph2.png"
-import graph3 from "../images/graph3.png"
+
 import graph4 from "../images/graph4.png"
 import gameIcon from "../images/gameIcon.png";
 import shareIcon from "../images/shareicon.png";
@@ -28,6 +27,7 @@ import chat1 from "../images/chat_1_gray.png"
 import chat2 from "../images/chat_2_gray.png"
 import Ad_game from "../elements/Ad_game";
 import Serviceintroduce from "../elements/ServiceIntroduce";
+import box from "../images/box.png";
 
 
 const Result = (props) => {
@@ -44,8 +44,17 @@ const Result = (props) => {
     return (
         <>
             <Header isBack={false}/>
+            <span className={"mainTitle"} style={{marginTop:"60px"}}>
+                게임 회사가 보는<br></br>나의 게임 성향은?
+                <img
+                    className="questionTxtImage"
+                    src={box}
+                    alt="img"
+                    width="191px"
+                    height="17px"
+                ></img>
+            </span>
             <div className="resultBox">
-
                 <img
                     style={{marginTop:"-100px",marginRight:"16px"}}
                     id=""
@@ -310,10 +319,6 @@ const Result = (props) => {
             <button id="allTypeBtn">
                 모든 유형 확인하기
             </button>
-
-
-            <Ad_game/>
-
             <Serviceintroduce></Serviceintroduce>
 
             {/*<div className={"gameIntro"}>*/}

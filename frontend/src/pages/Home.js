@@ -8,8 +8,6 @@ import link from "../images/link.png";
 import twitter from "../images/twitter.png";
 import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
-import Ad_game from "../elements/Ad_game";
-import Slider from "../elements/Slider";
 import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 
@@ -70,9 +68,9 @@ const Home = (props) => {
             </span>
 
 
-
             <MainSlide></MainSlide>
 
+            <span className="mainSubTitle" style={{fontWeight:"400"}}>자료 제공: TentuPlay</span>
             <div className="gameIntro">
                 <img
                     className="homeGameIcon1"
