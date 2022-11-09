@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import img2 from "../images/tutorial/q2_tuto.png"
 import Header from "../elements/Header";
 import img from "../images/tutorial/tutorial_king.png";
@@ -10,14 +11,18 @@ import q1 from "../images/tutorial/q1.png"
 
 const Tutorial = (props) => {
     const navigate = useNavigate();
-
+    const {state} = useLocation();
+    const userId = state.userId;
+    const [userName, setUserName] = React.useState(null);
+    const [userGenre, setUserGenre] = React.useState([]);
     const [step, setStep] = React.useState(0);
     const nameFunction = (x) => {
-        console.log(x);
+        setUserName(x);
     }
 
     const genreFunction = (x) => {
-        console.log(x);
+        console.log(x)
+        setUserGenre(x);
     }
     const text =
         ["게임 플레이를 위해\n계정을 생성합니다!\n",
@@ -33,7 +38,7 @@ const Tutorial = (props) => {
 
         if (step < 1) setStep(step + 1);
         else if (step === 1) {
-            navigate("/test");
+            navigate("/test", {state:{userId: userId, userName: userName, userGenre: userGenre}});
         }
 
     };
@@ -42,43 +47,43 @@ const Tutorial = (props) => {
             <Header isBack={true} step={step} setStep={setStep}/>
             <Progress width={300} percent={0.08}/>
 
-                <div>
-                    <div className={"tutorialText"} style={{marginTop:"120px"}}>
-                        {text[step]}
-                    </div>
-                    {
-                        step == 1
-                            ? <div></div>
-:
+            <div>
+                <div className={"tutorialText"} style={{marginTop: "120px"}}>
+                    {text[step]}
+                </div>
+                {
+                    step == 1
+                        ? <div></div>
+                        :
                         <img
-                        className="questionImg"
-                        src={q1}
-                        alt="img"
-                        width="180px"
-                        height="88px"
+                            className="questionImg"
+                            src={q1}
+                            alt="img"
+                            width="180px"
+                            height="88px"
                         />
 
-                    }
-                </div>
+                }
+            </div>
 
-                <div
-                    style={{color: "white"}}>
-                    {step === 0 ?
-                        <Name nameFunction={nameFunction}/> :
-                        step === 1 ?
-                            <Genre genreFunction={genreFunction}/> : null
+            <div
+                style={{color: "white"}}>
+                {step === 0 ?
+                    <Name nameFunction={nameFunction}/> :
+                    step === 1 ?
+                        <Genre genreFunction={genreFunction}/> : null
 
-                    }
+                }
 
-                </div>
+            </div>
 
-                <div className={"tutorialBtn"}>
-                    <button id={"tutorialBtn"}
-                            style={{width: btnSize[step],marginBottom:"190px"}}
-                            onClick={onClick}>
-                        {btnText[step]}
-                    </button>
-                </div>
+            <div className={"tutorialBtn"}>
+                <button id={"tutorialBtn"}
+                        style={{width: btnSize[step], marginBottom: "190px"}}
+                        onClick={onClick}>
+                    {btnText[step]}
+                </button>
+            </div>
         </>
     );
 };
