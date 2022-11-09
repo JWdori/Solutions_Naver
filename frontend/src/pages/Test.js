@@ -1,10 +1,10 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import main from "../images/main.png"
+
 import Header from "../elements/Header";
 import Progress from "../elements/Progress_test";
-import Progressrec from "../elements/Progress_rec";
-import q1 from "../images/test/q3.png"
+
+import q1 from "../images/test/q1.png"
 import q2 from "../images/test/q4.png"
 import q3 from "../images/test/q5.png"
 import q4 from "../images/test/q6.png"
@@ -16,67 +16,43 @@ import q9 from "../images/test/q11.png"
 import q10 from "../images/test/q12.png"
 import q11 from "../images/test/q13.png"
 import q12 from "../images/test/q14.png"
-import q13 from "../images/test/q15.png"
-import q14 from "../images/test/q16.png"
-
+import box from "../images/box.png"
 
 const Test = (props) => {
     const navigate = useNavigate();
     const [step, setStep] = React.useState(3);
     const [time, setTime] = React.useState(false);
-    const questionImg = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14];
+    const questionImg = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12];
     const question =
         [
-            "“자 그럼 먼저 장비부터 해결하지. \n" +
-            "돈이 없다고? 이곳에서도 자네 계좌에 있는\n 돈을 쓸 수 있다네.”",
+            "가입이 끝났다!\n바로 게임에 접속할까?",
 
-            "“그럼 이번엔 짐이 왕가 대대로 내려오는 \n" +
-            "유니크 스킬을 하나 부여해주지! \n" +
-            "자, 선택하게.”",
-
-            "“좋은 선택이네. 이제 바로 출발하지.\n" +
-            "그리고 듣기론, 용사를 기다리는 용사 파티가 \n" +
-            "있다던데... 참고하게나.”",
-
-            "당신은 흑염룡이 잠들어있는 던전의 입구\n까지 도착했습니다. 하지만 사람 형체의\n 괴물이 입구를 막고 있네요.",
-
-            "아니 이걸!\n" +
-            "세상에, 당신은 왕궁에서 받은 보급품과\n 마법 도구를 잃어버렸습니다!",
-
-            "이제 갈림길에 도달했습니다. \n" +
-            "표지판에는 단어가 쓰여 있네요.\n" +
-            "갈림길 모두 같은 곳을 향합니다.",
-
-            "보물이다!\n당신은 왕궁과 연락할 수 있는 전서구와\n 많은 보물들을 발견했습니다.",
-
-            "저건! 용을 지키는 가디언, 골렘입니다!\n 하지만 지금은 움직이지 않는 것 같네요.",
-
-            "“낯선이여...\n길을 열어주지. 대신 이 앞은 기어서 지나가야한다. ”",
-
-            "“미개한 것들이 허락도 없이 내 둥지에 \n" +
-            "발을 들이느냐!”\n" +
-            "갑작스레 흑염룡과의 전투가 시작됐습니다!",
-
-            "“아닛...! 그렇다면...!”\n" +
-            "흑염룡이 생각보다 많이 약하네요.\n" +
-            "벌써 힘이 다한 것 같습니다.",
-
-            "“잠깐잠깐...! 또 나한테...\n" +
-            "너 이번에 왕국에 새로 온 용사지?\n" +
-            "\n" +
+            "먼저, 플레이할 캐릭터의\n 커스터마이칭을 해야한다.\n\n나는 . . .",
 
 
-            "너는 착각하고 있는 거다,\n" +
-            "내 말을 들어보라고!”",
-            "너를 이곳에 보낸 사람!\n" +
-            "가르반 3세 국왕이지?\n" +
+            "과금 아이템 광고가\n 눈에 들어온다.",
 
-            "선택에 따라 세계의 운명이...어쩌구 그러면서",
-            "가증스런 왕국 인간들의 선동이다!\n 탐욕에 눈이 멀었지.\n" +
-            "오직 자신들의 배를 채우기 위해서!  "
+            "마을에 도착한 나는 ...",
+
+            "갑자기 NPC가 말을 걸어왔다!",
+
+
+            "[동료] 컨텐츠에 대해\n 알게 되었다!\n동료는 상점이나 퀘스트를 통해\n 수집 할 수 있다!",
+
+            "이런!\n 패치로 때문에 기존에 사용하던\n 동료들의 능력치가 낮아졌다...",
+
+            "우연히 이벤트에 당첨되어\n 보상으로 고급 뽑기권을 받았다!\n하나만 선택할 수 있다.",
+
+            "...",
+
+            "다시 과금 아이템 광고가\n 나타났다!",
+
+            "점점\n 육성이 어렵고 지루해진다!",
+
+            "드디어 만렙을 달성했다!\n 캐릭터도 충분히 강력하다!\n이제 나는. . ."
         ]
     const answerYes = [
-        "장비에 돈을 쓰지 않는다. 파밍으로 직접 구한다.",
+        "게임의 컨셉, 스토리, 공략 드을 더\n찾아보고 게임을 시작한다.",
         "저주와 정신 마법을 막아주는 <고귀한 의지>",
         "용사 파티와 함께 던전으로 향한다.",
         "괴물을 먼저 공격해서 해치우고 던전에 들어간다.",
@@ -96,7 +72,7 @@ const Test = (props) => {
 
     ];
     const answerNo = [
-        "필요한 장비와 마법만 최소한으로 구매한다.",
+        "무슨 게임인지 잘 모르지만...\n일단 한번 해본다.",
         "적을 잠시 동안 구속시키는 <그림자 밟기>",
         "홀로 던전으로 향한다.",
         "인간이 아니라도 말이 통할 가능성이 있다.\n 괴물과 대화를 통해 길을 튼다.",
@@ -122,8 +98,8 @@ const Test = (props) => {
     }, [time]);
     const onClick = (num) => {
         setTime(false);
-        if (step < 16) setStep(step + 1);
-        else if (step === 16) {
+        if (step < 13) setStep(step + 1);
+        else if (step === 13) {  //16아님.
             navigate("/beforeResult")
         }
         // select[step] = num;
@@ -131,11 +107,44 @@ const Test = (props) => {
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <Progress width={300} percent={(step - 2.9) / 13}/>
+            <Progress
+                width={300}
+                percent={0.07+(step - 2.9) / 13}
+            />
             {time && (
                 <div id="questionDiv">
                     {
-                        <img
+                        step === 3 ?
+                            <span className={"questionTxt"}>
+                                가입이 끝났다!<br></br>바로 게임에 접속할까?
+                                                            <img
+                                                                className="questionTxtImage"
+                                                                src={box}
+                                                                alt="img"
+                                                                width="111px"
+                                                                height="13px"
+                                                            ></img>
+                            </span>
+                            :
+                        step === 14 ?
+                            <div className={"questionTxt"}>
+                                {question[step - 3]}
+                            </div> :
+                            <div className={"questionTxt"}>
+                                {question[step - 3]}
+                            </div>
+                    }
+                    {
+                        step === 3
+                        ?<img
+                                className="questionImg"
+                                src={questionImg[step - 3]}
+                                alt="img"
+                                width="158px"
+                                height="108px"
+                                style={{marginBottom:"80px"}}
+                            ></img>
+                        :<img
                             className="questionImg"
                             src={questionImg[step - 3]}
                             alt="img"
@@ -143,16 +152,8 @@ const Test = (props) => {
                             height={hei[step - 3]}
                         ></img>
                     }
-                    {
-                        step === 14 ?
-                            <div className={"questionTxt"} style={{height: "240px", marginRight: "40px"}}>
-                                {question[step - 3]}
-                            </div> :
-                            <div className={"questionTxt"} style={{height: "122px"}}>
-                                {question[step - 3]}
-                            </div>
 
-                    }
+
                     <button
                         className="testAnswer"
                         onClick={() => {
@@ -170,16 +171,6 @@ const Test = (props) => {
                                 }}
                             >
                                 {answerNo[step - 3]}
-                            </button> : null
-                    }
-                    {
-                        step === 3 ?
-                            <button className="testAnswer"
-                                    onClick={() => {
-                                        onClick(3);
-                                    }}>
-                                왕에게 거금을 내고 왕실 창고에서 랜덤으로<br/>
-                                장비와 마법을 받는다.
                             </button> : null
                     }
                 </div>

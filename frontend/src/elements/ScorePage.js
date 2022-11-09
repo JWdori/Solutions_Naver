@@ -1,7 +1,5 @@
 import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
-import game2 from "../images/game2.png"
-import game from "../images/game.png"
 import Score from "./Score";
 
 
@@ -10,13 +8,12 @@ const ScorePage = (props) => {
     const { setShowPopup,num,complete } = props;
     const handleCloseBtn = (e) => {
         setShowPopup(false);
-        console.log(num)
+
     };
     const handleCompleteBtn = (e) => {
         setShowPopup(false);
         complete(num+1);
-        console.log(num)
-        console.log("gd")
+
     };
 
 

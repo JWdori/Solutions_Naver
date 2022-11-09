@@ -7,20 +7,6 @@ html {
 }
 
 
-body {
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    background: black;
-}
-
 .App {
     text-align: center;
     display: flex;
@@ -35,23 +21,14 @@ body {
 
 .back {
     margin-bottom: 18px;
-    margin-left: -120px;
+    margin-left: -110px;
     margin-right: 95px;
+    width: 12px;
+    height: 24px;
     cursor: pointer;
 }
 
 
-.headerContainer {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    max-height: 60px;
-    left: 0px;
-    top: 0px;
-
-    /* main1 */
-    background: #FF6900;
-}
 
 .logo {
     cursor: pointer;
@@ -331,26 +308,10 @@ body {
 }
 
 
-.serviceTitle1 {
-    font-family: "Gmarket Sans";
-    color: #FF6900;
-    font-weight: bold;
-    font-size: 24px;
-}
 
 
-.serviceTitleBox {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-}
 
-.serviceSemiBox {
-    display: flex;
-    align-items: start;
-    margin-top: 12px;
-    justify-content: start;
-}
+
 
 .NameQ {
     font-weight: bold;
@@ -360,43 +321,40 @@ body {
 }
 
 .NameBox {
-    height: 40px;
-    width: 124px;
-    background: #76767620;
-    border-radius: 10px;
-    border: solid 2px;
-    margin-top: 10px;
-    font-family: "Noto Sans KR";
-    color: white;
-    line-height: 40px;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-
-.servicecContentBox {
-    margin-top: 20px;
-
-}
-
-
-.servicesemi {
-    font-size: 18px;
-    font-family: "Noto Sans KR";
+    height: 60px;
+    width: 270px;
+    border: 2px solid #FF8936;
+    border-radius: 20px;
+    font-family: 'Pretendard';
+    font-style: normal;
     font-weight: 600;
-    color: #FF6900;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFAE68;
+
+}
+
+input::placeholder {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFAE68;
+}
+
+input:focus{
+    outline: none;
 }
 
 
-.Contact {
-    margin-top: 80px;
-    font-size: 16px;
-    font-family: "Noto Sans KR";
-    color: white;
-    display: flow;
-    align-items: center;
-    margin-bottom: 100px;
-}
+
+
+
+
+
 
 .Email {
     font-family: "Noto Sans KR";
@@ -405,15 +363,7 @@ body {
 }
 
 
-.servicecontent {
-    margin-bottom: 8px;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    color: white;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-}
+
 
 
 .modalHeadFont {
@@ -425,13 +375,7 @@ body {
 
 }
 
-.modalTitleresult {
-    font-family: "Gmarket Sans";
-    text-align: start;
-    font-size: 22px;
-    color: #6aa99e;
-    margin: 15px 0px 10px 0px;
-}
+
 
 .modalSemiresult {
     font-family: "Noto Sans KR";
@@ -483,23 +427,15 @@ body {
     z-index: 1;
 }
 
-.modalImage {
-    margin: 12px;
-    width: 276px;
-    height: 226px;
-    margin-top: -38px;
-    border-radius: 10px;
-    background: url("./images/game.png") repeat;
-}
+
 
 
 .modalImage2 {
     margin: 7px 7px 7px 7px;
-    width: 276px;
+    width: 280px;
     height: 160px;
     margin-top: -26px;
     border-radius: 10px;
-    background: url("./images/game2.png") repeat;
 }
 
 
@@ -509,9 +445,8 @@ body {
     text-align: start;
     font-size: 16px;
     font-weight: normal;
-    padding-top: 30px;
+    margin-top: 10px;
     margin-left: 20px;
-    color: white;
 }
 
 .modalSemi {
@@ -570,19 +505,40 @@ body {
 
 
 .mainSubTitle {
-    margin-top: 20px;
-    font-size: 12px;
-    font-family: "Noto Sans KR";
-    font-weight: 400;
-    color: #dcdcdc;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #B4B4B4;
+}
+
+.mainSubTitleBold {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    color: #FFAE68;
 }
 
 .mainTitle {
-    margin-top: 10px;
-    font-size: 24px;
-    font-family: "Gmarket Sans";
-    font-weight: bold;
-    color: white;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FF8216;
 }
 
 .mainBox {
@@ -607,15 +563,24 @@ body {
 
 
 .gameIntro {
-    color: white;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.03em;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    color: #FF8216;
+    margin-bottom: 12px;
+    margin-top: 40px;
 
 }
 
 .homeGameIcon1 {
-    margin-top: 1px;
+
     margin-right: 4px;
 }
 
@@ -630,17 +595,28 @@ body {
 
 
 #homeGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 32.5px;
-    width: 300px;
+    background: #FF8216;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    width: 270px;
     height: 60px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
+    border: 0px;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 24px;
+    justify-content: center;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.08em;
+
+    color: #FFFFFF;
+    margin-bottom: 36px;
 }
 
 
@@ -673,8 +649,7 @@ body {
     font-size: 16px;
     position: relative;
     z-index: 1;
-    margin-top: 32px;
-
+    margin-top: 20px;
 }
 
 
@@ -690,9 +665,9 @@ body {
 
 
 .progress {
-    background-color: #FF8936;
-    height: 8px;
-    border-radius: 20px;
+    background: linear-gradient(270deg, #FF8936 44.7%, #FF6900 100%);
+    height: 19px;
+    border-radius: 13.5px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -723,6 +698,10 @@ body {
     margin-right: -20px;
 }
 
+.recommendnextImage{
+    border-radius: 20px;
+}
+
 
 #homeSurveyBtn {
     background: #FF4337;
@@ -745,63 +724,36 @@ body {
     justify-content: center;
 }
 
-.genreButton {
-    cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
-    text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
-    margin-right: 12px;
-}
 
 .genreButtonFocus {
     cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
+    height: 38px;
+    width: 62px;
+    white-space: pre-wrap;
     text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    border: 0px;
+
     margin-right: 12px;
-    background: #FF6900;
-    border-width: 0px;
+
+    background: #FF8216;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 
-.shareIcon {
-    margin: 5px;
-    cursor: pointer;
-    padding: 1px;
-    border: 2px solid rgba(0, 0, 0, 0);
-}
 
-.shareText {
-    margin-bottom: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Noto Sans KR";
-    font-weight: 600;
-    font-size: 16px;
-    margin-top: 1px;
-}
+
+
 
 .shareTextIcon {
     margin-left: 10px;
@@ -988,19 +940,7 @@ body {
     border-radius: 10px;
 }
 
-#allGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 8px;
-    width: 300px;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
+
 
 #allTypeBtn {
     background: #D9D9D9;
@@ -1016,22 +956,7 @@ body {
 }
 
 
-.tutorialBtn {
-    margin-bottom: 40px;
-}
 
-#tutorialBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 8px;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    line-height: 25px;
-    font-weight: bold;
-    font-size: 18px;
-}
 
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -1054,7 +979,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px;
-    background: black;
+    background: white;
 }
 
 .App {
@@ -1064,24 +989,16 @@ body {
     justify-content: center;
     align-items: center;
     width: 375px;
-
     /*background-color: rgba(0, 0, 0, 0);*/
     margin-top: 60px;
 }
 
-.back {
-    margin-bottom: 18px;
-    margin-left: -120px;
-    margin-right: 95px;
-    cursor: pointer;
-}
 
 
 .headerContainer {
     position: absolute;
     width: 100%;
-    height: 60px;
-    max-height: 60px;
+    height: 54px;
     left: 0px;
     top: 0px;
 
@@ -1110,9 +1027,58 @@ body {
     margin-bottom: 80px;
 }
 
-.serviceintroduce {
 
+
+
+.slide__image {
+    display: block;
+    width: 253px;
+    height: 253px;
+    object-fit: cover;
 }
+
+.slide__game_type{
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.slide__game {
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: -60px;
+}
+
+.slide__game__title{
+    margin-top: 72px;
+    margin-bottom: 10px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 800;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FF8216;
+}
+
+
+
+.slide__game__option{
+    display: flex;
+    justify-content: start;
+}
+
+
 
 .ad_game_font {
     height: 40px;
@@ -1324,7 +1290,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 173px;
+    height: 174px;
     background-color: #fffef5;
     overflow: auto;
     overflow: x-hidden;
@@ -1369,9 +1335,7 @@ body {
     border-color: #FF6900
 }
 
-.servicebox {
-    width: 320px;
-}
+
 
 
 .typeExample {
@@ -1395,98 +1359,129 @@ body {
     margin-bottom: 10px;
 }
 
-.serviceTitle1 {
-    font-family: "Gmarket Sans";
-    color: #FF6900;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-
-.serviceTitleBox {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-}
-
-.serviceTitleBox2 {
-    width: 80px;
-    height: 100px;
-    border: solid 2px;
-    border-color: #b4b4b4;
-    border-radius: 10px;
-    text-align: center;
-    padding: 4px;
-}
-
-.serviceSemiBox {
-    display: flex;
-    align-items: start;
-    margin-top: 12px;
-    justify-content: start;
-}
-
-.NameQ {
-    font-weight: bold;
+.serviceTitle {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 900;
     font-size: 20px;
-    color: #FF6900;
-    font-family: "Noto Sans KR";
-}
-
-.NameBox {
-    height: 40px;
-    width: 124px;
-    background: #76767620;
-    border-radius: 10px;
-    border: solid 2px;
-    margin-top: 10px;
-    font-family: "Noto Sans KR";
-    color: white;
-    line-height: 40px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #FF8216;
+    margin-left: 32px;
 }
 
 
-.servicecContentBox {
-    margin-top: 20px;
+.serviceSemibold {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 11px;
+    line-height: 15px;
+    /* or 136% */
 
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FF8216;
+}
+.serviceSemi{
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    /* or 136% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFAE68;
 }
 
 
-.servicesemi {
-    font-size: 16px;
-    font-family: "Noto Sans KR";
-    font-weight: 600;
-    color: #FF6900;
-}
+
+
+
+
+
+
+
+
 
 
 .Contact {
-    margin-top: 80px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
     font-size: 16px;
-    font-family: "Noto Sans KR";
-    color: white;
-    display: flow;
+    line-height: 19px;
+    display: flex;
     align-items: center;
-    margin-bottom: 100px;
+    text-align: center;
+    margin-top: 100px;
+    color: #FF8216;
 }
 
 .Email {
-    font-family: "Noto Sans KR";
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
     font-size: 14px;
-    color: #b4b4b4;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 70px;
+    margin-top: 2px;
+    color: #FF8216;
+}
+.Copyright{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #AFAFAF;
+    margin-bottom: 20px;
 }
 
-
 .servicecontent {
-    margin-bottom: 8px;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    color: white;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 18px;
+    /* or 200% */
     display: flex;
-    align-items: start;
-    justify-content: start;
+    justify-items: center;
+    color: #8D8D8D;
+    margin-left: -40px;
+    margin-top: 16px;
+    margin-bottom: -20px;
+}
+.servicecontentbold {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 18px;
+    /* or 200% */
+
+    display: flex;
+    align-items: center;
+
+    color: #FF8216;
 }
 
 
@@ -1534,30 +1529,11 @@ body {
     height: 226px;
     margin-top: -38px;
     border-radius: 10px;
-    background: url("./images/game.png") repeat;
 }
 
 
-.modalImage2 {
-    margin: 7px 7px 7px 7px;
-    width: 276px;
-    height: 160px;
-    margin-top: -26px;
-    border-radius: 10px;
-    background: url("./images/game2.png") repeat;
-}
 
 
-.modalTitle {
-    font-family: "Gmarket Sans";
-    width: 160px;
-    text-align: start;
-    font-size: 16px;
-    font-weight: normal;
-    padding-top: 30px;
-    margin-left: 20px;
-    color: white;
-}
 
 .modalSemi {
     font-family: "Noto Sans KR";
@@ -1629,12 +1605,7 @@ body {
 }
 
 
-.gameIntro {
-    color: white;
-    display: flex;
-    align-items: center;
 
-}
 
 .homeGameIcon1 {
     margin-top: 1px;
@@ -1667,24 +1638,6 @@ body {
     margin-top: 28px;
 }
 
-#recommend2 {
-    background: #FF6900;
-    border: none;
-    border-radius: 32px;
-    width: 240px;
-    text-align: center;
-    height: 40px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    position: relative;
-    z-index: 1;
-    margin-top: 32px;
-
-}
-
-
 #rightslidebutton {
     background: none;
     margin-left: 20px;
@@ -1696,8 +1649,8 @@ body {
 }
 
 .progress-div {
-    background-color: rgba(246, 246, 246, 0.5);
-    border-radius: 20px;
+    background: #FFEAD8;
+    border-radius: 13.5px;
 }
 
 
@@ -1716,58 +1669,52 @@ body {
     line-height: 30px;
 }
 
-.genreBox1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-#genreButton {
+
+.genreButton {
+    white-space: pre-wrap;
+    box-sizing: border-box;
     cursor: pointer;
-    height: 44px;
-    width: 66px;
-    line-height: 22px;
+    height: 38px;
+    width: 62px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
     text-align: center;
-    color: white;
-    background: none;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    font-weight: 500;
-    border-width: 2.5px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #FF6900;
+    color: #FF8216;
+    justify-items: center;
     margin-right: 12px;
+
+    border: 2.5px solid #FF8216;
+    border-radius: 10px;
+    background: white;
 }
 
-#genreButton:focus {
-    background: #FF6900;
-    border-width: 0px;
-}
+
+
 
 
 .shareIcon {
-    margin: 5px;
+    margin-right: 7px;
     cursor: pointer;
-    padding: 1px;
-    border: 2px solid rgba(0, 0, 0, 0);
+
 }
 
 .shareText {
-    margin-bottom: 10px;
-    color: white;
-    font-family: "Noto Sans KR";
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.6667px;
+    line-height: 13px;
+    text-align: center;
+    color: #BABABA;
+    margin-bottom: 5px;
     display: flex;
-    font-weight: 500;
-    font-size: 16px;
     align-items: center;
-    justify-content: center;
 }
 
-.shareTextIcon {
-    margin-left: 10px;
-
-}
 
 
 #loading {
@@ -1911,18 +1858,30 @@ body {
 }
 
 #allGameBtn {
-    background: #FF6900;
+    background: #FF8216;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    border-radius: 8px;
-    width: 300px;
-    height: 50px;
-    line-height: 25px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
+    border-radius: 20px;
+    width: 270px;
+    height: 42px;
+    margin-top: 20px;
+
+    left: calc(50% - 258.63px/2 - 0.5px);
+    top: calc(50% - 17px/2 - 193px);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    letter-spacing: -0.08em;
+
+    color: #FFFFFF;
 }
 
 #allTypeBtn {
@@ -1944,20 +1903,21 @@ body {
 }
 
 #tutorialBtn {
-    background: none;
-    border: solid 2.5px;
-    border-radius: 20px;
-    border-color: #FF6900;
-    height: 50px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-family: "Noto Sans KR";
-    line-height: 25px;
-    font-weight: bold;
-    letter-spacing: 0.07px;
+    width: 270px;
+    height: 48px;
+    background: #FF8216;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
     font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    justify-content: center;
 
+    color: #FFFFFF;
 }
 
 #tutorialBtn:active {
@@ -1968,51 +1928,52 @@ body {
 
 .tutorialText {
     white-space: pre-wrap;
-    margin-top: 20px;
-    font-family: "Gmarket Sans";
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    align-items: center;
-    font-size: 14px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
     line-height: 24px;
-    width: 300px;
-    background: rgba(217, 217, 217, 0.1);
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+    color: #FF8216;
 }
 
 
 .questionImg {
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
 .testAnswer {
     white-space: pre-wrap;
-    width: 300px;
-    height: 52px;
-    background-color: transparent;
-    font-family: "Noto Sans KR";
-    border: 2px solid #FF6900;
-    border-radius: 20px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    line-height: 25px;
-    font-weight: 500;
-    font-size: 13px;
-    display: flow;
-    align-items: center;
+    width: 270px;
+    height: 66px;
+    border: 3px solid #FF8936;
+    border-radius: 15px;
+    background-color: white;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
-    letter-spacing: -0.07em;
-    line-height: 19px;
+    color: #FF8936;
+    margin-top: 15px;
 }
 
 
 .testAnswer:active {
-    background: #FF6900;
-    color: #fffef5;
+    background: #FF8216;
+    border-radius: 15px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .testAnswer:visited {
@@ -2035,24 +1996,49 @@ body {
 }
 
 .questionTxt {
+    margin-top: 110px;
     white-space: pre-wrap;
-    margin-top: 20px;
-    font-family: "Gmarket Sans";
-    font-weight: 400;
-    margin-left: 40px;
-    font-size: 14px;
-    line-height: 24px;
-    width: 300px;
-    background: rgba(217, 217, 217, 0.1);
-    border-radius: 20px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    margin-bottom: 40px;
-
+    color: #FF8216;
 }
 
+.questionTxtImage {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.servicebox1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    height: 233px;
+    width: 295px;
+}
+.servicebox2{
+    position: absolute;
+    margin-top: 4px;
+}
+
+.servicebox3{
+    display: flow;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left:  auto;
+}
 
 #questionDiv {
     /*display: inline-block;*/

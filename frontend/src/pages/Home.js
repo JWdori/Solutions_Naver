@@ -1,6 +1,5 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import main from "../images/main.png"
 import gameIcon from "../images/gameIcon.png"
 
 import facebook from "../images/facebook.png";
@@ -11,8 +10,15 @@ import shareIcon from "../images/shareicon.png"
 import Header from "../elements/Header";
 import Ad_game from "../elements/Ad_game";
 import Slider from "../elements/Slider";
+import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
+
+
 import {TentuPlay} from '@tentuplay/js-client-sdk';
+import GameSlide1 from "../elements/GameSlide1";
+import GameSlide2 from "../elements/GameSlide2";
+import box from "../images/box.png"
+
 
 const Home = (props) => {
     const navigate = useNavigate();
@@ -25,88 +31,87 @@ const Home = (props) => {
         navigate("/survey");
     };
 
+    const tp = new TentuPlay({
+            clientKey: "b64DGZZd38ZKHomhQFQE",
+    });
 
-    React.useEffect(() => {
-        const tp = new TentuPlay({
-            clientKey: "2Y5dB5x4cW1N82MHZT5V",
-        });
-        tp.onInit(() => {
-            console.log(tp.SDKVersion);
+    function myLogin(){
+        tp.onInit(()=>{
+            tp.sendJoin({
+                playerUUID: "44"
+            });
+            tp.sendLogin({
+                playerUUID: "44"
+            })
         })
-    })
+
+    }
+    myLogin();
+
+
     return (
         <>
             <Header isBack={false}/>
-            <div className="mainSubTitle">
-                게임유형 검사와 게임 추천 서비스를 경험해보세요!
-            </div>
-            <div className="mainBox">
-                <div className="mainTitle">
-                    내가 만약&nbsp;
-                </div>
-                <div className="mainTitle" style={{fontSize: "28px", color: "#FF6900"}}>
-                    게임&nbsp;
-                </div>
-                <div className="mainTitle">
-                    속&nbsp;
-                </div>
-                <div className="mainTitle" style={{fontSize: "28px", color: "#FF6900"}}>
-                    용사
-                </div>
-                <div className="mainTitle">
-                    라면?
-                </div>
-            </div>
+            <span className="mainSubTitleBold">
+                게임유형검사
+                            <span className="mainSubTitle">와</span>
+                 유형별 게임 추천 서비스
+                            <span className="mainSubTitle">를 경험해보세요!</span>
+            </span>
+            <span className={"mainTitle"} style={{marginTop:"10px"}}>
+                게임 회사가 보는<br></br>나의 게임 성향은?
+                <img
+                    className="questionTxtImage"
+                    src={box}
+                    alt="img"
+                    width="191px"
+                    height="17px"
+                ></img>
+            </span>
 
-            <img
-                id="mainImg"
-                src={main}
-                alt="img"
-                width="300x"
-                height="357px"
-            ></img>
+
+
+            <MainSlide></MainSlide>
 
             <div className="gameIntro">
                 <img
                     className="homeGameIcon1"
+
                     src={gameIcon}
                     alt="img"
-                    width="24px"
-                    height="24px"
+                    width="21px"
+                    height="15px"
                 ></img>
-                <span>  평소 게임 스타일을 이입해서 답변해주세요   </span>
-                <img
-                    className="homeGameIcon2"
-                    src={gameIcon}
-                    alt="img"
-                    width="24px"
-                    height="24px"
-                ></img>
+                <span> 평소 게임 스타일을 이입해서 답변해주세요   </span>
             </div>
 
             <button id="homeGameBtn" onClick={onGameClick}>
                 성향 검사 시작하기
+                {
+
+                }
             </button>
-            <button id="homeSurveyBtn" onClick={onSurClick}>
-                게임 추천 설문하기
-            </button>
+            {/*<button id="homeSurveyBtn" onClick={onSurClick}>*/}
+            {/*    게임 추천 설문하기*/}
+            {/*</button>*/}
             <div className={"shareText"}>
-                결과 공유하기
                 <img
                     className="shareTextIcon"
                     src={shareIcon}
                     alt="shareIcon"
-                    width="20px"
-                    height="20px"
+                    style={{marginRight:"4px"}}
+                    width="10px"
+                    height="11px"
                 />
+                테스트 공유하기
             </div>
             <div id="shareContainer">
                 <img
                     className="shareIcon"
                     src={kakao}
                     alt="kakaotalk"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={kakaoShare}
                 />
 
@@ -114,8 +119,8 @@ const Home = (props) => {
                     className="shareIcon"
                     src={facebook}
                     alt="facebook"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={facebookShare}
                 ></img>
 
@@ -123,30 +128,40 @@ const Home = (props) => {
                     className="shareIcon"
                     src={twitter}
                     alt="twitter"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
                 <img
                     className="shareIcon"
+                    style={{marginRight:"0px"}}
                     src={link}
                     alt="link"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     onClick={() => {
                         // copy(handleToast);
                     }}
                 ></img>
 
             </div>
-            <Ad_game/>
-            <Slider/>
+
+
+            <div className={"slide__game__title"}>
+                유형별 인기 게임
+            </div>
+            <div className={"slide__game__option"} >
+                <GameSlide1/>
+                <GameSlide2/>
+            </div>
+
+
+
             <button id="allGameBtn" style={{marginBottom: "80px"}}>
                 모든 인기 게임 확인하기
             </button>
-
             <Serviceintroduce></Serviceintroduce>
 
 

@@ -6,25 +6,34 @@ const Genre = ({genreFunction}) => {
 
     const [genre, setGenre] = React.useState([
         {text: "RPG", state: false},
-        {text: "스포츠", state: false},
-        {text: "액션", state: false},
         {text: "음악", state: false},
+        {text: "레이싱", state: false},
+        {text: "스포츠", state: false},
         {text: "전략", state: false},
         {text: "퍼즐", state: false},
-        {text: "AOS", state: false},
-        {text: "FPS", state: false}])
+        {text: "카지노", state: false},
+        {text: "방치형", state: false},
+        {text: "경영", state: false},
+        {text: "디펜스", state: false},
+        {text: "교육∙퀴즈", state: false},
+        {text: "없음", state: false}])
     ;
 
     const [genre1, setGenre1] = React.useState([
         {text: "RPG", state: false},
-        {text: "스포츠", state: false},
-        {text: "액션", state: false},
-        {text: "음악", state: false}])
+        {text: "음악", state: false},
+        {text: "레이싱", state: false},
+        {text: "스포츠", state: false}])
     ;const [genre2, setGenre2] = React.useState([
         {text: "전략", state: false},
         {text: "퍼즐", state: false},
-        {text: "AOS", state: false},
-        {text: "FPS", state: false}])
+        {text: "카지노", state: false},
+        {text: "방치형", state: false}])
+    ;const [genre3, setGenre3] = React.useState([
+        {text: "경영", state: false},
+        {text: "디펜스", state: false},
+        {text: "교육∙\n퀴즈", state: false},
+        {text: "없음", state: false}])
     ;
 
 
@@ -41,11 +50,17 @@ const Genre = ({genreFunction}) => {
                     ? {...genre1, state: !genre1.state}
                     : genre1
             ));
-        } else {
+        } else if(num ===2 ) {
             setGenre2(genre2.map(
                 genre2 => genre2.text === input
                     ? {...genre2, state: !genre2.state}
                     : genre2
+            ));
+        } else {
+            setGenre3(genre3.map(
+                genre3 => genre3.text === input
+                    ? {...genre3, state: !genre3.state}
+                    : genre3
             ));
         }
     };
@@ -59,7 +74,7 @@ const Genre = ({genreFunction}) => {
 
     return (
         <>
-            <div className="genreBox1" style={{marginTop: "40px"}}>
+            <div className="genreBox1" style={{marginTop: "60px"}}>
                 {genre1.map((item, idx) =>
                     (
                         <button
@@ -75,7 +90,7 @@ const Genre = ({genreFunction}) => {
                 )
                 }
             </div>
-            <div className="genreBox1" style={{marginBottom: "30px", marginTop: "12px"}}>
+            <div className="genreBox1" style={{marginTop: "13px"}}>
                 {genre2.map((item, idx) =>
                     (
                         <button
@@ -84,6 +99,22 @@ const Genre = ({genreFunction}) => {
                                 onGenreClick(item.text, 2)
                             }}
                             key={idx + "_2"}
+                        >
+                            {item.text}
+                        </button>
+                    )
+                )
+                }
+            </div>
+            <div className="genreBox1" style={{marginBottom: "30px", marginTop: "13px"}}>
+                {genre3.map((item, idx) =>
+                    (
+                        <button
+                            className={item.state ? "genreButtonFocus" : "genreButton"}
+                            onClick={() => {
+                                onGenreClick(item.text, 3)
+                            }}
+                            key={idx + "_3"}
                         >
                             {item.text}
                         </button>
