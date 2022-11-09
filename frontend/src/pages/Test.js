@@ -16,9 +16,7 @@ import q9 from "../images/test/q11.png"
 import q10 from "../images/test/q12.png"
 import q11 from "../images/test/q13.png"
 import q12 from "../images/test/q14.png"
-import q13 from "../images/test/q15.png"
-import q14 from "../images/test/q16.png"
-
+import box from "../images/box.png"
 
 const Test = (props) => {
     const navigate = useNavigate();
@@ -54,7 +52,7 @@ const Test = (props) => {
             "드디어 만렙을 달성했다!\n 캐릭터도 충분히 강력하다!\n이제 나는. . ."
         ]
     const answerYes = [
-        "장비에 돈을 쓰지 않는다. 파밍으로 직접 구한다.",
+        "게임의 컨셉, 스토리, 공략 드을 더\n찾아보고 게임을 시작한다.",
         "저주와 정신 마법을 막아주는 <고귀한 의지>",
         "용사 파티와 함께 던전으로 향한다.",
         "괴물을 먼저 공격해서 해치우고 던전에 들어간다.",
@@ -74,7 +72,7 @@ const Test = (props) => {
 
     ];
     const answerNo = [
-        "필요한 장비와 마법만 최소한으로 구매한다.",
+        "무슨 게임인지 잘 모르지만...\n일단 한번 해본다.",
         "적을 잠시 동안 구속시키는 <그림자 밟기>",
         "홀로 던전으로 향한다.",
         "인간이 아니라도 말이 통할 가능성이 있다.\n 괴물과 대화를 통해 길을 튼다.",
@@ -117,13 +115,16 @@ const Test = (props) => {
                 <div id="questionDiv">
                     {
                         step === 3 ?
-                            <img
-                                className="questionTxtImage"
-                                src={questionImg[step - 3]}
-                                alt="img"
-                                width="158px"
-                                height="108px"
-                            ></img>
+                            <span className={"questionTxt"}>
+                                가입이 끝났다!<br></br>바로 게임에 접속할까?
+                                                            <img
+                                                                className="questionTxtImage"
+                                                                src={box}
+                                                                alt="img"
+                                                                width="111px"
+                                                                height="13px"
+                                                            ></img>
+                            </span>
                             :
                         step === 14 ?
                             <div className={"questionTxt"}>
@@ -141,7 +142,7 @@ const Test = (props) => {
                                 alt="img"
                                 width="158px"
                                 height="108px"
-                                style={{marginBottom:"95px"}}
+                                style={{marginBottom:"80px"}}
                             ></img>
                         :<img
                             className="questionImg"
@@ -170,16 +171,6 @@ const Test = (props) => {
                                 }}
                             >
                                 {answerNo[step - 3]}
-                            </button> : null
-                    }
-                    {
-                        step === 3 ?
-                            <button className="testAnswer"
-                                    onClick={() => {
-                                        onClick(3);
-                                    }}>
-                                왕에게 거금을 내고 왕실 창고에서 랜덤으로<br/>
-                                장비와 마법을 받는다.
                             </button> : null
                     }
                 </div>
