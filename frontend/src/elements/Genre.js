@@ -68,7 +68,7 @@ const Genre = ({genreFunction}) => {
         //여기에서 만약에 퍼즐을 누른 상태면 아직 퍼즐이 false고
         //퍼즐을 한번 더 눌러서 선택해제되면 그때서야 퍼즐이 true야,,,^^
         //여기 어떡하지,,??
-        genreFunction(genreAll);
+        genreFunction(genreAll());
     };
 
 
