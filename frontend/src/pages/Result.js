@@ -3,16 +3,11 @@ import {useNavigate} from "react-router-dom";
 import Header from "../elements/Header";
 
 import Resultmodal from "../elements/Resultmodal";
-import type1 from "../images/type1.png"
-import typeexample1 from "../images/typeexample1.png"
-import typeexample2 from "../images/typeexample2.png"
-import typeexample3 from "../images/typeexample3.png"
-import graph1 from "../images/graph1.png"
-import graph2 from "../images/graph2.png"
-
-import graph4 from "../images/graph4.png"
-import gameIcon from "../images/gameIcon.png";
-import shareIcon from "../images/shareicon.png";
+import type1 from "../images/test/type1.png"
+import type2 from "../images/test/type2.png"
+import type3 from "../images/test/type3.png"
+import gameIcon from "../images/game_2.png";
+import shareIcon from "../images/shareicon2.png";
 import kakao from "../images/kakao.png";
 import facebook from "../images/facebook.png";
 import twitter from "../images/twitter.png";
@@ -23,12 +18,9 @@ import copperCrown from "../images/crown3.png"
 import r1 from "../images/ranking1.png"
 import r2 from "../images/ranking2.png"
 import r3 from "../images/ranking3.png"
-import chat1 from "../images/chat_1_gray.png"
-import chat2 from "../images/chat_2_gray.png"
-import Ad_game from "../elements/Ad_game";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
-
+import reset from "../images/reset.png"
 
 const Result = (props) => {
     const navigate = useNavigate();
@@ -55,129 +47,44 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultBox">
-                <img
-                    style={{marginTop:"-100px",marginRight:"16px"}}
-                    id=""
-                    src={chat1}
-                    alt="img"
-                    width={"25px"}
-                    height={"16px"}
-                ></img>
 
-                <div className={"resultText1"}>
-                    용사의 압도적인 무력 앞에<br/>
-                    사악한 용은 쓰러졌고<br/>
-                    왕국엔 평화가 찾아왔습니다.
-                </div>
-                <img
-                    style={{marginTop:"90px", marginLeft:"16px"}}
-                    id=""
-                    src={chat2}
-                    alt="img"
-                    width={"25px"}
-                    height={"16px"}
-                ></img>
-            </div>
-            <div className={"resultImg2"}style={{marginTop:"0px"}}>
-                결과 이미지
             </div>
             <img
                 id=""
                 src={type1}
                 alt="img"
-                width={"272px"}
-                height={"60pxpx"}
+                width={"254px"}
+                height={"254px"}
             ></img>
-            <div className={"resultImg3"} style={{marginTop:"-6px"}}>
-                당신의 압도적인 힘에 사악한 흑염룡은 최후의 순간까지 자신을 변호하려 했지만, 당신은 듣지 않고 최후의 일격을 날렸어요.
-                 홀로 사악한 흑염룡을 물리친 당신은 왕국의 은인입니다!
-            </div>
-            <div className={"resultImg3"}>
-                당신이 던전에서 나오니 국왕과 수많은 병사들이 당신을 맞이해주네요. 개선식이라도 열어주려는 걸까요...?
-            </div>
-
-            <div className={"resultBar"}>
-                <div className="resultBoxgraph">
-                    <div style={{marginTop:"10px",marginRight:"20px"}}>개인 &nbsp;</div>
-                    <img
-                        style={{marginTop:"10px"}}
-                        id=""
-                        src={graph1}
-                        alt="img"
-                        width={"185px"}
-                        height={"30px"}
-                    ></img>
-                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 협동</div><br/>
-                </div>
-                <div className="resultBoxgraph">
-                    <div style={{marginTop:"10px",marginRight:"20px"}}>모험 &nbsp;</div>
-                    <img
-                        id=""
-                        src={graph2}
-                        alt="img"
-                        width={"185px"}
-                        height={"30px"}
-                        style={{marginTop: "10px"}}
-                    ></img>
-                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 공략</div><br/>
-                </div>
-                <div className="resultBoxgraph">
-                    <div style={{marginTop:"10px",marginRight:"20px"}}>감각 &nbsp;</div>
-                    <img
-                        id=""
-                        src={graph1}
-                        alt="img"
-                        width={"185px"}
-                        height={"30px"}
-                        style={{marginTop: "10px"}}
-                    ></img>
-                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 직관</div><br/>
-                </div>
-                <div className="resultBoxgraph">
-                    <div style={{marginTop:"10px",marginRight:"20px"}}>완성 &nbsp;</div>
-                    <img
-                        id=""
-                        src={graph4}
-                        alt="img"
-                        width={"185px"}
-                        height={"30px"}
-                        style={{marginTop: "10px"}}
-                    ></img>
-                    <div style={{marginTop:"10px",marginLeft:"20px"}}>&nbsp; 재미</div><br/>
-                </div>
-            </div>
 
 
             <div className="typeExample">
+                <div className="TypeSub">
                 <img
-                    id=""
-                    src={typeexample1}
+                    className="typesubimg"
+                    src={type2}
                     alt="img"
-                    width={"83px"}
-                    height={"126px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <img
-                    id=""
-                    src={typeexample2}
-                    alt="img"
-                    width={"83px"}
-                    height={"126px"}
-                    style={{marginTop: "10px"}}
-                ></img>
-                <img
-                    id=""
-                    src={typeexample3}
-                    alt="img"
-                    width={"83px"}
-                    height={"126px"}
-                    style={{marginTop: "10px"}}
-                ></img>
+                    style={{marginRight:"24px"}}
+                >
+                </img>
+                    <div className={"typedecs"} style={{marginLeft:"6px"}}>공략 따라쟁이
+                    </div>
 
+                    </div>
+
+                    <div className="TypeSub">
+                        <img
+                            className="typesubimg"
+                            src={type3}
+                            alt="img"
+                            style={{marginLeft:"24px"}}
+                        ></img>
+                            <div className={"typedecs"} style={{marginLeft:"30px"}}>익숙함 선호</div>
+                    </div>
             </div>
 
 
-            <div className="gameIntro" style={{marginTop:"40px"}}>
+            <div className="gameIntro2" style={{marginTop:"40px"}}>
                 <img
                     className="homeGameIcon1"
                     src={gameIcon}
@@ -198,15 +105,16 @@ const Result = (props) => {
             <button id="resultGameBtn" onClick={onGameClick}>
                 나에게 맞는 게임 확인하기
             </button>
-            <div className={"shareText"}>
-                결과 공유하기
+            <div className={"shareText2"}>
                 <img
                     className="shareTextIcon"
                     src={shareIcon}
                     alt="shareIcon"
-                    width="20px"
-                    height="20px"
+                    style={{marginRight:"4px"}}
+                    width="10px"
+                    height="11px"
                 />
+                테스트 공유하기
             </div>
             <div id="shareContainer">
                 <img
@@ -248,47 +156,29 @@ const Result = (props) => {
                     }}
                 ></img>
             </div>
-            <button id="regameBtn" style={{marginBottom:"60px"}} onClick={onGameClick}>
-                다시하기
+            <button id="regameBtn" onClick={onGameClick}>
+                &nbsp;&nbsp;다시하기
+                <img
+                className="resetresult"
+                src={reset}
+                alt="link"
+                width="26px"
+                height="26px"
+            ></img>
             </button>
-
+            <span  className={"similarGameRanking"}>동일 유형 인기 게임</span><br/>
             <div className={"similarGame"}>
-                <span>동일 유형 인기 게임</span><br/>
                 <div className={"gameRating"}>
                     <img
                         className="crown"
                         src={sliverCrown}
                         alt="sliverCrown"
-                        width="80px"
-                        height="35px"
+                        width="47px"
+                        height="42.28px"
                         style={{
-                            marginLeft:"-20px",
-                            marginRight:"20px",
-                            marginBottom:"-25px"
+
                         }}
                     ></img>
-                    <img
-                        className="crown"
-                        src={goldCrown}
-                        alt="goldCrown"
-                        width="85px"
-                        height="40px"
-                        style={{
-                            marginBottom:"-5px"
-                        }}
-                    ></img>
-                    <img
-                        className="crown"
-                        src={copperCrown}
-                        alt="copperCrown"
-                        width="80px"
-                        height="35px"
-                        style={{
-                            marginLeft:"20px",
-                            marginRight:"-20px",
-                            marginBottom:"-25px"
-                        }}
-                    ></img><br/>
                     <img
                         className="gameRanking"
                         src={r1}
@@ -296,13 +186,38 @@ const Result = (props) => {
                         width="80px"
                         height="80px"
                     ></img>
+                </div>
+
+
+
+                <div className={"gameRating"}>
+                    <img
+                        className="crown"
+                        src={goldCrown}
+                        alt="sliverCrown"
+                        width="47px"
+                        height="42.28px"
+                        style={{
+                        }}
+                    ></img>
                     <img
                         className="gameRanking"
                         src={r2}
-                        alt="ranking2"
-                        width="100px"
-                        height="100px"
+                        alt="ranking1"
+                        width="104px"
+                        height="104px"
                     ></img>
+                </div>
+                    <div className={"gameRating"}>
+                        <img
+                            className="crown"
+                            src={copperCrown}
+                            alt="sliverCrown"
+                            width="47px"
+                            height="42.28px"
+                            style={{
+                            }}
+                        ></img>
                     <img
                         className="gameRanking"
                         src={r3}
@@ -313,12 +228,13 @@ const Result = (props) => {
                 </div>
             </div>
 
-            <button id="allGameBtn">
+            <button id="allTypeBtn">
                 모든 인기 게임 확인하기
             </button>
-            <button id="allTypeBtn">
+            <button id="allTypeBtn" style={{marginBottom:"100px"}}>
                 모든 유형 확인하기
             </button>
+
             <Serviceintroduce></Serviceintroduce>
 
             {/*<div className={"gameIntro"}>*/}

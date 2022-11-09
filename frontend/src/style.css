@@ -568,13 +568,31 @@ input:focus{
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
-    line-height: 14px;
+
     text-align: center;
     letter-spacing: -0.03em;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FF8216;
+    margin-bottom: 12px;
+    margin-top: 30px;
+}
+
+.gameIntro2 {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+
+    color: #B4B4B4;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 12px;
     margin-top: 30px;
 }
@@ -862,20 +880,6 @@ input:focus{
 }
 
 
-#resultGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 32.5px;
-    width: 300px;
-    height: 60px;
-    color: white;
-    cursor: pointer;
-    line-height: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
 .resultRecommend {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -883,17 +887,35 @@ input:focus{
 }
 
 #regameBtn {
-    width: 130px;
+    width: 128px;
     height: 40px;
-    background: #EF7A29;
-    border: none;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    background: #FF8936;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    color: white;
+
+    border: none;
     cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 20px;
+    margin-top: 26px;
+    margin-bottom: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 
@@ -921,25 +943,41 @@ input:focus{
 }
 
 .similarGame {
-    width: 300px;
-    height: 206px;
-    color: white;
-    margin-top: 40px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+}
+
+.similarGameRanking {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 600;
     font-size: 20px;
-    font-weight: 500;
-    font-family: "Gmarket Sans";
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FF8936;
+
+
 }
 
 .gameRating {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    display: flow;
+    align-items: center;
+    justify-content: center;
 }
 
 .gameRanking {
-    margin: 6px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
-
+.crown{
+    margin-bottom: 8px;
+}
 
 
 #allTypeBtn {
@@ -1336,19 +1374,40 @@ body {
 }
 
 
+.typedecs{
+    background: #FF8936;
+    border-radius: 32.488px;
+    width: 86px;
+    height: 21.71px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
 
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.TypeSub{
+    display: flow;
+}
 
 .typeExample {
     width: 320px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
+    justify-content: center;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
     font-weight: 500;
-    font-family: "Noto Sans KR";
-    font-size: 14px;
-    color: white;
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
 }
 
 .typeExampleSemi {
@@ -1710,11 +1769,23 @@ body {
     line-height: 13px;
     text-align: center;
     color: #BABABA;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
 }
+.shareText2 {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.6667px;
+    line-height: 13px;
+    text-align: center;
 
+    color: #FFAE68;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
 
 
 #loading {
@@ -1785,16 +1856,24 @@ body {
 }
 
 #resultGameBtn {
-    background: #FF6900;
-    border: none;
-    border-radius: 32.5px;
     width: 300px;
-    height: 60px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 20px;
+    height: 54px;
+    border: 0px;
+    background: #FF8936;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.07em;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-bottom: 26px;
 }
 
 .resultRecommend {
@@ -1803,20 +1882,12 @@ body {
     color: white;
 }
 
-#regameBtn {
-    width: 130px;
-    height: 40px;
-    background: #EF7A29;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 16px;
-}
 
+
+.resetresult{
+    margin-top: 2px;
+    margin-left: 2px;
+}
 
 #scorebutton {
     background: none;
@@ -1841,21 +1912,10 @@ body {
     border-width: 0px;
 }
 
-.similarGame {
-    width: 300px;
-    height: 206px;
-    color: white;
-    margin-top: 40px;
-}
 
-.gameRating {
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
 
-.gameRanking {
-    margin: 6px;
-}
+
+
 
 #allGameBtn {
     background: #FF8216;
@@ -1880,20 +1940,36 @@ body {
     justify-content: center;
     text-align: center;
     letter-spacing: -0.08em;
-
     color: #FFFFFF;
 }
 
+
+
+
 #allTypeBtn {
-    background: #D9D9D9;
+    background: #FF8216;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     width: 300px;
-    height: 50px;
-    color: #343434;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
+    height: 42px;
+    margin-top: 20px;
+
+    left: calc(50% - 258.63px/2 - 0.5px);
+    top: calc(50% - 17px/2 - 193px);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: -0.08em;
+    color: #FFFFFF;
 
 }
 
@@ -1942,6 +2018,22 @@ body {
 .questionImg {
     margin-top: 32px;
 }
+.typesubimg{
+    width: 95px;
+    height: 95px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
 
 .testAnswer {
     white-space: pre-wrap;

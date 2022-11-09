@@ -74,7 +74,6 @@ const Home = (props) => {
             <div className="gameIntro">
                 <img
                     className="homeGameIcon1"
-
                     src={gameIcon}
                     alt="img"
                     width="21px"
