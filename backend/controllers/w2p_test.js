@@ -115,10 +115,9 @@ const postTestResult = async (req, res) => {
 
     //** 사용자를 insert하고
     //선호하지 않는 게임 장르도 insert해주자~
-    const userId = uuid();
     userdb.create({
-        user_id: user.id,
-        user_name: user.name,
+        user_id: user.userId,
+        user_name: user.userName,
         user_ip: ip,
         user_date: Sequelize.literal('now()'),
         user_browser: browser,

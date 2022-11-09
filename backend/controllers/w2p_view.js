@@ -18,21 +18,14 @@ const getRateGame = async (req, res) => {
     // from GAME_RECOMMEND natural join USER_INFO
     // group by type_id;
 
-     recommenddb.findAll({
+    const rec = await recommenddb.findAll({
+        offset: 0,
+        limit: 10,
+        order: "score desc",
         include: ["USER_INFO"],
         attributes: ["appId", [models.sequelize.fn("sum", "game_recommend"), "score"], "type_id"],
         group: "type_id",
-    }).then(data => {
-         return cwr.createWebResp(res, header, 200, {
-             data: data
-         });
-     })
-         .catch(err => {
-             res.status(500).send({
-                 message:
-                     err.message || "Some error occurred while inserting recommend."
-             });
-         });
+    })
 
 }
 
@@ -43,4 +36,4 @@ const getStarGame = async (req, res) => {
     res.header("Access-Control-Allow-Origin", "*")
 
 }
-module.exports = {getRateGame,getStarGame}
+module.exports = {getRateGame, getStarGame}

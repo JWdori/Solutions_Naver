@@ -19,10 +19,12 @@ import box from "../images/box.png"
 
 
 const Home = (props) => {
+    const [uuid, setUuid] = React.useState(Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36));
+
     const navigate = useNavigate();
 
     const onGameClick = () => {
-        navigate("/loading");
+        navigate("/tutorial", {state: {userId: uuid},});
     };
 
     const onSurClick = () => {
@@ -30,20 +32,22 @@ const Home = (props) => {
     };
 
     const tp = new TentuPlay({
-            clientKey: "b64DGZZd38ZKHomhQFQE",
+        clientKey: "b64DGZZd38ZKHomhQFQE",
     });
 
-    function myLogin(){
-        tp.onInit(()=>{
+
+    function myLogin() {
+        tp.onInit(() => {
             tp.sendJoin({
-                playerUUID: "44"
+                playerUUID: uuid
             });
             tp.sendLogin({
-                playerUUID: "44"
+                playerUUID: uuid
             })
         })
 
     }
+
     myLogin();
 
 
@@ -56,7 +60,7 @@ const Home = (props) => {
                  유형별 게임 추천 서비스
                             <span className="mainSubTitle">를 경험해보세요!</span>
             </span>
-            <span className={"mainTitle"} style={{marginTop:"10px"}}>
+            <span className={"mainTitle"} style={{marginTop: "10px"}}>
                 게임 회사가 보는<br></br>나의 게임 성향은?
                 <img
                     className="questionTxtImage"
@@ -70,7 +74,7 @@ const Home = (props) => {
 
             <MainSlide></MainSlide>
 
-            <span className="mainSubTitle" style={{fontWeight:"400"}}>자료 제공: TentuPlay</span>
+            <span className="mainSubTitle" style={{fontWeight: "400"}}>자료 제공: TentuPlay</span>
             <div className="gameIntro">
                 <img
                     className="homeGameIcon1"
@@ -97,7 +101,7 @@ const Home = (props) => {
                     className="shareTextIcon"
                     src={shareIcon}
                     alt="shareIcon"
-                    style={{marginRight:"4px"}}
+                    style={{marginRight: "4px"}}
                     width="10px"
                     height="11px"
                 />
@@ -134,7 +138,7 @@ const Home = (props) => {
 
                 <img
                     className="shareIcon"
-                    style={{marginRight:"0px"}}
+                    style={{marginRight: "0px"}}
                     src={link}
                     alt="link"
                     width="24px"
@@ -150,11 +154,10 @@ const Home = (props) => {
             <div className={"slide__game__title"}>
                 유형별 인기 게임
             </div>
-            <div className={"slide__game__option"} >
+            <div className={"slide__game__option"}>
                 <GameSlide1/>
                 <GameSlide2/>
             </div>
-
 
 
             <button id="allGameBtn" style={{marginBottom: "80px"}}>

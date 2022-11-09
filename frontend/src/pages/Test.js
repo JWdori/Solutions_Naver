@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-
+import {useLocation} from "react-router-dom";
 import Header from "../elements/Header";
 import Progress from "../elements/Progress_test";
 
@@ -19,11 +19,19 @@ import q12 from "../images/test/q14.png"
 import q13 from "../images/test/q14.png"
 import box from "../images/box.png"
 
+let select = ["x"];
 const Test = (props) => {
     const navigate = useNavigate();
+    const {state} = useLocation();
+    const userId = state.userId;
+    const userName = state.userName;
+    const userGenre = state.userGenre;
+
+    // console.log(userId,userName,userGenre);
+
     const [step, setStep] = React.useState(3);
     const [time, setTime] = React.useState(false);
-    const questionImg = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12,q13];
+    const questionImg = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13];
     const question =
         [
             "가입이 끝났다!\n바로 게임에 접속할까?",
@@ -83,24 +91,33 @@ const Test = (props) => {
     ];
     const wid = [260, 220, 230, 155, 220, 210, 210, 145, 145, 230, 230, 230, 230, 230];
     const hei = [230, 220, 230, 215, 220, 175, 170, 180, 180, 230, 230, 230, 230, 230];
-    //300 * 112 , 300 *240
+
     React.useEffect(() => {
         setTime(true);
     }, [time]);
-    const onClick = (num) => {
+    const onClick = (value) => {
+        console.log(step)
         setTime(false);
         if (step < 14) setStep(step + 1);
         else if (step === 14) {  //16아님.
-            navigate("/beforeResult")
+            navigate("/beforeResult", {
+                state: {
+                    select: select,
+                    userId: userId,
+                    userName: userName,
+                    userGenre: userGenre
+                }
+            })
         }
-        // select[step] = num;
+        select[step - 2] = value;
+        console.log(select)
     };
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
             <Progress
                 width={300}
-                percent={0.07+(step - 2.9) / 12}
+                percent={0.07 + (step - 2.9) / 12}
             />
             {time && (
                 <div id="questionDiv">
@@ -117,38 +134,38 @@ const Test = (props) => {
                                                             ></img>
                             </span>
                             :
-                        step === 14 ?
-                            <div className={"questionTxt"}>
-                                {question[step - 3]}
-                            </div> :
-                            <div className={"questionTxt"}>
-                                {question[step - 3]}
-                            </div>
+                            step === 14 ?
+                                <div className={"questionTxt"}>
+                                    {question[step - 3]}
+                                </div> :
+                                <div className={"questionTxt"}>
+                                    {question[step - 3]}
+                                </div>
                     }
                     {
                         step === 3
-                        ?<img
+                            ? <img
                                 className="questionImg"
                                 src={questionImg[step - 3]}
                                 alt="img"
                                 width="158px"
                                 height="108px"
-                                style={{marginBottom:"80px"}}
+                                style={{marginBottom: "80px"}}
                             ></img>
-                        :<img
-                            className="questionImg"
-                            src={questionImg[step - 3]}
-                            alt="img"
-                            width={wid[step - 3]}
-                            height={hei[step - 3]}
-                        ></img>
+                            : <img
+                                className="questionImg"
+                                src={questionImg[step - 3]}
+                                alt="img"
+                                width={wid[step - 3]}
+                                height={hei[step - 3]}
+                            ></img>
                     }
 
 
                     <button
                         className="testAnswer"
                         onClick={() => {
-                            onClick(1);
+                            onClick("a");
                         }}
                     >
                         {answerYes[step - 3]}
@@ -156,10 +173,10 @@ const Test = (props) => {
                     {
                         step !== 15 ?
                             <button
-                                style={{marginBottom:"150px"}}
+                                style={{marginBottom: "150px"}}
                                 className="testAnswer"
                                 onClick={() => {
-                                    onClick(2);
+                                    onClick("b");
                                 }}
 
                             >
