@@ -74,7 +74,7 @@ const Tutorial = (props) => {
 
                 <div className={"tutorialBtn"}>
                     <button id={"tutorialBtn"}
-                            style={{width: btnSize[step]}}
+                            style={{width: btnSize[step],marginBottom:"190px"}}
                             onClick={onClick}>
                         {btnText[step]}
                     </button>

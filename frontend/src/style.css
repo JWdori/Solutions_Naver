@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 
+
 html {
     -ms-content-zooming: none;
     -ms-touch-action: pan-x pan-y;
@@ -575,8 +576,7 @@ input:focus{
     align-items: center;
     color: #FF8216;
     margin-bottom: 12px;
-    margin-top: 40px;
-
+    margin-top: 30px;
 }
 
 .homeGameIcon1 {
