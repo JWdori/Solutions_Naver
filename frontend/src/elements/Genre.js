@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {CloseOutlined} from "@ant-design/icons";
 
 
@@ -36,8 +36,8 @@ const Genre = ({genreFunction}) => {
         {text: "없음", state: false}])
     ;
 
-
     const onGenreClick = (input, num) => {
+
         setGenre(genre.map(
             genre => genre.text === input
                 ? {...genre, state: !genre.state}
@@ -63,20 +63,22 @@ const Genre = ({genreFunction}) => {
                     : genre3
             ));
         }
-
+        genreFunction(genreAll());
         //재완씨 크나큰 문제가 있어
         //여기에서 만약에 퍼즐을 누른 상태면 아직 퍼즐이 false고
         //퍼즐을 한번 더 눌러서 선택해제되면 그때서야 퍼즐이 true야,,,^^
         //여기 어떡하지,,??
-        genreFunction(genreAll());
+        //선배만 믿으라구...!
+        //아니 믿지마
     };
-
 
     const genreAll = () => {
         let value = [];
         genre.map(genre => genre.state === true ? value.push(genre.text) : null)
         return value;
     }
+
+
 
     return (
         <>
@@ -86,7 +88,8 @@ const Genre = ({genreFunction}) => {
                         <button
                             className={item.state ? "genreButtonFocus" : "genreButton"}
                             onClick={() => {
-                                onGenreClick(item.text, 1)
+                                onGenreClick(
+                                    item.text, 1)
                             }}
                             key={idx + "_1"}
                         >
@@ -112,10 +115,11 @@ const Genre = ({genreFunction}) => {
                 )
                 }
             </div>
-            <div className="genreBox1" style={{marginBottom: "30px", marginTop: "13px"}}>
+            <div className="genreBox1" style={{marginBottom: "30px", marginTop: "13px", marginRight:"0px"}}>
                 {genre3.map((item, idx) =>
                     (
                         <button
+
                             className={item.state ? "genreButtonFocus" : "genreButton"}
                             onClick={() => {
                                 onGenreClick(item.text, 3)

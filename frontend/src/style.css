@@ -619,7 +619,7 @@ input:focus{
     width: 270px;
     height: 60px;
     border: 0px;
-
+    cursor: pointer;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 800;
@@ -635,6 +635,11 @@ input:focus{
 
     color: #FFFFFF;
     margin-bottom: 36px;
+}
+
+#homeGameBtn:active {
+    background: #FF6900;
+    border: none;
 }
 
 
@@ -737,9 +742,10 @@ input:focus{
 }
 
 .genreBox1 {
+    width: 285px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
@@ -761,7 +767,6 @@ input:focus{
 
     border: 0px;
 
-    margin-right: 12px;
 
     background: #FF8216;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
@@ -821,6 +826,25 @@ input:focus{
     line-height: 150%;
     position: relative;
     z-index: 1;
+
+}
+
+
+
+.resultSub {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.04em;
+    justify-content: center;
+    color: #FF8216;
+    margin-bottom: 50px;
+    margin-top: -10px;
 }
 
 .resultTextBox {
@@ -889,25 +913,20 @@ input:focus{
 #regameBtn {
     width: 128px;
     height: 40px;
-
+    cursor: pointer;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #FFFFFF;
-
-
     background: #FF8936;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
     border: none;
     cursor: pointer;
     margin-top: 26px;
@@ -962,9 +981,37 @@ input:focus{
     text-align: center;
     justify-content: center;
     color: #FF8936;
+}
 
+.checktitle {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FF8936;
 
 }
+
+.checkSub{
+    font-family: 'Pretendard';
+    font-style: normal;
+    width: 275px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF8216;
+    margin-bottom: 60px;
+}
+
+
 
 .gameRating {
     display: flow;
@@ -972,26 +1019,18 @@ input:focus{
     justify-content: center;
 }
 
+
 .gameRanking {
     border-radius: 20px;
 }
+
+
 .crown{
     margin-bottom: 8px;
 }
 
 
-#allTypeBtn {
-    background: #D9D9D9;
-    border: none;
-    border-radius: 8px;
-    width: 300px;
-    height: 50px;
-    color: #343434;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
 
-}
 
 
 
@@ -1031,8 +1070,19 @@ body {
     margin-top: 60px;
 }
 
-
-
+.draggable{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-use-select: text;
+    user-select: text;
+}
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
 .headerContainer {
     position: absolute;
     width: 100%;
@@ -1390,6 +1440,24 @@ body {
     color: #FFFFFF;
 }
 
+.resultType{
+    background: #FF8936;
+    border-radius: 32.488px;
+    width: 110px;
+    height: 34.52px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20.305px;
+    line-height: 38.52px;
+    /* identical to box height */
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+
 .TypeSub{
     display: flow;
 }
@@ -1659,26 +1727,9 @@ body {
 }
 
 
-.home {
-    margin-top: 60px;
-}
 
 
 
-
-.homeGameIcon1 {
-    margin-top: 1px;
-    margin-right: 4px;
-}
-
-.homeGameIcon2 {
-    margin-top: 1px;
-    margin-left: 4px;
-}
-
-.homeTitle {
-    margin: 8px;
-}
 
 
 #recommend {
@@ -1713,20 +1764,6 @@ body {
 }
 
 
-#homeSurveyBtn {
-    background: #FF4337;
-    border: none;
-    border-radius: 32.5px;
-    width: 300px;
-    height: 60px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    line-height: 30px;
-}
 
 
 
@@ -1743,9 +1780,6 @@ body {
     line-height: 16px;
     text-align: center;
     color: #FF8216;
-    justify-items: center;
-    margin-right: 12px;
-
     border: 2.5px solid #FF8216;
     border-radius: 10px;
     background: white;
@@ -1874,6 +1908,18 @@ body {
     justify-content: center;
     color: #FFFFFF;
     margin-bottom: 26px;
+    cursor: pointer;
+}
+
+
+#resultGameBtn:active {
+    background: #FF6900;
+    border: none;
+}
+
+#regameBtn:active {
+    background: #FF6900;
+    border: none;
 }
 
 .resultRecommend {
@@ -1934,7 +1980,7 @@ body {
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1943,7 +1989,10 @@ body {
     color: #FFFFFF;
 }
 
-
+#allTypeBtn:active {
+    background: #FF6900;
+    border: none;
+}
 
 
 #allTypeBtn {
@@ -1953,8 +2002,8 @@ body {
     border-radius: 20px;
     width: 300px;
     height: 42px;
-    margin-top: 20px;
-
+    margin-top: 12px;
+    cursor: pointer;
     left: calc(50% - 258.63px/2 - 0.5px);
     top: calc(50% - 17px/2 - 193px);
     font-family: 'Pretendard';
@@ -1979,6 +2028,7 @@ body {
 }
 
 #tutorialBtn {
+    cursor: pointer;
     width: 270px;
     height: 48px;
     background: #FF8216;
@@ -1994,6 +2044,47 @@ body {
     justify-content: center;
 
     color: #FFFFFF;
+}
+
+.btn_login {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#btn_login[disabled=disabled], #btn_login:disabled {
+    background: #FFAE68;
+    cursor:not-allowed;
+}
+
+
+
+#btn_login {
+    cursor: pointer;
+    width: 270px;
+    height: 48px;
+    background: #FF8216;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+#btn_login:active {
+    background: #FF6900;
+    border: none;
+}
+
+#allGameBtn:active {
+    background: #FF6900;
+    border: none;
 }
 
 #tutorialBtn:active {

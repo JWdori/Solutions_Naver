@@ -55,9 +55,9 @@ const Home = (props) => {
         <>
             <Header isBack={false}/>
             <span className="mainSubTitleBold">
-                게임유형검사
+                게임성향검사
                             <span className="mainSubTitle">와</span>
-                 유형별 게임 추천 서비스
+                 성향별 게임 추천 서비스
                             <span className="mainSubTitle">를 경험해보세요!</span>
             </span>
             <span className={"mainTitle"} style={{marginTop: "10px"}}>
@@ -151,7 +151,7 @@ const Home = (props) => {
 
 
             <div className={"slide__game__title"}>
-                유형별 인기 게임
+                성향별 인기 게임
             </div>
             <div className={"slide__game__option"}>
                 <GameSlide1/>

@@ -19,10 +19,33 @@ const Tutorial = (props) => {
     const nameFunction = (x) => {
         setUserName(x);
     }
+    window.onload = function() {
+        const button = document.getElementsByClassName("btn_login")[0];
+        const inputId = document.getElementsByClassName("user_id")[0];
+        inputId.addEventListener("keyup", validate);
+
+        function validate() {
+            if (!(inputId.value)) {
+                button.disabled = true;
+                button.classList.remove("buttonLoginDisabled");
+            } else {
+                button.disabled = false;
+                button.style.cursor = "pointer";
+                button.classList.add("buttonLoginDisabled");
+            }
+        }
+    }
+
+    const [name, setName] = React.useState("");
+    const onChangeName = (event) => {
+        nameFunction(event.target.value);
+    }
+
 
     const genreFunction = (x) => {
         console.log(x)
         setUserGenre(x);
+
     }
     const text =
         ["게임 플레이를 위해\n계정을 생성합니다!\n",
@@ -32,7 +55,7 @@ const Tutorial = (props) => {
         "완료",
         "완료",
     ];
-    const btnSize = ["270px", "170px", "170px"]
+    const btnSize = ["270px", "270px",]
 
     const onClick = (num) => {
 
@@ -69,7 +92,9 @@ const Tutorial = (props) => {
             <div
                 style={{color: "white"}}>
                 {step === 0 ?
-                    <Name nameFunction={nameFunction}/> :
+                    <input id="user_id" type="text" className="NameBox" maxLength='6' placeholder="닉네임을 입력하세요" style={{color:"#FFAE68", marginTop:"80px"}}
+                           onChange={onChangeName}>
+                    </input>:
                     step === 1 ?
                         <Genre genreFunction={genreFunction}/> : null
 
@@ -78,11 +103,25 @@ const Tutorial = (props) => {
             </div>
 
             <div className={"tutorialBtn"}>
-                <button id={"tutorialBtn"}
-                        style={{width: btnSize[step], marginBottom: "190px"}}
-                        onClick={onClick}>
-                    {btnText[step]}
-                </button>
+                {
+                    step === 0
+                    ?
+                        <button id={"btn_login"}
+                                style={{width: btnSize[step], marginBottom: "190px"}}
+                                onClick={onClick}>
+                            {
+                                btnText[step]
+                            }
+                        </button>
+                        :
+                    <button id={"tutorialBtn"}
+                            style={{width: btnSize[step], marginBottom: "190px"}}
+                            onClick={onClick}>
+                        {
+                            btnText[step]
+                        }
+                    </button>
+                }
             </div>
         </>
     );

@@ -21,6 +21,7 @@ import r3 from "../images/ranking3.png"
 import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
 import reset from "../images/reset.png"
+import check from "../images/check.png"
 
 const Result = (props) => {
     const navigate = useNavigate();
@@ -46,8 +47,8 @@ const Result = (props) => {
                     height="17px"
                 ></img>
             </span>
-            <div className="resultBox">
-
+            <div className="resultType">
+                폭풍성장
             </div>
             <img
                 id=""
@@ -57,6 +58,32 @@ const Result = (props) => {
                 height={"254px"}
             ></img>
 
+            <span className={"resultSub"}>게임을 할 시간이 충분하지 않아 짧은 시간 동안 플레이를
+하지만 <br></br> 재화를 효율적으로 사용하여 매우 빠른 속도로 성장하는 유저</span>
+
+            <span  className={"checktitle"} style={{marginBottom:"8px"}}>게임사의 맞춤 전략
+                        <img
+                            className="questionTxtImage"
+                            src={check}
+                            style={{paddingRight:"180px", paddingBottom:"10px"}}
+                            alt="img"
+                            width="82px"
+                            height="65px"
+                        ></img>
+            </span>
+            <span className={"checkSub"}>빠른 성장을 할 수 있는 재화의 지속적인 공급</span>
+
+
+            <span  className={"similarGameRanking"} style={{marginBottom:"20px"}}>나의 다른 성향들
+                            <img
+                                className="questionTxtImage"
+                                src={box}
+                                style={{marginTop:"4px", marginLeft:"34px"}}
+                                alt="img"
+                                width="40px"
+                                height="11px"
+                            ></img>
+            </span>
 
             <div className="typeExample">
                 <div className="TypeSub">
@@ -166,7 +193,7 @@ const Result = (props) => {
                 height="26px"
             ></img>
             </button>
-            <span  className={"similarGameRanking"}>동일 유형 인기 게임</span><br/>
+            <span  className={"similarGameRanking"}>동일 성향 인기 게임</span><br/>
             <div className={"similarGame"}>
                 <div className={"gameRating"}>
                     <img
@@ -228,11 +255,11 @@ const Result = (props) => {
                 </div>
             </div>
 
-            <button id="allTypeBtn">
+            <button id="allTypeBtn" style={{marginTop:"16px"}}>
                 모든 인기 게임 확인하기
             </button>
-            <button id="allTypeBtn" style={{marginBottom:"100px"}}>
-                모든 유형 확인하기
+            <button id="allTypeBtn" style={{marginBottom:"90px"}}>
+                모든 성향 확인하기
             </button>
 
             <Serviceintroduce></Serviceintroduce>

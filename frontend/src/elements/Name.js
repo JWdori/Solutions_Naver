@@ -10,10 +10,9 @@ const Name = ({nameFunction}) => {
     return (
         <>
 
-            <input type="text" className="NameBox" name="dd"maxLength='6' placeholder="닉네임을 입력하세요" style={{color:"#FFAE68", marginTop:"80px"}}
+            <input id="user_id" type="text" className="NameBox" name="dd"maxLength='6' placeholder="닉네임을 입력하세요" style={{color:"#FFAE68", marginTop:"80px"}}
                    onChange={onChangeName}>
             </input>
-
         </>
     );
 };
