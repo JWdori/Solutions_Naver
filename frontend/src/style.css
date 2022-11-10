@@ -366,7 +366,7 @@ input:focus{
     font-family: "Pretendard";
     text-align: center;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 19px;
     color: #FFAE68;
 }
@@ -469,12 +469,12 @@ input:focus{
 
 
 .tag {
-    font-family: "Noto Sans KR";
+    font-family: "Pretendard";
     font-weight: 400;
     font-size: 12px;
     color: #fffef5;
-    background: #6999b5;
-    border-radius: 100px;
+    background: #FF8216;
+    border-radius: 20px;
     margin-right: 12px;
     margin-bottom: 15px;
     height: 30px;
@@ -486,6 +486,7 @@ input:focus{
 .tagContainer {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 
@@ -1672,25 +1673,8 @@ img {
 }
 
 
-.tag {
-    font-family: "Noto Sans KR";
-    font-weight: 400;
-    font-size: 12px;
-    color: #fffef5;
-    background: #6999b5;
-    border-radius: 100px;
-    margin-right: 12px;
-    margin-bottom: 15px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.tagContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 .mainDesc {
