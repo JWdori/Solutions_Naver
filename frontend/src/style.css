@@ -2027,7 +2027,22 @@ img {
     margin-bottom: 50px;
 }
 
-#btn_login[disabled=disabled], #btn_login:disabled {
+#buttonLoginDisabled{
+
+    width: 270px;
+    height: 48px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    justify-content: center;
+
+    color: #FFFFFF;
     background: #FFAE68;
     cursor:not-allowed;
 }
