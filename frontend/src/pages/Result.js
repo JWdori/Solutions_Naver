@@ -22,8 +22,7 @@ import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
 import reset from "../images/reset.png"
 import check from "../images/check.png"
-import modal from "../elements/Resultmodal"
-import ScorePage from "../elements/ScorePage";
+
 
 
 const Result = (props) => {
