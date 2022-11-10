@@ -13,6 +13,7 @@ import GameRecommend from "./pages/GameRecommend";
 import Score from "./elements/Score";
 import ScorePage from "./elements/ScorePage";
 import Recommendnext from "./elements/Recommendnext";
+import GameRanking from "./pages/GameRanking";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <Route element={<Score/>} path={"/score"}/>
                     <Route element={<ScorePage/>} path={"/scorepage"}/>
                     <Route element={<Recommendnext/>} path={"/Recommendnext"}/>
+                    <Route element={<GameRanking/>} path={"/gameranking"}/>
                 </Routes>
             </BrowserRouter>
         </div>

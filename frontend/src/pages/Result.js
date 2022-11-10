@@ -22,11 +22,13 @@ import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
 import reset from "../images/reset.png"
 import check from "../images/check.png"
+import modal from "../elements/Resultmodal"
+import ScorePage from "../elements/ScorePage";
+
 
 const Result = (props) => {
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
-
     const handleShowPopup = () => {
         setShowPopup(true);
     };
@@ -48,7 +50,7 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultType">
-                폭풍성장
+                후회하는 오프트래너
             </div>
             <img
                 id=""
@@ -94,7 +96,7 @@ const Result = (props) => {
                     style={{marginRight:"24px"}}
                 >
                 </img>
-                    <div className={"typedecs"} style={{marginLeft:"6px"}}>공략 따라쟁이
+                    <div className={"typedecs"} style={{marginLeft:"6px"}}>후회하는 오프트래너
                     </div>
 
                     </div>
@@ -258,7 +260,7 @@ const Result = (props) => {
             <button id="allTypeBtn" style={{marginTop:"16px"}}>
                 모든 인기 게임 확인하기
             </button>
-            <button id="allTypeBtn" style={{marginBottom:"90px"}}>
+            <button id="allTypeBtn" style={{marginBottom:"90px"}} onClick={handleShowPopup}>
                 모든 성향 확인하기
             </button>
 

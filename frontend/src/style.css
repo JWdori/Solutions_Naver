@@ -219,7 +219,7 @@ html {
     border-radius: 10px;
     border: solid;
     border-width: 2px;
-    border-color: #FF6900
+    border-color:#FF8936;
 }
 
 .stars {
@@ -271,7 +271,7 @@ html {
     border-radius: 10px;
     border: solid;
     border-width: 2px;
-    border-color: #FF6900
+    border-color:#FF8936;
 }
 
 .modalPost3 {
@@ -288,25 +288,10 @@ html {
     border-radius: 10px;
     border: solid;
     border-width: 2px;
-    border-color: #FF6900
+    border-color: #FF8936;
 }
 
-.modalPost4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 220px;
-    background-color: #fffef5;
-    overflow: auto;
-    overflow: x-hidden;
-    z-index: 3;
-    border-radius: 10px;
-    border: solid;
-    border-width: 2px;
-    border-color: #FF6900
-}
+
 
 
 
@@ -369,27 +354,26 @@ input:focus{
 
 .modalHeadFont {
     color: white;
-    font-family: "Gmarket Sans";
+    font-family: "Pretendard";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     margin: 20px;
-
 }
 
 
 
 .modalSemiresult {
-    font-family: "Noto Sans KR";
-    text-align: start;
-    font-weight: 550;
-    font-size: 13px;
+    font-family: "Pretendard";
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 19px;
-    color: #6aa99e;
+    color: #FFAE68;
 }
 
 
 .modalCon {
-    border: 1px solid #FF6900;
+    border: 1px solid #FF8216;;
     padding: 20px;
 }
 
@@ -403,7 +387,7 @@ input:focus{
     width: 100%;
     height: 50px;
     justify-content: space-between;
-    background-color: #FF6900;
+    background: #FF8216;
     align-items: center;
 }
 
@@ -1094,6 +1078,16 @@ img {
     background: #FF6900;
 }
 
+.rankingslidebox{
+    width: 311px;
+    height: 101px;
+    border: 1px solid #FF8936;
+    border-radius: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: start;
+}
+
 .logo {
     cursor: pointer;
     margin: 15px;
@@ -1132,6 +1126,13 @@ img {
     object-fit: cover;
     border-radius: 20px;
     margin-left: 30px;
+}
+.ranking__slide__game{
+    display: block;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .slide__game {
@@ -1320,22 +1321,7 @@ img {
     left: 0%;
 }
 
-.modalPost {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 250px;
-    background-color: #fffef5;
-    overflow: auto;
-    overflow: x-hidden;
-    z-index: 3;
-    border-radius: 10px;
-    border: solid;
-    border-width: 2px;
-    border-color: #FF6900
-}
+
 
 .stars {
     display: -webkit-box;
@@ -1372,22 +1358,7 @@ img {
 }
 
 
-.modalPost2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 174px;
-    background-color: #fffef5;
-    overflow: auto;
-    overflow: x-hidden;
-    z-index: 3;
-    border-radius: 10px;
-    border: solid;
-    border-width: 2px;
-    border-color: #FF6900
-}
+
 
 .modalPost3 {
     position: absolute;
@@ -1403,7 +1374,7 @@ img {
     border-radius: 10px;
     border: solid;
     border-width: 2px;
-    border-color: #FF6900
+    border: 2px solid #FF8936;
 }
 
 .modalPost4 {
@@ -1420,35 +1391,64 @@ img {
     border-radius: 10px;
     border: solid;
     border-width: 2px;
-    border-color: #FF6900
 }
 
 
 .typedecs{
     background: #FF8936;
     border-radius: 32.488px;
-    width: 86px;
+    width: 88px;
     height: 21.71px;
     font-family: 'Gmarket Sans';
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
-
     line-height: 24px;
     display: flex;
     justify-content: center;
     color: #FFFFFF;
 }
 
+.rankingtypedecs{
+    background: #FF8936;
+    border-radius: 32.488px;
+    width: 104px;
+    height: 20px;
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    display: flex;
+    line-height: 22px;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    margin-left: 12px;
+}
+
+.rankingslidetext{
+    font-family: 'Gmarket Sans';
+    width: 70px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #FF8216;
+    justify-content: center;
+}
 .resultType{
     background: #FF8936;
     border-radius: 32.488px;
-    width: 110px;
+    width: 180px;
     height: 34.52px;
     font-family: 'Gmarket Sans';
     font-style: normal;
     font-weight: 500;
-    font-size: 20.305px;
+    font-size: 18px;
     line-height: 38.52px;
     /* identical to box height */
     display: flex;
@@ -1613,41 +1613,17 @@ img {
 
 
 .modalTitleresult {
-    font-family: "Gmarket Sans";
-    text-align: start;
-    font-size: 22px;
-    color: #6aa99e;
-    margin: 15px 0px 10px 0px;
-}
-
-.modalSemiresult {
-    font-family: "Noto Sans KR";
-    text-align: start;
-    font-weight: 550;
-    font-size: 13px;
-    line-height: 19px;
-    color: #6aa99e;
+    font-family: "Pretendard";
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #FF8216;
+    margin-bottom: 10px;
 }
 
 
-.modalCon {
-    border: 1px solid #FF6900;
-    padding: 20px;
-}
 
 
-.modalHead {
-
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    width: 100%;
-    height: 50px;
-    justify-content: space-between;
-    background-color: #FF6900;
-    align-items: center;
-}
 
 
 .modalImage {

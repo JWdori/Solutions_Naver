@@ -2,7 +2,16 @@ import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import game2 from "../images/game/game001.png"
 import game from "../images/game.png"
-
+import type1 from "../images/test/type1.png";
+import type2 from "../images/test/type2.png";
+import type3 from "../images/test/type3.png";
+import type4 from "../images/test/type4.png";
+import type5 from "../images/test/type5.png";
+import type6 from "../images/test/type6.png";
+import type7 from "../images/test/type7.png";
+import type8 from "../images/test/type8.png";
+import type9 from "../images/test/type9.png";
+import type10 from "../images/test/type10.png";
 
 
 const Resultmodal = (props) => {
@@ -27,7 +36,7 @@ const Resultmodal = (props) => {
 
 
                     <div className="modalCon">
-                        <img src={game} width="260px" height="180px" alt="img"></img>
+                        <img src={type1} width="200px" height="200px" alt="img"></img>
                         <div className="modalTitleresult">'씨앗 디노'</div>
                         <div className="modalSemiresult">
                             씨앗을 심고 새싹이 될 때까지 정성을 들이는 단계

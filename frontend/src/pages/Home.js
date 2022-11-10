@@ -26,6 +26,9 @@ const Home = (props) => {
     const onGameClick = () => {
         navigate("/tutorial", {state: {userId: uuid},});
     };
+    const onRankingClick = () => {
+        navigate("/gameranking");
+    };
 
     const onSurClick = () => {
         navigate("/survey");
@@ -159,7 +162,9 @@ const Home = (props) => {
             </div>
 
 
-            <button id="allGameBtn" style={{marginBottom: "80px"}}>
+            <button id="allGameBtn" style={{marginBottom: "80px"}}
+            onClick={onRankingClick}>
+
                 모든 인기 게임 확인하기
             </button>
             <Serviceintroduce></Serviceintroduce>
