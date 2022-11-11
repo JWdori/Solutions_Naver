@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../elements/Header";
+import Header from "../elements/Headerrec"
 import ProgressRec from "../elements/Progress_rec";
 import type1 from "../images/gamerec_1.png"
 import good from "../images/good_red.png"
@@ -12,6 +12,7 @@ import shareIcon from "../images/shareicon.png";
 import reset from "../images/reset.png";
 import Score from "../elements/Score";
 import ScorePage from "../elements/ScorePage";
+import Progress from "../elements/Progress_test";
 
 
 const GameRecommend = (props) => {
@@ -21,17 +22,16 @@ const GameRecommend = (props) => {
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
     };
+
     const complete = (num) => {
         setComplete(num);
     }
 
     return (
         <>
-            <Header isBack={false}/>
+            <Header isBack={true} step={step} setStep={setStep}/>
+            <ProgressRec width={329} percent={0.2}/>
             <div className={"recGameAll"}>
-
-                <ProgressRec width={"300px"} step={step}/>
-
                 <div className={"recGame"}>
                     <img
                         className="recGameImg"

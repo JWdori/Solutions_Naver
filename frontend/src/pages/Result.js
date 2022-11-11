@@ -1,7 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import Header from "../elements/Header";
-
+import Header from "../elements/Headerrec";
 import Resultmodal from "../elements/Resultmodal";
 import type1 from "../images/test/type1.png"
 import type2 from "../images/test/type2.png"
@@ -49,7 +48,7 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultType">
-                후회하는 오프트래너
+                &nbsp;&nbsp; 후회하는 오프트래너 &nbsp;&nbsp;
             </div>
             <img
                 id=""
