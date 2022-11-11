@@ -9,6 +9,7 @@ import Genre from "../elements/Genre";
 import Name from "../elements/Name";
 import q1 from "../images/tutorial/q1.png"
 
+
 const Tutorial = (props) => {
     const navigate = useNavigate();
     const {state} = useLocation();
@@ -16,29 +17,19 @@ const Tutorial = (props) => {
     const [userName, setUserName] = React.useState(null);
     const [userGenre, setUserGenre] = React.useState([]);
     const [step, setStep] = React.useState(0);
-    const nameFunction = (x) => {
-        setUserName(x);
-    }
-    window.onload = function() {
-        const button = document.getElementsByClassName("btn_login")[0];
-        const inputId = document.getElementsByClassName("user_id")[0];
-        inputId.addEventListener("keyup", validate);
 
-        function validate() {
-            if (!(inputId.value)) {
-                button.disabled = true;
-                button.classList.remove("buttonLoginDisabled");
-            } else {
-                button.disabled = false;
-                button.style.cursor = "pointer";
-                button.classList.add("buttonLoginDisabled");
-            }
-        }
-    }
-
-    const [name, setName] = React.useState("");
     const onChangeName = (event) => {
-        nameFunction(event.target.value);
+        const btn = document.getElementsByClassName("nameBtn")[0];
+
+        if (event.target.value.length==0) {
+            btn.disabled = true;
+            btn.setAttribute("id", "buttonLoginDisabled")
+        } else {
+            setUserName(event.target.value);
+            btn.disabled = false;
+            btn.setAttribute("id", "btn_login")
+        }
+
     }
 
 
@@ -57,11 +48,11 @@ const Tutorial = (props) => {
     ];
     const btnSize = ["270px", "270px",]
 
-    const onClick = (num) => {
+    const onClick = (event) => {
 
         if (step < 1) setStep(step + 1);
         else if (step === 1) {
-            navigate("/test", {state:{userId: userId, userName: userName, userGenre: userGenre}});
+            navigate("/test", {state: {userId: userId, userName: userName, userGenre: userGenre}});
         }
 
     };
@@ -92,9 +83,10 @@ const Tutorial = (props) => {
             <div
                 style={{color: "white"}}>
                 {step === 0 ?
-                    <input id="user_id" type="text" className="NameBox" maxLength='6' placeholder="닉네임을 입력하세요" style={{color:"#FFAE68", marginTop:"80px"}}
+                    <input id="user_id" type="text" className="NameBox" maxLength='6' placeholder="닉네임을 입력하세요"
+                           style={{color: "#FFAE68", marginTop: "80px"}}
                            onChange={onChangeName}>
-                    </input>:
+                    </input> :
                     step === 1 ?
                         <Genre genreFunction={genreFunction}/> : null
 
@@ -105,22 +97,25 @@ const Tutorial = (props) => {
             <div className={"tutorialBtn"}>
                 {
                     step === 0
-                    ?
-                        <button id={"btn_login"}
+                        ?
+                        <button id={"buttonLoginDisabled"}
                                 style={{width: btnSize[step], marginBottom: "190px"}}
-                                onClick={onClick}>
+                                onClick={onClick}
+                                className={"nameBtn"}
+                        >
                             {
                                 btnText[step]
                             }
                         </button>
                         :
-                    <button id={"tutorialBtn"}
-                            style={{width: btnSize[step], marginBottom: "190px"}}
-                            onClick={onClick}>
-                        {
-                            btnText[step]
-                        }
-                    </button>
+                        <button id={"tutorialBtn"}
+                                style={{width: btnSize[step], marginBottom: "190px"}}
+                                onClick={onClick}
+                        >
+                            {
+                                btnText[step]
+                            }
+                        </button>
                 }
             </div>
         </>
