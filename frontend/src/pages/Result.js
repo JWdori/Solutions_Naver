@@ -31,6 +31,9 @@ const Result = (props) => {
         setShowPopup(true);
     };
 
+    const onResetClick = () => {
+        navigate("/");
+    };
     const onGameClick = () => {
         navigate("/recommend");
     };
@@ -148,26 +151,24 @@ const Result = (props) => {
                     className="shareIcon"
                     src={kakao}
                     alt="kakaotalk"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={kakaoShare}
                 />
-
                 <img
                     className="shareIcon"
                     src={facebook}
                     alt="facebook"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={facebookShare}
                 ></img>
-
                 <img
                     className="shareIcon"
                     src={twitter}
                     alt="twitter"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     // onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
@@ -176,14 +177,14 @@ const Result = (props) => {
                     className="shareIcon"
                     src={link}
                     alt="link"
-                    width="40px"
-                    height="40px"
+                    width="24px"
+                    height="24px"
                     onClick={() => {
                         // copy(handleToast);
                     }}
                 ></img>
             </div>
-            <button id="regameBtn" onClick={onGameClick}>
+            <button id="regameBtn" onClick={onResetClick}>
                 &nbsp;&nbsp;다시하기
                 <img
                 className="resetresult"
