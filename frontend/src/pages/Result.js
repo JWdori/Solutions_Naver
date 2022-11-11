@@ -51,7 +51,7 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultType">
-                &nbsp;&nbsp; 후회하는 오프트래너 &nbsp;&nbsp;
+                후회하는 오프트래너
             </div>
             <img
                 id=""
@@ -185,7 +185,7 @@ const Result = (props) => {
                 ></img>
             </div>
             <button id="regameBtn" onClick={onResetClick}>
-                &nbsp;&nbsp;다시하기
+                다시하기
                 <img
                 className="resetresult"
                 src={reset}
