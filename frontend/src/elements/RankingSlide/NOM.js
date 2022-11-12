@@ -23,31 +23,36 @@ import Prev from "../../images/left.png";
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 163px;
+  left: 324px;
+  margin-top: -90px;
   z-index: 99;
-  text-align: right;
+  text-align: center;
   line-height: 30px;
 `;
         const DivPre = styled.div`
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 16px;
+  margin-top: 28px;
+  left: 36px;
   z-index: 99;
-  text-align: left;
+  text-align: center;
   line-height: 30px;
 `;
 
         const settings = {
-            infinite: false, //무한 슬라이더로 할지
+            infinite: true, //무한 슬라이더로 할지
             fade:true,
-            autoplay: false, //자동 재생 할 것인지
-            slidesToShow:5,
+            autoplay: true, //자동 재생 할 것인지
+            autoplaySpeed: 4000,
+            slidesToShow:1,
             slidesToScroll:1,
             centerMode: true,
             draggable:false,
             padding:"20px",
             variableWidth:false,
+            dots:false,
+            pauseOnHover:false,
             nextArrow: (
                 <Div>
                     <img src={Next}
@@ -62,13 +67,12 @@ import Prev from "../../images/left.png";
                          height="18px"/>
                 </DivPre>
             ),
-            dots:false,
-            pauseOnHover:false
+
         };
 
 
         return (
-            <div style={{width:"500px", height:"120px", marginTop:"10px", display:"flex", marginLeft:"-40px"}}>
+            <div style={{width:"212px", height:"112px", marginTop:"10px", display:"flex", marginLeft:"-40px"}}>
                 <Slider {...settings}>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
@@ -88,12 +92,7 @@ import Prev from "../../images/left.png";
                         </a>
                         <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
                     </div>
-                    <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
-                        </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
-                    </div>
+
                 </Slider>
             </div>
         );

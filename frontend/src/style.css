@@ -1172,6 +1172,7 @@ img {
     display: flex;
     align-content: center;
     justify-content: start;
+    overflow: hidden;
 }
 
 .logo {
@@ -1219,6 +1220,7 @@ img {
     height: 70px;
     object-fit: cover;
     border-radius: 20px;
+    margin-right: 20px;
 }
 
 .slide__game {
@@ -1846,7 +1848,10 @@ img {
     margin-bottom: 8px;
     display: flex;
     align-items: center;
+    margin-right: 12px;
+
 }
+
 .shareText2 {
     font-family: 'Pretendard';
     font-style: normal;
@@ -1859,6 +1864,7 @@ img {
     margin-bottom: 8px;
     display: flex;
     align-items: center;
+    margin-right: 12px;
 }
 
 
@@ -2563,4 +2569,33 @@ img {
     color: #B4B4B4;
     cursor: pointer;
     margin-bottom: 60px;
+}
+
+.list {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    transform: translate(0, 0);
+}
+
+.item {
+    padding-right: 1rem;
+    list-style: none;
+    user-select: none;
+}
+
+.item:first-child {
+    padding-left: 1rem;
+}
+
+.link {
+    display: block;
+    -webkit-user-drag: none;
+}
+
+.image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    -webkit-user-drag: none;
 }
