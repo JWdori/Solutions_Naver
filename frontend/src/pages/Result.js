@@ -25,6 +25,8 @@ import check from "../images/check.png"
 
 
 const Result = (props) => {
+    const showData = JSON.parse(sessionStorage.getItem("data"));
+    console.log(showData);
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
     const handleShowPopup = () => {
