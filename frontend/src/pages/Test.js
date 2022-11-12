@@ -89,8 +89,8 @@ const Test = (props) => {
         "아이템, 동료, 무기 등,\n 다양한 요소들을 수집한다.",
         "남들과 다른 새로운 공략을 짜거나\n 게임에 숨겨진 요소를 탐구한다.",
     ];
-    const wid = [260, 220, 230, 155, 220, 210, 210, 145, 145, 230, 230, 230, 230, 230];
-    const hei = [230, 220, 230, 215, 220, 175, 170, 180, 180, 230, 230, 230, 230, 230];
+    const wid = [280, 280, 260, 240, 260, 240, 240, 240, 240, 260, 240, 240, 230, 230];
+    const hei = [200, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 200, 230];
 
     React.useEffect(() => {
         setTime(true);
@@ -148,7 +148,7 @@ const Test = (props) => {
                                 alt="img"
                                 width="158px"
                                 height="108px"
-                                style={{marginBottom: "80px"}}
+                                style={{marginBottom: "40px"}}
                             ></img>
                             : <img
                                 className="questionImg"
@@ -161,6 +161,7 @@ const Test = (props) => {
 
 
                     <button
+                        style={{marginTop:"40px"}}
                         className="testAnswer"
                         onClick={() => {
                             onClick("a");

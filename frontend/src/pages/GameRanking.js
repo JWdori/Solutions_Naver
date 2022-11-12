@@ -8,7 +8,6 @@ import goldCrown from "../images/crown1.png";
 import r2 from "../images/ranking2.png";
 import copperCrown from "../images/crown3.png";
 import r3 from "../images/ranking3.png";
-import NOM from "../elements/RankingSlide/NOM"
 import Slider from "../elements/Slider";
 
 
