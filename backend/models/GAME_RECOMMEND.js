@@ -26,6 +26,11 @@ module.exports = function(sequelize, DataTypes) {
     recommend_date: {
       type: DataTypes.DATEONLY,
       allowNull: true
+    },
+    user_type: {
+      type: DataTypes.STRING(45),
+      allowNull: false,
+      defaultValue: "WAL"
     }
   }, {
     sequelize,

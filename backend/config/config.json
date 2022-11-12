@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "what2play",
+    "password": "what2play!",
+    "database": "w2p",
+    "host": "db-d4tf9.pub-cdb.ntruss.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "what2play",
+    "password": "what2play!",
+    "database": "database-test",
+    "host": "db-d4tf9.pub-cdb.ntruss.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

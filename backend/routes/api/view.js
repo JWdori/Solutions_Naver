@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     res.send('respond with a view');
 });
 
-router.post('/getRateGame',viewController.getRateGame);
+router.get('/getRateGame',viewController.getRateGame);
 router.get('/getStarGame',viewController.getStarGame)
 
 module.exports = router;

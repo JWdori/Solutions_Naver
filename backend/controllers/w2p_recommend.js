@@ -6,6 +6,7 @@ const subdb = models.GAME_SUBGENRE;
 const dislikedb = models.USER_DISLIKE;
 const recommenddb = models.GAME_RECOMMEND;
 const stardb = models.GAME_RATING;
+const userdb = models.USER_INFO;
 const {Op, Sequelize} = require("sequelize");
 const cwr = require('../utils/createWebResponse');
 const {use} = require("express/lib/router");
@@ -16,10 +17,11 @@ const postGameRate = async (req, res) => {
     const userId = req.body.userId;
     const appId = req.body.appId;
     const gameScore = req.body.gameScore;
-
+    const userType = await userdb.findOne({where: {user_id: userId}});
 
     recommenddb.create({
         user_id: userId,
+        user_type: userType.type_id,
         appId: appId,
         recommend_date: Sequelize.literal('now()'),
         game_recommend: gameScore
@@ -45,15 +47,25 @@ const postGameStar = async (req, res) => {
     const userId = req.body.userId;
     const appId = req.body.appId;
     const gameStar = req.body.gameStar;
+    const userType = await userdb.findOne({where: {user_id: userId}});
+    let gameScore=0;
+    if(gameStar==4){
+        gameScore+=1;
+    }else if(gameStar==0 || gameStar==1){
+        gameScore-=1;
+    }
 
-    stardb.create({
+
+
+    recommenddb.create({
         user_id: userId,
         appId: appId,
-        rate_date: Sequelize.literal('now()'),
-        game_score: gameStar
+        user_type: userType.type_id,
+        recommend_date: Sequelize.literal('now()'),
+        game_recommend: gameScore
     }).then(data => {
         return cwr.createWebResp(res, header, 200, {
-            message: "Inserted gameStar to Database",
+            message: "Inserted recommend to Database",
             data: data
         });
     })
@@ -63,6 +75,24 @@ const postGameStar = async (req, res) => {
                     err.message || "Some error occurred while inserting recommend."
             });
         });
+
+    // stardb.create({
+    //     user_id: userId,
+    //     appId: appId,
+    //     rate_date: Sequelize.literal('now()'),
+    //     game_score: gameStar
+    // }).then(data => {
+    //     return cwr.createWebResp(res, header, 200, {
+    //         message: "Inserted gameStar to Database",
+    //         data: data
+    //     });
+    // })
+    //     .catch(err => {
+    //         res.status(500).send({
+    //             message:
+    //                 err.message || "Some error occurred while inserting recommend."
+    //         });
+    //     });
 
 }
 
