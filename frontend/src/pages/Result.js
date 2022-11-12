@@ -46,10 +46,13 @@ const Result = (props) => {
 
     function myLogin() {
         tp.onInit(() => {
+            tp.sendLogin({
+                playerUUID: "9BEIN2XUEN2P7ZW"
+            });
             tp.sendPurchase({
                 playerUUID: "9BEIN2XUEN2P7ZW", //받아온 아이디
                 characterUUID: "TentuPlayKeyword._DUMMY_CHARACTER_ID_",
-                purchassableSlug: "고래",
+                purchassableSlug: "WHA",
                 purchaseQuantity: 1,
                 purchaseUnitPrice: 1,
                 purchaseTotalPrice: 1,

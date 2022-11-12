@@ -9,6 +9,7 @@ import r2 from "../images/ranking2.png";
 import copperCrown from "../images/crown3.png";
 import r3 from "../images/ranking3.png";
 import Slider from "../elements/Slider";
+import good from "../images/good_gray.png";
 
 
 const gameranking = (props) => {
@@ -37,6 +38,19 @@ const gameranking = (props) => {
                         }}
                     ></img>
                         </a>
+
+                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px"}}>ㅁㄴㅇ</div>
+                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                style={{marginBottom:"2px",marginRight:"4px"}}
+                                alt="img"
+                                width={"18px"}
+                                height={"18px"}
+                            ></img>
+                        123
+                    </div>
                 </div>
 
 
@@ -63,6 +77,19 @@ const gameranking = (props) => {
                         }}
                     ></img>
                     </a>
+
+                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px", marginLeft:"14px"}}>이놈이 문제야</div>
+                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
+                        <img
+                            className="rankingDdabong"
+                            src={good}
+                            style={{marginBottom:"2px",marginRight:"4px"}}
+                            alt="img"
+                            width={"18px"}
+                            height={"18px"}
+                        ></img>
+                        123
+                    </div>
                 </div>
                 <div className={"gameRating"}>
                     <img
@@ -85,7 +112,20 @@ const gameranking = (props) => {
                         }}
                     ></img>
                         </a>
+                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px"}}>ㄴㅁㅇ</div>
+                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
+                        <img
+                            className="rankingDdabong"
+                            src={good}
+                            style={{marginBottom:"2px",marginRight:"4px"}}
+                            alt="img"
+                            width={"18px"}
+                            height={"18px"}
+                        ></img>
+                        123
+                    </div>
                 </div>
+
             </div>
 
             <div className={"type1"}>
@@ -160,7 +200,7 @@ const gameranking = (props) => {
                 </div>
             </div>
 
-            <div className={"type10"}>
+            <div className={"type10"} style={{marginBottom:"60px"}}>
                 <div className={"rankingtypedecs"}>처음부터 PvP</div>
                 <div className={"rankingslidebox"}>
                     <Slider>
