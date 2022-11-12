@@ -96,7 +96,6 @@ const Test = (props) => {
         setTime(true);
     }, [time]);
     const onClick = (value) => {
-        console.log(step)
         setTime(false);
         if (step < 14) setStep(step + 1);
         else if (step === 14) {  //16아님.
@@ -110,7 +109,6 @@ const Test = (props) => {
             })
         }
         select[step - 2] = value;
-        console.log(select)
     };
     return (
         <>

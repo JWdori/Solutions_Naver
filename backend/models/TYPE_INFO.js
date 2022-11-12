@@ -18,10 +18,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(500),
       allowNull: true
     },
-    type_sub_name: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
     type_sub_desc: {
       type: DataTypes.STRING(500),
       allowNull: true

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const models = require("../models")
 const testdb = models.GAME_INFO;
+const typedb = models.TYPE_INFO;
 const userdb = models.USER_INFO;
 const catdb = models.USER_DISLIKE;
 const {Op, Sequelize} = require("sequelize");
@@ -85,9 +86,6 @@ const postTestResult = async (req, res) => {
             continue;
         }
     }
-    const name = ["RER", "NOM", "GRO", "FAS", "WAL", "FOL", "UND", "FAM", "COL", "PVP"];
-    const cnt = [RER, NOM, GRO, FAS, WAL, FOL, UND, FAM, COL, PVP];
-
     let types = [
         {type: 'RER', cnt: RER},
         {type: 'NOM', cnt: NOM},
@@ -108,9 +106,9 @@ const postTestResult = async (req, res) => {
     });
 
     //결과 db에서 찾아오면된다,,
-    const firstResult = await testdb.findOne({where: {appId: result[0].type}});
-    const secondResult = await testdb.findOne({where: {appId: result[1].type}});
-    const thirdResult = await testdb.findOne({where: {appId: result[2].type}});
+    const firstResult = await typedb.findOne({where: {type_id: result[0].type}});
+    const secondResult = await typedb.findOne({where: {type_id: result[1].type}});
+    const thirdResult = await typedb.findOne({where: {type_id: result[2].type}});
 
 
     //** 사용자를 insert하고
@@ -126,23 +124,22 @@ const postTestResult = async (req, res) => {
         //여기서 이제 새롭게 싫어하는 카테고리 테이블 인서트 쳐준다.
         //그리고 그 밑에서 return 웹 해주면 된다~~
         //온제 하냐,,?
-
+        console.log(categoryArr)
         if (categoryArr.length > 0) {
             for (let i = 0; i < categoryArr.length; i++) {
                 catdb.create({
-                    user_id: user.id,
+                    user_id: user.userId,
                     category_id: categoryArr[i]
                 })
             }
         }
         console.log(newUser);
         return cwr.createWebResp(res, header, 200, {
-            message: "testing is completed, sending testResult!",
             firstResult: firstResult,
             secondResult: secondResult,
             thirdResult: thirdResult,
-            user:newUser,
-            category:categoryArr
+            user: newUser,
+            category: categoryArr
         });
     })
 }
