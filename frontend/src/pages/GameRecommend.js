@@ -15,25 +15,45 @@ import ScorePage from "../elements/ScorePage";
 import Progress from "../elements/Progress_test";
 import quotes1 from "../images/chat_1_gray.png"
 import quotes2 from "../images/chat_2_gray.png"
+import {useNavigate} from "react-router-dom";
+import Resultmodal from "../elements/Resultmodal";
+import Recommendnext from "../elements/Recommendnext";
 
 const GameRecommend = (props) => {
+    const navigate = useNavigate();
     const [isShowAll, setShowPopup] = React.useState(false);
+    const [isNextShowAll, setShowNextPopup] = React.useState(false);
     const [step, setStep] = React.useState(0);
     const [num, setComplete] = React.useState(0);
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
     };
+    const handleShowNextBtn = (props) => {
+        setShowNextPopup(true);
+    };
 
     const complete = (num) => {
         setComplete(num);
+    }
+    const onClickNext = () => {
+        if(step===5){
+           //여기 코드 확인점. 테스트용으로만 해놔서
+            // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
+        }
+        else setStep(step + 1);
+        console.log(step)
+
     }
 
     return (
         <>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <ProgressRec width={329} percent={0.2}/>
+            <ProgressRec
+                width={329}
+                percent={(step-0.1)/ 5}
+            />
             <span className={"recTitle"}>추천 게임은</span>
-            <div className={"recName"}>&nbsp;&nbsp;&nbsp;한국밈 피하기&nbsp;&nbsp;&nbsp;</div>
+            <div className={"recName"}>한국밈 피하기</div>
             <img
                 className=""
                 style={{marginRight:"300px", marginBottom:"-10px"}}
@@ -170,7 +190,7 @@ const GameRecommend = (props) => {
                             }}
                         ></img>
                     </div>
-                    <button id="recNextButton">
+                    <button id="recNextButton" onClick={handleShowNextBtn}>
                         다음 게임
                     </button>
 
@@ -190,6 +210,7 @@ const GameRecommend = (props) => {
                 ></img>
             </span>
                 {isShowAll && <ScorePage setShowPopup={setShowPopup} complete={complete} num={num}/>}
+                {isNextShowAll && <Recommendnext setShowNextPopup={setShowNextPopup}/>}
             </div>
         </>
     );

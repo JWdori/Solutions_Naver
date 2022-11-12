@@ -153,7 +153,7 @@ const Resultmodal = (props) => {
 
                         <div className="tagContainer">
                             <div className="tag" id="zerobase">
-                                &nbsp;&nbsp; #왜그랬을까 &nbsp;&nbsp;
+                                &nbsp;&nbsp; #라이트유저 &nbsp;&nbsp;
                             </div>
                             <div className="tag" id="todak">
                                 &nbsp;&nbsp; #팔랑귀 &nbsp;&nbsp;
