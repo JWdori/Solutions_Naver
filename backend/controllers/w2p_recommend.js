@@ -89,7 +89,14 @@ const getGameList = async (req, res) => {
     const subGenre = await dislikedb.findAll({where: {user_id: userId}, attributes: ['category_id']})
     let subGenreId = [];
     for (let i = 0; i < subGenre.length; i++) {
-        subGenreId.push(subGenre[i].category_id);
+        if(subGenre[i].category_id==="교육∙ 퀴즈"){
+            console.log("Dd")
+            subGenreId.push("교육");
+            subGenreId.push("퀴즈");
+        }else{
+            subGenreId.push(subGenre[i].category_id);
+        }
+        
     }
 
     const mainNotId = await gamedb.findAll({

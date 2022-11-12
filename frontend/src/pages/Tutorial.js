@@ -36,7 +36,6 @@ const Tutorial = (props) => {
     const genreFunction = (x) => {
         console.log(x)
         setUserGenre(x);
-
     }
     const text =
         ["게임 플레이를 위해\n계정을 생성합니다!\n",

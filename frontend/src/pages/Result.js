@@ -53,7 +53,7 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultType">
-                &nbsp;&nbsp; 후회하는 오프트래너 &nbsp;&nbsp;
+                &nbsp;&nbsp; {showData.firstResult.type_name} &nbsp;&nbsp;
             </div>
             <img
                 id=""
