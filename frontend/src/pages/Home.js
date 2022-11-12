@@ -37,24 +37,6 @@ const Home = (props) => {
         navigate("/survey");
     };
 
-    const tp = new TentuPlay({
-        clientKey: "b64DGZZd38ZKHomhQFQE",
-    });
-
-
-    function myLogin() {
-        tp.onInit(() => {
-            tp.sendJoin({
-                playerUUID: uuid
-            });
-            tp.sendLogin({
-                playerUUID: uuid
-            })
-        })
-
-    }
-
-    myLogin();
 
 
     return (

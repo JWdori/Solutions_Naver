@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import Header from "../elements/Headerrec";
+import Header from "../elements/Header";
 import Resultmodal from "../elements/Resultmodal";
 import type1 from "../images/test/type1.png"
 import type2 from "../images/test/type2.png"
@@ -21,6 +21,7 @@ import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
 import reset from "../images/reset.png"
 import check from "../images/check.png"
+import {TentuPlay} from "@tentuplay/js-client-sdk";
 
 
 
@@ -39,6 +40,25 @@ const Result = (props) => {
     const onGameClick = () => {
         navigate("/recommend");
     };
+    const tp = new TentuPlay({
+        clientKey: "b64DGZZd38ZKHomhQFQE",
+    });
+
+    function myLogin() {
+        tp.onInit(() => {
+            tp.sendPurchase({
+                playerUUID: "9BEIN2XUEN2P7ZW", //받아온 아이디
+                characterUUID: "TentuPlayKeyword._DUMMY_CHARACTER_ID_",
+                purchassableSlug: "고래",
+                purchaseQuantity: 1,
+                purchaseUnitPrice: 1,
+                purchaseTotalPrice: 1,
+                purchaseCurrencyCode: "KRW",
+                isAdRemove: false
+            });
+        })
+    }
+    myLogin();
     return (
         <>
             <Header isBack={false}/>
