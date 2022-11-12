@@ -3,7 +3,7 @@ const kakaoShare_test = () => {
     window.Kakao.Link.sendDefault({
         objectType: "feed",
         content: {
-            title: "Catch Up! MDTI 테스트",
+            title: "W2P! 게임 유형 테스트 & 게임 추천",
             description: "MDTI 테스트 받고 경품까지!",
             imageUrl: "https://i.ibb.co/CV1X2FB/for-Share-Ka-Kao.png",
             link: {
@@ -27,7 +27,7 @@ const kakaoShare_test = () => {
 };
 
 const twitterShare_test = () => {
-    var sendText = "캐취업! 지금 바로 MDTI 테스트 하러가기";
+    var sendText = "W2P! 지금 바로 게임 성향 테스트 & 게임 추천 받으러가기";
     var sendUrl =
         "https://catchup.shop/                                                         ";
     var sendHashTag = "청년이룸,캐치업,MyDream,MDTI";

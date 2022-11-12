@@ -6,6 +6,7 @@ import right from "../images/right.png";
 import styeld from "styled-components";
 import { useState, useRef, useEffect } from "react";
 import type6 from "../images/test/type6.png";
+import good from "../images/good_gray.png";
 const Slider = (props) => {
     const slideRef = useRef(null);
     const [currentImgOrder, setcCurrentImgOrder] = useState(0);
@@ -18,7 +19,7 @@ const Slider = (props) => {
     }, [currentImgOrder]);
 
     const moveToNextSlide = () => {
-        if (currentImgOrder === 1) return;
+        if (currentImgOrder === 4) return;
         setcCurrentImgOrder(currentImgOrder + 1);
     };
 
@@ -31,7 +32,7 @@ const Slider = (props) => {
             <img src={left}
                  width="8px"
                  height="18px"
-                 style={{marginTop:"36px", marginLeft:"8px", marginRight:"8px"}}
+                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"8px"}}
                  onClick={moveToPrevSlide}></img>
             <Wrapper>
                 <SlideWrapper ref={slideRef}>
@@ -39,44 +40,184 @@ const Slider = (props) => {
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>12312321</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                     <div>
                         <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
                             <img className="ranking__slide__game" src={type6} alt="img"/>
                         </a>
-                        <span className={"rankingslidetext"}>여기에 ui 추가 예정</span>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
+                    </div>
+                    <div>
+                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
+                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        </a>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
+                    </div>
+                    <div>
+                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
+                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        </a>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
+                    </div>
+                    <div>
+                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
+                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        </a>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
+                    </div>
+                    <div>
+                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
+                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        </a>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
+                    </div>
+                    <div>
+                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
+                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        </a>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
+                            <img
+                                className="rankingDdabong"
+                                src={good}
+                                alt="img"
+                                width={"12px"}
+                                height={"12px"}
+                            ></img>
+                            2334
+                        </div>
                     </div>
                 </SlideWrapper>
             </Wrapper>
             <img src={right}
                  width="8px"
                  height="18px"
-                 style={{marginTop:"36px", marginLeft:"8px", marginRight:"8px"}}
+                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"8px"}}
                  onClick={moveToNextSlide}></img>
         </>
     );
