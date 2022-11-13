@@ -860,6 +860,7 @@ input:focus{
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 800;
+    width: 270px;
     font-size: 10px;
     line-height: 12px;
     display: flex;
@@ -1025,7 +1026,7 @@ input:focus{
 .checkSub{
     font-family: 'Pretendard';
     font-style: normal;
-    width: 275px;
+    width: 280px;
     font-weight: 900;
     font-size: 12px;
     line-height: 14px;
@@ -1525,7 +1526,8 @@ margin-right:4px;
 .typedecs{
     background: #FF8936;
     border-radius: 32.488px;
-
+    padding-left: 10px;
+    padding-right: 10px;
     height: 21.71px;
     font-family: 'Gmarket Sans';
     font-style: normal;
@@ -1569,8 +1571,8 @@ margin-right:4px;
     justify-content: center;
 }
 .resultType{
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
     background: #FF8936;
     border-radius: 32.488px;
     height: 34.52px;

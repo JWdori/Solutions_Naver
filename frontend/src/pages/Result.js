@@ -43,20 +43,19 @@ const Result = (props) => {
     const tp = new TentuPlay({
         clientKey: "b64DGZZd38ZKHomhQFQE",
     });
-
     function myLogin() {
         tp.onInit(() => {
             tp.sendLogin({
-                playerUUID: "9BEIN2XUEN2P7ZW"
+                playerUUID: showData.user.user_id
             });
             tp.sendPurchase({
-                playerUUID: "9BEIN2XUEN2P7ZW", //받아온 아이디
+                playerUUID: showData.user.user_id, //받아온 아이디
                 characterUUID: "TentuPlayKeyword._DUMMY_CHARACTER_ID_",
-                purchassableSlug: "WHA",
+                purchassableSlug: showData.user.type_id,
                 purchaseQuantity: 1,
                 purchaseUnitPrice: 1,
                 purchaseTotalPrice: 1,
-                purchaseCurrencyCode: "KRW",
+                purchaseCurrencyCode: "USD",
                 isAdRemove: false
             });
         })
@@ -76,20 +75,28 @@ const Result = (props) => {
                 ></img>
             </span>
             <div className="resultType">
-                후회하는 오프트래너
+                {showData.firstResult.type_name}
             </div>
+
             <img
                 id=""
-                src={type1}
+                src={showData.firstResult.type_img}
                 alt="img"
                 width={"254px"}
                 height={"254px"}
             ></img>
 
-            <span className={"resultSub"}>게임을 할 시간이 충분하지 않아 짧은 시간 동안 플레이를
-하지만 <br></br> 재화를 효율적으로 사용하여 매우 빠른 속도로 성장하는 유저</span>
+            <span className={"resultSub"}>{showData.firstResult.type_desc}</span>
 
             <span  className={"checktitle"} style={{marginBottom:"8px"}}>게임사의 맞춤 전략
+                                <img
+                                    className="questionTxtImage"
+                                    src={box}
+                                    style={{marginTop:"4px", marginLeft:"41px"}}
+                                    alt="img"
+                                    width="84px"
+                                    height="11px"
+                                ></img>
                         <img
                             className="questionTxtImage"
                             src={check}
@@ -99,16 +106,16 @@ const Result = (props) => {
                             height="65px"
                         ></img>
             </span>
-            <span className={"checkSub"}>빠른 성장을 할 수 있는 재화의 지속적인 공급</span>
+            <span className={"checkSub"}>{showData.firstResult.type_sub_desc}</span>
 
 
             <span  className={"similarGameRanking"} style={{marginBottom:"20px"}}>나의 다른 성향들
                             <img
                                 className="questionTxtImage"
                                 src={box}
-                                style={{marginTop:"4px", marginLeft:"34px"}}
+                                style={{marginTop:"5px", marginLeft:"44px"}}
                                 alt="img"
-                                width="40px"
+                                width="60px"
                                 height="11px"
                             ></img>
             </span>
@@ -117,24 +124,34 @@ const Result = (props) => {
                 <div className="TypeSub">
                 <img
                     className="typesubimg"
-                    src={type2}
+                    src={showData.secondResult.type_img}
                     alt="img"
                     style={{marginRight:"24px"}}
                 >
                 </img>
-                    <div className={"typedecs"} style={{marginLeft:"6px"}}>후회하는 오프트래너
-                    </div>
-
+                    {
+                        showData.secondResult.type_name == "후회하는 오프트래너" || showData.secondResult.type_name == "기대치 높은 무과금러"
+                        ? <div className={"typedecs"}
+                        style={{marginLeft: "-18px"}}>{showData.secondResult.type_name}</div>
+                        :<div className={"typedecs"}
+                             style={{marginRight: "30px"}}>{showData.secondResult.type_name}</div>
+                    }
                     </div>
 
                     <div className="TypeSub">
                         <img
                             className="typesubimg"
-                            src={type3}
+                            src={showData.thirdResult.type_img}
                             alt="img"
                             style={{marginLeft:"24px"}}
                         ></img>
-                            <div className={"typedecs"} style={{marginLeft:"30px"}}>익숙함 선호</div>
+                        {
+                            showData.thirdResult.type_name == "후회하는 오프트래너" || showData.thirdResult.type_name == "기대치 높은 무과금러"
+                                ? <div className={"typedecs"}
+                                       style={{marginLeft: "18px"}}>{showData.thirdResult.type_name}</div>
+                                : <div className={"typedecs"}
+                                       style={{marginLeft: "30px"}}>{showData.thirdResult.type_name}</div>
+                        }
                     </div>
             </div>
 
