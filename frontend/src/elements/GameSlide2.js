@@ -4,11 +4,11 @@ import React from "react";
 
 import Slick from 'react-slick';
 import styled from 'styled-components';
-import type1 from "../images/test/type1.png";
 
 
 
-    const GameSlide2 = () => {
+
+    const GameSlide2 = (props) => {
         const settings = {
             infinite: true, //무한 슬라이더로 할지
             fade:true,
@@ -29,9 +29,16 @@ import type1 from "../images/test/type1.png";
         return (
             <div style={{width:"212px", height:"112px"}}>
                 <Slider {...settings}>
-                    <img className="slide__game" src={type1} alt="img"/>
-                    <img className="slide__game" src={type1} alt="img"/>
-
+                    <img className="slide__game_type" src={props.gameimgRER} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgFAS} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgCOL} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgGRO} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgWHA} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgNOM} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgFOL} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgFAM} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgUND} alt="img"/>
+                    <img className="slide__game_type" src={props.gameimgPVP} alt="img"/>
                 </Slider>
             </div>
         );

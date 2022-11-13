@@ -131,28 +131,41 @@ const Recommendnext = (props) => {
     const handleCloseBtn = (e) => {
         setShowNextPopup(false);
     };
+        const Img = NOM_randImage[randomIndex];
+        const Name = NOM_randName[randomIndex];
     //여따 조건문
     //const Link = NOM_randLink[randomIndex];
-    const Img = NOM_randImage[randomIndex];
-    const Name = NOM_randName[randomIndex];
-    // const Img = RER_randImage[randomIndex];
-    // const Name = RER_randName[randomIndex];
-    // const Img = GRO_randImage[randomIndex];
-    // const Name = GRO_randName[randomIndex];
-    // const Img = FAS_randImage[randomIndex];
-    // const Name = FAS_randName[randomIndex];
-    // const Img = WHA_randImage[randomIndex];
-    // const Name = WHA_randName[randomIndex];
-    // const Img = FOL_randImage[randomIndex];
-    // const Name = FOL_randName[randomIndex];
-    // const Img = UND_randImage[randomIndex];
-    // const Name = UND_randName[randomIndex];
-    // const Img = FAM_randImage[randomIndex];
-    // const Name = FAM_randName[randomIndex];
-    // const Img = COL_randImage[randomIndex];
-    // const Name = COL_randName[randomIndex];
-    // const Img = PVP_randImage[randomIndex];
-    // const Name = PVP_randName[randomIndex];
+    // if (type_id === "NOM") {
+    //     const Img = NOM_randImage[randomIndex];
+    //     const Name = NOM_randName[randomIndex];
+    // }else if(type_id==="RER") {
+    //     const Img = RER_randImage[randomIndex];
+    //     const Name = RER_randName[randomIndex];
+    // }else if(type_id==="GRO") {
+    //     const Img = GRO_randImage[randomIndex];
+    //     const Name = GRO_randName[randomIndex];
+    // }else if(type_id==="FAS") {
+    //     const Img = FAS_randImage[randomIndex];
+    //     const Name = FAS_randName[randomIndex];
+    // }else if(type_id==="WHA") {
+    //     const Img = WHA_randImage[randomIndex];
+    //     const Name = WHA_randName[randomIndex];
+    // }else if(type_id==="FOL") {
+    //     const Img = FOL_randImage[randomIndex];
+    //     const Name = FOL_randName[randomIndex];
+    // }else if(type_id==="UND") {
+    //     const Img = UND_randImage[randomIndex];
+    //     const Name = UND_randName[randomIndex];
+    // }else if(type_id==="FAM") {
+    //     const Img = FAM_randImage[randomIndex];
+    //     const Name = FAM_randName[randomIndex];
+    // }else if(type_id==="COL") {
+    //     const Img = COL_randImage[randomIndex];
+    //     const Name = COL_randName[randomIndex];
+    // }else{
+    //     const Img = PVP_randImage[randomIndex];
+    //     const Name = PVP_randName[randomIndex];
+    // }
     return (
         <>
             <div className="modal">

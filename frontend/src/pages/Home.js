@@ -143,7 +143,7 @@ const Home = (props) => {
             </div>
             <div className={"slide__game__option"}>
                 <GameSlide1/>
-                <GameSlide2/>
+                <GameSlide2 gameimgRER="" gameimgFAS="" gameimgCOL="" gameimgGRO="" gameimgWHA="" gameimgNOM="" gameimgFOL="" gameimgFAM="" gameimgUND="" gameimgPVP=""/>
             </div>
 
 

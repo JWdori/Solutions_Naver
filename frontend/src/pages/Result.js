@@ -248,7 +248,7 @@ const Result = (props) => {
                     ></img>
                     <img
                         className="gameRanking"
-                        src={r1}
+                        src={showData}
                         alt="ranking1"
                         width="80px"
                         height="80px"
@@ -269,7 +269,7 @@ const Result = (props) => {
                     ></img>
                     <img
                         className="gameRanking"
-                        src={r2}
+                        src={showData}
                         alt="ranking1"
                         width="104px"
                         height="104px"
@@ -287,7 +287,7 @@ const Result = (props) => {
                         ></img>
                     <img
                         className="gameRanking"
-                        src={r3}
+                        src={showData}
                         alt="ranking3"
                         width="80px"
                         height="80px"
