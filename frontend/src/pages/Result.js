@@ -30,7 +30,9 @@ const Result = (props) => {
     const handleShowPopup = () => {
         setShowPopup(true);
     };
-
+    const onRankingClick = () => {
+        navigate("/gameranking");
+    };
     const onResetClick = () => {
         navigate("/");
     };
@@ -295,7 +297,7 @@ const Result = (props) => {
                 </div>
             </div>
 
-            <button id="allTypeBtn" style={{marginTop:"16px"}}>
+            <button id="allTypeBtn" style={{marginTop:"16px"}} onClick={onRankingClick}>
                 모든 인기 게임 확인하기
             </button>
             <button id="allTypeBtn" style={{marginBottom:"90px"}} onClick={handleShowPopup}>

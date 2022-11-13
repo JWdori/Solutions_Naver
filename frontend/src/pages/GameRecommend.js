@@ -31,7 +31,9 @@ const GameRecommend = (props) => {
     const handleShowNextBtn = (props) => {
         setShowNextPopup(true);
     };
-
+    const btngood = () => {
+        console.log(true)
+    };
     const complete = (num) => {
         setComplete(num);
     }
@@ -107,7 +109,7 @@ const GameRecommend = (props) => {
 
                     <div className={"rating"}>
                         <div>
-                            <button id={"goodButton"} style={{marginLeft:"20px"}}>만족</button>
+                            <button id={"goodButton"} style={{marginLeft:"20px"}} onClick={btngood}>만족</button>
                             <img
                                 className=""
                                 src={good}
