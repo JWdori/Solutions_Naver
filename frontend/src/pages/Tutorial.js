@@ -61,7 +61,7 @@ const Tutorial = (props) => {
             <Progress width={300} percent={0.08}/>
 
             <div>
-                <div className={"tutorialText"} style={{marginTop: "120px"}}>
+                <div className={"tutorialText"} style={{marginTop: "80px"}}>
                     {text[step]}
                 </div>
                 {

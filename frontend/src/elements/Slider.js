@@ -37,10 +37,10 @@ const Slider = (props) => {
             <Wrapper>
                 <SlideWrapper ref={slideRef}>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link1} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img1} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name1}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -49,14 +49,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score1}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link2} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img2} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name2}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -65,14 +65,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score2}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link3} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img3} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name3}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -81,14 +81,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score3}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link4} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img4} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name4}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -97,14 +97,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score4}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link5} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img5} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name5}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -113,14 +113,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score5}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link6} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img6} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name6}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -129,14 +129,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score6}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link7} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img7} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name7}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -145,14 +145,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score7}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link8} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img8} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name8}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -161,14 +161,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score8}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link9} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img9} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name9}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -177,14 +177,14 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
+                            {props.score9}
                         </div>
                     </div>
                     <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
+                        <a href={props.link10} target="_blank" >
+                            <img className="ranking__slide__game" src={props.img10} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
+                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name10}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -193,23 +193,7 @@ const Slider = (props) => {
                                 width={"12px"}
                                 height={"12px"}
                             ></img>
-                            2334
-                        </div>
-                    </div>
-                    <div>
-                        <a href={"https://www.google.com/search?q=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&oq=css+%EB%A7%81%ED%81%AC+%EC%83%88%EC%B0%BD&aqs=chrome..69i57.2542j0j4&sourceid=chrome&ie=UTF-8"} target="_blank" >
-                            <img className="ranking__slide__game" src={type6} alt="img"/>
-                        </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >에픽세븐</div>
-                        <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
-                            <img
-                                className="rankingDdabong"
-                                src={good}
-                                alt="img"
-                                width={"12px"}
-                                height={"12px"}
-                            ></img>
-                            2334
+                            {props.score10}
                         </div>
                     </div>
                 </SlideWrapper>

@@ -816,28 +816,8 @@ input:focus{
     animation: fadein 3s ease-in-out;
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
 
-@-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
+
 
 
 .resultText1 {
@@ -1917,28 +1897,7 @@ margin-right:4px;
     animation: fadein 3s ease-in-out;
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
 
-@-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
 
 
 .resultImg1 {
@@ -2141,7 +2100,6 @@ margin-right:4px;
 }
 
 #buttonLoginDisabled{
-
     width: 270px;
     height: 48px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -2154,7 +2112,7 @@ margin-right:4px;
     line-height: 19px;
     /* identical to box height */
     justify-content: center;
-
+    pointer-events: none;
     color: #FFFFFF;
     background: #FFAE68;
     cursor:not-allowed;
@@ -2211,7 +2169,8 @@ margin-right:4px;
 
 
 .questionImg {
-    margin-top: 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 .typesubimg{
     width: 95px;
@@ -2283,7 +2242,7 @@ margin-right:4px;
 }
 
 .questionTxt {
-    margin-top: 110px;
+    margin-top: 60px;
     white-space: pre-wrap;
     font-family: 'Pretendard';
     font-style: normal;
@@ -2331,14 +2290,14 @@ margin-right:4px;
     /*display: inline-block;*/
     /*padding: 100px;*/
     /*font-size: 20px;*/
-    animation: fadein 1.5s ease-in-out;
+    animation: fadein 0.7s ease-in-out;
     margin-bottom: 20px;
 }
 
 @keyframes fadein {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateX(100px);
     }
     to {
         opacity: 1;
@@ -2350,7 +2309,7 @@ margin-right:4px;
     /* Safari and Chrome */
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateX(100px);
     }
     to {
         opacity: 1;
@@ -2372,28 +2331,8 @@ margin-right:4px;
     animation: fadein 3s ease-in-out;
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
 
-@-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
+
 
 
 

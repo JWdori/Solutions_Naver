@@ -2,9 +2,6 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import Header from "../elements/Header";
 import Resultmodal from "../elements/Resultmodal";
-import type1 from "../images/test/type1.png"
-import type2 from "../images/test/type2.png"
-import type3 from "../images/test/type3.png"
 import gameIcon from "../images/game_2.png";
 import shareIcon from "../images/shareicon2.png";
 import kakao from "../images/kakao.png";
@@ -41,7 +38,7 @@ const Result = (props) => {
         navigate("/recommend");
     };
     const tp = new TentuPlay({
-        clientKey: "b64DGZZd38ZKHomhQFQE",
+        clientKey: "dxpG5HbqaYC44eqVnneh",
     });
     function myLogin() {
         tp.onInit(() => {
@@ -130,7 +127,7 @@ const Result = (props) => {
                 >
                 </img>
                     {
-                        showData.secondResult.type_name == "후회하는 오프트래너" || showData.secondResult.type_name == "기대치 높은 무과금러"
+                        showData.secondResult.type_name === "후회하는 오프트래너" || showData.secondResult.type_name === "기대치 높은 무과금러"
                         ? <div className={"typedecs"}
                         style={{marginLeft: "-18px"}}>{showData.secondResult.type_name}</div>
                         :<div className={"typedecs"}
@@ -146,7 +143,7 @@ const Result = (props) => {
                             style={{marginLeft:"24px"}}
                         ></img>
                         {
-                            showData.thirdResult.type_name == "후회하는 오프트래너" || showData.thirdResult.type_name == "기대치 높은 무과금러"
+                            showData.thirdResult.type_name === "후회하는 오프트래너" || showData.thirdResult.type_name === "기대치 높은 무과금러"
                                 ? <div className={"typedecs"}
                                        style={{marginLeft: "18px"}}>{showData.thirdResult.type_name}</div>
                                 : <div className={"typedecs"}

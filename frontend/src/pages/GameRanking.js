@@ -1,6 +1,4 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
-
 import Header from "../elements/Header";
 import sliverCrown from "../images/crown2.png";
 import r1 from "../images/ranking1.png";
@@ -131,7 +129,7 @@ const gameranking = (props) => {
             <div className={"type1"}>
                 <div className={"rankingtypedecs"}>후회하는 오프트래너</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -139,7 +137,7 @@ const gameranking = (props) => {
             <div className={"type2"}>
                 <div className={"rankingtypedecs"}>기대치 높은 무과금</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -147,7 +145,7 @@ const gameranking = (props) => {
             <div className={"type3"}>
                 <div className={"rankingtypedecs"}>폭풍성장</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -155,7 +153,7 @@ const gameranking = (props) => {
             <div className={"type4"}>
                 <div className={"rankingtypedecs"}>패션 아이템 선호</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -163,7 +161,7 @@ const gameranking = (props) => {
             <div className={"type5"}>
                 <div className={"rankingtypedecs"}>고래</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -171,7 +169,7 @@ const gameranking = (props) => {
             <div className={"type6"}>
                 <div className={"rankingtypedecs"}>공략 따라쟁이</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -179,7 +177,7 @@ const gameranking = (props) => {
             <div className={"type7"}>
                 <div className={"rankingtypedecs"}>언더독 키우기</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -187,7 +185,7 @@ const gameranking = (props) => {
             <div className={"type8"}>
                 <div className={"rankingtypedecs"}>익숙함 선호</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
                     </Slider>
                 </div>
             </div>
@@ -195,7 +193,10 @@ const gameranking = (props) => {
             <div className={"type9"}>
                 <div className={"rankingtypedecs"}>수집가</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider name1={"ㅎㅇ"} name2={"ㅎㅇ"} name3={"ㅎㅇ"} name4={"ㅎㅇ"} name5={"ㅎㅇ"} name6={"ㅎㅇ"} name7={"ㅎㅇ"} name8={"ㅎㅇ"} name9={"ㅎㅇ"} name10={"ㅎㅇ"}
+                            score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" score6="ㅎㅇ" score7="ㅎㅇ" score8="ㅎㅇ" score9="ㅎㅇ" score10="ㅎㅇ"
+                            img1="" img2="" img3="" img4="" img5="" img6="" img7="" img8="" img9="" img10=""
+                            link1={""} link2={""} link3={""} link4={""} link5={""} link6={""} link7={""} link8={""} link9={""} link10={""}>
                     </Slider>
                 </div>
             </div>
@@ -203,7 +204,7 @@ const gameranking = (props) => {
             <div className={"type10"} style={{marginBottom:"60px"}}>
                 <div className={"rankingtypedecs"}>처음부터 PvP</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
+                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ123">
                     </Slider>
                 </div>
             </div>

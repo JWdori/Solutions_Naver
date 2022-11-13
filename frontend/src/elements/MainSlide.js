@@ -17,6 +17,7 @@ import styled from 'styled-components';
 
 
 
+
     const MainSlide = () => {
         const settings = {
             infinite: true, //무한 슬라이더로 할지

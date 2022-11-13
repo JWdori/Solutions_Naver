@@ -5,15 +5,7 @@ import React from "react";
 import Slick from 'react-slick';
 import styled from 'styled-components';
 import type1 from "../images/test/type1.png";
-import type2 from "../images/test/type2.png";
-import type3 from "../images/test/type3.png";
-import type4 from "../images/test/type4.png";
-import type5 from "../images/test/type5.png";
-import type6 from "../images/test/type6.png";
-import type7 from "../images/test/type7.png";
-import type8 from "../images/test/type8.png";
-import type9 from "../images/test/type9.png";
-import type10 from "../images/test/type10.png";
+
 
 
     const GameSlide2 = () => {

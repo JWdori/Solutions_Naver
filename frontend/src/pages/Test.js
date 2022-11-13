@@ -52,7 +52,7 @@ const Test = (props) => {
 
             "이벤트에 당첨되어 뽑기권을 받았다!\n하나만 선택할 수 있다.",
 
-            "...",
+            "......",
 
             "다시 과금 아이템 광고가 나타났다!",
 
@@ -89,8 +89,8 @@ const Test = (props) => {
         "아이템, 동료, 무기 등,\n 다양한 요소들을 수집한다.",
         "남들과 다른 새로운 공략을 짜거나\n 게임에 숨겨진 요소를 탐구한다.",
     ];
-    const wid = [280, 280, 260, 240, 260, 240, 240, 240, 240, 260, 240, 240, 230, 230];
-    const hei = [200, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 200, 230];
+    const wid = [280, 260, 260, 240, 270, 290, 240, 240, 240, 270, 240, 260, 230, 230];
+    const hei = [200, 200, 200, 230, 230, 230, 200, 200, 230, 230, 201, 242, 200, 230];
 
     React.useEffect(() => {
         setTime(true);
@@ -118,7 +118,7 @@ const Test = (props) => {
                 percent={0.07 + (step - 2.9) / 12}
             />
             {time && (
-                <div id="questionDiv">
+                <div>
                     {
                         step === 3 ?
                             <span className={"questionTxt"}>
@@ -148,7 +148,7 @@ const Test = (props) => {
                                 alt="img"
                                 width="158px"
                                 height="108px"
-                                style={{marginBottom: "40px"}}
+                                style={{marginTop: "72px"}}
                             ></img>
                             : <img
                                 className="questionImg"
@@ -159,7 +159,7 @@ const Test = (props) => {
                             ></img>
                     }
 
-
+                    <div id="questionDiv">
                     <button
                         style={{marginTop:"40px"}}
                         className="testAnswer"
@@ -182,6 +182,7 @@ const Test = (props) => {
                                 {answerNo[step - 3]}
                             </button> : null
                     }
+                </div>
                 </div>
             )}
         </>
