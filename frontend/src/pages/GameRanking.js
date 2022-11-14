@@ -15,7 +15,7 @@ import axios from "axios";
 
 const GameRanking = (props) => {
 
-    React.useEffect(async () => {
+    const getRateGame = async () => {
         await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
             .then((res) => {
                 //이게 유형별 10개 인기게임
@@ -24,7 +24,9 @@ const GameRanking = (props) => {
             .catch((error) => {
                 console.dir(error);
             });
+    }
 
+    const getTop3Game = async () => {
         await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
             .then((res) => {
                 //이게 유형별 상관없이 top3
@@ -33,7 +35,13 @@ const GameRanking = (props) => {
             .catch((error) => {
                 console.dir(error);
             });
-    }, [])
+    }
+
+    React.useEffect(()=> {
+        getRateGame();
+        getTop3Game();
+
+    }, []);
 
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
