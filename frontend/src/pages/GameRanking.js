@@ -15,9 +15,19 @@ import axios from "axios";
 
 const GameRanking = (props) => {
 
-    React.useEffect(() => {
-        axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+    React.useEffect(async () => {
+        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
             .then((res) => {
+                //이게 유형별 10개 인기게임
+                console.log(res)
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+
+        await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
+            .then((res) => {
+                //이게 유형별 상관없이 top3
                 console.log(res)
             })
             .catch((error) => {
