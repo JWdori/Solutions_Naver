@@ -41,27 +41,27 @@ const getRateGameByType = async (req, res) => {
     }
 
     let appData = [
-        {type: 'RER'},
-        {type: 'NOM'},
-        {type: 'GRO'},
-        {type: 'FAS'},
-        {type: 'WAL'},
-        {type: 'FOL'},
-        {type: 'UND'},
-        {type: 'FAM'},
-        {type: 'COL'},
-        {type: 'PVP'},
+        {type: 'RER',app:[]},
+        {type: 'NOM',app:[]},
+        {type: 'GRO',app:[]},
+        {type: 'FAS',app:[]},
+        {type: 'WAL',app:[]},
+        {type: 'FOL',app:[]},
+        {type: 'UND',app:[]},
+        {type: 'FAM',app:[]},
+        {type: 'COL',app:[]},
+        {type: 'PVP',app:[]},
     ];
 
 
     for (let i = 0; i < types.length; i++) {
         for (let j = 0; j < types[i].data.length; j++) {
             const id = types[i].data[j].appId;
-            appData[i].app = await gamedb.findOne({where: {appId: id}});
+            appData[i].app.push(await gamedb.findOne({where: {appId: id}}));
         }
     }
 
-
+console.log(appData);
     //** 모든 타입의 더미데이터를 넣어놔야 돌아가는 코드임!!!!!!!!!!!
     //무족권 무족권 데이터 쌓아놓자,,^^~
     res.send(appData);
