@@ -29,12 +29,13 @@ const GameRecommend = (props) => {
     const [page, setPage] = React.useState(0);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
+
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
 
 
-    const getData = () => {
-        axios.get("http://localhost:5000/api/recommend/getGameList", {
+    const getData = async () => {
+        await axios.get("http://localhost:5000/api/recommend/getGameList", {
             params: {
                 user_id: userId,
                 page: page,
@@ -43,7 +44,6 @@ const GameRecommend = (props) => {
         })
             .then((res) => {
                 setData(res);
-                console.log(res);
             })
             .catch((error) => {
                 console.dir(error);
@@ -67,7 +67,7 @@ const GameRecommend = (props) => {
     }
 
     React.useEffect(() => {
-        getData()
+        getData().then(r => console.log(r));
     }, [])
 
     const handleShowAllBtn = (props) => {
@@ -130,7 +130,9 @@ const GameRecommend = (props) => {
                 percent={step / 5}
             />
             <span className={"recTitle"}>추천 게임은</span>
-            <div className={"recName"}>한국밈 피하기</div>
+            <div className={"recName"}>
+                {data?.data.gameList[0].title}
+            </div>
             <img
                 className=""
                 style={{marginRight: "300px", marginBottom: "-10px"}}

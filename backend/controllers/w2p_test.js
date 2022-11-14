@@ -5,6 +5,8 @@ const testdb = models.GAME_INFO;
 const typedb = models.TYPE_INFO;
 const userdb = models.USER_INFO;
 const catdb = models.USER_DISLIKE;
+const gamedb = models.GAME_INFO;
+const recommenddb = models.GAME_RECOMMEND;
 const {Op, Sequelize} = require("sequelize");
 const cwr = require('../utils/createWebResponse');
 
@@ -120,10 +122,9 @@ const postTestResult = async (req, res) => {
         user_date: Sequelize.literal('now()'),
         user_browser: browser,
         type_id: result[0].type
-    }).then(newUser => {
+    }).then(async newUser => {
         //여기서 이제 새롭게 싫어하는 카테고리 테이블 인서트 쳐준다.
         //그리고 그 밑에서 return 웹 해주면 된다~~
-        //온제 하냐,,?
         console.log(categoryArr)
         if (categoryArr.length > 0) {
             for (let i = 0; i < categoryArr.length; i++) {
@@ -134,12 +135,30 @@ const postTestResult = async (req, res) => {
             }
         }
         console.log(newUser);
+
+        const game3 = await recommenddb.findAll({
+            offset: 0,
+            limit: 3,
+            where: {user_type: newUser.type_id},
+            attributes: ["appId", [models.sequelize.fn("sum", models.sequelize.col("game_recommend")), "score"]],
+            group: "appId",
+            order: [[models.sequelize.fn("sum", models.sequelize.col("game_recommend")), 'DESC']]
+        })
+
+        let appData = [];
+        for (let j = 0; j < game3.length; j++) {
+            const id = game3[j].appId;
+            let app = await gamedb.findOne({where: {appId: id}});
+            app.dataValues.w2pStar = game3[j].dataValues.score;
+            appData.push(app)
+        }
         return cwr.createWebResp(res, header, 200, {
             firstResult: firstResult,
             secondResult: secondResult,
             thirdResult: thirdResult,
             user: newUser,
-            category: categoryArr
+            category: categoryArr,
+            top3Game: appData
         });
     })
 }
