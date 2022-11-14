@@ -11,18 +11,43 @@ import good from "../images/good_gray.png";
 import ScrollRestoration from "../elements/ScrollRestoration";
 import axios from "axios";
 
-const gameranking = (props) => {
+
+
+const GameRanking = (props) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [data, setData] = React.useState(null);
+    const [type, setType] = React.useState(null);
+    const [all, setAll] = React.useState(null);
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [step, setStep] = React.useState(0);
     // eslint-disable-next-line react-hooks/rules-of-hooks
+
+    React.useEffect(async () => {
+        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+            .then((res) => {
+                //이게 유형별 10개 인기게임
+                setType(res);
+                console.log(res)
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+
+        await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
+            .then((res) => {
+                //이게 유형별 상관없이 top3
+                setAll(res);
+                console.log(res)
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+    }, [])
 
     return (
         <>
             <ScrollRestoration></ScrollRestoration>
             <Header isBack={true} step={step} setStep={setStep}/>
-            <div className={"similarGame"} style={{marginTop:"28px"}}>
+            <div className={"similarGame"} style={{marginTop: "28px"}}>
                 <div className={"gameRating"}>
                     <img
                         className="crown"
@@ -31,32 +56,34 @@ const gameranking = (props) => {
                         width="47px"
                         height="42.28px"
                     ></img>
-                    <a href={"https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"} target="_blank">
-                    <img
-                        className="gameRanking"
-                        src={r1}
-                        alt="ranking1"
-                        width="80px"
-                        height="80px"
-                        style={{cursor:"pointer"
-                        }}
-                    ></img>
-                        </a>
+                    <a href={all?.data[1]?.url} target="_blank">
+                        <img
+                            className="gameRanking"
+                            src={all?.data[1]?.icon}
+                            alt="ranking1"
+                            width="80px"
+                            height="80px"
+                            style={{
+                                cursor: "pointer"
+                            }}
+                        ></img>
+                    </a>
 
-                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px"}}>ㅁㄴㅇ</div>
-                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
-                            <img
-                                className="rankingDdabong"
-                                src={good}
-                                style={{marginBottom:"2px",marginRight:"4px"}}
-                                alt="img"
-                                width={"18px"}
-                                height={"18px"}
-                            ></img>
-                        123
+                    <div className="rankingName" style={{fontSize: "11px", marginTop: "8px", marginBottom: "2px"}}>{all?.data[1]?.title}
+                    </div>
+                    <div className={"rankingScore"} style={{fontSize: "12px"}}>
+                        <img
+                            className="rankingDdabong"
+                            src={good}
+                            style={{marginBottom: "2px", marginRight: "4px"}}
+                            alt="img"
+                            width={"18px"}
+                            height={"18px"}
+                        ></img>
+                        {all?.data[1]?.w2pStar}
+
                     </div>
                 </div>
-
 
 
                 <div className={"gameRating"}>
@@ -67,32 +94,35 @@ const gameranking = (props) => {
                         alt="sliverCrown"
                         width="47px"
                         height="42.28px"
-                        style={{
-                        }}
+                        style={{}}
                     ></img>
-                    <a href={"https://play.google.com/store/apps/details?id=com.hidea.cat"} target="_blank">
-                    <img
-                        className="gameRanking"
-                        src={r2}
-                        alt="ranking1"
-                        width="104px"
-                        height="104px"
-                        style={{cursor:"pointer"
-                        }}
-                    ></img>
+                    <a href={all?.data[0]?.url} target="_blank">
+                        <img
+                            className="gameRanking"
+                            src={all?.data[0]?.icon}
+                            alt="ranking1"
+                            width="104px"
+                            height="104px"
+                            style={{
+                                cursor: "pointer"
+                            }}
+                        ></img>
                     </a>
 
-                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px", marginLeft:"14px"}}>이놈이 문제야</div>
-                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
+
+                    <div className="rankingName"
+                         style={{fontSize: "11px", marginTop: "8px", marginBottom: "2px", marginLeft: "14px"}}>{all?.data[0]?.title}
+                    </div>
+                    <div className={"rankingScore"} style={{fontSize: "12px"}}>
                         <img
                             className="rankingDdabong"
                             src={good}
-                            style={{marginBottom:"2px",marginRight:"4px"}}
+                            style={{marginBottom: "2px", marginRight: "4px"}}
                             alt="img"
                             width={"18px"}
                             height={"18px"}
                         ></img>
-                        123
+                        {all?.data[0].w2pStar}
                     </div>
                 </div>
                 <div className={"gameRating"}>
@@ -102,31 +132,32 @@ const gameranking = (props) => {
                         alt="sliverCrown"
                         width="47px"
                         height="42.28px"
-                        style={{
-                        }}
+                        style={{}}
                     ></img>
-                    <a href={"https://play.google.com/store/apps/details?id=com.stove.epic7.google"} target="_blank">
-                    <img
-                        className="gameRanking"
-                        src={r3}
-                        alt="ranking3"
-                        width="80px"
-                        height="80px"
-                        style={{cursor:"pointer"
-                        }}
-                    ></img>
-                        </a>
-                    <div className="rankingName" style={{fontSize:"12px", marginTop:"8px", marginBottom:"2px"}}>ㄴㅁㅇ</div>
-                    <div className={"rankingScore"} style={{fontSize:"12px"}}>
+                    <a href={all?.data[2]?.url} target="_blank">
+                        <img
+                            className="gameRanking"
+                            src={all?.data[2]?.icon}
+                            alt="ranking3"
+                            width="80px"
+                            height="80px"
+                            style={{
+                                cursor: "pointer"
+                            }}
+                        ></img>
+                    </a>
+                    <div className="rankingName" style={{fontSize: "11px", marginTop: "8px", marginBottom: "2px"}}>{all?.data[2]?.title}
+                    </div>
+                    <div className={"rankingScore"} style={{fontSize: "12px"}}>
                         <img
                             className="rankingDdabong"
                             src={good}
-                            style={{marginBottom:"2px",marginRight:"4px"}}
+                            style={{marginBottom: "2px", marginRight: "4px"}}
                             alt="img"
                             width={"18px"}
                             height={"18px"}
                         ></img>
-                        123
+                        {all?.data[2]?.w2pStar}
                     </div>
                 </div>
 
@@ -199,7 +230,7 @@ const gameranking = (props) => {
             <div className={"type9"}>
                 <div className={"rankingtypedecs"}>수집가</div>
                 <div className={"rankingslidebox"}>
-                    <Slider name1={"ㅎㅇ"} name2={"ㅎㅇ"} name3={"ㅎㅇ"} name4={"ㅎㅇ"} name5={"ㅎㅇ"} name6={"ㅎㅇ"} name7={"ㅎㅇ"} name8={"ㅎㅇ"} name9={"ㅎㅇ"} name10={"ㅎㅇ"}
+                    <Slider name1={type?.data[8]?.title} name2={"ㅎㅇ"} name3={"ㅎㅇ"} name4={"ㅎㅇ"} name5={"ㅎㅇ"} name6={"ㅎㅇ"} name7={"ㅎㅇ"} name8={"ㅎㅇ"} name9={"ㅎㅇ"} name10={"ㅎㅇ"}
                             score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" score6="ㅎㅇ" score7="ㅎㅇ" score8="ㅎㅇ" score9="ㅎㅇ" score10="ㅎㅇ"
                             img1="" img2="" img3="" img4="" img5="" img6="" img7="" img8="" img9="" img10=""
                             link1={""} link2={""} link3={""} link4={""} link5={""} link6={""} link7={""} link8={""} link9={""} link10={""}>
@@ -207,7 +238,7 @@ const gameranking = (props) => {
                 </div>
             </div>
 
-            <div className={"type10"} style={{marginBottom:"60px"}}>
+            <div className={"type10"} style={{marginBottom: "60px"}}>
                 <div className={"rankingtypedecs"}>처음부터 PvP</div>
                 <div className={"rankingslidebox"}>
                     <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ123">
@@ -219,4 +250,4 @@ const gameranking = (props) => {
     );
 };
 
-export default gameranking;
+export default GameRanking;

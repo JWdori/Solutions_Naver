@@ -104,7 +104,7 @@ const GameRecommend = (props) => {
     }
 
     const onClickNext = () => {
-        if (step === 5) {
+        if (step === 4) {
             //여기 코드 확인점. 테스트용으로만 해놔서
             // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
             setComplete(0)
