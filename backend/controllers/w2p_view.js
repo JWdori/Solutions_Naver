@@ -54,13 +54,21 @@ const getRateGameByType = async (req, res) => {
     ];
 
 
+    // for (let i = 0; i < types.length; i++) {
+    //     for (let j = 0; j < types[i].data.length; j++) {
+    //         const id = types[i].data[j].appId;
+    //         appData[i].app.push(await gamedb.findOne({where: {appId: id}}));
+    //     }
+    // }
+
     for (let i = 0; i < types.length; i++) {
         for (let j = 0; j < types[i].data.length; j++) {
             const id = types[i].data[j].appId;
-            appData[i].app.push(await gamedb.findOne({where: {appId: id}}));
+            const game = await gamedb.findOne({where: {appId: id}});
+            game.dataValues.w2pStar=types[i].data[j].dataValues.score;
+            appData[i].app.push(game);
         }
     }
-
 console.log(appData);
     //** 모든 타입의 더미데이터를 넣어놔야 돌아가는 코드임!!!!!!!!!!!
     //무족권 무족권 데이터 쌓아놓자,,^^~
