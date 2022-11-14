@@ -32,11 +32,17 @@ const GameRecommend = (props) => {
     const [page, setPage] = React.useState(0);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
+
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
 
-    const getData = () => {
-        axios.get("http://localhost:5000/api/recommend/getGameList", {
+    const getData = async () => {
+        if (step === 0)
+        {
+            const btn = document.getElementsByClassName("next")[0];
+            btn.disabled = true;
+        }
+        await axios.get("http://localhost:5000/api/recommend/getGameList", {
             params: {
                 user_id: userId,
                 page: page,
@@ -45,7 +51,6 @@ const GameRecommend = (props) => {
         })
             .then((res) => {
                 setData(res);
-                console.log(res);
             })
             .catch((error) => {
                 console.dir(error);
@@ -69,11 +74,12 @@ const GameRecommend = (props) => {
     }
 
     React.useEffect(() => {
-        getData()
+        getData().then(r => console.log(r));
     }, [])
 
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
+        //setValue는 나중에...
     };
     const resetbtn = (props) => {
         setStep(0)
@@ -103,7 +109,6 @@ const GameRecommend = (props) => {
             // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
             setComplete(0)
             setShowNextPopup(true);
-
             setStep(0);
             getData();
             //재완씨 여기 두개 가져가서 element가서 해,,,
@@ -117,6 +122,7 @@ const GameRecommend = (props) => {
             } else {
 
             }
+
             setStep(step + 1);
             setPage(page + 1);
             const btn = document.getElementsByClassName("next")[0];
@@ -126,18 +132,21 @@ const GameRecommend = (props) => {
         }
     }
 
-    console.log(step)
 
     return (
         <>
-            <ScrollRestoration></ScrollRestoration>
             <Headerrec isBack={true} step={step} setStep={setStep}>
             </Headerrec>
             <ProgressRec
                 width={329}
                 percent={step / 5}
             />
+            <ScrollRestoration></ScrollRestoration>
+
+
+
             <span className={"recTitle"}>추천 게임은</span>
+
             <div className={"recName"}>{data?.data.gameList[step].title}</div>
             <img
                 className=""
@@ -157,7 +166,9 @@ const GameRecommend = (props) => {
                 height={"22px"}
             ></img>
             <div className={"recGameAll"}>
+
                 <div className={"recGame"}>
+
                     <img
                         className="recGameImg"
                         src={data?.data.gameList[step].headerImage}

@@ -38,16 +38,16 @@ const Serviceintroduce = (props) => {
                         <span className={"serviceSemibold"}>텐투플레이</span>
                     &#62;의
                 </span>
-                <span className={"serviceSemi"}>페르소나를 바탕으로 게임 유저의 성향을 분류하고<br></br>
-            성향별 추천 게임을 제공하는 서비스입니다.</span>
+                <span className={"serviceSemi"}>페르소나를 바탕으로 게임 유저의 유형을 분류하고<br></br>
+            유형별 추천 게임을 제공하는 서비스입니다.</span>
 
                     </div>
 
                     <div className={"servicecontent"}>
                         <ol start="1" >
-                            <li style={{marginBottom:"4px"}}>성향 검사를 통해 일부 장르의 게임을 제거 / 선택합니다.</li>
+                            <li style={{marginBottom:"4px"}}>유형 검사를 통해 일부 장르의 게임을 제거 / 선택합니다.</li>
                             <li style={{marginBottom:"4px"}}>제공된 추천게임에 대한 유저의 선호도 평가를 받습니다.</li>
-                            <li>텐투플레이 API가 성향별 추천 게임 오퍼를 전송합니다.</li>
+                            <li>텐투플레이 API가 유형별 추천 게임 오퍼를 전송합니다.</li>
                         </ol>
                     </div>
                 </div>

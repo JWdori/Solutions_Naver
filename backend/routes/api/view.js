@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
     res.send('respond with a view');
 });
 
-router.get('/getRateGame',viewController.getRateGame);
+router.get('/getRateGameByType',viewController.getRateGameByType);
+router.get('/getRateGameTop3',viewController.getRateGameTop3);
 router.get('/getStarGame',viewController.getStarGame)
 
 module.exports = router;

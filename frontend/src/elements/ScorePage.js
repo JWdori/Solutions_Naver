@@ -13,7 +13,9 @@ const ScorePage = (props) => {
     const handleCompleteBtn = (e) => {
         setShowPopup(false);
         complete(num+1);
-
+        const btn = document.getElementsByClassName("next")[0];
+        btn.disabled = false;
+        btn.setAttribute("id", "recNextButton")
     };
 
 

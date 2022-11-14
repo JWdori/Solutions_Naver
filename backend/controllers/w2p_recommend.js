@@ -119,8 +119,7 @@ const getGameList = async (req, res) => {
     const subGenre = await dislikedb.findAll({where: {user_id: userId}, attributes: ['category_id']})
     let subGenreId = [];
     for (let i = 0; i < subGenre.length; i++) {
-        if(subGenre[i].category_id==="교육∙ 퀴즈"){
-            console.log("Dd")
+        if(subGenre[i].category_id==="교육∙\n퀴즈"){
             subGenreId.push("교육");
             subGenreId.push("퀴즈");
         }else{
@@ -148,21 +147,36 @@ const getGameList = async (req, res) => {
         exceptId.push(except[i].appId);
     }
 
-    gamedb.findAndCountAll({
-        limit, offset,
+    subdb.findAll({
         where: {appId: {[Op.notIn]: exceptId}},
-        order: [["installs"]]
-    })
-        .then(data => {
-            const response = getPagingData(data, page, limit);
-            res.send(response);
+    }).then(subGenre=>{
+        gamedb.findAndCountAll({
+            limit, offset,
+            where: {appId: {[Op.notIn]: exceptId}},
+            order: [["installs"]]
         })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while retrieving gameList."
+            .then(data => {
+
+                for (let i = 0; i < data.rows.length; i++) {
+                    data.rows[i].dataValues.subGenre=[];
+                    for (let j = 0; j < subGenre.length; j++) {
+                        if(data.rows[i].appId===subGenre[j].appId){
+                            data.rows[i].dataValues.subGenre.push(subGenre[j].subgenre_id)
+                        }
+                    }
+                }
+                const response = getPagingData(data, page, limit);
+                res.send(response);
+            })
+            .catch(err => {
+                res.status(500).send({
+                    message:
+                        err.message || "Some error occurred while retrieving gameList."
+                });
             });
-        });
+
+    })
+
 
 }
 const getPagination = (page, size) => {

@@ -66,7 +66,7 @@ const Result = (props) => {
             <ScrollRestoration></ScrollRestoration>
             <Header isBack={false}/>
             <span className={"mainTitle"} style={{marginTop:"60px"}}>
-                게임 회사가 보는<br></br>나의 게임 성향은?
+                게임 회사가 보는<br></br>나의 게임 유형은?
                 <img
                     className="questionTxtImage"
                     src={box}
@@ -110,7 +110,7 @@ const Result = (props) => {
             <span className={"checkSub"}>{showData.firstResult.type_sub_desc}</span>
 
 
-            <span  className={"similarGameRanking"} style={{marginBottom:"20px"}}>나의 다른 성향들
+            <span  className={"similarGameRanking"} style={{marginBottom:"20px"}}>나의 다른 유형들
                             <img
                                 className="questionTxtImage"
                                 src={box}
@@ -237,7 +237,7 @@ const Result = (props) => {
                 height="26px"
             ></img>
             </button>
-            <span  className={"similarGameRanking"}>동일 성향 인기 게임</span><br/>
+            <span  className={"similarGameRanking"}>동일 유형 인기 게임</span><br/>
             <div className={"similarGame"}>
                 <div className={"gameRating"}>
                     <img
@@ -303,7 +303,7 @@ const Result = (props) => {
                 모든 인기 게임 확인하기
             </button>
             <button id="allTypeBtn" style={{marginBottom:"90px"}} onClick={handleShowPopup}>
-                모든 성향 확인하기
+                모든 유형 확인하기
             </button>
 
             <Serviceintroduce></Serviceintroduce>

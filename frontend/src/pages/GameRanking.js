@@ -9,11 +9,15 @@ import r3 from "../images/ranking3.png";
 import Slider from "../elements/Slider";
 import good from "../images/good_gray.png";
 import ScrollRestoration from "../elements/ScrollRestoration";
-
+import axios from "axios";
 
 const gameranking = (props) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [data, setData] = React.useState(null);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [step, setStep] = React.useState(0);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     return (
         <>
             <ScrollRestoration></ScrollRestoration>

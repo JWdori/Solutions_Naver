@@ -43,13 +43,13 @@ const Home = (props) => {
             <ScrollRestoration></ScrollRestoration>
             <Header isBack={false}/>
             <span className="mainSubTitleBold">
-                게임성향검사
-                            <span className="mainSubTitle">와</span>
-                 성향별 게임 추천 서비스
+                게임유형검사
+                            <span className="mainSubTitle">와&nbsp;</span>
+                 유형별 게임 추천 서비스
                             <span className="mainSubTitle">를 경험해보세요!</span>
             </span>
             <span className={"mainTitle"} style={{marginTop: "10px"}}>
-                게임 회사가 보는<br></br>나의 게임 성향은?
+                게임 회사가 보는<br></br>나의 게임 유형은?
                 <img
                     className="questionTxtImage"
                     src={box}
@@ -75,7 +75,7 @@ const Home = (props) => {
             </div>
 
             <button id="homeGameBtn" onClick={onGameClick}>
-                성향 검사 시작하기
+                유형 검사 시작하기
                 {
 
                 }
@@ -139,7 +139,7 @@ const Home = (props) => {
 
 
             <div className={"slide__game__title"}>
-                성향별 인기 게임
+                유형별 인기 게임
             </div>
             <div className={"slide__game__option"}>
                 <GameSlide1/>
