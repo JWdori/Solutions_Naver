@@ -124,9 +124,9 @@ const COL_randImage = [colgame1,colgame2,colgame3,colgame4,colgame5,colgame6,col
 const PVP_randName = ["검은사막 모바일","오딘: 발할라 라이징","로한M","활2","배틀그라운드","콜 오브 듀티: 모바일","다크어벤저3","이카루스M","블레스 이터널","리그 오브 레전드: 와일드 리프트"]
 const PVP_randImage = [pvpgame1,pvpgame2,pvpgame3,pvpgame4,pvpgame5,pvpgame6,pvpgame7,pvpgame8,pvpgame9,pvpgame10];
 
-const randomIndex = Math.floor(Math.random() * NOM_randImage.length);
 
 const Recommendnext = (props) => {
+    const randomIndex = Math.floor(Math.random() * NOM_randImage.length);
     const { setShowNextPopup } = props;
     const handleCloseBtn = (e) => {
         setShowNextPopup(false);
