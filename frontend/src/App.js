@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route,Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./style.css";
 
 import Home from "./pages/Home";
@@ -15,11 +15,11 @@ import ScorePage from "./elements/ScorePage";
 import Recommendnext from "./elements/Recommendnext";
 import GameRanking from "./pages/GameRanking";
 
-
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
+
                 <Routes>
                     <Route element={<Home/>} path={"/"}/>
                     <Route element={<Loading/>} path={"/loading"}/>

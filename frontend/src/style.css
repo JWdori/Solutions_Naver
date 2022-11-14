@@ -1115,8 +1115,8 @@ img {
 }
 
 .recName{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
     height: 30px;
     background: #FF8936;
     border-radius: 22.1195px;
@@ -2552,7 +2552,6 @@ margin-right:4px;
     text-align: center;
     color: #FFFFFF;
     justify-content: center;
-    cursor:not-allowed;
 }
 
 

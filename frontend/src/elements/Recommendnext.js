@@ -131,6 +131,8 @@ const Recommendnext = (props) => {
     const handleCloseBtn = (e) => {
         setShowNextPopup(false);
     };
+    const nextbtn = (props) => {
+    }
         const Img = NOM_randImage[randomIndex];
         const Name = NOM_randName[randomIndex];
     //여따 조건문

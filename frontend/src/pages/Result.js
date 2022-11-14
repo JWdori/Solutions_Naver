@@ -19,6 +19,7 @@ import box from "../images/box.png";
 import reset from "../images/reset.png"
 import check from "../images/check.png"
 import {TentuPlay} from "@tentuplay/js-client-sdk";
+import ScrollRestoration from "../elements/ScrollRestoration";
 
 
 
@@ -62,6 +63,7 @@ const Result = (props) => {
     myLogin();
     return (
         <>
+            <ScrollRestoration></ScrollRestoration>
             <Header isBack={false}/>
             <span className={"mainTitle"} style={{marginTop:"60px"}}>
                 게임 회사가 보는<br></br>나의 게임 성향은?

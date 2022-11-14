@@ -12,11 +12,10 @@ import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 
 
-import {TentuPlay} from '@tentuplay/js-client-sdk';
 import GameSlide1 from "../elements/GameSlide1";
 import GameSlide2 from "../elements/GameSlide2";
 import box from "../images/box.png"
-
+import ScrollRestoration from "../elements/ScrollRestoration"
 
 const Home = (props) => {
     const [uuid, setUuid] = React.useState(null);
@@ -41,6 +40,7 @@ const Home = (props) => {
 
     return (
         <>
+            <ScrollRestoration></ScrollRestoration>
             <Header isBack={false}/>
             <span className="mainSubTitleBold">
                 게임성향검사

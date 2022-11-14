@@ -8,6 +8,7 @@ import copperCrown from "../images/crown3.png";
 import r3 from "../images/ranking3.png";
 import Slider from "../elements/Slider";
 import good from "../images/good_gray.png";
+import ScrollRestoration from "../elements/ScrollRestoration";
 
 
 const gameranking = (props) => {
@@ -15,6 +16,7 @@ const gameranking = (props) => {
     const [step, setStep] = React.useState(0);
     return (
         <>
+            <ScrollRestoration></ScrollRestoration>
             <Header isBack={true} step={step} setStep={setStep}/>
             <div className={"similarGame"} style={{marginTop:"28px"}}>
                 <div className={"gameRating"}>

@@ -10,11 +10,7 @@ const Header = (props) => {
     const navigate = useNavigate();
     const handleOnClick = () => {
         if (isBack) {
-            if (step !== 0) {
-                setStep(step - 1);
-            } else {
-                navigate("/result");
-            }
+            navigate("/result");
         }
     };
     return (

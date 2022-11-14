@@ -19,7 +19,9 @@ import {useNavigate} from "react-router-dom";
 import Resultmodal from "../elements/Resultmodal";
 import Recommendnext from "../elements/Recommendnext";
 import axios from "axios";
-
+import back from "../images/back.png";
+import Headerrec from "../elements/Headerrec";
+import ScrollRestoration from "../elements/ScrollRestoration";
 
 const GameRecommend = (props) => {
     const navigate = useNavigate();
@@ -73,6 +75,9 @@ const GameRecommend = (props) => {
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
     };
+    const resetbtn = (props) => {
+        setStep(0)
+    };
     const handleShowNextBtn = (props) => {
         setShowNextPopup(true);
     };
@@ -96,13 +101,13 @@ const GameRecommend = (props) => {
         if (step === 5) {
             //여기 코드 확인점. 테스트용으로만 해놔서
             // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
-
+            setComplete(0)
             setShowNextPopup(true);
 
             //재완씨 여기 두개 가져가서 element가서 해,,,
-            setStep(0);
-            getData();
         } else {
+            setComplete(0)
+            setShowPopup(false);
             //이 순간에서 step 증가하기전에 디비에다가 계속 쌓아줘야함
             //axios 코드 짜기
             if (value !== 0) {
@@ -123,13 +128,15 @@ const GameRecommend = (props) => {
 
     return (
         <>
-            <Header isBack={true} step={step} setStep={setStep}/>
+            <ScrollRestoration></ScrollRestoration>
+            <Headerrec isBack={true} step={step} setStep={setStep}>
+            </Headerrec>
             <ProgressRec
                 width={329}
                 percent={step / 5}
             />
             <span className={"recTitle"}>추천 게임은</span>
-            <div className={"recName"}></div>
+            <div className={"recName"}>{data?.data.gameList[step].title}</div>
             <img
                 className=""
                 style={{marginRight: "300px", marginBottom: "-10px"}}
@@ -138,7 +145,7 @@ const GameRecommend = (props) => {
                 width={"25px"}
                 height={"22px"}
             ></img>
-            <span className={"recdesc"} style={{textOverflow: "ellipsis"}}>asddddd</span>
+            <span className={"recdesc"} style={{textOverflow: "ellipsis"}}>{data?.data.gameList[step].summary}</span>
             <img
                 className=""
                 style={{marginLeft: "300px", marginTop: "-10px", marginBottom: "24px"}}
@@ -151,18 +158,18 @@ const GameRecommend = (props) => {
                 <div className={"recGame"}>
                     <img
                         className="recGameImg"
-                        src={type1}
+                        src={data?.data.gameList[step].headerImage}
                         alt="img"
                         width={"254px"}
                         height={"138px"}
                     ></img>
 
                     <div className={"recinfo"}>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;3.9 ★&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;{data?.data.gameList[step].scoreText} ★&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <span className={"divideLine"}></span>
-                        <span>1000만회 이상</span>
+                        <span>{data?.data.gameList[step].installs}</span>
                         <span className={"divideLine"}></span>
-                        <span>전체 이용가</span>
+                        <span>{data?.data.gameList[step].contentRating}</span>
                     </div>
 
 
@@ -178,7 +185,7 @@ const GameRecommend = (props) => {
                     </div>
 
                     <a className={"playstore"}
-                       href="https://play.google.com/store/apps/details?id=com.REDNOSE.AvoidKmeme&hl=ko&gl=US"
+                       href={data?.data.gameList[step].url}
                        target="_blank">플레이스토어에서
                         확인하기</a>
 
@@ -214,7 +221,7 @@ const GameRecommend = (props) => {
                         num == 0
                             ?
                             <span id={"already"} onClick={handleShowAllBtn}
-                                  style={{color: "#ffbd8d"}}>이미 해본 게임이라면?</span>
+                                  style={{color: "gray"}}>이미 해본 게임이라면?</span>
                             : <span id={"already"} onClick={handleShowAllBtn}
                                     style={{color: "#ff6900"}}>이미 해본 게임이라면?</span>
                     }
@@ -274,7 +281,7 @@ const GameRecommend = (props) => {
                     </button>
 
                 </div>
-                <span className="resetButton">
+                <span className="resetButton" onClick={resetbtn}>
                 초기화 하기
                 <img
                     className="shareIcon"
@@ -289,7 +296,7 @@ const GameRecommend = (props) => {
                 ></img>
             </span>
                 {isShowAll && <ScorePage setShowPopup={setShowPopup} complete={complete} num={num}/>}
-                {isNextShowAll && <Recommendnext setShowNextPopup={setShowNextPopup}/>}
+                {isNextShowAll && <Recommendnext step={setStep(0)} getData={getData()} setShowNextPopup={setShowNextPopup}/>}
             </div>
         </>
     );

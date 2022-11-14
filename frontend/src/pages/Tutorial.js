@@ -8,6 +8,7 @@ import Progress from "../elements/Progress_test";
 import Genre from "../elements/Genre";
 import Name from "../elements/Name";
 import q1 from "../images/tutorial/q1.png"
+import ScrollRestoration from "../elements/ScrollRestoration";
 
 
 const Tutorial = (props) => {
@@ -57,6 +58,7 @@ const Tutorial = (props) => {
     };
     return (
         <>
+            <ScrollRestoration></ScrollRestoration>
             <Header isBack={true} step={step} setStep={setStep}/>
             <Progress width={300} percent={0.08}/>
 
