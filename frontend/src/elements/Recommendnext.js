@@ -133,41 +133,40 @@ const Recommendnext = (props) => {
     };
     const nextbtn = (props) => {
     }
-        const Img = NOM_randImage[randomIndex];
-        const Name = NOM_randName[randomIndex];
-    //여따 조건문
-    //const Link = NOM_randLink[randomIndex];
-    // if (type_id === "NOM") {
-    //     const Img = NOM_randImage[randomIndex];
-    //     const Name = NOM_randName[randomIndex];
-    // }else if(type_id==="RER") {
-    //     const Img = RER_randImage[randomIndex];
-    //     const Name = RER_randName[randomIndex];
-    // }else if(type_id==="GRO") {
-    //     const Img = GRO_randImage[randomIndex];
-    //     const Name = GRO_randName[randomIndex];
-    // }else if(type_id==="FAS") {
-    //     const Img = FAS_randImage[randomIndex];
-    //     const Name = FAS_randName[randomIndex];
-    // }else if(type_id==="WHA") {
-    //     const Img = WHA_randImage[randomIndex];
-    //     const Name = WHA_randName[randomIndex];
-    // }else if(type_id==="FOL") {
-    //     const Img = FOL_randImage[randomIndex];
-    //     const Name = FOL_randName[randomIndex];
-    // }else if(type_id==="UND") {
-    //     const Img = UND_randImage[randomIndex];
-    //     const Name = UND_randName[randomIndex];
-    // }else if(type_id==="FAM") {
-    //     const Img = FAM_randImage[randomIndex];
-    //     const Name = FAM_randName[randomIndex];
-    // }else if(type_id==="COL") {
-    //     const Img = COL_randImage[randomIndex];
-    //     const Name = COL_randName[randomIndex];
-    // }else{
-    //     const Img = PVP_randImage[randomIndex];
-    //     const Name = PVP_randName[randomIndex];
-    // }
+    var Img = NOM_randImage[randomIndex];
+    var Name = NOM_randName[randomIndex];
+
+    if (props.type === "NOM") {
+        Img = NOM_randImage[randomIndex];
+        Name = NOM_randName[randomIndex];
+    }else if(props.type==="RER") {
+        Img = RER_randImage[randomIndex];
+        Name = RER_randName[randomIndex];
+    }else if(props.type==="GRO") {
+        Img = GRO_randImage[randomIndex];
+        Name = GRO_randName[randomIndex];
+    }else if(props.type==="FAS") {
+        Img = FAS_randImage[randomIndex];
+        Name = FAS_randName[randomIndex];
+    }else if(props.type==="WHA") {
+        Img = WHA_randImage[randomIndex];
+        Name = WHA_randName[randomIndex];
+    }else if(props.type==="FOL") {
+        Img = FOL_randImage[randomIndex];
+         Name = FOL_randName[randomIndex];
+    }else if(props.type==="UND") {
+        Img = UND_randImage[randomIndex];
+        Name = UND_randName[randomIndex];
+    }else if(props.type==="FAM") {
+       Img = FAM_randImage[randomIndex];
+       Name = FAM_randName[randomIndex];
+    }else if(props.type==="COL") {
+        Img = COL_randImage[randomIndex];
+       Name = COL_randName[randomIndex];
+    }else{
+         Img = PVP_randImage[randomIndex];
+        Name = PVP_randName[randomIndex];
+    }
     return (
         <>
             <div className="modal">
@@ -185,7 +184,7 @@ const Recommendnext = (props) => {
                             height="18px"
                             onClick={handleCloseBtn} />
                     </div>
-                    <span className={"modalNextTitle"}>폭풍성장
+                    <span className={"modalNextTitle"}>{props.type}
                         <span className={"modalNextSub"}>형 유저에게</span>추천
                         <span className={"modalNextSub"}>하는 게임!</span>
                     </span>

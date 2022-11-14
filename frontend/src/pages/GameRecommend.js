@@ -104,6 +104,8 @@ const GameRecommend = (props) => {
             setComplete(0)
             setShowNextPopup(true);
 
+            setStep(0);
+            getData();
             //재완씨 여기 두개 가져가서 element가서 해,,,
         } else {
             setComplete(0)
@@ -115,7 +117,6 @@ const GameRecommend = (props) => {
             } else {
 
             }
-
             setStep(step + 1);
             setPage(page + 1);
             const btn = document.getElementsByClassName("next")[0];
@@ -123,8 +124,9 @@ const GameRecommend = (props) => {
             btn.setAttribute("id", "recNextDisabledButton")
             setValue(0);
         }
-
     }
+
+    console.log(step)
 
     return (
         <>
@@ -296,7 +298,7 @@ const GameRecommend = (props) => {
                 ></img>
             </span>
                 {isShowAll && <ScorePage setShowPopup={setShowPopup} complete={complete} num={num}/>}
-                {isNextShowAll && <Recommendnext step={setStep(0)} getData={getData()} setShowNextPopup={setShowNextPopup}/>}
+                {isNextShowAll && <Recommendnext type = {showData.firstResult.type_name} setShowNextPopup={setShowNextPopup}/>}
             </div>
         </>
     );
