@@ -158,7 +158,7 @@ const Home = (props) => {
             </div>
             <div className={"slide__game__option"} style={{marginTop:"10px", marginLeft:"34px"}}>
                 <GameSlide1></GameSlide1>
-                <GameSlide2 gameimgRER={type?.data[0].app[0].icon} gameimgFAS={type?.data[3].app[0].icon} gameimgCOL={type?.data[8].app[0].icon}  gameimgGRO={type?.data[7].app[0].icon}
+                <GameSlide2 gameimgRER={type?.data[0].app[0].icon} gameimgFAS={type?.data[3].app[0].icon} gameimgCOL={type?.data[8].app[0].icon}  gameimgGRO={type?.data[2].app[0].icon}
                             gameimgWHA={type?.data[4].app[0].icon}  gameimgNOM={type?.data[1].app[0].icon}  gameimgFOL={type?.data[5].app[0].icon}  gameimgFAM={type?.data[7].app[0].icon}
                             gameimgUND={type?.data[6].app[0].icon}  gameimgPVP={type?.data[9].app[0].icon} />
             </div>

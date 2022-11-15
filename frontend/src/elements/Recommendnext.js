@@ -134,7 +134,7 @@ const Recommendnext = (props) => {
     };
     var Img = NOM_randImage[randomIndex];
     var Name = NOM_randName[randomIndex];
-
+    console.log(props.type)
     if (props.type === "NOM") {
         Img = NOM_randImage[randomIndex];
         Name = NOM_randName[randomIndex];
@@ -187,8 +187,8 @@ const Recommendnext = (props) => {
                             height="18px"
                             onClick={handleCloseBtn} />
                     </div>
-                    <span className={"modalNextTitle"}>{props.type}
-                        <span className={"modalNextSub"}>형 유저에게</span>추천
+                    <span className={"modalNextTitle"}>{props.typeName}
+                        <span className={"modalNextSub"}>유저에게&nbsp;</span>추천
                         <span className={"modalNextSub"}>하는 게임!</span>
                     </span>
 

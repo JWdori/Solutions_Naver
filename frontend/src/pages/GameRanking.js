@@ -194,8 +194,11 @@ const GameRanking = (props) => {
             <div className={"type3"}>
                 <div className={"rankingtypedecs"}>폭풍성장</div>
                 <div className={"rankingslidebox"}>
-                    <Slider>
-                    </Slider>
+                    <Slider name1={type?.data[2].app[0].title} name2={type?.data[2].app[1].title} name3={type?.data[2].app[2].title} name4={type?.data[2].app[3].title} name5={type?.data[2].app[4].title} name6={type?.data[2].app[5].title} name7={type?.data[2].app[6].title} name8={type?.data[2].app[7].title} name9={type?.data[2].app[8].title} name10={type?.data[2].app[9].title}
+                            score1={type?.data[2].app[0].w2pStar} score2={type?.data[2].app[1].w2pStar} score3={type?.data[2].app[2].w2pStar} score4={type?.data[2].app[3].w2pStar}score5={type?.data[2].app[4].w2pStar} score6={type?.data[2].app[5].w2pStar} score7={type?.data[2].app[6].w2pStar} score8={type?.data[2].app[7].w2pStar} score9={type?.data[2].app[8].w2pStar} score10={type?.data[2].app[9].w2pStar}
+                            img1={type?.data[2].app[0].icon} img2={type?.data[2].app[1].icon} img3={type?.data[2].app[2].icon} img4={type?.data[2].app[3].icon} img5={type?.data[2].app[4].icon} img6={type?.data[2].app[5].icon} img7={type?.data[2].app[6].icon} img8={type?.data[2].app[7].icon} img9={type?.data[2].app[8].icon} img10={type?.data[2].app[9].icon}
+                            link1={type?.data[2].app[0].url} link2={type?.data[2].app[1].url} link3={type?.data[2].app[2].url} link4={type?.data[2].app[3].url} link5={type?.data[2].app[4].url} link6={type?.data[2].app[5].url} link7={type?.data[2].app[6].url} link8={type?.data[2].app[7].url} link9={type?.data[2].app[8].url} link10={type?.data[2].app[9].url}> </Slider>
+
                 </div>
             </div>
 

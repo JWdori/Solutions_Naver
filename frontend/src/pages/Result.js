@@ -28,14 +28,14 @@ const Result = (props) => {
     console.log(showData);
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
-    const [all, setAll] = React.useState(null);
+    const [type, setType] = React.useState(null);
 
 
-    const getTop3Game = async () => {
-        await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
+    const getRateGame = async () => {
+        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
             .then((res) => {
-                //이게 유형별 상관없이 top3
-                setAll(res);
+                //이게 유형별 10개 인기게임
+                setType(res);
                 console.log(res)
             })
             .catch((error) => {
@@ -43,8 +43,11 @@ const Result = (props) => {
             });
     }
 
+
+
+
     React.useEffect(()=> {
-        getTop3Game();
+        getRateGame();
 
     }, []);
 
@@ -84,6 +87,16 @@ const Result = (props) => {
             });
         })
     }
+    let a;
+    for(let i=0;i<=9;i++) {
+        // eslint-disable-next-line no-unused-expressions
+        if (type?.data[i].type === showData.user.type_id){
+            a = i
+            break;
+        }
+    }
+
+
     return (
         <>
             <ScrollRestoration></ScrollRestoration>
@@ -273,10 +286,10 @@ const Result = (props) => {
 
                         }}
                     ></img>
-                    <a href={all?.data[1].url}  target="_blank" rel="noopener noreferrer">
+                    <a href={type?.data[a].app[1].url}  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={all?.data[1].icon}
+                        src={type?.data[a].app[1].icon}
                         alt="ranking1"
                         width="80px"
                         height="80px"
@@ -296,10 +309,10 @@ const Result = (props) => {
                         style={{
                         }}
                     ></img>
-                    <a href={all?.data[0].url}  target="_blank"  target="_blank" rel="noopener noreferrer">
+                    <a href={type?.data[a].app[0].url}   target="_blank"  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={all?.data[0].icon}
+                        src={type?.data[a].app[0].icon}
                         alt="ranking1"
                         width="104px"
                         height="104px"
@@ -316,10 +329,10 @@ const Result = (props) => {
                             style={{
                             }}
                         ></img>
-                        <a href={all?.data[2].url}  target="_blank"  target="_blank" rel="noopener noreferrer">
+                        <a href={type?.data[a].app[2].url}   target="_blank"  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={all?.data[2].icon}
+                        src={type?.data[a].app[2].icon}
                         alt="ranking3"
                         width="80px"
                         height="80px"

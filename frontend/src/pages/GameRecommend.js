@@ -405,7 +405,7 @@ const GameRecommend = (props) => {
                 {isShowAll &&
                 <ScorePage setShowPopup={setShowPopup} complete={complete} num={num} starRating={starRating}/>}
                 {isNextShowAll &&
-                <Recommendnext type={showData.firstResult.type_name} setShowNextPopup={setShowNextPopup}
+                <Recommendnext type={showData.firstResult.type_id} typeName={showData.firstResult.type_name} setShowNextPopup={setShowNextPopup}
                                recommendNext={recommendNext}/>}
             </div>
         </>
