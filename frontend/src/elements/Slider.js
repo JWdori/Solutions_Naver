@@ -32,7 +32,7 @@ const Slider = (props) => {
             <img src={left}
                  width="8px"
                  height="18px"
-                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"8px"}}
+                 style={{marginTop:"56px", marginLeft:"8px", marginRight:"8px"}}
                  onClick={moveToPrevSlide}></img>
             <Wrapper>
                 <SlideWrapper ref={slideRef}>
@@ -40,7 +40,7 @@ const Slider = (props) => {
                         <a href={props.link1} target="_blank" >
                             <img className="ranking__slide__game" src={props.img1} alt="img"/>
                         </a>
-                        <div className="rankingName" style={{marginRight:"12px",marginLeft:"12px", width:"70px"}} >{props.name1}</div>
+                        <div className="rankingName" style={{marginRight:"6px",marginLeft:"6px", width:"76px"}} >{props.name1}</div>
                         <div className={"rankingScore"} style={{marginRight:"12px",marginLeft:"12px"}}>
                             <img
                                 className="rankingDdabong"
@@ -201,7 +201,7 @@ const Slider = (props) => {
             <img src={right}
                  width="8px"
                  height="18px"
-                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"8px"}}
+                 style={{marginTop:"56px", marginLeft:"8px", marginRight:"8px"}}
                  onClick={moveToNextSlide}></img>
         </>
     );

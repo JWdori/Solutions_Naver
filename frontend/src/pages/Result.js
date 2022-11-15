@@ -20,7 +20,7 @@ import reset from "../images/reset.png"
 import check from "../images/check.png"
 import {TentuPlay} from "@tentuplay/js-client-sdk";
 import ScrollRestoration from "../elements/ScrollRestoration";
-
+import axios from "axios";
 
 
 const Result = (props) => {
@@ -28,10 +28,33 @@ const Result = (props) => {
     console.log(showData);
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
+    const [all, setAll] = React.useState(null);
+
+
+    const getTop3Game = async () => {
+        await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
+            .then((res) => {
+                //이게 유형별 상관없이 top3
+                setAll(res);
+                console.log(res)
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+    }
+
+    React.useEffect(()=> {
+        getTop3Game();
+
+    }, []);
+
+
+
+
     const handleShowPopup = () => {
         setShowPopup(true);
     };
-    const onRankingClick = () => {
+    const onRankingClick = (props) => {
         navigate("/gameranking");
     };
     const onResetClick = () => {
@@ -39,6 +62,7 @@ const Result = (props) => {
     };
     const onGameClick = () => {
         navigate("/recommend");
+        myLogin();
     };
     const tp = new TentuPlay({
         clientKey: "dxpG5HbqaYC44eqVnneh",
@@ -60,7 +84,6 @@ const Result = (props) => {
             });
         })
     }
-    myLogin();
     return (
         <>
             <ScrollRestoration></ScrollRestoration>
@@ -237,7 +260,7 @@ const Result = (props) => {
                 height="26px"
             ></img>
             </button>
-            <span  className={"similarGameRanking"}>동일 유형 인기 게임</span><br/>
+            <span  className={"similarGameRanking"}>{showData.firstResult.type_name} 유형의<br></br> 인기 게임</span><br/>
             <div className={"similarGame"}>
                 <div className={"gameRating"}>
                     <img
@@ -250,13 +273,15 @@ const Result = (props) => {
 
                         }}
                     ></img>
+                    <a href={all?.data[1].url}  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={showData}
+                        src={all?.data[1].icon}
                         alt="ranking1"
                         width="80px"
                         height="80px"
                     ></img>
+                    </a>
                 </div>
 
 
@@ -271,13 +296,15 @@ const Result = (props) => {
                         style={{
                         }}
                     ></img>
+                    <a href={all?.data[0].url}  target="_blank"  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={showData}
+                        src={all?.data[0].icon}
                         alt="ranking1"
                         width="104px"
                         height="104px"
                     ></img>
+                    </a>
                 </div>
                     <div className={"gameRating"}>
                         <img
@@ -289,13 +316,15 @@ const Result = (props) => {
                             style={{
                             }}
                         ></img>
+                        <a href={all?.data[2].url}  target="_blank"  target="_blank" rel="noopener noreferrer">
                     <img
                         className="gameRanking"
-                        src={showData}
+                        src={all?.data[2].icon}
                         alt="ranking3"
                         width="80px"
                         height="80px"
                     ></img>
+                            </a>
                 </div>
             </div>
 

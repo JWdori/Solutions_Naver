@@ -27,7 +27,7 @@ import styled from 'styled-components';
         };
 
         return (
-            <div style={{width:"212px", height:"112px"}}>
+            <div style={{width:"212px", height:"112px" , marginLeft:"-40px"}}>
                 <Slider {...settings}>
                     <img className="slide__game_type" src={props.gameimgRER} alt="img"/>
                     <img className="slide__game_type" src={props.gameimgFAS} alt="img"/>

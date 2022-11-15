@@ -16,13 +16,28 @@ import GameSlide1 from "../elements/GameSlide1";
 import GameSlide2 from "../elements/GameSlide2";
 import box from "../images/box.png"
 import ScrollRestoration from "../elements/ScrollRestoration"
-
+import axios from "axios";
 const Home = (props) => {
+    const [type, setType] = React.useState(null);
     const [uuid, setUuid] = React.useState(null);
     React.useEffect(()=>{
         setUuid(Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36));
     },[])
+    const getRateGame = async () => {
+        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+            .then((res) => {
+                //이게 유형별 10개 인기게임
+                setType(res);
+                console.log(res)
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+    }
+    React.useEffect(()=> {
+        getRateGame();
 
+    }, []);
     const navigate = useNavigate();
 
     const onGameClick = () => {
@@ -141,9 +156,11 @@ const Home = (props) => {
             <div className={"slide__game__title"}>
                 유형별 인기 게임
             </div>
-            <div className={"slide__game__option"}>
-                <GameSlide1/>
-                <GameSlide2 gameimgRER="" gameimgFAS="" gameimgCOL="" gameimgGRO="" gameimgWHA="" gameimgNOM="" gameimgFOL="" gameimgFAM="" gameimgUND="" gameimgPVP=""/>
+            <div className={"slide__game__option"} style={{marginTop:"10px", marginLeft:"34px"}}>
+                <GameSlide1></GameSlide1>
+                <GameSlide2 gameimgRER={type?.data[0].app[0].icon} gameimgFAS={type?.data[3].app[0].icon} gameimgCOL={type?.data[8].app[0].icon}  gameimgGRO={type?.data[7].app[0].icon}
+                            gameimgWHA={type?.data[4].app[0].icon}  gameimgNOM={type?.data[1].app[0].icon}  gameimgFOL={type?.data[5].app[0].icon}  gameimgFAM={type?.data[7].app[0].icon}
+                            gameimgUND={type?.data[6].app[0].icon}  gameimgPVP={type?.data[9].app[0].icon} />
             </div>
 
 

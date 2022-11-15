@@ -36,7 +36,13 @@ const GameRecommend = (props) => {
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
 
-    const getData = async () => {
+    React.useEffect(() => {
+        const initPage = JSON.parse(sessionStorage.getItem("page"))
+        setPage(initPage);
+        getData(initPage).then(r => console.log(r));
+    }, [])
+
+    const getData = async (gamePage) => {
         if (step === 0)
         {
             const btn = document.getElementsByClassName("next")[0];
@@ -45,11 +51,12 @@ const GameRecommend = (props) => {
         await axios.get("http://localhost:5000/api/recommend/getGameList", {
             params: {
                 user_id: userId,
-                page: page,
+                page: gamePage,
                 size: 5
             }
         })
             .then((res) => {
+                console.log(res);
                 setData(res);
             })
             .catch((error) => {
@@ -73,9 +80,7 @@ const GameRecommend = (props) => {
             });
     }
 
-    React.useEffect(() => {
-        getData().then(r => console.log(r));
-    }, [])
+
 
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
@@ -107,10 +112,13 @@ const GameRecommend = (props) => {
         if (step === 4) {
             //여기 코드 확인점. 테스트용으로만 해놔서
             // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
+            console.log(page);
+            sessionStorage.setItem("page", JSON.stringify(page+2));
+            setPage(page + 2);
             setComplete(0)
             setShowNextPopup(true);
             setStep(0);
-            getData();
+            getData(page+2);
             //재완씨 여기 두개 가져가서 element가서 해,,,
         } else {
             setComplete(0)
@@ -124,7 +132,7 @@ const GameRecommend = (props) => {
             }
 
             setStep(step + 1);
-            setPage(page + 1);
+
             const btn = document.getElementsByClassName("next")[0];
             btn.disabled = true;
             btn.setAttribute("id", "recNextDisabledButton")
@@ -132,14 +140,13 @@ const GameRecommend = (props) => {
         }
     }
 
-
     return (
         <>
             <Headerrec isBack={true} step={step} setStep={setStep}>
             </Headerrec>
             <ProgressRec
                 width={329}
-                percent={step / 5}
+                percent={0.2 + step / 5}
             />
             <ScrollRestoration></ScrollRestoration>
 
@@ -295,7 +302,7 @@ const GameRecommend = (props) => {
 
                 </div>
                 <span className="resetButton" onClick={resetbtn}>
-                초기화 하기
+                처음으로
                 <img
                     className="shareIcon"
                     style={{marginLeft: "4px"}}

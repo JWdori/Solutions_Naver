@@ -101,6 +101,7 @@ import pvpgame7 from "../images/GameImage/PVP/7_darkavenger3.png";
 import pvpgame8 from "../images/GameImage/PVP/8_ecalosem.png";
 import pvpgame9 from "../images/GameImage/PVP/9_bress.png";
 import pvpgame10 from "../images/GameImage/PVP/10_wildleft.png";
+import GameRecommend from "../pages/GameRecommend";
 
 //const NOM_randLink = ["https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=ko&gl=US","https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=ko&gl=US"];
 const NOM_randName = ["용사식당","가디언 테일즈","라스트 캠프 디펜스","배틀그라운드","컴바인월드","용사의 탑","Soul Knight","던전메이커","스도리카","메이플스토리 월드"];
@@ -131,8 +132,6 @@ const Recommendnext = (props) => {
     const handleCloseBtn = (e) => {
         setShowNextPopup(false);
     };
-    const nextbtn = (props) => {
-    }
     var Img = NOM_randImage[randomIndex];
     var Name = NOM_randName[randomIndex];
 
@@ -206,7 +205,7 @@ const Recommendnext = (props) => {
                     </div>
 
 
-                        <button id="recommend2" >
+                        <button id="recommend2" onClick={props.nextbtn} >
                             나에게 맞는 게임 확인하기
                         </button>
 

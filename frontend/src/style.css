@@ -937,7 +937,7 @@ input:focus{
     border: none;
     cursor: pointer;
     margin-top: 26px;
-    margin-bottom: 57px;
+    margin-bottom: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -982,11 +982,11 @@ input:focus{
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 20px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
+    line-height: 24px;
     color: #FF8936;
 }
 
@@ -1148,7 +1148,7 @@ img {
 
 .rankingslidebox{
     width: 311px;
-    height: 120px;
+    height: 130px;
     border: 1px solid #FF8936;
     border-radius: 15px;
     display: flex;
@@ -1194,7 +1194,7 @@ img {
     height: 112px;
     object-fit: cover;
     border-radius: 20px;
-    margin-left: 30px;
+    margin-left: -10px;
 }
 .ranking__slide__game{
     display: block;
@@ -1204,6 +1204,7 @@ img {
     border-radius: 20px;
     margin-right: 12px;
     margin-left: 12px;
+    margin-top: 8px;
 }
 
 .slide__game {
@@ -1227,13 +1228,12 @@ img {
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #FF8216;
 }
 
 .rankingName{
     font-family: 'Gmarket Sans';
-    width: 90px;
+    width: 96px;
     display: flex;
     font-style: normal;
     font-weight: 500;
@@ -1245,8 +1245,10 @@ img {
     align-content: center;
     margin-top: 4px;
     color: #FF8936;
-
-
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
 }
 
 

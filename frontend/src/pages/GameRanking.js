@@ -12,7 +12,6 @@ import ScrollRestoration from "../elements/ScrollRestoration";
 import axios from "axios";
 
 
-
 const GameRanking = (props) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [type, setType] = React.useState(null);
@@ -50,7 +49,6 @@ const GameRanking = (props) => {
         getTop3Game();
 
     }, []);
-
     return (
         <>
             <ScrollRestoration></ScrollRestoration>
@@ -174,15 +172,21 @@ const GameRanking = (props) => {
             <div className={"type1"}>
                 <div className={"rankingtypedecs"}>후회하는 오프트래너</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
+                    <Slider name1={type?.data[0].app[0].title} name2={type?.data[0].app[1].title} name3={type?.data[0].app[2].title} name4={type?.data[0].app[3].title} name5={type?.data[0].app[4].title} name6={type?.data[0].app[5].title} name7={type?.data[0].app[6].title} name8={type?.data[0].app[7].title} name9={type?.data[0].app[8].title} name10={type?.data[0].app[9].title}
+                            score1={type?.data[0].app[0].w2pStar} score2={type?.data[0].app[1].w2pStar} score3={type?.data[0].app[2].w2pStar} score4={type?.data[0].app[3].w2pStar}score5={type?.data[0].app[4].w2pStar} score6={type?.data[0].app[5].w2pStar} score7={type?.data[0].app[6].w2pStar} score8={type?.data[0].app[7].w2pStar} score9={type?.data[0].app[8].w2pStar} score10={type?.data[0].app[9].w2pStar}
+                            img1={type?.data[0].app[0].icon} img2={type?.data[0].app[1].icon} img3={type?.data[0].app[2].icon} img4={type?.data[0].app[3].icon} img5={type?.data[0].app[4].icon} img6={type?.data[0].app[5].icon} img7={type?.data[0].app[6].icon} img8={type?.data[0].app[7].icon} img9={type?.data[0].app[8].icon} img10={type?.data[0].app[9].icon}
+                            link1={type?.data[0].app[0].url} link2={type?.data[0].app[1].url} link3={type?.data[0].app[2].url} link4={type?.data[0].app[3].url} link5={type?.data[0].app[4].url} link6={type?.data[0].app[5].url} link7={type?.data[0].app[6].url} link8={type?.data[0].app[7].url} link9={type?.data[0].app[8].url} link10={type?.data[0].app[9].url}>
                     </Slider>
-                </div>
+                    </div>
             </div>
 
             <div className={"type2"}>
                 <div className={"rankingtypedecs"}>기대치 높은 무과금</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
+                    <Slider name1={type?.data[1].app[0].title} name2={type?.data[1].app[1].title} name3={type?.data[1].app[2].title} name4={type?.data[1].app[3].title} name5={type?.data[1].app[4].title} name6={type?.data[1].app[5].title} name7={type?.data[1].app[6].title} name8={type?.data[1].app[7].title} name9={type?.data[1].app[8].title} name10={type?.data[1].app[9].title}
+                            score1={type?.data[1].app[0].w2pStar} score2={type?.data[1].app[1].w2pStar} score3={type?.data[1].app[2].w2pStar} score4={type?.data[1].app[3].w2pStar}score5={type?.data[1].app[4].w2pStar} score6={type?.data[1].app[5].w2pStar} score7={type?.data[1].app[6].w2pStar} score8={type?.data[1].app[7].w2pStar} score9={type?.data[1].app[8].w2pStar} score10={type?.data[1].app[9].w2pStar}
+                            img1={type?.data[1].app[0].icon} img2={type?.data[1].app[1].icon} img3={type?.data[1].app[2].icon} img4={type?.data[1].app[3].icon} img5={type?.data[1].app[4].icon} img6={type?.data[1].app[5].icon} img7={type?.data[1].app[6].icon} img8={type?.data[1].app[7].icon} img9={type?.data[1].app[8].icon} img10={type?.data[1].app[9].icon}
+                            link1={type?.data[1].app[0].url} link2={type?.data[1].app[1].url} link3={type?.data[1].app[2].url} link4={type?.data[1].app[3].url} link5={type?.data[1].app[4].url} link6={type?.data[1].app[5].url} link7={type?.data[1].app[6].url} link8={type?.data[1].app[7].url} link9={type?.data[1].app[8].url} link10={type?.data[1].app[9].url}>
                     </Slider>
                 </div>
             </div>
@@ -190,7 +194,7 @@ const GameRanking = (props) => {
             <div className={"type3"}>
                 <div className={"rankingtypedecs"}>폭풍성장</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
+                    <Slider>
                     </Slider>
                 </div>
             </div>
@@ -198,7 +202,10 @@ const GameRanking = (props) => {
             <div className={"type4"}>
                 <div className={"rankingtypedecs"}>패션 아이템 선호</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
+                    <Slider name1={type?.data[3].app[0].title} name2={type?.data[3].app[1].title} name3={type?.data[3].app[2].title} name4={type?.data[3].app[3].title} name5={type?.data[3].app[4].title} name6={type?.data[3].app[5].title} name7={type?.data[3].app[6].title} name8={type?.data[3].app[7].title} name9={type?.data[3].app[8].title} name10={type?.data[3].app[9].title}
+                            score1={type?.data[3].app[0].w2pStar} score2={type?.data[3].app[1].w2pStar} score3={type?.data[3].app[2].w2pStar} score4={type?.data[3].app[3].w2pStar}score5={type?.data[3].app[4].w2pStar} score6={type?.data[3].app[5].w2pStar} score7={type?.data[3].app[6].w2pStar} score8={type?.data[3].app[7].w2pStar} score9={type?.data[3].app[8].w2pStar} score10={type?.data[3].app[9].w2pStar}
+                            img1={type?.data[3].app[0].icon} img2={type?.data[3].app[1].icon} img3={type?.data[3].app[2].icon} img4={type?.data[3].app[3].icon} img5={type?.data[3].app[4].icon} img6={type?.data[3].app[5].icon} img7={type?.data[3].app[6].icon} img8={type?.data[3].app[7].icon} img9={type?.data[3].app[8].icon} img10={type?.data[3].app[9].icon}
+                            link1={type?.data[3].app[0].url} link2={type?.data[3].app[1].url} link3={type?.data[3].app[2].url} link4={type?.data[3].app[3].url} link5={type?.data[3].app[4].url} link6={type?.data[3].app[5].url} link7={type?.data[3].app[6].url} link8={type?.data[3].app[7].url} link9={type?.data[3].app[8].url} link10={type?.data[3].app[9].url}>
                     </Slider>
                 </div>
             </div>
@@ -206,42 +213,52 @@ const GameRanking = (props) => {
             <div className={"type5"}>
                 <div className={"rankingtypedecs"}>고래</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
-                    </Slider>
+                    <Slider name1={type?.data[4].app[0].title} name2={type?.data[4].app[1].title} name3={type?.data[4].app[2].title} name4={type?.data[4].app[3].title} name5={type?.data[4].app[4].title} name6={type?.data[4].app[5].title} name7={type?.data[4].app[6].title} name8={type?.data[4].app[7].title} name9={type?.data[4].app[8].title} name10={type?.data[4].app[9].title}
+                            score1={type?.data[4].app[0].w2pStar} score2={type?.data[4].app[1].w2pStar} score3={type?.data[4].app[2].w2pStar} score4={type?.data[4].app[3].w2pStar}score5={type?.data[4].app[4].w2pStar} score6={type?.data[4].app[5].w2pStar} score7={type?.data[4].app[6].w2pStar} score8={type?.data[4].app[7].w2pStar} score9={type?.data[4].app[8].w2pStar} score10={type?.data[4].app[9].w2pStar}
+                            img1={type?.data[4].app[0].icon} img2={type?.data[4].app[1].icon} img3={type?.data[4].app[2].icon} img4={type?.data[4].app[3].icon} img5={type?.data[4].app[4].icon} img6={type?.data[4].app[5].icon} img7={type?.data[4].app[6].icon} img8={type?.data[4].app[7].icon} img9={type?.data[4].app[8].icon} img10={type?.data[4].app[9].icon}
+                            link1={type?.data[4].app[0].url} link2={type?.data[4].app[1].url} link3={type?.data[4].app[2].url} link4={type?.data[4].app[3].url} link5={type?.data[4].app[4].url} link6={type?.data[4].app[5].url} link7={type?.data[4].app[6].url} link8={type?.data[4].app[7].url} link9={type?.data[4].app[8].url} link10={type?.data[4].app[9].url}> </Slider>
+
                 </div>
             </div>
 
             <div className={"type6"}>
                 <div className={"rankingtypedecs"}>공략 따라쟁이</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
-                    </Slider>
+                    <Slider name1={type?.data[5].app[0].title} name2={type?.data[5].app[1].title} name3={type?.data[5].app[2].title} name4={type?.data[5].app[3].title} name5={type?.data[5].app[4].title} name6={type?.data[5].app[5].title} name7={type?.data[5].app[6].title} name8={type?.data[5].app[7].title} name9={type?.data[5].app[8].title} name10={type?.data[5].app[9].title}
+                            score1={type?.data[5].app[0].w2pStar} score2={type?.data[5].app[1].w2pStar} score3={type?.data[5].app[2].w2pStar} score4={type?.data[5].app[3].w2pStar}score5={type?.data[5].app[4].w2pStar} score6={type?.data[5].app[5].w2pStar} score7={type?.data[5].app[6].w2pStar} score8={type?.data[5].app[7].w2pStar} score9={type?.data[5].app[8].w2pStar} score10={type?.data[5].app[9].w2pStar}
+                            img1={type?.data[5].app[0].icon} img2={type?.data[5].app[1].icon} img3={type?.data[5].app[2].icon} img4={type?.data[5].app[3].icon} img5={type?.data[5].app[4].icon} img6={type?.data[5].app[5].icon} img7={type?.data[5].app[6].icon} img8={type?.data[5].app[7].icon} img9={type?.data[5].app[8].icon} img10={type?.data[5].app[9].icon}
+                            link1={type?.data[5].app[0].url} link2={type?.data[5].app[1].url} link3={type?.data[5].app[2].url} link4={type?.data[5].app[3].url} link5={type?.data[5].app[4].url} link6={type?.data[5].app[5].url} link7={type?.data[5].app[6].url} link8={type?.data[5].app[7].url} link9={type?.data[5].app[8].url} link10={type?.data[5].app[9].url}> </Slider>
+
                 </div>
             </div>
 
             <div className={"type7"}>
                 <div className={"rankingtypedecs"}>언더독 키우기</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
-                    </Slider>
+                    <Slider name1={type?.data[6].app[0].title} name2={type?.data[6].app[1].title} name3={type?.data[6].app[2].title} name4={type?.data[6].app[3].title} name5={type?.data[6].app[4].title} name6={type?.data[6].app[5].title} name7={type?.data[6].app[6].title} name8={type?.data[6].app[7].title} name9={type?.data[6].app[8].title} name10={type?.data[6].app[9].title}
+                            score1={type?.data[6].app[0].w2pStar} score2={type?.data[6].app[1].w2pStar} score3={type?.data[6].app[2].w2pStar} score4={type?.data[6].app[3].w2pStar}score5={type?.data[6].app[4].w2pStar} score6={type?.data[6].app[5].w2pStar} score7={type?.data[6].app[6].w2pStar} score8={type?.data[6].app[7].w2pStar} score9={type?.data[6].app[8].w2pStar} score10={type?.data[6].app[9].w2pStar}
+                            img1={type?.data[6].app[0].icon} img2={type?.data[6].app[1].icon} img3={type?.data[6].app[2].icon} img4={type?.data[6].app[3].icon} img5={type?.data[6].app[4].icon} img6={type?.data[6].app[5].icon} img7={type?.data[6].app[6].icon} img8={type?.data[6].app[7].icon} img9={type?.data[6].app[8].icon} img10={type?.data[6].app[9].icon}
+                            link1={type?.data[6].app[0].url} link2={type?.data[6].app[1].url} link3={type?.data[6].app[2].url} link4={type?.data[6].app[3].url} link5={type?.data[6].app[4].url} link6={type?.data[6].app[5].url} link7={type?.data[6].app[6].url} link8={type?.data[6].app[7].url} link9={type?.data[6].app[8].url} link10={type?.data[6].app[9].url}> </Slider>
                 </div>
             </div>
 
             <div className={"type8"}>
                 <div className={"rankingtypedecs"}>익숙함 선호</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ">
-                    </Slider>
+                    <Slider name1={type?.data[7].app[0].title} name2={type?.data[7].app[1].title} name3={type?.data[7].app[2].title} name4={type?.data[7].app[3].title} name5={type?.data[7].app[4].title} name6={type?.data[7].app[5].title} name7={type?.data[7].app[6].title} name8={type?.data[7].app[7].title} name9={type?.data[7].app[8].title} name10={type?.data[7].app[9].title}
+                            score1={type?.data[7].app[0].w2pStar} score2={type?.data[7].app[1].w2pStar} score3={type?.data[7].app[2].w2pStar} score4={type?.data[7].app[3].w2pStar}score5={type?.data[7].app[4].w2pStar} score6={type?.data[7].app[5].w2pStar} score7={type?.data[7].app[6].w2pStar} score8={type?.data[7].app[7].w2pStar} score9={type?.data[7].app[8].w2pStar} score10={type?.data[7].app[9].w2pStar}
+                            img1={type?.data[7].app[0].icon} img2={type?.data[7].app[1].icon} img3={type?.data[7].app[2].icon} img4={type?.data[7].app[3].icon} img5={type?.data[7].app[4].icon} img6={type?.data[7].app[5].icon} img7={type?.data[7].app[6].icon} img8={type?.data[7].app[7].icon} img9={type?.data[7].app[8].icon} img10={type?.data[7].app[9].icon}
+                            link1={type?.data[7].app[0].url} link2={type?.data[7].app[1].url} link3={type?.data[7].app[2].url} link4={type?.data[7].app[3].url} link5={type?.data[7].app[4].url} link6={type?.data[7].app[5].url} link7={type?.data[7].app[6].url} link8={type?.data[7].app[7].url} link9={type?.data[7].app[8].url} link10={type?.data[7].app[9].url}> </Slider>
                 </div>
             </div>
 
             <div className={"type9"}>
                 <div className={"rankingtypedecs"}>수집가</div>
                 <div className={"rankingslidebox"}>
-                    <Slider name1={type?.data[8]?.title} name2={"ㅎㅇ"} name3={"ㅎㅇ"} name4={"ㅎㅇ"} name5={"ㅎㅇ"} name6={"ㅎㅇ"} name7={"ㅎㅇ"} name8={"ㅎㅇ"} name9={"ㅎㅇ"} name10={"ㅎㅇ"}
-                            score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" score6="ㅎㅇ" score7="ㅎㅇ" score8="ㅎㅇ" score9="ㅎㅇ" score10="ㅎㅇ"
-                            img1="" img2="" img3="" img4="" img5="" img6="" img7="" img8="" img9="" img10=""
-                            link1={""} link2={""} link3={""} link4={""} link5={""} link6={""} link7={""} link8={""} link9={""} link10={""}>
+                    <Slider name1={type?.data[8].app[0].title} name2={type?.data[8].app[1].title} name3={type?.data[8].app[2].title} name4={type?.data[8].app[3].title} name5={type?.data[8].app[4].title} name6={type?.data[8].app[5].title} name7={type?.data[8].app[6].title} name8={type?.data[8].app[7].title} name9={type?.data[8].app[8].title} name10={type?.data[8].app[9].title}
+                            score1={type?.data[8].app[0].w2pStar} score2={type?.data[8].app[1].w2pStar} score3={type?.data[8].app[2].w2pStar} score4={type?.data[8].app[3].w2pStar}score5={type?.data[8].app[4].w2pStar} score6={type?.data[8].app[5].w2pStar} score7={type?.data[8].app[6].w2pStar} score8={type?.data[8].app[7].w2pStar} score9={type?.data[8].app[8].w2pStar} score10={type?.data[8].app[9].w2pStar}
+                            img1={type?.data[8].app[0].icon} img2={type?.data[8].app[1].icon} img3={type?.data[8].app[2].icon} img4={type?.data[8].app[3].icon} img5={type?.data[8].app[4].icon} img6={type?.data[8].app[5].icon} img7={type?.data[8].app[6].icon} img8={type?.data[8].app[7].icon} img9={type?.data[8].app[8].icon} img10={type?.data[8].app[9].icon}
+                            link1={type?.data[8].app[0].url} link2={type?.data[8].app[1].url} link3={type?.data[8].app[2].url} link4={type?.data[8].app[3].url} link5={type?.data[8].app[4].url} link6={type?.data[8].app[5].url} link7={type?.data[8].app[6].url} link8={type?.data[8].app[7].url} link9={type?.data[8].app[8].url} link10={type?.data[8].app[9].url}>
                     </Slider>
                 </div>
             </div>
@@ -249,7 +266,10 @@ const GameRanking = (props) => {
             <div className={"type10"} style={{marginBottom: "60px"}}>
                 <div className={"rankingtypedecs"}>처음부터 PvP</div>
                 <div className={"rankingslidebox"}>
-                    <Slider score1="ㅎㅇ" score2="ㅎㅇ" score3="ㅎㅇ" score4="ㅎㅇ"score5="ㅎㅇ" game6="ㅎㅇ" game7="ㅎㅇ" game8="ㅎㅇ" game9="ㅎㅇ" score10="ㅎㅇ123">
+                    <Slider name1={type?.data[9].app[0].title} name2={type?.data[9].app[1].title} name3={type?.data[9].app[2].title} name4={type?.data[9].app[3].title} name5={type?.data[9].app[4].title} name6={type?.data[9].app[5].title} name7={type?.data[9].app[6].title} name8={type?.data[9].app[7].title} name9={type?.data[9].app[8].title} name10={type?.data[9].app[9].title}
+                            score1={type?.data[9].app[0].w2pStar} score2={type?.data[9].app[1].w2pStar} score3={type?.data[9].app[2].w2pStar} score4={type?.data[9].app[3].w2pStar}score5={type?.data[9].app[4].w2pStar} score6={type?.data[9].app[5].w2pStar} score7={type?.data[9].app[6].w2pStar} score8={type?.data[9].app[7].w2pStar} score9={type?.data[9].app[8].w2pStar} score10={type?.data[9].app[9].w2pStar}
+                            img1={type?.data[9].app[0].icon} img2={type?.data[9].app[1].icon} img3={type?.data[9].app[2].icon} img4={type?.data[9].app[3].icon} img5={type?.data[9].app[4].icon} img6={type?.data[9].app[5].icon} img7={type?.data[9].app[6].icon} img8={type?.data[9].app[7].icon} img9={type?.data[9].app[8].icon} img10={type?.data[9].app[9].icon}
+                            link1={type?.data[9].app[0].url} link2={type?.data[9].app[1].url} link3={type?.data[9].app[2].url} link4={type?.data[9].app[3].url} link5={type?.data[9].app[4].url} link6={type?.data[9].app[5].url} link7={type?.data[9].app[6].url} link8={type?.data[9].app[7].url} link9={type?.data[9].app[8].url} link10={type?.data[9].app[9].url}>
                     </Slider>
                 </div>
             </div>

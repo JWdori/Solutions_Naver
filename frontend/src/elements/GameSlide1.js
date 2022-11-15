@@ -26,7 +26,7 @@ import type10 from "../images/test/type10.png";
             slidesToScroll:1,
             centerMode: true,
             draggable:false,
-            padding:"20px",
+            padding:"0px",
             variableWidth:false,
             arrows:false,
             dots:false,
@@ -35,7 +35,7 @@ import type10 from "../images/test/type10.png";
         };
 
         return (
-            <div style={{width:"212px", height:"112px"}}>
+            <div style={{width:"212px", height:"112px", marginLeft:"-30px"}}>
                 <Slider {...settings}>
                     <img className="slide__game_type" src={type6} alt="img"/>
                     <img className="slide__game_type" src={type7} alt="img"/>
