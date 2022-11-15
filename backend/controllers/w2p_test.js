@@ -45,7 +45,7 @@ const postTestResult = async (req, res) => {
         }
         if (i == 4) {
             if (resultArr[i] == 'a') PVP += 2.9;
-            else NOM += 0.11, GRO += 0.11;
+            else NOM += 0.11, GRO += 0.49;
             continue;
         }
         if (i == 5) {
