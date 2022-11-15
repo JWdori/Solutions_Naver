@@ -49,7 +49,7 @@ const postGameStar = async (req, res) => {
     const gameStar = req.body.gameStar;
     const userType = await userdb.findOne({where: {user_id: userId}});
     let gameScore=0;
-    if(gameStar==4){
+    if(gameStar>=4){
         gameScore+=1;
     }else if(gameStar==0 || gameStar==1){
         gameScore-=1;
