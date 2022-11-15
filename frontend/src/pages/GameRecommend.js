@@ -244,48 +244,48 @@ const GameRecommend = (props) => {
                     </div>
 
 
-                    {data?.data.gameList[step].subGenre.length >= 3 ?
-                        <div className={"rectag"} style={{marginBottom: "6px"}}>
-                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[0]}</button>
-                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[1]}</button>
-                            <button id={"recGenreButton"}
-                                    style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[2]}</button>
-                        </div>
-                        :
+                    {/*{data?.data.gameList[step].subGenre.length >= 3 ?*/}
+                    {/*    <div className={"rectag"} style={{marginBottom: "6px"}}>*/}
+                    {/*        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[0]}</button>*/}
+                    {/*        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[1]}</button>*/}
+                    {/*        <button id={"recGenreButton"}*/}
+                    {/*                style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[2]}</button>*/}
+                    {/*    </div>*/}
+                    {/*    :*/}
 
-                        <div className={"rectag"} style={{marginBottom: "6px"}}>
-                            {subGen1?.map((sub, index) => (
-                                <button id={"recGenreButton"} key={index}>{sub}</button>
-                            ))}
-                        </div>
+                    {/*    <div className={"rectag"} style={{marginBottom: "6px"}}>*/}
+                    {/*        {subGen1?.map((sub, index) => (*/}
+                    {/*            <button id={"recGenreButton"} key={index}>{sub}</button>*/}
+                    {/*        ))}*/}
+                    {/*    </div>*/}
 
-                    }
-                    {data?.data.gameList[step].subGenre.length >= 6 ?
-                        <div className={"rectag"} style={{marginBottom: "6px"}}>
-                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[3]}</button>
-                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[4]}</button>
-                            <button id={"recGenreButton"}
-                                    style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[5]}</button>
-                        </div>
-                        :
-                        <div className={"rectag"} style={{marginBottom: "6px"}}>
-                            {subGen2?.map((sub, index) => (
-                                <button id={"recGenreButton"} key={index}>{sub}</button>
-                            ))}
-                        </div>
-                    }
+                    {/*}*/}
+                    {/*{data?.data.gameList[step].subGenre.length >= 6 ?*/}
+                    {/*    <div className={"rectag"} style={{marginBottom: "6px"}}>*/}
+                    {/*        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[3]}</button>*/}
+                    {/*        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[4]}</button>*/}
+                    {/*        <button id={"recGenreButton"}*/}
+                    {/*                style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[5]}</button>*/}
+                    {/*    </div>*/}
+                    {/*    :*/}
+                    {/*    <div className={"rectag"} style={{marginBottom: "6px"}}>*/}
+                    {/*        {subGen2?.map((sub, index) => (*/}
+                    {/*            <button id={"recGenreButton"} key={index}>{sub}</button>*/}
+                    {/*        ))}*/}
+                    {/*    </div>*/}
+                    {/*}*/}
 
 
-                    {/*<div className={"rectag"} style={{marginBottom: "6px"}}>*/}
-                    {/*    <button id={"recGenreButton"}>아케이드</button>*/}
-                    {/*    <button id={"recGenreButton"}>싱글 플레이어</button>*/}
-                    {/*    <button id={"recGenreButton"} style={{marginRight: "0px"}}>액션</button>*/}
-                    {/*</div>*/}
-                    {/*<div className={"rectag"} style={{marginBottom: "18px"}}>*/}
-                    {/*    <button id={"recGenreButton"}>플랫폼 게임</button>*/}
-                    {/*    <button id={"recGenreButton"}>오프라인</button>*/}
-                    {/*    <button id={"recGenreButton"} style={{marginRight: "0px"}}>추상</button>*/}
-                    {/*</div>*/}
+                    <div className={"rectag"} style={{marginBottom: "6px"}}>
+                        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[0]}</button>
+                        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[1]}</button>
+                        <button id={"recGenreButton"} style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[2]}</button>
+                    </div>
+                    <div className={"rectag"} style={{marginBottom: "18px"}}>
+                        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[3]}</button>
+                        <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[4]}</button>
+                        <button id={"recGenreButton"} style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[5]}</button>
+                    </div>
 
                     <a className={"playstore"}
                        href={data?.data.gameList[step].url}
