@@ -32,6 +32,8 @@ const GameRecommend = (props) => {
     const [next, setNext] = React.useState(false);
     const [page, setPage] = React.useState(0);
     const [star, setStar] = React.useState(0);
+    const [subGen1, setSubGen1] = React.useState(null);
+    const [subGen2, setSubGen2] = React.useState(null);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
 
@@ -61,10 +63,20 @@ const GameRecommend = (props) => {
             .then((res) => {
                 console.log(res);
                 setData(res);
+
+                const sub1 = res.data.gameList[0].subGenre.filter((el,idx) =>
+                    idx < 2
+                );
+                const sub2 = res.data.gameList[0].subGenre.filter((el,idx) =>
+                    idx > 2
+                );
+                setSubGen1(sub1);
+                setSubGen2(sub2);
             })
             .catch((error) => {
                 console.dir(error);
             });
+
     }
 
     const sendData = (input) => {
@@ -132,7 +144,7 @@ const GameRecommend = (props) => {
     }
 
     const recommendNext = (next) => {
-        if(next){
+        if (next) {
             setNext(next);
             console.log(next);
             console.log(page);
@@ -160,7 +172,6 @@ const GameRecommend = (props) => {
             } else if (star > 0) {
                 sendStar(star);
             }
-
             setStep(step + 1);
 
             const btn = document.getElementsByClassName("next")[0];
@@ -169,8 +180,17 @@ const GameRecommend = (props) => {
             setValue(0);
             goodBtn.disabled = false;
             badBtn.disabled = false;
+            const sub1 = data.data.gameList[0].subGenre.filter((el,idx) =>
+                idx < 2
+            );
+            const sub2 = data.data.gameList[0].subGenre.filter((el,idx) =>
+                idx > 2 && idx < 7
+            );
+            setSubGen1(sub1);
+            setSubGen2(sub2);
         }
     }
+
 
     return (
         <>
@@ -224,16 +244,48 @@ const GameRecommend = (props) => {
                     </div>
 
 
-                    <div className={"rectag"} style={{marginBottom: "6px"}}>
-                        <button id={"recGenreButton"}>아케이드</button>
-                        <button id={"recGenreButton"}>싱글 플레이어</button>
-                        <button id={"recGenreButton"} style={{marginRight: "0px"}}>액션</button>
-                    </div>
-                    <div className={"rectag"} style={{marginBottom: "18px"}}>
-                        <button id={"recGenreButton"}>플랫폼 게임</button>
-                        <button id={"recGenreButton"}>오프라인</button>
-                        <button id={"recGenreButton"} style={{marginRight: "0px"}}>추상</button>
-                    </div>
+                    {data?.data.gameList[step].subGenre.length >= 3 ?
+                        <div className={"rectag"} style={{marginBottom: "6px"}}>
+                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[0]}</button>
+                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[1]}</button>
+                            <button id={"recGenreButton"}
+                                    style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[2]}</button>
+                        </div>
+                        :
+
+                        <div className={"rectag"} style={{marginBottom: "6px"}}>
+                            {subGen1?.map((sub, index) => (
+                                <button id={"recGenreButton"} key={index}>{sub}</button>
+                            ))}
+                        </div>
+
+                    }
+                    {data?.data.gameList[step].subGenre.length >= 6 ?
+                        <div className={"rectag"} style={{marginBottom: "6px"}}>
+                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[3]}</button>
+                            <button id={"recGenreButton"}>{data?.data.gameList[step].subGenre[4]}</button>
+                            <button id={"recGenreButton"}
+                                    style={{marginRight: "0px"}}>{data?.data.gameList[step].subGenre[5]}</button>
+                        </div>
+                        :
+                        <div className={"rectag"} style={{marginBottom: "6px"}}>
+                            {subGen2?.map((sub, index) => (
+                                <button id={"recGenreButton"} key={index}>{sub}</button>
+                            ))}
+                        </div>
+                    }
+
+
+                    {/*<div className={"rectag"} style={{marginBottom: "6px"}}>*/}
+                    {/*    <button id={"recGenreButton"}>아케이드</button>*/}
+                    {/*    <button id={"recGenreButton"}>싱글 플레이어</button>*/}
+                    {/*    <button id={"recGenreButton"} style={{marginRight: "0px"}}>액션</button>*/}
+                    {/*</div>*/}
+                    {/*<div className={"rectag"} style={{marginBottom: "18px"}}>*/}
+                    {/*    <button id={"recGenreButton"}>플랫폼 게임</button>*/}
+                    {/*    <button id={"recGenreButton"}>오프라인</button>*/}
+                    {/*    <button id={"recGenreButton"} style={{marginRight: "0px"}}>추상</button>*/}
+                    {/*</div>*/}
 
                     <a className={"playstore"}
                        href={data?.data.gameList[step].url}
@@ -353,7 +405,8 @@ const GameRecommend = (props) => {
                 {isShowAll &&
                 <ScorePage setShowPopup={setShowPopup} complete={complete} num={num} starRating={starRating}/>}
                 {isNextShowAll &&
-                <Recommendnext type={showData.firstResult.type_name} setShowNextPopup={setShowNextPopup} recommendNext={recommendNext}/>}
+                <Recommendnext type={showData.firstResult.type_name} setShowNextPopup={setShowNextPopup}
+                               recommendNext={recommendNext}/>}
             </div>
         </>
     );
