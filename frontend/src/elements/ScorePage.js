@@ -1,18 +1,17 @@
 import React from "react";
-import { CloseOutlined } from "@ant-design/icons";
+import {CloseOutlined} from "@ant-design/icons";
 import Score from "./Score";
 
 
-
 const ScorePage = (props) => {
-    const { setShowPopup,num,complete } = props;
+    const {setShowPopup, num, complete,starRating} = props;
     const handleCloseBtn = (e) => {
         setShowPopup(false);
 
     };
     const handleCompleteBtn = (e) => {
         setShowPopup(false);
-        complete(num+1);
+        complete(num + 1);
         const btn = document.getElementsByClassName("next")[0];
         btn.disabled = false;
         btn.setAttribute("id", "recNextButton")
@@ -30,11 +29,11 @@ const ScorePage = (props) => {
                 >
                     <div className="modalHead">
                         <div className="modalHeadFont">평점 주기</div>
-                        <CloseOutlined className="closeBtn" onClick={handleCloseBtn} />
+                        <CloseOutlined className="closeBtn" onClick={handleCloseBtn}/>
                     </div>
                     <div className="modalstar">
-                        <Score></Score>
-                        <button id="scorebutton"onClick={handleCompleteBtn} >완료</button>
+                        <Score starRating={starRating}></Score>
+                        <button id="scorebutton" onClick={handleCompleteBtn}>완료</button>
                     </div>
 
 
@@ -43,8 +42,6 @@ const ScorePage = (props) => {
         </>
     );
 };
-
-
 
 
 export default ScorePage;

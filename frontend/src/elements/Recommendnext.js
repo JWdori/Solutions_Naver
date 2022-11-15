@@ -128,7 +128,7 @@ const PVP_randImage = [pvpgame1,pvpgame2,pvpgame3,pvpgame4,pvpgame5,pvpgame6,pvp
 
 const Recommendnext = (props) => {
     const randomIndex = Math.floor(Math.random() * NOM_randImage.length);
-    const { setShowNextPopup } = props;
+    const { setShowNextPopup,recommendNext } = props;
     const handleCloseBtn = (e) => {
         setShowNextPopup(false);
     };
@@ -165,6 +165,10 @@ const Recommendnext = (props) => {
     }else{
          Img = PVP_randImage[randomIndex];
         Name = PVP_randName[randomIndex];
+    }
+
+    const nextbtn = ()=>{
+        recommendNext(true);
     }
     return (
         <>
@@ -205,7 +209,7 @@ const Recommendnext = (props) => {
                     </div>
 
 
-                        <button id="recommend2" onClick={props.nextbtn} >
+                        <button id="recommend2" onClick={nextbtn} >
                             나에게 맞는 게임 확인하기
                         </button>
 

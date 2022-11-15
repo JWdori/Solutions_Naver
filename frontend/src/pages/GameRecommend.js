@@ -29,22 +29,25 @@ const GameRecommend = (props) => {
     const [isNextShowAll, setShowNextPopup] = React.useState(false);
     const [step, setStep] = React.useState(0);
     const [value, setValue] = React.useState(0);
+    const [next, setNext] = React.useState(false);
     const [page, setPage] = React.useState(0);
+    const [star, setStar] = React.useState(0);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
 
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
+    const goodBtn = document.getElementsByClassName("recBtn")[0];
+    const badBtn = document.getElementsByClassName("recBtn")[1];
 
     React.useEffect(() => {
         const initPage = JSON.parse(sessionStorage.getItem("page"))
         setPage(initPage);
-        getData(initPage).then(r => console.log(r));
+        getData(initPage);
     }, [])
 
     const getData = async (gamePage) => {
-        if (step === 0)
-        {
+        if (step === 0) {
             const btn = document.getElementsByClassName("next")[0];
             btn.disabled = true;
         }
@@ -81,6 +84,26 @@ const GameRecommend = (props) => {
     }
 
 
+    const sendStar = (star) => {
+        const appid = data.data.gameList[step].appId;
+        console.log(appid);
+        axios.post("http://localhost:5000/api/recommend/postGameStar", {
+            userId: userId,
+            appId: appid,
+            gameStar: star
+        })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.dir(error);
+            });
+    }
+    const starRating = (star) => {
+        setStar(star);
+        goodBtn.disabled = true;
+        badBtn.disabled = true;
+    }
 
     const handleShowAllBtn = (props) => {
         setShowPopup(true);
@@ -108,27 +131,34 @@ const GameRecommend = (props) => {
         setComplete(num);
     }
 
+    const recommendNext = (next) => {
+        if(next){
+            setNext(next);
+            console.log(next);
+            console.log(page);
+            sessionStorage.setItem("page", JSON.stringify(page + 2));
+            setPage(page + 2);
+            setComplete(0)
+            setStep(0);
+            getData(page + 2);
+            setShowNextPopup(false);
+        }
+    }
+
     const onClickNext = () => {
         if (step === 4) {
             //여기 코드 확인점. 테스트용으로만 해놔서
             // 5번 끝나면 팝업이 뜨고, 팝업에서 다음으로 넘어가게 해야되는데...
-            console.log(page);
-            sessionStorage.setItem("page", JSON.stringify(page+2));
-            setPage(page + 2);
-            setComplete(0)
             setShowNextPopup(true);
-            setStep(0);
-            getData(page+2);
-            //재완씨 여기 두개 가져가서 element가서 해,,,
         } else {
             setComplete(0)
             setShowPopup(false);
             //이 순간에서 step 증가하기전에 디비에다가 계속 쌓아줘야함
             //axios 코드 짜기
             if (value !== 0) {
-                sendData(value)
-            } else {
-
+                sendData(value)//-1인지 1인지
+            } else if (star > 0) {
+                sendStar(star);
             }
 
             setStep(step + 1);
@@ -137,6 +167,8 @@ const GameRecommend = (props) => {
             btn.disabled = true;
             btn.setAttribute("id", "recNextDisabledButton")
             setValue(0);
+            goodBtn.disabled = false;
+            badBtn.disabled = false;
         }
     }
 
@@ -149,7 +181,6 @@ const GameRecommend = (props) => {
                 percent={0.2 + step / 5}
             />
             <ScrollRestoration></ScrollRestoration>
-
 
 
             <span className={"recTitle"}>추천 게임은</span>
@@ -211,7 +242,9 @@ const GameRecommend = (props) => {
 
                     <div className={"rating"}>
                         <div>
-                            <button id={"goodButton"} style={{marginLeft:"20px"}} onClick={btngood}>만족</button>
+                            <button id={"goodButton"} style={{marginLeft: "20px"}} onClick={btngood}
+                                    className={"recBtn"}>만족
+                            </button>
 
                             <img
                                 className=""
@@ -224,7 +257,9 @@ const GameRecommend = (props) => {
                         </div>
                         <span style={{marginBottom: "24px"}}>게임 평가</span>
                         <div>
-                            <button id={"badButton"} style={{marginRight: "20px"}} onClick={btnbad}>관심없음</button>
+                            <button id={"badButton"} style={{marginRight: "20px"}} onClick={btnbad}
+                                    className={"recBtn"}>관심없음
+                            </button>
                             <img
                                 className=""
                                 src={bad}
@@ -315,8 +350,10 @@ const GameRecommend = (props) => {
                     }}
                 ></img>
             </span>
-                {isShowAll && <ScorePage setShowPopup={setShowPopup} complete={complete} num={num}/>}
-                {isNextShowAll && <Recommendnext type = {showData.firstResult.type_name} setShowNextPopup={setShowNextPopup}/>}
+                {isShowAll &&
+                <ScorePage setShowPopup={setShowPopup} complete={complete} num={num} starRating={starRating}/>}
+                {isNextShowAll &&
+                <Recommendnext type={showData.firstResult.type_name} setShowNextPopup={setShowNextPopup} recommendNext={recommendNext}/>}
             </div>
         </>
     );
