@@ -153,7 +153,8 @@ const getGameList = async (req, res) => {
         gamedb.findAndCountAll({
             limit, offset,
             where: {appId: {[Op.notIn]: exceptId}},
-            order: [["installs"]]
+            // order: [["installs"]]
+            order: Sequelize.literal('rand()')
         })
             .then(data => {
 
