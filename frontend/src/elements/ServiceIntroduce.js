@@ -1,5 +1,4 @@
 import React from "react";
-import { CloseOutlined } from "@ant-design/icons";
 import service from "../images/service.png";
 import box from "../images/box.png";
 
