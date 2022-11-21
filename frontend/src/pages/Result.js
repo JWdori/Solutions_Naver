@@ -32,7 +32,7 @@ const Result = (props) => {
 
 
     const getRateGame = async () => {
-        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+        await axios.get("http://118.67.143.133/api/view/getRateGameByType", {})
             .then((res) => {
                 //이게 유형별 10개 인기게임
                 setType(res);
