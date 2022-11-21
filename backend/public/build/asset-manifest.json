@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4f010330.css",
-    "main.js": "/static/js/main.f6f836b7.js",
+    "main.js": "/static/js/main.95847ea1.js",
     "static/media/1_V4.PNG": "/static/media/1_V4.e7b628bf8ea06bce94a8.PNG",
     "static/media/10_thewhicher.png": "/static/media/10_thewhicher.f9dfff2588ae1c05d7dd.png",
     "static/media/1_blackservival.png": "/static/media/1_blackservival.7c9bb8583e17dcff24a2.png",
@@ -26,7 +26,6 @@
     "static/media/1_blackdesert.png": "/static/media/1_blackdesert.0ae53185604ee1908618.png",
     "static/media/2_blackdesert.png": "/static/media/2_blackdesert.0ae53185604ee1908618.png",
     "static/media/10_nodiedunjeon.png": "/static/media/10_nodiedunjeon.e2a8bb305c5aca8368f8.png",
-    "static/media/ranking3.png": "/static/media/ranking3.3f9d5e23a36ea135701c.png",
     "static/media/7_nike.png": "/static/media/7_nike.23584f86a994977f8ae6.png",
     "static/media/3_cookie.png": "/static/media/3_cookie.2176c70bac1546a02d04.png",
     "static/media/5_cookie.png": "/static/media/5_cookie.2176c70bac1546a02d04.png",
@@ -62,7 +61,6 @@
     "static/media/3_runtera.png": "/static/media/3_runtera.a241ea2ebfee6ed06d0d.png",
     "static/media/3_ageofdynasties.png": "/static/media/3_ageofdynasties.46b8034babd53776c925.png",
     "static/media/2_blolstars.png": "/static/media/2_blolstars.0780caee7d066a177a57.png",
-    "static/media/game001.png": "/static/media/game001.0780caee7d066a177a57.png",
     "static/media/type3.png": "/static/media/type3.1c4fc1a4e2531617c96f.png",
     "static/media/type8.png": "/static/media/type8.c5d37813bb39f7d2e51c.png",
     "static/media/5_linige.png": "/static/media/5_linige.bc53b7e7613cd342abb9.png",
@@ -74,7 +72,6 @@
     "static/media/type4.png": "/static/media/type4.73a717681388b7ea224a.png",
     "static/media/8_besta.png": "/static/media/8_besta.ec8cea92a4a0e42af0f0.png",
     "static/media/type5.png": "/static/media/type5.2c440d78bc475e89c319.png",
-    "static/media/game.png": "/static/media/game.80e36db9419e0b274d89.png",
     "static/media/q12.png": "/static/media/q12.f1c9b746a6282570ef33.png",
     "static/media/10_maplestoryworld.png": "/static/media/10_maplestoryworld.f8f2ce2ad7e4ed790ad7.png",
     "static/media/5_meongillbanju.png": "/static/media/5_meongillbanju.2a1f5756c88ab197fad2.png",
@@ -113,32 +110,26 @@
     "static/media/loading.gif": "/static/media/loading.e07cbb7e701ff92f81c1.gif",
     "static/media/q6.png": "/static/media/q6.5feb5ac9cf433b8640ef.png",
     "static/media/q10.png": "/static/media/q10.68cedae760ff4bd451eb.png",
-    "static/media/popular_result.png": "/static/media/popular_result.98fc830e96246fb022ca.png",
-    "static/media/ranking2.png": "/static/media/ranking2.ab84f76d560e4de4cb35.png",
-    "static/media/gamerec_1.png": "/static/media/gamerec_1.202df916f0d1824093a2.png",
     "static/media/8_wintertop.png": "/static/media/8_wintertop.a4de7c96a9de587fb6b7.png",
     "static/media/6_huger.png": "/static/media/6_huger.875d4141e650a4b8b3ef.png",
     "static/media/q4.png": "/static/media/q4.4a77be8a6643717ed2a9.png",
     "static/media/4_clashofclan.png": "/static/media/4_clashofclan.409dc2924e620a329ff3.png",
-    "static/media/ranking1.png": "/static/media/ranking1.5662031c90e89c704dd3.png",
     "static/media/10_witchsam.png": "/static/media/10_witchsam.1a348cf683f165552753.png",
     "static/media/10_ayhangasa.png": "/static/media/10_ayhangasa.66db9d7baeeae93a04dc.png",
     "static/media/1_koreanmim.png": "/static/media/1_koreanmim.bf436685902dc6969591.png",
     "static/media/5_moonlight.png": "/static/media/5_moonlight.53a0c43305d3d528209f.png",
-    "static/media/popular_game.png": "/static/media/popular_game.603ba410e4fcbf9775a7.png",
     "static/media/3_toweroffantasy.png": "/static/media/3_toweroffantasy.81c386a59556bb91738f.png",
     "static/media/6_soulknight.png": "/static/media/6_soulknight.8cc0eb47db8587cf9316.png",
     "static/media/7_soulknight.png": "/static/media/7_soulknight.8cc0eb47db8587cf9316.png",
-    "static/media/q2_tuto.png": "/static/media/q2_tuto.ef8e03b7ff0490c4414a.png",
     "static/media/4_reigns.jpg": "/static/media/4_reigns.caf35a9c4f50aca5eba6.jpg",
     "static/media/kakao.png": "/static/media/kakao.cc5dabd38d55f357c1f7.png",
     "static/media/check.png": "/static/media/check.54c6922c0a0bd6266f5d.png",
     "index.html": "/index.html",
     "main.4f010330.css.map": "/static/css/main.4f010330.css.map",
-    "main.f6f836b7.js.map": "/static/js/main.f6f836b7.js.map"
+    "main.95847ea1.js.map": "/static/js/main.95847ea1.js.map"
   },
   "entrypoints": [
     "static/css/main.4f010330.css",
-    "static/js/main.f6f836b7.js"
+    "static/js/main.95847ea1.js"
   ]
 }
