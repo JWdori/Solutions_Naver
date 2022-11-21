@@ -24,7 +24,7 @@ const Home = (props) => {
         setUuid(Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36));
     },[])
     const getRateGame = async () => {
-        await axios.get("http://118.67.143.133/api/view/getRateGameByType", {})
+        await axios.get("api/view/getRateGameByType", {})
             .then((res) => {
                 //이게 유형별 10개 인기게임
                 setType(res);
