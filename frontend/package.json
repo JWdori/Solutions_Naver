@@ -70,6 +70,5 @@
     "fs": false,
     "path": false,
     "os": false
-  },
-  "proxy": "http://118.67.143.133/"
+  }
 }
