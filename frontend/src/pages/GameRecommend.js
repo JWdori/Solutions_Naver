@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../elements/Headerrec"
 import ProgressRec from "../elements/Progress_rec";
-import type1 from "../images/gamerec_1.png"
 import good from "../images/good_gray.png"
 import bad from "../images/bad_gray.png"
 import kakao from "../images/kakao.png";
@@ -10,16 +8,12 @@ import twitter from "../images/twitter.png";
 import link from "../images/link.png";
 import shareIcon from "../images/shareicon2.png";
 import reset from "../images/reset2.png";
-import Score from "../elements/Score";
 import ScorePage from "../elements/ScorePage";
-import Progress from "../elements/Progress_test";
 import quotes1 from "../images/chat_1_gray.png"
 import quotes2 from "../images/chat_2_gray.png"
 import {useNavigate} from "react-router-dom";
-import Resultmodal from "../elements/Resultmodal";
 import Recommendnext from "../elements/Recommendnext";
 import axios from "axios";
-import back from "../images/back.png";
 import Headerrec from "../elements/Headerrec";
 import ScrollRestoration from "../elements/ScrollRestoration";
 
@@ -36,12 +30,10 @@ const GameRecommend = (props) => {
     const [subGen2, setSubGen2] = React.useState(null);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
-
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
     const goodBtn = document.getElementsByClassName("recBtn")[0];
     const badBtn = document.getElementsByClassName("recBtn")[1];
-
     React.useEffect(() => {
         const initPage = JSON.parse(sessionStorage.getItem("page"))
         setPage(initPage);
@@ -52,6 +44,7 @@ const GameRecommend = (props) => {
         if (step === 0) {
             const btn = document.getElementsByClassName("next")[0];
             btn.disabled = true;
+            btn.setAttribute("id", "recNextDisabledButton")
         }
         await axios.get("http://localhost:5000/api/recommend/getGameList", {
             params: {
@@ -61,7 +54,7 @@ const GameRecommend = (props) => {
             }
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
                 setData(res);
 
                 const sub1 = res.data.gameList[0].subGenre.filter((el,idx) =>
@@ -74,41 +67,41 @@ const GameRecommend = (props) => {
                 setSubGen2(sub2);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
 
     }
 
     const sendData = (input) => {
         const appid = data.data.gameList[step].appId;
-        console.log(appid);
+        //console.log(appid);
         axios.post("http://localhost:5000/api/recommend/postGameRate", {
             userId: userId,
             appId: appid,
             gameScore: input
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
     }
 
 
     const sendStar = (star) => {
         const appid = data.data.gameList[step].appId;
-        console.log(appid);
+        //console.log(appid);
         axios.post("http://localhost:5000/api/recommend/postGameStar", {
             userId: userId,
             appId: appid,
             gameStar: star
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
     }
     const starRating = (star) => {
@@ -123,9 +116,16 @@ const GameRecommend = (props) => {
     };
     const resetbtn = (props) => {
         setStep(0)
+        const btn = document.getElementsByClassName("next")[0];
+        btn.disabled = true;
+        btn.setAttribute("id", "recNextDisabledButton")
     };
     const handleShowNextBtn = (props) => {
         setShowNextPopup(true);
+        const btn = document.getElementsByClassName("next")[0];
+        btn.disabled = false;
+        btn.setAttribute("id", "recNextButton")
+
     };
     const btngood = () => {
         setValue(1)
@@ -145,9 +145,10 @@ const GameRecommend = (props) => {
 
     const recommendNext = (next) => {
         if (next) {
+            const btn = document.getElementsByClassName("next")[0];
+            btn.disabled = true;
+            btn.setAttribute("id", "recNextDisabledButton")
             setNext(next);
-            console.log(next);
-            console.log(page);
             sessionStorage.setItem("page", JSON.stringify(page + 2));
             setPage(page + 2);
             setComplete(0)

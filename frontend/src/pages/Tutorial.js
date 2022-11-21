@@ -1,12 +1,10 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {useLocation} from "react-router-dom";
-import img2 from "../images/tutorial/q2_tuto.png"
 import Header from "../elements/Header";
 import img from "../images/tutorial/tutorial_king.png";
 import Progress from "../elements/Progress_test";
 import Genre from "../elements/Genre";
-import Name from "../elements/Name";
 import q1 from "../images/tutorial/q1.png"
 import ScrollRestoration from "../elements/ScrollRestoration";
 

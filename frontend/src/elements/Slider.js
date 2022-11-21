@@ -1,11 +1,8 @@
 import React from "react";
 import left from "../images/left.png";
-import popular_result from "../images/popular_result.png";
-import popular_game from "../images/popular_game.png";
 import right from "../images/right.png";
 import styeld from "styled-components";
 import { useState, useRef, useEffect } from "react";
-import type6 from "../images/test/type6.png";
 import good from "../images/good_gray.png";
 const Slider = (props) => {
     const slideRef = useRef(null);

@@ -1,7 +1,6 @@
 import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
-import game2 from "../images/game/game001.png"
-import game from "../images/game.png"
+
 import type1 from "../images/test/type1.png";
 import type2 from "../images/test/type2.png";
 import type3 from "../images/test/type3.png";
