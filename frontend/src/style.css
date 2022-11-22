@@ -475,6 +475,7 @@ input:focus{
     display: flex;
     justify-content: end;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 
@@ -841,8 +842,8 @@ input:focus{
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 800;
-    width: 270px;
-    font-size: 10px;
+    width: 285px;
+    font-size: 12px;
     line-height: 12px;
     display: flex;
     align-items: center;
@@ -1610,9 +1611,10 @@ margin-right:4px;
     display: flex;
     align-items: center;
     text-align: center;
+    justify-items: center;
+    justify-content: center;
     margin-bottom: 8px;
     color: #FF8216;
-    margin-left: 32px;
 }
 
 
@@ -1858,7 +1860,7 @@ margin-right:4px;
 
 
 .shareIcon {
-    margin-right: 7px;
+    margin-right: 9px;
     cursor: pointer;
 
 }
@@ -1871,7 +1873,7 @@ margin-right:4px;
     line-height: 13px;
     text-align: center;
     color: #BABABA;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     margin-right: 12px;
@@ -1887,7 +1889,7 @@ margin-right:4px;
     text-align: center;
     justify-content: center;
     color: #FFAE68;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     margin-right: 12px;
@@ -2489,9 +2491,10 @@ margin-right:4px;
     justify-content: center;
     height: 30px;
     line-height: 30px;
+    background: white;
     color: #FF8936;
     border: 0.913333px solid #FF8936;
-    filter: drop-shadow(0px 3.65333px 18.2667px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
     border-radius: 29.2267px;
     width: 84.03px;
     cursor: pointer;
@@ -2509,6 +2512,7 @@ margin-right:4px;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
+    background: white;
     display: flex;
     align-items: center;
     text-align: center;
@@ -2517,7 +2521,7 @@ margin-right:4px;
     line-height: 30px;
     color: #FF8936;
     border: 0.913333px solid #FF8936;
-    filter: drop-shadow(0px 3.65333px 18.2667px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
     border-radius: 29.2267px;
     width: 84.03px;
     cursor: pointer;

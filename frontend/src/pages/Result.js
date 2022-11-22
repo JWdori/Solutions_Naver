@@ -20,6 +20,7 @@ import reset from "../images/reset.png"
 import check from "../images/check.png"
 import {TentuPlay} from "@tentuplay/js-client-sdk";
 import ScrollRestoration from "../elements/ScrollRestoration";
+import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
 import axios from "axios";
 
 
@@ -29,6 +30,26 @@ const Result = (props) => {
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = React.useState(false);
     const [type, setType] = React.useState(null);
+    const [ToastStatus, setToastStatus] = React.useState(false);
+    const ToastMsg = "클립보드에 URL이 복사되었습니다.";
+    const handleToast = () => {
+        if (!ToastStatus) {
+            setToastStatus(true);
+        }
+    };
+    const copyToClipboard = (val) => {
+        const t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = val;
+        t.select();
+        document.execCommand("copy");
+        document.body.removeChild(t);
+    };
+
+    const copy = (func) => {
+        copyToClipboard("http://118.67.143.133/");
+        func("complete");
+    };
 
 
     const getRateGame = async () => {
@@ -137,7 +158,7 @@ const Result = (props) => {
                         <img
                             className="questionTxtImage"
                             src={check}
-                            style={{paddingRight:"180px", paddingBottom:"10px"}}
+                            style={{paddingRight:"200px", paddingBottom:"10px"}}
                             alt="img"
                             width="82px"
                             height="65px"
@@ -201,7 +222,7 @@ const Result = (props) => {
                     width="24px"
                     height="24px"
                 ></img>
-                <span>  겸사 결과를 기반으로 게임이 추천됩니다.   </span>
+                <span>  검사 결과를 기반으로 게임이 추천됩니다.   </span>
                 <img
                     className="homeGameIcon2"
                     src={gameIcon}
@@ -212,7 +233,7 @@ const Result = (props) => {
             </div>
 
             <button id="resultGameBtn" onClick={onGameClick}>
-                나에게 맞는 게임 확인하기
+                나에게 맞는 게임 추천받기
             </button>
             <div className={"shareText2"}>
                 <img
@@ -230,25 +251,25 @@ const Result = (props) => {
                     className="shareIcon"
                     src={kakao}
                     alt="kakaotalk"
-                    width="24px"
-                    height="24px"
-                    // onClick={kakaoShare}
+                    width="32px"
+                    height="32px"
+                    onClick={kakaoShare_test}
                 />
                 <img
                     className="shareIcon"
                     src={facebook}
                     alt="facebook"
-                    width="24px"
-                    height="24px"
-                    // onClick={facebookShare}
+                    width="32px"
+                    height="32px"
+                    onClick={facebookShare_test}
                 ></img>
                 <img
                     className="shareIcon"
                     src={twitter}
                     alt="twitter"
-                    width="24px"
-                    height="24px"
-                    // onClick={twitterShare}
+                    width="32px"
+                    height="32px"
+                    onClick={twitterShare_test}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
@@ -256,10 +277,10 @@ const Result = (props) => {
                     className="shareIcon"
                     src={link}
                     alt="link"
-                    width="24px"
-                    height="24px"
+                    width="32px"
+                    height="32px"
                     onClick={() => {
-                        // copy(handleToast);
+                        copy(handleToast);
                     }}
                 ></img>
             </div>
