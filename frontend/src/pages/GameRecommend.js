@@ -34,11 +34,11 @@ const GameRecommend = (props) => {
     const [subGen2, setSubGen2] = React.useState(null);
     const [data, setData] = React.useState(null);
     const [num, setComplete] = React.useState(0);
-
     const showData = JSON.parse(sessionStorage.getItem("data"));
     const userId = showData.user.user_id;
     const goodBtn = document.getElementsByClassName("recBtn")[0];
     const badBtn = document.getElementsByClassName("recBtn")[1];
+
 
     const [ToastStatus, setToastStatus] = React.useState(false);
     const ToastMsg = "클립보드에 URL이 복사되었습니다.";
@@ -61,6 +61,7 @@ const GameRecommend = (props) => {
         func("complete");
     };
 
+
     React.useEffect(() => {
         const initPage = JSON.parse(sessionStorage.getItem("page"))
         setPage(initPage);
@@ -71,6 +72,7 @@ const GameRecommend = (props) => {
         if (step === 0) {
             const btn = document.getElementsByClassName("next")[0];
             btn.disabled = true;
+            btn.setAttribute("id", "recNextDisabledButton")
         }
         await axios.get("http://localhost:5000/api/recommend/getGameList", {
             params: {
@@ -80,7 +82,7 @@ const GameRecommend = (props) => {
             }
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
                 setData(res);
 
                 const sub1 = res.data.gameList[0].subGenre.filter((el,idx) =>
@@ -93,41 +95,41 @@ const GameRecommend = (props) => {
                 setSubGen2(sub2);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
 
     }
 
     const sendData = (input) => {
         const appid = data.data.gameList[step].appId;
-        console.log(appid);
+        //console.log(appid);
         axios.post("http://localhost:5000/api/recommend/postGameRate", {
             userId: userId,
             appId: appid,
             gameScore: input
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
     }
 
 
     const sendStar = (star) => {
         const appid = data.data.gameList[step].appId;
-        console.log(appid);
+        //console.log(appid);
         axios.post("http://localhost:5000/api/recommend/postGameStar", {
             userId: userId,
             appId: appid,
             gameStar: star
         })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
             })
             .catch((error) => {
-                console.dir(error);
+                //console.dir(error);
             });
     }
     const starRating = (star) => {
@@ -142,9 +144,16 @@ const GameRecommend = (props) => {
     };
     const resetbtn = (props) => {
         setStep(0)
+        const btn = document.getElementsByClassName("next")[0];
+        btn.disabled = true;
+        btn.setAttribute("id", "recNextDisabledButton")
     };
     const handleShowNextBtn = (props) => {
         setShowNextPopup(true);
+        const btn = document.getElementsByClassName("next")[0];
+        btn.disabled = false;
+        btn.setAttribute("id", "recNextButton")
+
     };
     const btngood = () => {
         setValue(1)
@@ -164,9 +173,10 @@ const GameRecommend = (props) => {
 
     const recommendNext = (next) => {
         if (next) {
+            const btn = document.getElementsByClassName("next")[0];
+            btn.disabled = true;
+            btn.setAttribute("id", "recNextDisabledButton")
             setNext(next);
-            console.log(next);
-            console.log(page);
             sessionStorage.setItem("page", JSON.stringify(page + 2));
             setPage(page + 2);
             setComplete(0)

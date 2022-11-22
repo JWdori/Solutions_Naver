@@ -11,9 +11,6 @@ import link from "../images/link.png";
 import goldCrown from "../images/crown1.png"
 import sliverCrown from "../images/crown2.png"
 import copperCrown from "../images/crown3.png"
-import r1 from "../images/ranking1.png"
-import r2 from "../images/ranking2.png"
-import r3 from "../images/ranking3.png"
 import Serviceintroduce from "../elements/ServiceIntroduce";
 import box from "../images/box.png";
 import reset from "../images/reset.png"
