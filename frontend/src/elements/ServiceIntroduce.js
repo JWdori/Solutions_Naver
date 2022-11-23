@@ -23,6 +23,7 @@ const Serviceintroduce = (props) => {
                                     <span className={"serviceTitle"}>
                                 <img
                                     className="servicebox2"
+                                    style={{marginLeft:"-16px"}}
                                     src={box}
                                     alt="img"
                                     width="116px"

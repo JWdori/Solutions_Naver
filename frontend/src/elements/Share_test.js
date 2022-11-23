@@ -4,22 +4,21 @@ const kakaoShare_test = () => {
         objectType: "feed",
         content: {
             title: "W2P! 게임 유형 테스트 & 게임 추천",
-            description: "MDTI 테스트 받고 경품까지!",
+            description: "게임사가 보는 나의 유형은? + 모바일 게임 추천 서비스!",
             imageUrl: "https://i.ibb.co/CV1X2FB/for-Share-Ka-Kao.png",
             link: {
-                mobileWebUrl: "https://bit.ly/캐취업",
+                mobileWebUrl: "http://118.67.143.133/",
             },
         },
         itemContent: {
             titleImageUrl: "https://i.ibb.co/GCyyWZk/logo-KAKAO.png",
-            titleImageText: "캐취업",
-            titleImageCategory: "청년이룸",
+            titleImageText: "W2P",
         },
         buttons: [
             {
                 title: "테스트 하러 가기",
                 link: {
-                    mobileWebUrl: "https://bit.ly/캐취업",
+                    mobileWebUrl: "http://118.67.143.133/",
                 },
             },
         ],
@@ -29,20 +28,17 @@ const kakaoShare_test = () => {
 const twitterShare_test = () => {
     var sendText = "W2P! 지금 바로 게임 성향 테스트 & 게임 추천 받으러가기";
     var sendUrl =
-        "https://catchup.shop/                                                         ";
-    var sendHashTag = "청년이룸,캐치업,MyDream,MDTI";
+        "http://118.67.143.133/                                                       ";
     window.open(
         "https://twitter.com/intent/tweet?text=" +
         sendText +
         "&url=" +
-        sendUrl +
-        "&hashtags=" +
-        sendHashTag
+        sendUrl
     );
 };
 
 const facebookShare_test = () => {
-    var sendUrl = "https://bit.ly/캐취업";
+    var sendUrl = "http://118.67.143.133/";
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 };
 

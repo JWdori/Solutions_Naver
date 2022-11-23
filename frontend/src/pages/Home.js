@@ -11,7 +11,7 @@ import Header from "../elements/Header";
 import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 
-
+import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
 import GameSlide1 from "../elements/GameSlide1";
 import GameSlide2 from "../elements/GameSlide2";
 import box from "../images/box.png"
@@ -20,6 +20,28 @@ import axios from "axios";
 const Home = (props) => {
     const [type, setType] = React.useState(null);
     const [uuid, setUuid] = React.useState(null);
+    const [ToastStatus, setToastStatus] = React.useState(false);
+    const ToastMsg = "클립보드에 URL이 복사되었습니다.";
+    const handleToast = () => {
+        if (!ToastStatus) {
+            setToastStatus(true);
+        }
+    };
+    const copyToClipboard = (val) => {
+        const t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = val;
+        t.select();
+        document.execCommand("copy");
+        document.body.removeChild(t);
+    };
+
+    const copy = (func) => {
+        copyToClipboard("http://118.67.143.133/");
+        func("complete");
+    };
+
+
     React.useEffect(()=>{
         setUuid(Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36));
     },[])
@@ -114,27 +136,27 @@ const Home = (props) => {
                     className="shareIcon"
                     src={kakao}
                     alt="kakaotalk"
-                    width="24px"
-                    height="24px"
-                    // onClick={kakaoShare}
+                    width="32px"
+                    height="32px"
+                    onClick={kakaoShare_test}
                 />
 
                 <img
                     className="shareIcon"
                     src={facebook}
                     alt="facebook"
-                    width="24px"
-                    height="24px"
-                    // onClick={facebookShare}
+                    width="32px"
+                    height="32px"
+                    onClick={facebookShare_test}
                 ></img>
 
                 <img
                     className="shareIcon"
                     src={twitter}
                     alt="twitter"
-                    width="24px"
-                    height="24px"
-                    // onClick={twitterShare}
+                    width="32px"
+                    height="32px"
+                    onClick={twitterShare_test}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
@@ -143,10 +165,10 @@ const Home = (props) => {
                     style={{marginRight: "0px"}}
                     src={link}
                     alt="link"
-                    width="24px"
-                    height="24px"
+                    width="32px"
+                    height="32px"
                     onClick={() => {
-                        // copy(handleToast);
+                        copy(handleToast);
                     }}
                 ></img>
 

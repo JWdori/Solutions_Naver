@@ -1,5 +1,7 @@
 import React from "react";
+
 import ProgressRec from "../elements/Progress_rec";
+
 import good from "../images/good_gray.png"
 import bad from "../images/bad_gray.png"
 import kakao from "../images/kakao.png";
@@ -8,7 +10,9 @@ import twitter from "../images/twitter.png";
 import link from "../images/link.png";
 import shareIcon from "../images/shareicon2.png";
 import reset from "../images/reset2.png";
+
 import ScorePage from "../elements/ScorePage";
+
 import quotes1 from "../images/chat_1_gray.png"
 import quotes2 from "../images/chat_2_gray.png"
 import {useNavigate} from "react-router-dom";
@@ -16,7 +20,7 @@ import Recommendnext from "../elements/Recommendnext";
 import axios from "axios";
 import Headerrec from "../elements/Headerrec";
 import ScrollRestoration from "../elements/ScrollRestoration";
-
+import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
 const GameRecommend = (props) => {
     const navigate = useNavigate();
     const [isShowAll, setShowPopup] = React.useState(false);
@@ -34,6 +38,30 @@ const GameRecommend = (props) => {
     const userId = showData.user.user_id;
     const goodBtn = document.getElementsByClassName("recBtn")[0];
     const badBtn = document.getElementsByClassName("recBtn")[1];
+
+
+    const [ToastStatus, setToastStatus] = React.useState(false);
+    const ToastMsg = "클립보드에 URL이 복사되었습니다.";
+    const handleToast = () => {
+        if (!ToastStatus) {
+            setToastStatus(true);
+        }
+    };
+    const copyToClipboard = (val) => {
+        const t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = val;
+        t.select();
+        document.execCommand("copy");
+        document.body.removeChild(t);
+    };
+
+    const copy = (func) => {
+        copyToClipboard("http://118.67.143.133/");
+        func("complete");
+    };
+
+
     React.useEffect(() => {
         const initPage = JSON.parse(sessionStorage.getItem("page"))
         setPage(initPage);
@@ -350,25 +378,25 @@ const GameRecommend = (props) => {
                             className="shareIcon"
                             src={kakao}
                             alt="kakaotalk"
-                            width="24px"
-                            height="24px"
-                            // onClick={kakaoShare}
+                            width="28px"
+                            height="28px"
+                            onClick={kakaoShare_test}
                         />
                         <img
                             className="shareIcon"
                             src={facebook}
                             alt="facebook"
-                            width="24px"
-                            height="24px"
-                            // onClick={facebookShare}
+                            width="28px"
+                            height="28px"
+                             onClick={facebookShare_test}
                         ></img>
                         <img
                             className="shareIcon"
                             src={twitter}
                             alt="twitter"
-                            width="24px"
-                            height="24px"
-                            // onClick={twitterShare}
+                            width="28px"
+                            height="28px"
+                            onClick={twitterShare_test}
                         ></img>
                         <input type="hidden" id="urlInput" className="url-input"/>
 
@@ -376,10 +404,10 @@ const GameRecommend = (props) => {
                             className="shareIcon"
                             src={link}
                             alt="link"
-                            width="24px"
-                            height="24px"
+                            width="28px"
+                            height="28px"
                             onClick={() => {
-                                // copy(handleToast);
+                                copy(handleToast);
                             }}
                         ></img>
                     </div>
