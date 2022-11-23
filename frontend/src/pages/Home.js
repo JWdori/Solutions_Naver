@@ -11,7 +11,7 @@ import Header from "../elements/Header";
 import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 
-import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
+import {kakaoShare, facebookShare, twitterShare} from "../elements/Share_test";
 import GameSlide1 from "../elements/GameSlide1";
 import GameSlide2 from "../elements/GameSlide2";
 import box from "../images/box.png"
@@ -138,7 +138,7 @@ const Home = (props) => {
                     alt="kakaotalk"
                     width="32px"
                     height="32px"
-                    onClick={kakaoShare_test}
+                    onClick={kakaoShare}
                 />
 
                 <img
@@ -147,7 +147,7 @@ const Home = (props) => {
                     alt="facebook"
                     width="32px"
                     height="32px"
-                    onClick={facebookShare_test}
+                    onClick={facebookShare}
                 ></img>
 
                 <img
@@ -156,7 +156,7 @@ const Home = (props) => {
                     alt="twitter"
                     width="32px"
                     height="32px"
-                    onClick={twitterShare_test}
+                    onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
