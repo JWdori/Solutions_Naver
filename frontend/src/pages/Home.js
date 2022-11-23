@@ -187,7 +187,7 @@ const Home = (props) => {
 
 
             <button id="allGameBtn" style={{marginBottom: "80px"}}
-            onClick={onRankingClick}>
+                    onClick={onRankingClick}>
 
                 모든 인기 게임 확인하기
             </button>

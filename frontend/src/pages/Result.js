@@ -17,7 +17,7 @@ import reset from "../images/reset.png"
 import check from "../images/check.png"
 import {TentuPlay} from "@tentuplay/js-client-sdk";
 import ScrollRestoration from "../elements/ScrollRestoration";
-import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
+import {kakaoShare, facebookShare, twitterShare} from "../elements/Share_test";
 import axios from "axios";
 
 
@@ -177,37 +177,37 @@ const Result = (props) => {
 
             <div className="typeExample">
                 <div className="TypeSub">
-                <img
-                    className="typesubimg"
-                    src={showData.secondResult.type_img}
-                    alt="img"
-                    style={{marginRight:"24px"}}
-                >
-                </img>
+                    <img
+                        className="typesubimg"
+                        src={showData.secondResult.type_img}
+                        alt="img"
+                        style={{marginRight:"24px"}}
+                    >
+                    </img>
                     {
                         showData.secondResult.type_name === "후회하는 오프트래너" || showData.secondResult.type_name === "기대치 높은 무과금러"
-                        ? <div className={"typedecs"}
-                        style={{marginLeft: "-18px"}}>{showData.secondResult.type_name}</div>
-                        :<div className={"typedecs"}
-                             style={{marginRight: "30px"}}>{showData.secondResult.type_name}</div>
+                            ? <div className={"typedecs"}
+                                   style={{marginLeft: "-18px"}}>{showData.secondResult.type_name}</div>
+                            :<div className={"typedecs"}
+                                  style={{marginRight: "30px"}}>{showData.secondResult.type_name}</div>
                     }
-                    </div>
+                </div>
 
-                    <div className="TypeSub">
-                        <img
-                            className="typesubimg"
-                            src={showData.thirdResult.type_img}
-                            alt="img"
-                            style={{marginLeft:"24px"}}
-                        ></img>
-                        {
-                            showData.thirdResult.type_name === "후회하는 오프트래너" || showData.thirdResult.type_name === "기대치 높은 무과금러"
-                                ? <div className={"typedecs"}
-                                       style={{marginLeft: "18px"}}>{showData.thirdResult.type_name}</div>
-                                : <div className={"typedecs"}
-                                       style={{marginLeft: "30px"}}>{showData.thirdResult.type_name}</div>
-                        }
-                    </div>
+                <div className="TypeSub">
+                    <img
+                        className="typesubimg"
+                        src={showData.thirdResult.type_img}
+                        alt="img"
+                        style={{marginLeft:"24px"}}
+                    ></img>
+                    {
+                        showData.thirdResult.type_name === "후회하는 오프트래너" || showData.thirdResult.type_name === "기대치 높은 무과금러"
+                            ? <div className={"typedecs"}
+                                   style={{marginLeft: "18px"}}>{showData.thirdResult.type_name}</div>
+                            : <div className={"typedecs"}
+                                   style={{marginLeft: "30px"}}>{showData.thirdResult.type_name}</div>
+                    }
+                </div>
             </div>
 
 
@@ -250,7 +250,7 @@ const Result = (props) => {
                     alt="kakaotalk"
                     width="32px"
                     height="32px"
-                    onClick={kakaoShare_test}
+                    onClick={kakaoShare}
                 />
                 <img
                     className="shareIcon"
@@ -258,7 +258,7 @@ const Result = (props) => {
                     alt="facebook"
                     width="32px"
                     height="32px"
-                    onClick={facebookShare_test}
+                    onClick={facebookShare}
                 ></img>
                 <img
                     className="shareIcon"
@@ -266,7 +266,7 @@ const Result = (props) => {
                     alt="twitter"
                     width="32px"
                     height="32px"
-                    onClick={twitterShare_test}
+                    onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
@@ -284,12 +284,12 @@ const Result = (props) => {
             <button id="regameBtn" onClick={onResetClick}>
                 다시하기
                 <img
-                className="resetresult"
-                src={reset}
-                alt="link"
-                width="26px"
-                height="26px"
-            ></img>
+                    className="resetresult"
+                    src={reset}
+                    alt="link"
+                    width="26px"
+                    height="26px"
+                ></img>
             </button>
             <span  className={"similarGameRanking"}>{showData.firstResult.type_name} 유형의<br></br> 인기 게임</span><br/>
             <div className={"similarGame"}>
@@ -305,13 +305,13 @@ const Result = (props) => {
                         }}
                     ></img>
                     <a href={type?.data[a].app[1].url}  target="_blank" rel="noopener noreferrer">
-                    <img
-                        className="gameRanking"
-                        src={type?.data[a].app[1].icon}
-                        alt="ranking1"
-                        width="80px"
-                        height="80px"
-                    ></img>
+                        <img
+                            className="gameRanking"
+                            src={type?.data[a].app[1].icon}
+                            alt="ranking1"
+                            width="80px"
+                            height="80px"
+                        ></img>
                     </a>
                 </div>
 
@@ -328,34 +328,34 @@ const Result = (props) => {
                         }}
                     ></img>
                     <a href={type?.data[a].app[0].url}   target="_blank"  target="_blank" rel="noopener noreferrer">
-                    <img
-                        className="gameRanking"
-                        src={type?.data[a].app[0].icon}
-                        alt="ranking1"
-                        width="104px"
-                        height="104px"
-                    ></img>
+                        <img
+                            className="gameRanking"
+                            src={type?.data[a].app[0].icon}
+                            alt="ranking1"
+                            width="104px"
+                            height="104px"
+                        ></img>
                     </a>
                 </div>
-                    <div className={"gameRating"}>
-                        <img
-                            className="crown"
-                            src={copperCrown}
-                            alt="sliverCrown"
-                            width="47px"
-                            height="42.28px"
-                            style={{
-                            }}
-                        ></img>
-                        <a href={type?.data[a].app[2].url}   target="_blank"  target="_blank" rel="noopener noreferrer">
+                <div className={"gameRating"}>
                     <img
-                        className="gameRanking"
-                        src={type?.data[a].app[2].icon}
-                        alt="ranking3"
-                        width="80px"
-                        height="80px"
+                        className="crown"
+                        src={copperCrown}
+                        alt="sliverCrown"
+                        width="47px"
+                        height="42.28px"
+                        style={{
+                        }}
                     ></img>
-                            </a>
+                    <a href={type?.data[a].app[2].url}   target="_blank"  target="_blank" rel="noopener noreferrer">
+                        <img
+                            className="gameRanking"
+                            src={type?.data[a].app[2].icon}
+                            alt="ranking3"
+                            width="80px"
+                            height="80px"
+                        ></img>
+                    </a>
                 </div>
             </div>
 

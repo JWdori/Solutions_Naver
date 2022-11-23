@@ -20,7 +20,7 @@ import Recommendnext from "../elements/Recommendnext";
 import axios from "axios";
 import Headerrec from "../elements/Headerrec";
 import ScrollRestoration from "../elements/ScrollRestoration";
-import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
+import {kakaoShare, facebookShare, twitterShare} from "../elements/Share_test";
 const GameRecommend = (props) => {
     const navigate = useNavigate();
     const [isShowAll, setShowPopup] = React.useState(false);
@@ -116,7 +116,7 @@ const GameRecommend = (props) => {
     }
 
 
-    const sendStar = (star) => {
+    const sendStar = (별) => {
         const appid = data.data.gameList[step].appId;
 
         axios.post("http://118.67.143.133/api/recommend/postGameStar", {
@@ -131,8 +131,8 @@ const GameRecommend = (props) => {
                 //console.dir(error);
             });
     }
-    const starRating = (star) => {
-        setStar(star);
+    const starRating = (별) => {
+        setStar(별);
         goodBtn.disabled = true;
         badBtn.disabled = true;
     }
@@ -198,7 +198,7 @@ const GameRecommend = (props) => {
             if (value !== 0) {
                 sendData(value)//-1인지 1인지
             } else if (star > 0) {
-                sendStar(star);
+                sendStar(별);
             }
             setStep(step + 1);
 
@@ -380,7 +380,7 @@ const GameRecommend = (props) => {
                             alt="kakaotalk"
                             width="28px"
                             height="28px"
-                            onClick={kakaoShare_test}
+                            onClick={kakaoShare}
                         />
                         <img
                             className="shareIcon"
@@ -388,7 +388,7 @@ const GameRecommend = (props) => {
                             alt="facebook"
                             width="28px"
                             height="28px"
-                             onClick={facebookShare_test}
+                            onClick={facebookShare}
                         ></img>
                         <img
                             className="shareIcon"
@@ -396,7 +396,7 @@ const GameRecommend = (props) => {
                             alt="twitter"
                             width="28px"
                             height="28px"
-                            onClick={twitterShare_test}
+                            onClick={twitterShare}
                         ></img>
                         <input type="hidden" id="urlInput" className="url-input"/>
 
