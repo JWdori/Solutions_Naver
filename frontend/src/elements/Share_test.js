@@ -28,7 +28,7 @@ const kakaoShare = () => {
 const twitterShare = () => {
     var sendText = "W2P! 지금 바로 게임 성향 테스트 & 게임 추천 받으러가기";
     var sendUrl =
-        "http://118.67.143.133/                                                       ";
+        "http://118.67.143.133/";
     window.open(
         "https://twitter.com/intent/tweet?text=" +
         sendText +
@@ -39,7 +39,7 @@ const twitterShare = () => {
 
 const facebookShare = () => {
     var sendUrl = "http://118.67.143.133/";
-    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+    window.open("https://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 };
 
 export { kakaoShare, twitterShare, facebookShare };

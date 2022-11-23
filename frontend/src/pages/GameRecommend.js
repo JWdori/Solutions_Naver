@@ -116,7 +116,7 @@ const GameRecommend = (props) => {
     }
 
 
-    const sendStar = (별) => {
+    const sendStar = (star) => {
         const appid = data.data.gameList[step].appId;
 
         axios.post("http://118.67.143.133/api/recommend/postGameStar", {
@@ -131,8 +131,8 @@ const GameRecommend = (props) => {
                 //console.dir(error);
             });
     }
-    const starRating = (별) => {
-        setStar(별);
+    const starRating = (star) => {
+        setStar(star);
         goodBtn.disabled = true;
         badBtn.disabled = true;
     }
@@ -198,7 +198,7 @@ const GameRecommend = (props) => {
             if (value !== 0) {
                 sendData(value)//-1인지 1인지
             } else if (star > 0) {
-                sendStar(별);
+                sendStar(star);
             }
             setStep(step + 1);
 
