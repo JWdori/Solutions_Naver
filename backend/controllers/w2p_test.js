@@ -44,7 +44,7 @@ const postTestResult = async (req, res) => {
             continue;
         }
         if (i == 4) {
-            if (resultArr[i] == 'a') PVP += 2.9;
+            if (resultArr[i] == 'a') PVP += 2.97;
             else NOM += 0.11, GRO += 0.49;
             continue;
         }
@@ -73,7 +73,7 @@ const postTestResult = async (req, res) => {
             continue;
         }
         if (i == 10) {
-            if (resultArr[i] == 'a') WAL += 99, GRO += 0.5;
+            if (resultArr[i] == 'a') WAL += 2.99, GRO += 0.5;
             else NOM += 0.5;
             continue;
         }

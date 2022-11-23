@@ -1,5 +1,5 @@
 
-const kakaoShare_test = () => {
+const kakaoShare = () => {
     window.Kakao.Link.sendDefault({
         objectType: "feed",
         content: {
@@ -25,7 +25,7 @@ const kakaoShare_test = () => {
     });
 };
 
-const twitterShare_test = () => {
+const twitterShare = () => {
     var sendText = "W2P! 지금 바로 게임 성향 테스트 & 게임 추천 받으러가기";
     var sendUrl =
         "http://118.67.143.133/                                                       ";
@@ -37,9 +37,9 @@ const twitterShare_test = () => {
     );
 };
 
-const facebookShare_test = () => {
+const facebookShare = () => {
     var sendUrl = "http://118.67.143.133/";
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 };
 
-export { kakaoShare_test, twitterShare_test, facebookShare_test };
+export { kakaoShare, twitterShare, facebookShare };

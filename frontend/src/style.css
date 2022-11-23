@@ -1,6 +1,27 @@
+
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
 
 html {
     -ms-content-zooming: none;
@@ -55,7 +76,7 @@ html {
 .ad_game_font {
     height: 40px;
     margin-top: 20px;
-    font-family: "G마켓 산스 TTF Medium";
+    font-family: "GmarketSansMedium";
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -154,7 +175,7 @@ html {
 
 .popular_result_font {
     height: 40px;
-    font-family: "G마켓 산스 TTF Medium";
+    font-family: "GmarketSansMedium";
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -293,7 +314,7 @@ html {
     width: 270px;
     border: 2px solid #FF8936;
     border-radius: 20px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -304,7 +325,7 @@ html {
 }
 
 input::placeholder {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -336,7 +357,7 @@ input:focus{
 
 .modalHeadFont {
     color: white;
-    font-family: "Pretendard";
+    font-family: "Pretendard-Regular";
     font-weight: 500;
     font-size: 18px;
     margin: 20px;
@@ -345,7 +366,7 @@ input:focus{
 
 
 .modalSemiresult {
-    font-family: "Pretendard";
+    font-family: "Pretendard-Regular";
     text-align: center;
     font-weight: 700;
     font-size: 12px;
@@ -386,7 +407,7 @@ input:focus{
 
 .modalNextTitle{
     margin-top: -12px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 17.1176px;
@@ -399,7 +420,7 @@ input:focus{
 }
 
 .modalNextSub{
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 11.4117px;
@@ -434,7 +455,7 @@ input:focus{
 
 
 .modalTitle {
-    font-family: "Gmarket Sans";
+    font-family: "GmarketSansMedium";
     width: 160px;
     text-align: start;
     font-size: 16px;
@@ -479,7 +500,7 @@ input:focus{
 
 
 .tag {
-    font-family: "Pretendard";
+    font-family: "Pretendard-Regular";
     font-weight: 400;
     font-size: 12px;
     color: #fffef5;
@@ -501,7 +522,7 @@ input:focus{
 
 
 .mainSubTitle {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 10px;
@@ -514,7 +535,7 @@ input:focus{
 }
 
 .mainSubTitleBold {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 14px;
@@ -527,7 +548,7 @@ input:focus{
 }
 
 .mainTitle {
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 800;
     font-size: 30px;
@@ -560,7 +581,7 @@ input:focus{
 
 
 .gameIntro {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -576,7 +597,7 @@ input:focus{
 }
 
 .gameIntro2 {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -616,7 +637,7 @@ input:focus{
     height: 60px;
     border: 0px;
     cursor: pointer;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
@@ -664,7 +685,7 @@ input:focus{
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     cursor: pointer;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -738,7 +759,7 @@ input:focus{
     height: 21px;
     background: #FF8936;
     border-radius: 18.2346px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 10.7168px;
@@ -781,7 +802,7 @@ input:focus{
     width: 62px;
     white-space: pre-wrap;
     text-align: center;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
@@ -822,7 +843,7 @@ input:focus{
 
 
 .resultText1 {
-    font-family: "Gmarket Sans";
+    font-family: "GmarketSansMedium";
     font-weight: bold;
     font-size: 20px;
     display: flex;
@@ -838,7 +859,7 @@ input:focus{
 
 
 .resultSub {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 800;
     width: 285px;
@@ -893,7 +914,7 @@ input:focus{
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    font-family: "Gmarket Sans";
+    font-family: "GmarketSansMedium";
     font-size: 16px;
     color: white;
     margin-top: 40px;
@@ -904,7 +925,7 @@ input:focus{
     align-items: center;
     justify-content: center;
 
-    font-family: "Gmarket Sans";
+    font-family: "GmarketSansMedium";
     font-size: 16px;
     color: white;
 
@@ -921,7 +942,7 @@ input:focus{
     width: 128px;
     height: 40px;
     cursor: pointer;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -978,7 +999,7 @@ input:focus{
 }
 
 .similarGameRanking {
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -991,7 +1012,7 @@ input:focus{
 }
 
 .checktitle {
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -1005,7 +1026,7 @@ input:focus{
 }
 
 .checkSub{
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     width: 280px;
     font-weight: 900;
@@ -1101,7 +1122,7 @@ img {
 }
 
 .recTitle{
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -1121,7 +1142,7 @@ img {
     height: 30px;
     background: #FF8936;
     border-radius: 22.1195px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -1133,7 +1154,7 @@ img {
 }
 
 .recdesc{
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 12px;
@@ -1232,7 +1253,7 @@ img {
 }
 
 .rankingName{
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     width: 96px;
     display: flex;
     font-style: normal;
@@ -1254,7 +1275,7 @@ img {
 
 .rankingScore{
     display: flex;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 8px;
@@ -1285,7 +1306,7 @@ margin-right:4px;
 .ad_game_font {
     height: 40px;
     margin-top: 20px;
-    font-family: "Gmarket Sans";
+    font-family: "GmarketSansMedium";
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -1513,7 +1534,7 @@ margin-right:4px;
     padding-left: 10px;
     padding-right: 10px;
     height: 21.71px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -1527,7 +1548,7 @@ margin-right:4px;
     border-radius: 32.488px;
     height: 20px;
     width: 120px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 8px;
@@ -1541,7 +1562,7 @@ margin-right:4px;
 }
 
 .rankingslidetext{
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     width: 70px;
     font-style: normal;
     font-weight: 500;
@@ -1560,7 +1581,7 @@ margin-right:4px;
     background: #FF8936;
     border-radius: 32.488px;
     height: 34.52px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -1581,7 +1602,7 @@ margin-right:4px;
     width: 320px;
     display: flex;
     justify-content: center;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -1602,7 +1623,7 @@ margin-right:4px;
 }
 
 .serviceTitle {
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
@@ -1618,7 +1639,7 @@ margin-right:4px;
 
 
 .serviceSemibold {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 11px;
@@ -1633,7 +1654,7 @@ margin-right:4px;
 }
 .serviceSemi{
 
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 11px;
@@ -1659,7 +1680,7 @@ margin-right:4px;
 
 
 .Contact {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1672,7 +1693,7 @@ margin-right:4px;
 }
 
 .Email {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -1686,7 +1707,7 @@ margin-right:4px;
     color: #FF8216;
 }
 .Copyright{
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 300;
     font-size: 10px;
@@ -1700,7 +1721,7 @@ margin-right:4px;
 
 .servicecontent {
 
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 500;
     font-size: 9px;
@@ -1714,7 +1735,7 @@ margin-right:4px;
     margin-bottom: -20px;
 }
 .servicecontentbold {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 9px;
@@ -1729,7 +1750,7 @@ margin-right:4px;
 
 
 .modalTitleresult {
-    font-family: "Pretendard";
+    font-family: "Pretendard-Regular";
     text-align: center;
     font-size: 24px;
     font-weight: 500;
@@ -1842,7 +1863,7 @@ margin-right:4px;
     cursor: pointer;
     height: 38px;
     width: 62px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
@@ -1865,7 +1886,7 @@ margin-right:4px;
 }
 
 .shareText {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 10.6667px;
@@ -1880,7 +1901,7 @@ margin-right:4px;
 }
 
 .shareText2 {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 10.6667px;
@@ -1948,7 +1969,7 @@ margin-right:4px;
     background: #FF8936;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -2027,7 +2048,7 @@ margin-right:4px;
 
     left: calc(50% - 258.63px/2 - 0.5px);
     top: calc(50% - 17px/2 - 193px);
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -2059,7 +2080,7 @@ margin-right:4px;
     cursor: pointer;
     left: calc(50% - 258.63px/2 - 0.5px);
     top: calc(50% - 17px/2 - 193px);
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -2088,7 +2109,7 @@ margin-right:4px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 0px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -2110,7 +2131,7 @@ margin-right:4px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 0px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -2133,7 +2154,7 @@ margin-right:4px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 0px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -2162,7 +2183,7 @@ margin-right:4px;
 
 .tutorialText {
     white-space: pre-wrap;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
@@ -2180,7 +2201,7 @@ margin-right:4px;
 .typesubimg{
     width: 95px;
     height: 95px;
-    font-family: 'Gmarket Sans';
+    font-family: 'GmarketSansMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -2202,7 +2223,7 @@ margin-right:4px;
     border-radius: 15px;
     background-color: white;
 
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 14px;
@@ -2216,7 +2237,7 @@ margin-right:4px;
 .testAnswer:active {
     background: #FF8216;
     border-radius: 15px;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 14px;
@@ -2249,7 +2270,7 @@ margin-right:4px;
 .questionTxt {
     margin-top: 60px;
     white-space: pre-wrap;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -2356,7 +2377,7 @@ margin-right:4px;
 .recinfo {
     display: flex;
     justify-content: space-around;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -2373,7 +2394,7 @@ margin-right:4px;
 .rectag {
     display: flex;
     justify-content: space-around;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -2397,7 +2418,7 @@ margin-right:4px;
 }
 
 #recGenreButton {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 600;
     font-size: 9.34307px;
@@ -2417,7 +2438,7 @@ margin-right:4px;
 }
 
 .playstore {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -2435,7 +2456,7 @@ margin-right:4px;
 
 .rating {
     display: flex;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 12.7867px;
@@ -2461,7 +2482,7 @@ margin-right:4px;
 
 #already {
     background: none;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 600;
     font-size: 12.7867px;
@@ -2479,7 +2500,7 @@ margin-right:4px;
 
 
 #goodButton {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -2506,7 +2527,7 @@ margin-right:4px;
 
 
 #badButton {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;

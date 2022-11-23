@@ -14,7 +14,7 @@ const BeforeResult = (props) => {
 
 
         const getResult = () => {
-            axios.post("http://localhost:5000/api/test/postTestArray", {
+            axios.post("http://118.67.143.133/api/test/postTestArray", {
                 user: {
                     userId: userId,
                     userName: userName

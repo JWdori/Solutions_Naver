@@ -18,7 +18,7 @@ const GameRanking = (props) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
 
     const getRateGame = async () => {
-        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+        await axios.get("http://118.67.143.133/api/view/getRateGameByType", {})
             .then((res) => {
                 //이게 유형별 10개 인기게임
                 setType(res);
@@ -30,7 +30,7 @@ const GameRanking = (props) => {
     }
 
     const getTop3Game = async () => {
-        await axios.get("http://localhost:5000/api/view/getRateGameTop3", {})
+        await axios.get("http://118.67.143.133/api/view/getRateGameTop3", {})
             .then((res) => {
                 //이게 유형별 상관없이 top3
                 setAll(res);

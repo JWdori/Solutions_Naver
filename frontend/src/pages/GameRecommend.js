@@ -74,7 +74,7 @@ const GameRecommend = (props) => {
             btn.disabled = true;
             btn.setAttribute("id", "recNextDisabledButton")
         }
-        await axios.get("http://localhost:5000/api/recommend/getGameList", {
+        await axios.get("http://118.67.143.133/api/recommend/getGameList", {
             params: {
                 user_id: userId,
                 page: gamePage,
@@ -102,8 +102,7 @@ const GameRecommend = (props) => {
 
     const sendData = (input) => {
         const appid = data.data.gameList[step].appId;
-        //console.log(appid);
-        axios.post("http://localhost:5000/api/recommend/postGameRate", {
+        axios.post("http://118.67.143.133/api/recommend/postGameRate", {
             userId: userId,
             appId: appid,
             gameScore: input
@@ -119,8 +118,8 @@ const GameRecommend = (props) => {
 
     const sendStar = (star) => {
         const appid = data.data.gameList[step].appId;
-        //console.log(appid);
-        axios.post("http://localhost:5000/api/recommend/postGameStar", {
+
+        axios.post("http://118.67.143.133/api/recommend/postGameStar", {
             userId: userId,
             appId: appid,
             gameStar: star

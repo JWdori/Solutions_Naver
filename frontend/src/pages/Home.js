@@ -11,7 +11,7 @@ import Header from "../elements/Header";
 import MainSlide from "../elements/MainSlide";
 import Serviceintroduce from "../elements/ServiceIntroduce";
 
-import {kakaoShare_test, facebookShare_test, twitterShare_test} from "../elements/Share_test";
+import {kakaoShare, facebookShare, twitterShare} from "../elements/Share_test";
 import GameSlide1 from "../elements/GameSlide1";
 import GameSlide2 from "../elements/GameSlide2";
 import box from "../images/box.png"
@@ -46,7 +46,7 @@ const Home = (props) => {
         setUuid(Math.random().toString(36).substr(2) + (new Date()).getTime().toString(36));
     },[])
     const getRateGame = async () => {
-        await axios.get("http://localhost:5000/api/view/getRateGameByType", {})
+        await axios.get("http://118.67.143.133/api/view/getRateGameByType", {})
             .then((res) => {
                 //이게 유형별 10개 인기게임
                 setType(res);
@@ -138,7 +138,7 @@ const Home = (props) => {
                     alt="kakaotalk"
                     width="32px"
                     height="32px"
-                    onClick={kakaoShare_test}
+                    onClick={kakaoShare}
                 />
 
                 <img
@@ -147,7 +147,7 @@ const Home = (props) => {
                     alt="facebook"
                     width="32px"
                     height="32px"
-                    onClick={facebookShare_test}
+                    onClick={facebookShare}
                 ></img>
 
                 <img
@@ -156,7 +156,7 @@ const Home = (props) => {
                     alt="twitter"
                     width="32px"
                     height="32px"
-                    onClick={twitterShare_test}
+                    onClick={twitterShare}
                 ></img>
                 <input type="hidden" id="urlInput" className="url-input"/>
 
