@@ -32,7 +32,7 @@ const Slider = (props) => {
             <img src={left}
                  width="8px"
                  height="18px"
-                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"8px"}}
+                 style={{marginTop:"50px", marginLeft:"8px", marginRight:"0px"}}
                  onClick={moveToPrevSlide}></img>
             <Wrapper>
                 <SlideWrapper ref={slideRef}>
